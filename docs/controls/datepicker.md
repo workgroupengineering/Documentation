@@ -54,7 +54,7 @@ The date properties can't be set as a XAML attribute string, because the Windows
 This example demonstrates setting the 
 
 ```csharp
-    myDatePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
+myDatePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 ```
 
 
