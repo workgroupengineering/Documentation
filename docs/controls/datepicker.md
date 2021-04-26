@@ -57,5 +57,11 @@ This example demonstrates setting the
 myDatePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 ```
 
+### Reference <a id="reference"></a>
 
+[D](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBox/)atePicker
+
+### Source code <a id="source-code"></a>
+
+[DatePicker.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/DatePicker.cs)
 
