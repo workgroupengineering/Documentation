@@ -1,6 +1,6 @@
 # Add Data Persistence
 
-### Persisting Music Collection
+## Persisting Music Collection
 
 Persistence is the job of the business logic \(`model`\) code. However here we will see its very simple to wire this up to the UI.
 
@@ -14,7 +14,7 @@ public async Task SaveToDiskAsync()
     if (Cover != null)
     {
         var bitmap = Cover;
-                
+
         await Task.Run(() =>
         {
             using (var fs = _album.SaveCoverBitmapSteam())
@@ -34,7 +34,7 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
     var store = new MusicStoreViewModel();
 
     var result = await ShowDialog.Handle(store);
-    
+
     if (result != null)
     {
         Albums.Add(result);

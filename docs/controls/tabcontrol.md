@@ -91,29 +91,32 @@ The grey part is the `TabItem`... Yes, the `TabItem` includes the tab **AND** th
 
 Dynamically generated `TabItem`s through binding are also supported. In this case bind Items property. The `TabStrip` header content is defined by ItemTemplate property, while `TabItem`'s content is defined by ContentTemplate property.
 
-The following example uses a `TabItemModel` array to represent two tabs.
-Let's first create the model.
+The following example uses a `TabItemModel` array to represent two tabs. Let's first create the model.
+
 ```markup
 public class TabItemModel
 {
-	public string Header { get; }
-	public string Content { get; }
-	public TabItemModel(string header, string content)
-	{
-		Header = header;
-		Content = content;
-	}
+    public string Header { get; }
+    public string Content { get; }
+    public TabItemModel(string header, string content)
+    {
+        Header = header;
+        Content = content;
+    }
 }
 ```
+
 Create an array of two `TabItemModel` instances and bind it to the DataContext.
+
 ```markup
 DataContext = new TabItemModel[] { 
-	new TabItemModel("One", "Some content on first tab"),
-	new TabItemModel("Two", "Some content on second tab"),
+    new TabItemModel("One", "Some content on first tab"),
+    new TabItemModel("Two", "Some content on second tab"),
 };
 ```
 
 Finally create a `TabControl` and bind its Items property to the DataContext.
+
 ```markup
 <TabControl Items="{Binding}">
     <TabControl.ItemTemplate>

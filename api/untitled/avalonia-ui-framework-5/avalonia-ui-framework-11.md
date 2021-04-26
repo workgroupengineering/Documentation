@@ -6,5 +6,5 @@
 
 | Class | Summary |
 | :--- | :--- |
-| [SelectableMixin](http://reference.avaloniaui.net/api/Avalonia.Controls.Mixins/SelectableMixin) |  Adds selectable functionality to control classes. |
+| [SelectableMixin](http://reference.avaloniaui.net/api/Avalonia.Controls.Mixins/SelectableMixin) | Adds selectable functionality to control classes. |
 

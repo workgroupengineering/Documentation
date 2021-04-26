@@ -71,6 +71,7 @@
   * [TabControl](docs/controls/tabcontrol.md)
   * [TabStrip](docs/controls/tabstrip.md)
   * [TextBlock](docs/controls/textblock.md)
+  * [TimePicker](docs/controls/timepicker.md)
   * [TextBox](docs/controls/textbox.md)
   * [ToggleButton](docs/controls/togglebutton.md)
   * [ToolTip](docs/controls/tooltip.md)

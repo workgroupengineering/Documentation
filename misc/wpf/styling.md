@@ -11,6 +11,6 @@ The most obvious difference from other XAML frameworks is that Avalonia uses a [
         </Style>
     </UserControl.Styles>
     <TextBlock Classes="h1">Header</TextBlock>
-<UserControl>    
+<UserControl>
 ```
 

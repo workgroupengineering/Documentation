@@ -38,10 +38,19 @@
 
 ## Data Display
 
-* [DataGrid](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.datagrid)
-* [ListView](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.listview)
+[DataGrid](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.datagrid)
+
+[ItemsControl](itemscontrol.md)
+
+[ItemsRepeater](itemsrepeater.md)
 
 ## Date Display and Selection
+
+DatePicker
+
+TimePicker
+
+Calendar
 
 ## Menus
 

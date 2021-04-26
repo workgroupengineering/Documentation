@@ -25,7 +25,7 @@ Don't assume the Nuget packages will work just because master was working. In th
 
 ![](../../.gitbook/assets/image%20%2811%29.png)
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 * Then click on `Deploy`.
 

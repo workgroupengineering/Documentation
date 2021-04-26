@@ -30,9 +30,3 @@ Avalonia is in general very similar to WPF, but you will find differences. Here 
 
 {% page-ref page="rendertransforms-and-rendertransformorigin.md" %}
 
-
-
-
-
-
-

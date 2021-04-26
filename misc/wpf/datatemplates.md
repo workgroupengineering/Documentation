@@ -15,7 +15,7 @@ As styles aren't stored in `Resources`, neither are `DataTemplates`. Instead, `D
          MyApp.ViewModels.FooViewModel then a red border with a corner
          radius of 8 containing a TextBox will be displayed here -->
     <ContentControl Content="{Binding Foo}"/>
-<UserControl>    
+<UserControl>
 ```
 
 Data templates in Avalonia can also target interfaces and derived classes \(which cannot be done in WPF\) and so the order of `DataTemplate`s can be important: `DataTemplate`s within the same collection are evaluated in declaration order so you need to place them from most-specific to least-specific as you would in code.

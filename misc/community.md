@@ -1,12 +1,6 @@
 # 👪 Community
 
-### Find us on...
+## Find us on...
 
-### [💬 Gitter Chat](https://gitter.im/AvaloniaUI/Avalonia)
-
-### 
-
-### 
-
-### 
+## [💬 Gitter Chat](https://gitter.im/AvaloniaUI/Avalonia)
 

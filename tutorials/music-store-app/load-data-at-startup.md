@@ -1,6 +1,6 @@
 # Load data at Startup
 
-### Loading Albums on Startup <a id="loading-albums-on-startup"></a>
+## Loading Albums on Startup <a id="loading-albums-on-startup"></a>
 
 Our backend code provides a nice way to load the users collection from disk.
 
@@ -15,7 +15,7 @@ private async Task LoadAlbums()
     {
         Albums.Add(album);
     }
-    
+
     foreach (var album in Albums.ToList())
     {
         await album.LoadCover();
