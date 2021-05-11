@@ -18,7 +18,9 @@ Transitions in Avalonia are also heavily inspired by CSS Animations. They listen
 
     <Rectangle Classes="red">
         <Rectangle.Transitions>
-            <DoubleTransition Property="Opacity" Duration="0:0:0.2"/>
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.2"/>
+            </Transitions>
         </Rectangle.Transitions>
     </Rectangle>
 
