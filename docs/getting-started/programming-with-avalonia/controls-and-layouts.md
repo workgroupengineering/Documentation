@@ -4,15 +4,15 @@
 
 Avalonia provides many core controls. Here are some of the most common:
 
-* Buttons: [`Button`](http://avaloniaui.net/docs/controls/button), [`RepeatButton`](http://avaloniaui.net/docs/controls/repeatbutton)
-* Data Display: [`ItemsControl`](http://avaloniaui.net/docs/controls/itemscontrol), [`ItemsRepeater`](http://avaloniaui.net/docs/controls/itemsrepeater), [`ListBox`](http://avaloniaui.net/docs/controls/listbox), [`TreeView`](http://avaloniaui.net/docs/controls/treeview)
-* Input: [`CheckBox`](http://avaloniaui.net/docs/controls/checkbox), [`ComboBox`](http://avaloniaui.net/docs/controls/combobox), [`RadioButton`](http://avaloniaui.net/docs/controls/radiobutton), [`Slider`](http://avaloniaui.net/docs/controls/slider), [`TextBox`](http://avaloniaui.net/docs/controls/textbox)
-* Layout: [`Border`](http://avaloniaui.net/docs/controls/border), [`Canvas`](http://avaloniaui.net/docs/controls/canvas), [`DockPanel`](http://avaloniaui.net/docs/controls/dockpanel), [`Expander`](http://avaloniaui.net/docs/controls/expander), [`Grid`](http://avaloniaui.net/docs/controls/grid), [`GridSplitter`](http://avaloniaui.net/docs/controls/gridsplitter), [`Panel`](http://avaloniaui.net/docs/controls/panel), [`Separator`](http://avaloniaui.net/docs/controls/separator), [`ScrollBar`](http://avaloniaui.net/docs/controls/scrollbar), [`ScrollViewer`](http://avaloniaui.net/docs/controls/scrollviewer), [`StackPanel`](http://avaloniaui.net/docs/controls/stackpanel), [`Viewbox`](http://avaloniaui.net/docs/controls/viewbox), [`WrapPanel`](http://avaloniaui.net/docs/controls/wrappanel)
-* Menus: [`ContentMenu`](http://avaloniaui.net/docs/controls/contextmenu), [`Menu`](http://avaloniaui.net/docs/controls/menu), [`NativeMenu`](http://avaloniaui.net/docs/controls/nativemenu)
-* Navigation: [`TabControl`](http://avaloniaui.net/docs/controls/tabcontrol), [`TabStrip`](http://avaloniaui.net/docs/controls/tabstrip)
-* User Information: [`ProgressBar`](http://avaloniaui.net/docs/controls/progressbar), [`TextBlock`](http://avaloniaui.net/docs/controls/textblock), [`ToolTip`](http://avaloniaui.net/docs/controls/tooltip)
+* Buttons: [`Button`](../../controls/button.md), [`RepeatButton`](../../controls/repeatbutton.md)
+* Data Display: [`ItemsControl`](../../controls/itemscontrol.md), [`ItemsRepeater`](../../controls/itemsrepeater.md), [`ListBox`](../../controls/listbox.md), [`TreeView`](../../controls/treeview-1.md)
+* Input: [`CheckBox`](../../controls/checkbox.md), [`ComboBox`](../../controls/combobox.md), [`RadioButton`](../../controls/radiobutton.md), [`Slider`](../../controls/slider.md), [`TextBox`](../../controls/textbox.md)
+* Layout: [`Border`](../../controls/border.md), [`Canvas`](../../controls/canvas.md), [`DockPanel`](../../controls/dockpanel.md), [`Expander`](../../controls/expander.md), [`Grid`](../../controls/grid.md), [`GridSplitter`](../../controls/gridsplitter.md), [`Panel`](../../controls/panel.md), [`Separator`](../../controls/separator.md), [`ScrollBar`](../../controls/scrollbar.md), [`ScrollViewer`](../../controls/scrollviewer.md), [`StackPanel`](../../controls/stackpanel.md), [`Viewbox`](../../controls/viewbox.md), [`WrapPanel`](../../controls/wrappanel.md)
+* Menus: [`ContextMenu`](../../controls/contextmenu.md), [`Menu`](../../controls/menu.md), [`NativeMenu`](../../controls/nativemenu.md)
+* Navigation: [`TabControl`](../../controls/tabcontrol.md), [`TabStrip`](../../controls/tabstrip.md)
+* User Information: [`ProgressBar`](../../controls/progressbar.md), [`TextBlock`](../../controls/textblock.md), [`ToolTip`](../../controls/tooltip.md)
 
-### Input and Commands <a id="input-and-commands"></a>
+## Input and Commands
 
 Controls most often detect and respond to user input. The Avalonia [input system](http://avaloniaui.net/docs/input) uses both [direct and routed events](http://avaloniaui.net/docs/input/events) to support text input, focus management, and mouse positioning.
 
