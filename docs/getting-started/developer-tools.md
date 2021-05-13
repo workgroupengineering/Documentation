@@ -28,17 +28,17 @@ From release 0.10 to using devtools, you must add Avalonia.Diagnostics nuget pac
 dotnet add package Avalonia.Diagnostics --version 0.10.0
 ```
 
-![Avalonia DevTools](http://avaloniaui.net/docs/quickstart/images/devtools.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 There is a known issue when running under .NET core 2.1 that pressing F12 will cause the program to quit. In this case, either switch to .NET core 2.0 or 3.0+ or change the open gesture to something different, such as `Ctrl+F12`.
 
 ### Logical and Visual Trees <a id="logical-and-visual-trees"></a>
 
-The `Logical Tree` and `Visual Tree` tabs display the controls in the window's [logical and visual trees](http://avaloniaui.net/docs/advanced/trees). Selecting a control will show the properties of that control in the right-hand pane where they can be edited.
+The `Logical Tree` and `Visual Tree` tabs display the controls in the window's logical and visual trees. Selecting a control will show the properties of that control in the right-hand pane where they can be edited.
 
 ### Events <a id="events"></a>
 
-The events tab can be used to track the propogation of [events](http://avaloniaui.net/docs/input/events). Select the events to track in the left pane, and all events of that type will be shown in the center upper pane. Select one of these events to see the event route.
+The events tab can be used to track the propagation of [events](../input/). Select the events to track in the left pane, and all events of that type will be shown in the center upper pane. Select one of these events to see the event route.
 
 ### Console <a id="console"></a>
 
