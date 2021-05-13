@@ -1,6 +1,6 @@
 # Assets
 
-Many applications need to include assets such as bitmaps and [resource dictionaries](http://avaloniaui.net/docs/styles/resources) in their executable and refer to these assets from XAML.
+Many applications need to include assets such as bitmaps and [resource dictionaries](../styling/resources.md) in their executable and refer to these assets from XAML.
 
 ### Including assets <a id="including-assets"></a>
 
@@ -14,7 +14,7 @@ Assets can be included in an application by using the `<AvaloniaResource>` item 
 
 You can include whatever files you want by adding additional `<AvaloniaResource>` elements.
 
-You will notice that we're referring to _assets_ here whereas the MSBuild item is called an Avalonia _resource_. Assets are internally stored as [.NET resources](https://docs.microsoft.com/en-us/visualstudio/ide/managing-application-resources-dotnet) but because the term "resource" conflicts with [XAML resources](http://avaloniaui.net/docs/styles/resources) we'll refer to them as "assets" throughout.
+You will notice that we're referring to _assets_ here whereas the MSBuild item is called an Avalonia _resource_. Assets are internally stored as [.NET resources](https://docs.microsoft.com/en-us/visualstudio/ide/managing-application-resources-dotnet) but because the term "resource" conflicts with [XAML resources](../styling/resources.md) we'll refer to them as "assets" throughout.
 
 ### Referencing assets <a id="referencing-assets"></a>
 
