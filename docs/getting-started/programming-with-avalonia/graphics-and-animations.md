@@ -45,7 +45,7 @@ Avalonia provides a library of common vector-drawn 2D shapes such as `Ellipse`, 
 </Canvas>
 ```
 
-![Drawing shapes](http://avaloniaui.net/docs/quickstart/images/shapes.png)
+![](../../../.gitbook/assets/shapes.png)
 
 ### Animation
 
