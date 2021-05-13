@@ -14,9 +14,9 @@ Avalonia provides many core controls. Here are some of the most common:
 
 ## Input and Commands
 
-Controls most often detect and respond to user input. The Avalonia [input system](http://avaloniaui.net/docs/input) uses both [direct and routed events](http://avaloniaui.net/docs/input/events) to support text input, focus management, and mouse positioning.
+Controls most often detect and respond to user input. The Avalonia [input system](../../input/) uses both [direct and routed events](../../input/routed-events.md) to support text input, focus management, and mouse positioning.
 
-Applications often have complex input requirements. Avalonia provides a [command system](http://avaloniaui.net/docs/binding/binding-to-commands) that separates user-input actions from the code that responds to those actions.
+Applications often have complex input requirements. Avalonia provides a [command system](../../data-binding/binding-to-commands.md) that separates user-input actions from the code that responds to those actions.
 
 ### Layout <a id="layout"></a>
 
@@ -24,14 +24,14 @@ When you create a user interface, you arrange your controls by location and size
 
 The cornerstone of the layout system is relative positioning, which increases the ability to adapt to changing window and display conditions. In addition, the layout system manages the negotiation between controls to determine the layout. The negotiation is a two-step process: first, a control tells its parent what location and size it requires; second, the parent tells the control what space it can have.
 
-The layout system is exposed to child controls through base Avalonia classes. For common layouts such as grids, stacking, and docking, Avalonia includes several layout controls:
+The layout system is exposed to child controls through base Avalonia classes. For common layouts such as grids, stacking, and docking, Avalonia includes several layout controls
 
-* [`Panel`](http://avaloniaui.net/docs/controls/panel): Child controls are stacked on top of each other to fill the panel
-* [`Canvas`](http://avaloniaui.net/docs/controls/canvas): Child controls provide their own layout
-* [`DockPanel`](http://avaloniaui.net/docs/controls/dockpanel): Child controls are aligned to the edges of the panel
-* [`Grid`](http://avaloniaui.net/docs/controls/grid): Child controls are positioned by rows and columns
-* [`StackPanel`](http://avaloniaui.net/docs/controls/stackpanel): Child controls are stacked either vertically or horizontally
-* [`WrapPanel`](http://avaloniaui.net/docs/controls/wrappanel): Child controls are positioned in left-to-right order and wrapped to the next line when there are more controls on the current line than space allows
+* [`Panel`](../../controls/panel.md): Child controls are stacked on top of each other to fill the panel
+* [`Canvas`](../../controls/canvas.md): Child controls provide their own layout
+* [`DockPanel`](../../controls/dockpanel.md): Child controls are aligned to the edges of the panel
+* [`Grid`](../../controls/grid.md): Child controls are positioned by rows and columns
+* [`StackPanel`](../../controls/stackpanel.md): Child controls are stacked either vertically or horizontally
+* [`WrapPanel`](../../controls/wrappanel.md): Child controls are positioned in left-to-right order and wrapped to the next line when there are more controls on the current line than space allows
 
-You can also create your own layouts by [deriving from the `Panel` class](http://avaloniaui.net/docs/layout/creating-a-panel).
+You can also create your own layouts by deriving from the [`Panel`](../../controls/panel.md) class.
 
