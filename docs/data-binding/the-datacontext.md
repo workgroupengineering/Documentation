@@ -1,6 +1,6 @@
 # The DataContext
 
-The [`Control.DataContext`](http://avaloniaui.net/api/Avalonia.Controls/Control/D29AE9A9) property describes where controls will look by default for values when binding. The data context will usually be set for top-level controls such as [`Window`](http://avaloniaui.net/api/Avalonia.Controls/Window) and child controls will inherit this data context.
+The `Control.DataContext` property describes where controls will look by default for values when binding. The data context will usually be set for top-level controls such as [`Window`](http://avaloniaui.net/api/Avalonia.Controls/Window) and child controls will inherit this data context.
 
 When using the MVVM pattern, the data context will usually be an instance of a view model.
 
