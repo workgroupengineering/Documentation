@@ -2,9 +2,9 @@
 
 `UserControl` represents a "view" in Avalonia, which is a reusable collection of controls in a predefined layout.
 
-A `UserControl` usually consists of two parts: a XAML file \(e.g. `MyUserControl.axaml`\) and a codebehind file \(e.g. `MyUserControl.axaml.cs`\). The codebehind defines a .NET class which represents the control.
+A `UserControl` usually consists of two parts: a XAML file \(e.g. `MyUserControl.axaml`\) and a code-behind file \(e.g. `MyUserControl.axaml.cs`\). The code-behind defines a .NET class which represents the control.
 
-`UserControl`s are often paired with "view models" when using the MVVM pattern. For more information see [the tutorial](http://avaloniaui.net/docs/tutorial/creating-a-view).
+`UserControl`s are often paired with "view models" when using the MVVM pattern. For more information see the [tutorial](../../tutorials/todo-list-app/).
 
 You can create `UserControl`s from templates:
 
