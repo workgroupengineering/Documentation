@@ -37,7 +37,7 @@ This will generate a DataGrid with column header names. FirstName and LastName.
         x:Class="AvaloniaAppTemplate.MainWindow"
         Title="AvaloniaAppTemplate">
     <Grid>
-        <DataGrid Name="MyDataGrid" ItemsSource="{Binding People}" >
+        <DataGrid Name="MyDataGrid" Items="{Binding People}" >
         </DataGrid>
     </Grid>
 </Window>
@@ -64,7 +64,7 @@ The DataGrid uses the same class Person as before, but now with custom column he
         x:Class="AvaloniaAppTemplate.MainWindow"
         Title="AvaloniaAppTemplate">
     <Grid>
-        <DataGrid Name="MyDataGrid" ItemsSource="{Binding People}" AutoGenerateColumns="False" >
+        <DataGrid Name="MyDataGrid" Items="{Binding People}" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Forename"  Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Surname" Binding="{Binding LastName}" />
