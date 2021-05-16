@@ -27,7 +27,7 @@ The following images show the user interface that is defined by the XAML in the 
 
 Since XAML is XML-based, the UI that you compose with it is assembled in a hierarchy of nested elements known as an [element tree](http://avaloniaui.net/docs/advanced/trees). The element tree provides a logical and intuitive way to create and manage UIs.
 
-![Application window](http://avaloniaui.net/docs/quickstart/images/click-me.png)
+![](../../../.gitbook/assets/click-me.png)
 
 ### Code-behind
 
@@ -82,5 +82,5 @@ namespace AvaloniaApplication1
 {% endtab %}
 {% endtabs %}
 
-In this example, the code-behind implements a class that derives from the [`Window`](http://avaloniaui.net/docs/quickstart/window) class. The `x:Class` attribute is used to associate the markup with the code-behind class. `InitializeComponent` is called from the code-behind class's constructor to merge the UI that is defined in markup with the code-behind class. The combination of `x:Class` and `InitializeComponent` ensure that your implementation is correctly initialized whenever it is created. The code-behind class also implements an event handler for the button's `Click` event. When the button is clicked, the event handler changes the text of the button by setting a property on the `Button` control.
+In this example, the code-behind implements a class that derives from the [`Window`](http://avaloniaui.net/docs/quickstart/window) class. The `x:Class` attribute is used to associate the markup with the code-behind class. `InitializeComponent` is called from the code-behind class's constructor to merge the UI that is defined in markup with the code-behind class. The combination of `x:Class` and `InitializeComponent` ensure that your implementation is correctly initialised whenever it is created. The code-behind class also implements an event handler for the button's `Click` event. When the button is clicked, the event handler changes the text of the button by setting a property on the `Button` control.
 

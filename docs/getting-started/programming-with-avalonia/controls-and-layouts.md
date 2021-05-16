@@ -4,19 +4,19 @@
 
 Avalonia provides many core controls. Here are some of the most common:
 
-* Buttons: [`Button`](http://avaloniaui.net/docs/controls/button), [`RepeatButton`](http://avaloniaui.net/docs/controls/repeatbutton)
-* Data Display: [`ItemsControl`](http://avaloniaui.net/docs/controls/itemscontrol), [`ItemsRepeater`](http://avaloniaui.net/docs/controls/itemsrepeater), [`ListBox`](http://avaloniaui.net/docs/controls/listbox), [`TreeView`](http://avaloniaui.net/docs/controls/treeview)
-* Input: [`CheckBox`](http://avaloniaui.net/docs/controls/checkbox), [`ComboBox`](http://avaloniaui.net/docs/controls/combobox), [`RadioButton`](http://avaloniaui.net/docs/controls/radiobutton), [`Slider`](http://avaloniaui.net/docs/controls/slider), [`TextBox`](http://avaloniaui.net/docs/controls/textbox)
-* Layout: [`Border`](http://avaloniaui.net/docs/controls/border), [`Canvas`](http://avaloniaui.net/docs/controls/canvas), [`DockPanel`](http://avaloniaui.net/docs/controls/dockpanel), [`Expander`](http://avaloniaui.net/docs/controls/expander), [`Grid`](http://avaloniaui.net/docs/controls/grid), [`GridSplitter`](http://avaloniaui.net/docs/controls/gridsplitter), [`Panel`](http://avaloniaui.net/docs/controls/panel), [`Separator`](http://avaloniaui.net/docs/controls/separator), [`ScrollBar`](http://avaloniaui.net/docs/controls/scrollbar), [`ScrollViewer`](http://avaloniaui.net/docs/controls/scrollviewer), [`StackPanel`](http://avaloniaui.net/docs/controls/stackpanel), [`Viewbox`](http://avaloniaui.net/docs/controls/viewbox), [`WrapPanel`](http://avaloniaui.net/docs/controls/wrappanel)
-* Menus: [`ContentMenu`](http://avaloniaui.net/docs/controls/contextmenu), [`Menu`](http://avaloniaui.net/docs/controls/menu), [`NativeMenu`](http://avaloniaui.net/docs/controls/nativemenu)
-* Navigation: [`TabControl`](http://avaloniaui.net/docs/controls/tabcontrol), [`TabStrip`](http://avaloniaui.net/docs/controls/tabstrip)
-* User Information: [`ProgressBar`](http://avaloniaui.net/docs/controls/progressbar), [`TextBlock`](http://avaloniaui.net/docs/controls/textblock), [`ToolTip`](http://avaloniaui.net/docs/controls/tooltip)
+* Buttons: [`Button`](../../controls/button.md), [`RepeatButton`](../../controls/repeatbutton.md)
+* Data Display: [`ItemsControl`](../../controls/itemscontrol.md), [`ItemsRepeater`](../../controls/itemsrepeater.md), [`ListBox`](../../controls/listbox.md), [`TreeView`](../../controls/treeview-1.md)
+* Input: [`CheckBox`](../../controls/checkbox.md), [`ComboBox`](../../controls/combobox.md), [`RadioButton`](../../controls/radiobutton.md), [`Slider`](../../controls/slider.md), [`TextBox`](../../controls/textbox.md)
+* Layout: [`Border`](../../controls/border.md), [`Canvas`](../../controls/canvas.md), [`DockPanel`](../../controls/dockpanel.md), [`Expander`](../../controls/expander.md), [`Grid`](../../controls/grid.md), [`GridSplitter`](../../controls/gridsplitter.md), [`Panel`](../../controls/panel.md), [`Separator`](../../controls/separator.md), [`ScrollBar`](../../controls/scrollbar.md), [`ScrollViewer`](../../controls/scrollviewer.md), [`StackPanel`](../../controls/stackpanel.md), [`Viewbox`](../../controls/viewbox.md), [`WrapPanel`](../../controls/wrappanel.md)
+* Menus: [`ContextMenu`](../../controls/contextmenu.md), [`Menu`](../../controls/menu.md), [`NativeMenu`](../../controls/nativemenu.md)
+* Navigation: [`TabControl`](../../controls/tabcontrol.md), [`TabStrip`](../../controls/tabstrip.md)
+* User Information: [`ProgressBar`](../../controls/progressbar.md), [`TextBlock`](../../controls/textblock.md), [`ToolTip`](../../controls/tooltip.md)
 
-### Input and Commands <a id="input-and-commands"></a>
+## Input and Commands
 
-Controls most often detect and respond to user input. The Avalonia [input system](http://avaloniaui.net/docs/input) uses both [direct and routed events](http://avaloniaui.net/docs/input/events) to support text input, focus management, and mouse positioning.
+Controls most often detect and respond to user input. The Avalonia [input system](../../input/) uses both [direct and routed events](../../input/routed-events.md) to support text input, focus management, and mouse positioning.
 
-Applications often have complex input requirements. Avalonia provides a [command system](http://avaloniaui.net/docs/binding/binding-to-commands) that separates user-input actions from the code that responds to those actions.
+Applications often have complex input requirements. Avalonia provides a [command system](../../data-binding/binding-to-commands.md) that separates user-input actions from the code that responds to those actions.
 
 ### Layout <a id="layout"></a>
 
@@ -24,14 +24,14 @@ When you create a user interface, you arrange your controls by location and size
 
 The cornerstone of the layout system is relative positioning, which increases the ability to adapt to changing window and display conditions. In addition, the layout system manages the negotiation between controls to determine the layout. The negotiation is a two-step process: first, a control tells its parent what location and size it requires; second, the parent tells the control what space it can have.
 
-The layout system is exposed to child controls through base Avalonia classes. For common layouts such as grids, stacking, and docking, Avalonia includes several layout controls:
+The layout system is exposed to child controls through base Avalonia classes. For common layouts such as grids, stacking, and docking, Avalonia includes several layout controls
 
-* [`Panel`](http://avaloniaui.net/docs/controls/panel): Child controls are stacked on top of each other to fill the panel
-* [`Canvas`](http://avaloniaui.net/docs/controls/canvas): Child controls provide their own layout
-* [`DockPanel`](http://avaloniaui.net/docs/controls/dockpanel): Child controls are aligned to the edges of the panel
-* [`Grid`](http://avaloniaui.net/docs/controls/grid): Child controls are positioned by rows and columns
-* [`StackPanel`](http://avaloniaui.net/docs/controls/stackpanel): Child controls are stacked either vertically or horizontally
-* [`WrapPanel`](http://avaloniaui.net/docs/controls/wrappanel): Child controls are positioned in left-to-right order and wrapped to the next line when there are more controls on the current line than space allows
+* [`Panel`](../../controls/panel.md): Child controls are stacked on top of each other to fill the panel
+* [`Canvas`](../../controls/canvas.md): Child controls provide their own layout
+* [`DockPanel`](../../controls/dockpanel.md): Child controls are aligned to the edges of the panel
+* [`Grid`](../../controls/grid.md): Child controls are positioned by rows and columns
+* [`StackPanel`](../../controls/stackpanel.md): Child controls are stacked either vertically or horizontally
+* [`WrapPanel`](../../controls/wrappanel.md): Child controls are positioned in left-to-right order and wrapped to the next line when there are more controls on the current line than space allows
 
-You can also create your own layouts by [deriving from the `Panel` class](http://avaloniaui.net/docs/layout/creating-a-panel).
+You can also create your own layouts by deriving from the [`Panel`](../../controls/panel.md) class.
 

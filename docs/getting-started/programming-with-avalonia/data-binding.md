@@ -1,12 +1,12 @@
 # Data Binding
 
-Avalonia includes comprehensive support for [binding](http://avaloniaui.net/docs/binding/bindings) between controls and to aribtrary .NET objects. Data binding can be set up [in XAML](http://avaloniaui.net/docs/binding/bindings) or [in code](http://avaloniaui.net/docs/binding/binding-from-code) and supports:
+Avalonia includes comprehensive support for [binding](../../data-binding/bindings.md) between controls and to arbitrary .NET objects. Data binding can be set up in XAML or in code and supports:
 
 * Multiple binding modes: one way, two way, one-time and one-way to source
-* Binding to a [`DataContext`](http://avaloniaui.net/docs/binding/datacontext)
-* Binding to [other controls](http://avaloniaui.net/docs/binding/binding-to-controls)
-* Binding to [`Task`s and `Observables`](http://avaloniaui.net/docs/binding/binding-to-tasks-and-observables)
-* Binding [converters](http://avaloniaui.net/docs/binding/converting-binding-values) and negating binding values
+* Binding to a [`DataContext`](../../data-binding/the-datacontext.md)
+* Binding to [other controls](../../data-binding/binding-to-controls.md)
+* Binding to [`Task`s and `Observables`](../../data-binding/binding-to-tasks-and-observables.md)\`\`
+* Binding [converters](../../data-binding/converting-binding-values.md) and negating binding values
 
 The following example shows a `TextBlock` when an associated `TextBox` is disabled, by using a binding:
 

@@ -18,7 +18,7 @@ The [Avalonia for Visual Studio extension](https://marketplace.visualstudio.com/
 
 For Visual Studio and ReSharper users, [ReSharper 2020.3 introduces](https://www.jetbrains.com/resharper/whatsnew/2020-3/#version-2020-3-avalonia-support) built-in code analysis, code completion, navigation, and find usages.
 
-![Visual Studio Designer](http://avaloniaui.net/docs/quickstart/images/vs-designer.png)
+![](../../../.gitbook/assets/vs-designer.png)
 
 If your XAML is in a library, Avalonia needs an executable application in order to be able to preview it. Select an executable project from the dropdown on the top right of the designer. Once your project is built, editing the XAML in the editor will cause the preview to update automatically.
 
@@ -82,7 +82,7 @@ namespace My.Namespace
 
 If you're having problems, try enabling verbose logging. To do this:
 
-* Select the to "Tools" → "Options" menu in Visual Stduio
+* Select the to "Tools" → "Options" menu in Visual Studio
 * Select "Avalonia XAML Editor" from the list
 * Select "Verbose" under "Minimum Log Verbosity"
 
