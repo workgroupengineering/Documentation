@@ -25,7 +25,7 @@ arrivalTimePicker.Header = "Arrival time";
 
 Use a `TimePicker` to let a user enter a single time value. You can customize the `DatePicker` to use a 12-hour or 24-hour clock.
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 ### 12-hour and 24-hour clocks
 
