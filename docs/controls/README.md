@@ -38,7 +38,7 @@
 
 ## Data Display
 
-[DataGrid](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.datagrid)
+[DataGrid](datagrid.md)
 
 [ItemsControl](itemscontrol.md)
 
