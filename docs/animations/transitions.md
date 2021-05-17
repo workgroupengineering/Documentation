@@ -8,7 +8,7 @@ Transitions in Avalonia are also heavily inspired by CSS Animations. They listen
         <Style Selector="Rectangle.red">
             <Setter Property="Height" Value="100"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Fill" Value="Red"/>
             <Setter Property="Opacity" Value="0.5"/>
         </Style>
         <Style Selector="Rectangle.red:pointerover">
@@ -37,7 +37,7 @@ Transitions can also be defined in any style by using a `Setter` with `Transitio
         <Style Selector="Rectangle.red">
             <Setter Property="Height" Value="100"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Fill" Value="Red"/>
             <Setter Property="Opacity" Value="0.5"/>
             <Setter Property="Transitions">
                 <Transitions>
