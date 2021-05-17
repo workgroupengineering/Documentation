@@ -2,9 +2,17 @@
 
 ## Layout
 
-[Border](border.md)
+### [Border](border.md)
 
-[Canvas](canvas.md)
+Decorates a child with a border and background.
+
+![](../../.gitbook/assets/image.png)\`\`
+
+### [Canvas](canvas.md)
+
+Lays out its children by explicit coordinates.
+
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 [DockPanel](dockpanel.md)
 
