@@ -60,7 +60,7 @@ Control size and size constraints are also shown.
 If `Width` or `Height` are underlined that means there is an active constraint. Hover over the value to see a tooltip containing relevant information.
 {% endhint %}
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2824%29%20%281%29.png)
 
 ### Styles
 
