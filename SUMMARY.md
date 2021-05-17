@@ -45,6 +45,7 @@
   * [ContentControl](docs/controls/contentcontrol.md)
   * [ContextMenu](docs/controls/contextmenu.md)
   * [Decorator](docs/controls/decorator.md)
+  * [DataGrid](docs/controls/datagrid.md)
   * [DatePicker](docs/controls/datepicker.md)
   * [DockPanel](docs/controls/dockpanel.md)
   * [Expander](docs/controls/expander.md)
