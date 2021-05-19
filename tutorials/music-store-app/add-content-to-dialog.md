@@ -140,6 +140,11 @@ In the contructor add the following:
 ```csharp
 BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 {
+    if (SelectedAlbum is { })
+    {
+        return SelectedAlbum;
+    }
+    return null;
 });
 ```
 
