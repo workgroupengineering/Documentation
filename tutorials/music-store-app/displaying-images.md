@@ -64,6 +64,14 @@ namespace Avalonia.MusicStore.ViewModels
             get => _cover;
             private set => this.RaiseAndSetIfChanged(ref _cover, value);
         }
+        
+        public async Task LoadCover()
+        {
+            await using (var imageStream = await _album.LoadCoverBitmapAsync())
+            {
+                Cover = await Task.Run(() => Bitmap.DecodeToWidth(imageStream, 400));
+            }
+        }
     }
 }
 ```
