@@ -148,6 +148,8 @@ BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 });
 ```
 
+This will cause the `BuyMusicCommand` to return the `SelectedAlbum`'s View Model to the main window if there is a selection. Otherwise, it will return `null`.
+
 Return to the `MusicStoreView.axaml`
 
 Add a `ListBox` to the `DockPanel`. Since this is the last item in the Panel it will fill the remaining space, and since the `TextBox` and `ProgressBar` are docked to the top inside a `StackPanel` and the `Button` is docked to the bottom. This ListBox will appear in between them and fill the space.
