@@ -15,6 +15,7 @@ We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `I
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
+        xmlns:local="clr-namespace:Avalonia.MusicStore.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Avalonia.MusicStore.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -52,6 +53,12 @@ We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `I
                         <WrapPanel />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+                
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:AlbumView Margin="0 0 20 20" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
             </ItemsControl>
         </Panel>
     </Panel>
