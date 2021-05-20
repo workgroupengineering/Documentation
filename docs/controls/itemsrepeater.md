@@ -2,7 +2,7 @@
 
 A data-driven collection control that incorporates a flexible layout system, custom views, and virtualization.
 
-`ItemsRepeater` is is a port of the UWP `ItemsRepeater` control. More documentation can be found at:
+`ItemsRepeater` is a port of the UWP `ItemsRepeater` control. More documentation can be found at:
 
 [https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/items-repeater) [https://docs.microsoft.com/en-us/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.3](https://docs.microsoft.com/en-us/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.3)
 
