@@ -57,7 +57,7 @@ The `ArrangeCore` method evaluates the `DesiredSize` of the child and evaluates 
 
 ### In This Section <a id="in-this-section"></a>
 
-* [Panels Overview](http://avaloniaui.net/docs/layout/panels-overview)
-* [Alignment, Margins and Padding](http://avaloniaui.net/docs/layout/alignment-margins-padding)
-* [Create a Custom Panel](http://avaloniaui.net/docs/layout/creating-a-panel)
+* [Panels Overview](./panels-overview.md)
+* [Alignment, Margins and Padding](./alignment-margins-and-padding.md)
+* [Create a Custom Panel](./create-a-custom-panel.md)
 
