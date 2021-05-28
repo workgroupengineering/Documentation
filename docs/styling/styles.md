@@ -13,7 +13,7 @@ The following style selects any `TextBlock` with a `h1` _style class_ and sets i
 </Style>
 ```
 
-Styles can be defined on any control or on the `Application` object by adding them to the [`Control.Styles`](http://avaloniaui.net/api/Avalonia/StyledElement/0A46A84A) or [`Application.Styles`](http://avaloniaui.net/api/Avalonia/Application/04017CAF) collections.
+Styles can be defined on any control or on the `Application` object by adding them to the [`Control.Styles`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/0A46A84A) or [`Application.Styles`](http://reference.avaloniaui.net/api/Avalonia/Application/04017CAF) collections.
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -42,7 +42,7 @@ Styles can also be included from other files using the `StyleInclude` class, e.g
 </Window>
 ```
 
-Where `CustomStyles.xaml` is a XAML file with a root of either `Style` or `Styles` and is included as an [asset](http://avaloniaui.net/docs/quickstart/assets) in the application, e.g.:
+Where `CustomStyles.xaml` is a XAML file with a root of either `Style` or `Styles` and is included as an [asset](../getting-started/assets.md) in the application, e.g.:
 
 CustomStyles.xaml
 
@@ -108,7 +108,7 @@ _Selectors_ select a control using a custom selector syntax which is very simila
 | `StackPanel Button.foo` | Selects all `Button`s with the `foo` class that are descendants of a `StackPanel` |
 | `StackPanel > Button.foo` | Selects all `Button`s with the `foo` class that are children of a `StackPanel` |
 
-For more information see the [selectors documentation](http://avaloniaui.net/docs/styles/selectors).
+For more information see the [selectors documentation](./selectors.md).
 
 ### Setters <a id="setters"></a>
 
