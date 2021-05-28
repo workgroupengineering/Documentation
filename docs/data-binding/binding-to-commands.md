@@ -1,8 +1,8 @@
 # Binding to Commands
 
-Controls that carry out an action, such as [`Button`](http://avaloniaui.net/api/Avalonia.Controls/Button/D29AE9A9) have a `Command` property which can be bound to an [`ICommand`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0). When the control is activated \(e.g. when a button is clicked\) the `ICommand.Execute` method will be called.
+Controls that carry out an action, such as [`Button`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/4AAA993D) have a `Command` property which can be bound to an [`ICommand`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0). When the control is activated \(e.g. when a button is clicked\) the `ICommand.Execute` method will be called.
 
-A good implementation of `ICommand` can be found in ReactiveUI's [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/). If you've created your application using the [Avalonia MVVM Application](http://avaloniaui.net/docs/quickstart/create-new-project) template then this will be available by default. See the [ReactiveUI](https://reactiveui.net/docs/handbook/commands/) documentation for more information.
+A good implementation of `ICommand` can be found in ReactiveUI's [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/). If you've created your application using the [Avalonia MVVM Application](https://docs.avaloniaui.net/tutorials/todo-list-app/creating-a-new-project#net-core-cli) template then this will be available by default. See the [ReactiveUI](https://reactiveui.net/docs/handbook/commands/) documentation for more information.
 
 An example:
 
