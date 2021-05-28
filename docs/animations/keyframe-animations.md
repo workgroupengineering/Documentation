@@ -30,11 +30,11 @@ Keyframe animations are applied using styles. They can be defined on any style b
 </Window>
 ```
 
-The example above animates the target `Control` as defined by its [selector](http://avaloniaui.net/docs/styles/selectors). It will be run immediately when the control is loaded.
+The example above animates the target `Control` as defined by its [selector](https://docs.avaloniaui.net/docs/styling/selectors). It will be run immediately when the control is loaded.
 
 ### Triggering Animations <a id="triggering-animations"></a>
 
-Unlike WPF's `Triggers`, Animations defined in XAML rely on [selectors](http://avaloniaui.net/docs/styles/selectors) for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply \(for example if the control has a style class appled\).
+Unlike WPF's `Triggers`, Animations defined in XAML rely on [selectors](https://docs.avaloniaui.net/docs/styling/selectors) for their triggering behavior. Selectors can always apply to a control, or they can conditionally apply \(for example if the control has a style class appled\).
 
 If the selector isn't conditional then the animation will be triggered when a matching `Control` is spawned into the visual tree. Otherwise, the animations will run whenever its selector is activated. When the selector no longer matches, the currently running animation will be canceled.
 
