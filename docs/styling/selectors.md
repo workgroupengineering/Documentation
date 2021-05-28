@@ -20,7 +20,7 @@ new Style(x => x.OfType(typeof(Button)));
 
 Selects a control by type. The first example above selects the `Avalonia.Controls.Button` class. To include a XAML namespace in the type separate the namespace and the type with a `|` character.
 
-This selector does not match derived types. For that, use the [`Is`](http://avaloniaui.net/docs/styles/selectors#is) selector.
+This selector does not match derived types. For that, use the [`Is`](#is) selector.
 
 > Note the type of an object is actually determined by looking at its IStyleable.StyleKey property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
 
@@ -42,7 +42,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 {% endtab %}
 {% endtabs %}
 
-Selects a control by its [`Name`](http://avaloniaui.net/api/Avalonia.Controls/Control/580076CD) property.
+Selects a control by its [`Name`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/2362746E) property.
 
 ### Class <a id="class"></a>
 
@@ -82,7 +82,7 @@ new Style(x => x.Is(typeof(Button)));
 {% endtab %}
 {% endtabs %}
 
-This is very similar to the [`OfType`](http://avaloniaui.net/docs/styles/selectors#ofType) selector except it also matches derived types.
+This is very similar to the [`OfType`](#ofType) selector except it also matches derived types.
 
 > Again, the type of an object is actually determined by looking at its IStyleable.StyleKey property.
 
