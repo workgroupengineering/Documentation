@@ -4,7 +4,7 @@ If you are creating a control, you will want to define properties on your contro
 
 ### Registering Styled Properties <a id="registering-styled-properties"></a>
 
-Unless you have a good reason not to, you should define properties on your control as _styled properties_. Styled properties ensure that your property will work correctly with Avalonia's [styling system](http://avaloniaui.net/docs/styles).
+Unless you have a good reason not to, you should define properties on your control as _styled properties_. Styled properties ensure that your property will work correctly with Avalonia's [styling system](https://docs.avaloniaui.net/docs/styling).
 
 You register a styled property by calling `AvaloniaProperty.Register` and storing the result in a `static readonly` field. You then create a standard C\# property to access it.
 
