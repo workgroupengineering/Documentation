@@ -6,11 +6,11 @@
 
 `Panel` is the base class for all elements that provide layout support in Avalonia. Derived `Panel` elements are used to position and arrange elements in XAML and code.
 
-Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](http://avaloniaui.net/docs/layout/creating-a-panel).
+Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](./create-a-custom-panel.md).
 
 #### Panel Common Members <a id="panel-common-members"></a>
 
-All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](http://avaloniaui.net/docs/layout/alignment-margins-padding).
+All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](./alignment-margins-and-padding.md).
 
 `Panel` exposes additional properties that are of critical importance in understanding and using layout. The `Background` property is used to fill the area between the boundaries of a derived panel element with a `Brush`. `Children` represents the child collection of elements that the `Panel` is comprised of.
 
