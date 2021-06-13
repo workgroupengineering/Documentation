@@ -1,6 +1,6 @@
 # Return from Dialog
 
-### Returning from the Dialog <a id="returning-from-the-dialog"></a>
+## Returning from the Dialog <a id="returning-from-the-dialog"></a>
 
 Now that the user can select one of our Albums, we need to be able to close the Dialog and return the result to the `ViewModel` that called the dialog.
 
