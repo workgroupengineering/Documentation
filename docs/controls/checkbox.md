@@ -37,7 +37,9 @@ The `CheckBox` control is a [`ContentControl`](http://avaloniaui.net/docs/contro
 ```
 
 produces following output with **Windows 10**  
-![Basic checkbox](http://avaloniaui.net/docs/controls/images/checkbox_basic.png)
+
+
+![Basic checkbox](../../.gitbook/assets/checkbox_basic.png)
 
 ### Three state checkbox
 
@@ -58,5 +60,7 @@ produces following output with **Windows 10**
 ```
 
 produces following output with **Windows 10**  
-![Three state checkbox](http://avaloniaui.net/docs/controls/images/checkbox_threestate.png)
+
+
+![Three state checkbox](../../.gitbook/assets/checkbox_threestate.png)
 
