@@ -58,7 +58,9 @@ The Button control's full documentation can be found [here](http://avaloniaui.ne
 ```
 
 produces following output with **Windows 10**  
-![Basic button](http://avaloniaui.net/docs/controls/images/button_basic.png)
+
+
+![Basic button](../../.gitbook/assets/button_basic%20%281%29.png)
 
 ### Colored button
 
@@ -77,7 +79,9 @@ produces following output with **Windows 10**
 ```
 
 produces following output with **Windows 10**  
-![Basic button](http://avaloniaui.net/docs/controls/images/button_colors.png)
+
+
+![Basic button](../../.gitbook/assets/button_basic.png)
 
 ### Play button
 
