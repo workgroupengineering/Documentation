@@ -30,7 +30,7 @@ To get started with ReactiveUI, see the [Getting Started](https://reactiveui.net
 
 ### In This Section <a id="in-this-section"></a>
 
-* [View Activation](http://avaloniaui.net/docs/reactiveui/activation)
-* [Routing](http://avaloniaui.net/docs/reactiveui/routing)
-* [Data Persistence](http://avaloniaui.net/docs/reactiveui/suspension)
+* [View Activation](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/view-activation)
+* [Routing](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/routing)
+* [Data Persistence](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/data-persistence)
 
