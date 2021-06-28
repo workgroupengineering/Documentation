@@ -28,7 +28,7 @@ public static class Program
 
 To get started with ReactiveUI, see the [Getting Started](https://reactiveui.net/docs/getting-started/) guide and the [tutorial](http://avaloniaui.net/docs/tutorial/). See also the [ReactiveUI Handbook](https://reactiveui.net/docs/handbook/) which describes advanced ReactiveUI features allowing you to build complex and scalable applications with ReactiveUI. See the pages below to learn how to handle view activation and how to use routing in your Avalonia applications.
 
-### In This Section <a id="in-this-section"></a>
+## In This Section <a id="in-this-section"></a>
 
 * [View Activation](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/view-activation)
 * [Routing](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/routing)
