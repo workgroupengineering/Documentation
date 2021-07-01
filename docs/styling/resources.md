@@ -110,7 +110,7 @@ The `Resources` property on each control and style is of type `ResourceDictionar
 </Window.Resources>
 ```
 
-Where `AnotherResourceDictionary` is a XAML file with a root of `ResourceDictionary` and is included as an [asset](http://avaloniaui.net/docs/quickstart/assets) in the application.
+Where `AnotherResourceDictionary` is a XAML file with a root of `ResourceDictionary` and is included as an [asset](../getting-started/assets.md) in the application.
 
 ### Resource resolution <a id="resource-resolution"></a>
 

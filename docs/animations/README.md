@@ -10,5 +10,3 @@ There are two types of animations in Avalonia:
 * [Keyframe Animations](keyframe-animations.md)
 * [Transitions](transitions.md)
 
-
-

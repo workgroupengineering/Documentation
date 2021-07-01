@@ -1,6 +1,6 @@
 # 🎨 Styling
 
-[Styles in Avalonia](http://avaloniaui.net/docs/styles/styles) are used to share property settings between controls. The Avalonia styling system can be thought of as a mix of CSS styling and WPF/UWP styling. At its most basic, a style consists of a _selector_ and a collection of _setters_.
+[Styles in Avalonia](./styles.md) are used to share property settings between controls. The Avalonia styling system can be thought of as a mix of CSS styling and WPF/UWP styling. At its most basic, a style consists of a _selector_ and a collection of _setters_.
 
 The following style selects any `TextBlock` in the `Window` with a `h1` _style class_ and sets its font size to 24 point and font weight to bold:
 
