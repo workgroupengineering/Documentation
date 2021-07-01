@@ -98,3 +98,12 @@ produces the following output in **Windows 10** when text is input
 
 ![](../../.gitbook/assets/textbox_multiline.png)
 
+#### TextInput Event Handling <a id="textinput-event-handling"></a>
+
+By default the TextInput event does nothing if you assign directly to it. This is due to the TextBox itself handling the event from the underlying InputElement.
+
+If you wish to access the TextInput event, then you will have to use the TextBox.AddHandler method to intercept the event via event tunneling.
+
+```code
+MyTextInput.AddHandler(TextInputEvent, MyTextInput_InputHandler, RoutingStrategies.Tunnel);
+```
