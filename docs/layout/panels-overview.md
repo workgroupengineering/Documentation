@@ -2,15 +2,15 @@
 
 `Panel` elements are components that control the rendering of elements - their size and dimensions, their position, and the arrangement of their child content. Avalonia provides a number of predefined `Panel` elements as well as the ability to construct custom `Panel` elements.
 
-### The Panel Class <a id="the-panel-class"></a>
+## The Panel Class <a id="the-panel-class"></a>
 
 `Panel` is the base class for all elements that provide layout support in Avalonia. Derived `Panel` elements are used to position and arrange elements in XAML and code.
 
-Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](./create-a-custom-panel.md).
+Avalonia includes a comprehensive suite of derived panel implementations that enable many complex layouts. These derived classes expose properties and methods that enable most standard UI scenarios. Developers who are unable to find a child arrangement behavior that meets their needs can create new layouts by overriding the `ArrangeOverride` and `MeasureOverride` methods. For more information on custom layout behaviors, see [Create a Custom Panel](create-a-custom-panel.md).
 
-#### Panel Common Members <a id="panel-common-members"></a>
+### Panel Common Members <a id="panel-common-members"></a>
 
-All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](./alignment-margins-and-padding.md).
+All `Panel` elements support the base sizing and positioning properties defined by `Control`, including `Height`, `Width`, `HorizontalAlignment`, `VerticalAlignment` and `Margin`. For additional information on positioning properties defined by `Control`, see [Alignment, Margins, and Padding Overview](alignment-margins-and-padding.md).
 
 `Panel` exposes additional properties that are of critical importance in understanding and using layout. The `Background` property is used to fill the area between the boundaries of a derived panel element with a `Brush`. `Children` represents the child collection of elements that the `Panel` is comprised of.
 
@@ -20,7 +20,7 @@ Derived panel elements make extensive use of attached properties. An attached pr
 
 One purpose of an attached property is to allow child elements to store unique values of a property that is actually defined by a parent element. An application of this functionality is having child elements inform the parent how they wish to be presented in the UI, which is extremely useful for application layout.
 
-#### User Interface Panels <a id="user-interface-panels"></a>
+### User Interface Panels <a id="user-interface-panels"></a>
 
 There are several panel classes available in Avalonia that are optimized to support UI scenarios: `Panel`, `Canvas`, `DockPanel`, `Grid`, `StackPanel`, `WrapPanel` and `RelativePanel`. These panel elements are easy to use, versatile, and extensible enough for most applications.
 
@@ -331,7 +331,7 @@ myButton3.Content = "Button 3";
 // Add child elements to the parent StackPanel
 myStackPanel.Children.Add(myButton1);
 myStackPanel.Children.Add(myButton2);
-myStackPanel.Children.Add(myButton3);           
+myStackPanel.Children.Add(myButton3);
 ```
 
 **WrapPanel**
@@ -370,7 +370,7 @@ btn4.Width = 75;
 myWrapPanel.Children.Add(btn1);
 myWrapPanel.Children.Add(btn2);
 myWrapPanel.Children.Add(btn3);
-myWrapPanel.Children.Add(btn4);       
+myWrapPanel.Children.Add(btn4);
 ```
 
 XAML
@@ -383,10 +383,10 @@ XAML
     <Button>Button 3</Button>
     <Button>Button 4</Button>
   </WrapPanel>
-</Border>    
+</Border>
 ```
 
-#### Nested Panel Elements <a id="nested-panel-elements"></a>
+### Nested Panel Elements <a id="nested-panel-elements"></a>
 
 `Panel` elements can be nested within each other in order to produce complex layouts. This can prove very useful in situations where one `Panel` is ideal for a portion of a UI, but may not meet the needs of a different portion of the UI.
 

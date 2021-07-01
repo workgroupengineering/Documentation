@@ -1,12 +1,12 @@
 # Binding to Controls
 
- As well as binding to a control's [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) you can also bind to other controls.
+As well as binding to a control's [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) you can also bind to other controls.
 
 {% hint style="info" %}
- Note that when you do this, the binding source is to the _control itself_ not the control's `DataContext`. If you want to bind to the control's `DataContext` then you'll need to specify that in the binding path.
+Note that when you do this, the binding source is to the _control itself_ not the control's `DataContext`. If you want to bind to the control's `DataContext` then you'll need to specify that in the binding path.
 {% endhint %}
 
-### Binding to a named control
+## Binding to a named control
 
 If you want to bind to a property on another named control, you can use the control name prefixed by a `#` character.
 
@@ -26,7 +26,7 @@ This is the equivalent to the long-form binding that will be familiar to WPF and
 
 Avalonia supports both syntaxes but the short-form `#` syntax is less verbose.
 
-### Binding to an Ancestor <a id="binding-to-an-ancestor"></a>
+## Binding to an Ancestor <a id="binding-to-an-ancestor"></a>
 
 You can bind to the logical parent of the target using the `$parent` symbol:
 
@@ -81,6 +81,6 @@ If you need to include a XAML namespace in the ancestor type, you can do that us
 ```
 
 {% hint style="warning" %}
- Avalonia also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
+Avalonia also supports WPF/UWP's `RelativeSource` syntax which does something similar, but is _not_ the same. `RelativeSource` works on the _visual_ tree whereas the syntax given here works on the _logical_ tree.
 {% endhint %}
 

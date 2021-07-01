@@ -32,7 +32,7 @@ namespace Example
 </Window>
 ```
 
-### CommandParameter <a id="commandparameter"></a>
+## CommandParameter <a id="commandparameter"></a>
 
 You can also pass a parameter to the command using the `CommandParameter` property:
 
@@ -78,9 +78,9 @@ Note that no type conversion is carried out on `CommandParameter`, so if you nee
 
 Like any other property, `CommandParameter` can also be bound.
 
-### Binding To Methods <a id="binding-to-methods"></a>
+## Binding To Methods <a id="binding-to-methods"></a>
 
-#### ICommand.Execute <a id="icommandexecute"></a>
+### ICommand.Execute <a id="icommandexecute"></a>
 
 Sometimes you just want to call a method when a button is clicked without the ceremony of creating a command. You can do that too!
 
@@ -103,7 +103,7 @@ namespace Example
 </Window>
 ```
 
-#### ICommand.CanExecute <a id="icommandcanexecute"></a>
+### ICommand.CanExecute <a id="icommandcanexecute"></a>
 
 If you need to have execution dependent on CommandParameter or your ViewModel property, you can define a named method formed by the prefix "Can" and the name of your execution method; the method will accept an object parameter which is the CommandParameter and return a Boolean which determines if the method is executable.
 

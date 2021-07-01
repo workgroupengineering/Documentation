@@ -28,7 +28,7 @@ This means that when the `MainWindow` is created, a new instance of `MainWindowV
 
 Will bind the `Button`'s `Content` to `Window.DataContext.ButtonCaption`.
 
-### Binding DataContext <a id="binding-datacontext"></a>
+## Binding DataContext <a id="binding-datacontext"></a>
 
 When binding `DataContext`, the `DataContext` of the parent control is used as the source of the binding:
 

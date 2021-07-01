@@ -2,7 +2,7 @@
 
 Avalonia lets you develop an appliction using the [XAML markup language](https://docs.avaloniaui.net/guides/basics/introduction-to-xaml) and C\# \(or another .NET language\) for code. You generally use XAML markup to implement the appearance of an application while using code to implement its behavior.
 
-### Markup
+## Markup
 
 XAML is an XML-based markup language that implements an application's appearance declaratively. You typically use it to create windows and user controls, and to fill them with controls, shapes, and graphics.
 
@@ -14,7 +14,7 @@ The following example uses XAML to implement the appearance of a window that con
         x:Class="AvaloniaApplication1.MainWindow"
         Title="Window with Button"
         Width="250" Height="100">
-  
+
   <!-- Add button to window -->
   <Button Name="button">Click Me!</Button>
 
@@ -29,7 +29,7 @@ Since XAML is XML-based, the UI that you compose with it is assembled in a hiera
 
 ![](../../../.gitbook/assets/click-me.png)
 
-### Code-behind
+## Code-behind
 
 The main behavior of an application is to implement the functionality that responds to user interactions, including handling events \(for example, clicking a menu, tool bar, or button\) and calling business logic and data access logic in response. In Avalonia, this behavior can be implemented in code that is associated with markup. This type of code is known as [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind). The following example shows the updated markup from the previous example and the code-behind:
 
@@ -41,7 +41,7 @@ The main behavior of an application is to implement the functionality that respo
         x:Class="AvaloniaApplication1.MainWindow"
         Title="Window with Button"
         Width="250" Height="100">
-  
+
   <!-- Add button to window -->
   <Button Name="button" Click="button_Click">Click Me!</Button>
 

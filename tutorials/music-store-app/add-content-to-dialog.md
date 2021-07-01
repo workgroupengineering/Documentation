@@ -1,6 +1,6 @@
 # Add Content to Dialog
 
-### Adding Content to the Dialog <a id="adding-content-to-the-dialog"></a>
+## Adding Content to the Dialog <a id="adding-content-to-the-dialog"></a>
 
 Inside the dialog we would like the user to search for albums, and then select an album to buy.
 
@@ -29,7 +29,7 @@ Declare a `<DockPanel>`.
 
 ```markup
 <DockPanel>
-   
+
 </DockPanel>
 ```
 
@@ -38,7 +38,7 @@ Inside the `DockPanel` add a `<StackPanel>`. Set `DockPanel.Dock="Top"` on the `
 ```markup
 <DockPanel>
     <StackPanel DockPanel.Dock="Top">
-    
+
     </StackPanel>
 </DockPanel>
 ```
@@ -68,7 +68,7 @@ namespace Avalonia.MusicStore.ViewModels
     public class MusicStoreViewModel : ViewModelBase
     {
         private string? _searchText;
-        
+
         public string? SearchText
         {
             get => _searchText;
@@ -95,13 +95,13 @@ namespace Avalonia.MusicStore.ViewModels
     {
         private bool _isBusy;
         private string? _searchText;
-        
+
         public string? SearchText
         {
             get => _searchText;
             set => this.RaiseAndSetIfChanged(ref _searchText, value);
         }
-        
+
         public bool IsBusy
         {
             get => _isBusy;
@@ -168,12 +168,12 @@ Return to the `MusicStoreViewModel.cs` file and add the following code.
 private AlbumViewModel? _selectedAlbum;
 
 public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
-        
+
 public AlbumViewModel? SelectedAlbum
 {
     get => _selectedAlbum;
     set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
-}    
+}
 ```
 
 As you can see the `SelectedAlbum` property is implemented with the by now familiar pattern.
@@ -248,13 +248,12 @@ You `MusicStoreWindow.axaml` should look like this.
                     MaterialOpacity="0.65" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
-        
+
         <Panel Margin="40">
             <local:MusicStoreView />
         </Panel>
     </Panel>
 </Window>
-
 ```
 
 Run the application:

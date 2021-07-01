@@ -1,6 +1,6 @@
 # Displaying Images
 
-### Displaying Album Cover Images <a id="displaying-album-cover-images"></a>
+## Displaying Album Cover Images <a id="displaying-album-cover-images"></a>
 
 So we have the Albums showing with the Artist name and Title, however if we can download the Album art and display it, this will really bring the app alive.
 
@@ -64,7 +64,7 @@ namespace Avalonia.MusicStore.ViewModels
             get => _cover;
             private set => this.RaiseAndSetIfChanged(ref _cover, value);
         }
-        
+
         public async Task LoadCover()
         {
             await using (var imageStream = await _album.LoadCoverBitmapAsync())
@@ -122,8 +122,8 @@ private async void DoSearch(string s)
 {
     IsBusy = true;
     SearchResults.Clear();
-  
-  	_cancellationTokenSource?.Cancel();
+
+      _cancellationTokenSource?.Cancel();
     _cancellationTokenSource = new CancellationTokenSource();
 
     var albums = await Album.SearchAsync(s);
@@ -134,7 +134,7 @@ private async void DoSearch(string s)
 
         SearchResults.Add(vm);
     }
-    
+
     if (!_cancellationTokenSource.IsCancellationRequested)
     {
         LoadCovers(_cancellationTokenSource.Token);

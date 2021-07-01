@@ -1,6 +1,6 @@
 # Add Items to Users Collection
 
-### Adding Albums to the Users Collection <a id="adding-albums-to-the-users-collection"></a>
+## Adding Albums to the Users Collection <a id="adding-albums-to-the-users-collection"></a>
 
 Ok so now the user can find albums to purchase, it would be nice if the user could see which albums are in their collection. To do this we can add a similar UI to the MainWindow.
 
@@ -39,21 +39,21 @@ We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `I
                     MaterialOpacity="0.65" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
-        
+
         <Panel Margin="40">
             <Button HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding BuyMusicCommand}">
                 <PathIcon Data="{StaticResource store_microsoft_regular}" />
             </Button>
-            
+
             <TextBlock IsVisible="{Binding CollectionEmpty}" Text="Its lonely in here. Purchase some music to get your collection started." HorizontalAlignment="Center" VerticalAlignment="Center" />
-            
+
             <ItemsControl Margin="0 40 0 0" Items="{Binding Albums}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-                
+
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:AlbumView Margin="0 0 20 20" />
@@ -75,7 +75,7 @@ public bool CollectionEmpty
     get => _collectionEmpty;
     set => this.RaiseAndSetIfChanged(ref _collectionEmpty, value);
 }
-        
+
 public ObservableCollection<AlbumViewModel> Albums { get; } = new();
 ```
 
