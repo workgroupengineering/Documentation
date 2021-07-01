@@ -28,7 +28,7 @@ There are three parts to this file:
 * The root element `Window` - this descibes the type of the root control in the XAML file; in this case [`Window`](http://avaloniaui.net/api/Avalonia.Controls/Window/)
 * `xmlns="https://github.com/avaloniaui"` - this is the XAML namespace for Avalonia. Without this, the file will not be recognised as an Avalonia XAML document.
 * `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the XAML-language XAML namespace. This isn't strictly necessary, but you will probably need it for accessing certain features of the XAML language.
-* `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find the associated class for this file, defined in [code-behind](http://avaloniaui.net/docs/quickstart/codebehind)
+* `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find the associated class for this file, defined in [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind)
 
 ### Declaring Controls <a id="declaring-controls"></a>
 
@@ -41,7 +41,7 @@ Controls are added to the XAML by adding an XML element with the control's class
 </Window>
 ```
 
-See the [controls documentation](http://avaloniaui.net/docs/controls) for a list of the controls included with Avalonia.
+See the [controls documentation](https://docs.avaloniaui.net/docs/controls) for a list of the controls included with Avalonia.
 
 ### Setting Properties <a id="setting-properties"></a>
 
