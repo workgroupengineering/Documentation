@@ -23,7 +23,7 @@ private async Task LoadAlbums()
 }
 ```
 
-As you can see it firstly uses the buisness logic apis to load the list of `Albums`. It then transforms each one into an `AlbumViewModel`. After this we add each `AlbumViewModel` instance to the `ObservableCollection` of `Albums`, this will instantly updat the UI.
+As you can see it firstly uses the buisness logic apis to load the list of `Albums`. It then transforms each one into an `AlbumViewModel`. After this we add each `AlbumViewModel` instance to the `ObservableCollection` of `Albums`, this will instantly update the UI.
 
 Note we then re-iterate over the `Albums` and asynchronously load each cover. Note that we do this after adding all the albums to the list, as its more important to quickly show the user all the albums available and then load the images.
 

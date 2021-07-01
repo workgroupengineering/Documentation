@@ -140,8 +140,15 @@ In the contructor add the following:
 ```csharp
 BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
 {
+    if (SelectedAlbum is { })
+    {
+        return SelectedAlbum;
+    }
+    return null;
 });
 ```
+
+This will cause the `BuyMusicCommand` to return the `SelectedAlbum`'s View Model to the main window if there is a selection. Otherwise, it will return `null`.
 
 Return to the `MusicStoreView.axaml`
 
