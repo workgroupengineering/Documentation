@@ -1,8 +1,8 @@
 # Add and Layout Controls
 
-### Add and Layout some Controls <a id="add-and-layout-some-controls"></a>
+## Add and Layout some Controls <a id="add-and-layout-some-controls"></a>
 
-Lets start by adding a `Button` to the `MainWindow`. The button will allow the `user` to purchase music in order to add to their collection.
+Let's start by adding a `Button` to the `MainWindow`. The button will allow the `user` to purchase music in order to add to their collection.
 
 In `MainWindow.axaml` change the code as follows, adding a Button inside the Panel.
 
@@ -17,7 +17,7 @@ In `MainWindow.axaml` change the code as follows, adding a Button inside the Pan
                  MaterialOpacity="0.65" />
         </ExperimentalAcrylicBorder.Material>
      </ExperimentalAcrylicBorder>
-        
+
      <Button Content="Buy Music" Command="{Binding BuyMusicCommand}"/>
 </Panel>
 ```
@@ -40,12 +40,12 @@ public class MainWindowViewModel : ViewModelBase
                 // Code here will be executed when the button is clicked.
             });
         }
-        
+
         public ICommand BuyMusicCommand { get; }
     }
 ```
 
-Pressing the `Debug Button` again to run the program we can see we have a button and when clicked setting a breakpoint inside the `BuyMusicCommand` code we can see that the code is executed when its hit.
+Pressing the `Debug Button` again to run the program we can see we have a button and when clicked setting a breakpoint inside the `BuyMusicCommand` code we can see that the code is executed when it's hit.
 
 ![buy-button](http://avaloniaui.net/docs/advanced-tutorial/images/buy-button.png)
 
@@ -63,7 +63,7 @@ The simplest way to control the layout of a control is with the `HorizontalAlign
 
 We also add a `Margin` of 40 to the `Panel` so that the button is not right at the edge of the Window.
 
-You may prefer to have an icon or image instead of text inside your button. The are a few ways to do this, lets grab a store icon from [Avalonia - Fluent Icons](http://avaloniaui.github.io/icons.html)
+You may prefer to have an icon or image instead of text inside your button. The are a few ways to do this, let's grab a store icon from [Avalonia - Fluent Icons](http://avaloniaui.github.io/icons.html)
 
 Scroll through this page and find an icon you like, then simply copy the code provided.
 
@@ -75,7 +75,7 @@ There should be some code similar to:
 <StreamGeometry x:Key="store_microsoft_regular">M11.5 9.5V13H8V9.5H11.5Z M11.5 17.5V14H8V17.5H11.5Z M16 9.5V13H12.5V9.5H16Z M16 17.5V14H12.5V17.5H16Z M8 6V3.75C8 2.7835 8.7835 2 9.75 2H14.25C15.2165 2 16 2.7835 16 3.75V6H21.25C21.6642 6 22 6.33579 22 6.75V18.25C22 19.7688 20.7688 21 19.25 21H4.75C3.23122 21 2 19.7688 2 18.25V6.75C2 6.33579 2.33579 6 2.75 6H8ZM9.5 3.75V6H14.5V3.75C14.5 3.61193 14.3881 3.5 14.25 3.5H9.75C9.61193 3.5 9.5 3.61193 9.5 3.75ZM3.5 18.25C3.5 18.9404 4.05964 19.5 4.75 19.5H19.25C19.9404 19.5 20.5 18.9404 20.5 18.25V7.5H3.5V18.25Z</StreamGeometry>
 ```
 
-Lets create a file just for Icons.
+Let's create a file just for Icons.
 
 In Rider right click on the project and select `Add` → `Avalonia Styles`
 

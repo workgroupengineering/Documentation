@@ -76,18 +76,33 @@ control.Classes.Remove("red");
 
 Also as in CSS, controls can have pseudoclasses; these are classes that are defined by the control itself rather than by the user. Pseudoclasses start with a `:` character.
 
-One example of a pseudoclass is the `:pointerover` pseudoclass \(`:hover` in CSS - we may change to that in future\).
+One example of a pseudoclass is the `:pointerover` \(similar to `:hover` in CSS\).
 
 Pseudoclasses provide the functionality of `Triggers` in WPF and `VisualStateManager` in UWP:
 
 ```markup
 <StackPanel>
   <StackPanel.Styles>
-    <Style Selector="Button:pointerover">
-      <Setter Property="Button.Foreground" Value="Red"/>
+    <Style Selector="Border:pointerover">
+      <Setter Property="Background" Value="Red"/>
     </Style>
   </StackPanel.Styles>
-  <Button>I will have red text when hovered.</Button>
+  <Border>
+    <TextBlock>I will have red background when hovered.</TextBlock>
+  </Border>
+</StackPanel>
+```
+
+Another example that involves changing properties inside of control [template](selectors.md#template):
+
+```markup
+<StackPanel>
+  <StackPanel.Styles>
+    <Style Selector="Button:pressed /template/ ContentPresenter">
+        <Setter Property="TextBlock.Foreground" Value="Red"/>
+    </Style>
+  </StackPanel.Styles>
+  <Button>I will have red text when pressed.</Button>
 </StackPanel>
 ```
 
@@ -107,8 +122,9 @@ _Selectors_ select a control using a custom selector syntax which is very simila
 | `Button#myButton` | Selects a `Button` control with a name of `myButton` |
 | `StackPanel Button.foo` | Selects all `Button`s with the `foo` class that are descendants of a `StackPanel` |
 | `StackPanel > Button.foo` | Selects all `Button`s with the `foo` class that are children of a `StackPanel` |
+| `Button /template/ ContentPreseter` | Selects all ContentPresenter controls inside of Button's template |
 
-For more information see the [selectors documentation](./selectors.md).
+For more information see the [selectors documentation](selectors.md).
 
 ### Setters <a id="setters"></a>
 
@@ -149,7 +165,7 @@ In the above example, the binding source will be `MyObject.DataContext`, not `My
 
 ### Templates in Setters <a id="templates-in-setters"></a>
 
-As mentioned above, usually a single insance of a setter's `Value` is created and shared across all matching controls. Due to this, to use a control as a setter value, the control must be wrapped in a `<Template>`:
+As mentioned above, usually a single instance of a setter's `Value` is created and shared across all matching controls. Due to this, to use a control as a setter value, the control must be wrapped in a `<Template>`:
 
 ```markup
 <Style Selector="Border.empty">

@@ -29,7 +29,9 @@ The `TextBox` control is an editable text field where a user can input text.
 ```
 
 produces the following output in **Windows 10**  
-![Basic TextBox](https://avaloniaui.net/docs/controls/images/textbox_basic.png)
+
+
+![](../../.gitbook/assets/textbox_basic.png)
 
 #### Password input TextBox <a id="password-input-textbox"></a>
 
@@ -48,7 +50,9 @@ produces the following output in **Windows 10**
 ```
 
 produces the following output in **Windows 10** when text is input  
-![Password TextBox](https://avaloniaui.net/docs/controls/images/textbox_password.png)
+
+
+![](../../.gitbook/assets/textbox_password.png)
 
 #### TextBox with watermark <a id="textbox-with-watermark"></a>
 
@@ -69,7 +73,9 @@ Avalonia can show a "watermark" in a `TextBox`, which is a piece of text that is
 ```
 
 produces the following output in **Windows 10**  
-![Watermark TextBox](https://avaloniaui.net/docs/controls/images/textbox_watermark.png)
+
+
+![](../../.gitbook/assets/textbox_watermark.png)
 
 #### Multiline TextBox <a id="multiline-textbox"></a>
 
@@ -88,5 +94,7 @@ produces the following output in **Windows 10**
 ```
 
 produces the following output in **Windows 10** when text is input  
-![Multiline TextBox](https://avaloniaui.net/docs/controls/images/textbox_multiline.png)
+
+
+![](../../.gitbook/assets/textbox_multiline.png)
 

@@ -12,7 +12,7 @@
 </Window>
 ```
 
-![Hello World button](http://avaloniaui.net/docs/templates/images/hello-world-button.png)
+![Hello World button](../../.gitbook/assets/hello-world-button.png)
 
 Similarly if you put a string as the window content, the window will display the string:
 
@@ -23,7 +23,7 @@ Similarly if you put a string as the window content, the window will display the
 </Window>
 ```
 
-![Hello World string](http://avaloniaui.net/docs/templates/images/hello-world-string.png)
+![Hello World string](../../.gitbook/assets/hello-world-string.png)
 
 But what happens if you try to display an object as the window content?
 
@@ -52,7 +52,7 @@ namespace Example
 </Window>
 ```
 
-![Student without DataTemplate](http://avaloniaui.net/docs/templates/images/student-no-datatemplate.png)
+![Student without DataTemplate](../../.gitbook/assets/student-no-datatemplate.png)
 
 Not very helpful. That's because Avalonia doesn't know _how_ to display an object of type `Student` - because it's not a control it falls back to just calling `.ToString()` on the object. We can tell Avalonia how to display non-control objects by defining a data template.
 
@@ -79,7 +79,7 @@ The easiest way to do this on `Window` \(and any control that inherits from `Con
 </Window>
 ```
 
-![Student first and last name](http://avaloniaui.net/docs/templates/images/student-first-last-name.png)
+![Student first and last name](../../.gitbook/assets/student-first-last-name%20%281%29%20%281%29.png)
 
 The data template for the window content doesn't only come from the `ContentTemplate` property. Every control also has a `DataTemplates` collection into which any number of data templates can be placed. If a control doesn't have a template set locally \(e.g. in `ContentTemplate`\) then it will look in its `DataTemplates` collection for a matching template. If a match isn't found there it will then go on to search its parent's `DataTemplates`, then its grandparent's, and so on until it reaches the `Window`. If it _still_ hasn't found a match it will then look in `App.xaml`/`App.axaml` for a matching `DataTemplate` and finally when all those options have been exhausted it will simply call `.ToString()` on the object.
 

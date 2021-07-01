@@ -23,7 +23,9 @@ The value stored in the `NumericUpDown` is a double.
 ```
 
 produces the following output on **Linux**  
-![Basic NumericUpDown](https://avaloniaui.net/docs/controls/images/numericupdown_basic.png)
+
+
+![Basic NumericUpDown](../../.gitbook/assets/numericupdown_basic.png)
 
 ### NumericUpDown with a changed increment and bounds <a id="numericupdown-with-a-changed-increment-and-bounds"></a>
 

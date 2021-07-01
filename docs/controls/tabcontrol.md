@@ -4,7 +4,7 @@ The `TabControl` allows us to switch between different pages by means of tabs li
 
 Here is an animation of what you can achieve :
 
-![](https://avaloniaui.net/docs/controls/images/TabControl.gif)
+![](../../.gitbook/assets/tabcontrol.gif)
 
 To create this, we'll describe the entire control \(TabControl\) and each individual tab+page \(TabItem\). Here is an example :
 
@@ -38,7 +38,7 @@ To create this, we'll describe the entire control \(TabControl\) and each indivi
 
 Let's have a look at a customized `TabControl` :
 
-![](https://avaloniaui.net/docs/controls/images/CustomizedTabControl.gif)
+![](../../.gitbook/assets/customizedtabcontrol.gif)
 
 The grey part is the `TabItem`... Yes, the `TabItem` includes the tab **AND** the page associated to the tab. The tab is called the `header`of the `TabItem`. Moreover, given the way `TabControl` has been implemented, tabs are in a `WrapPanel`. Thus, if you want to color in blue \(like this is done above\) the empty bar of the tabbed bar, you must change the background color of the `WrapPanel` of the `TabControl`. Here is the code used to obtain the result above \(_Note the workaround used to color some tabs : this is due to the way the control is implemented. It might change in the future._\)
 

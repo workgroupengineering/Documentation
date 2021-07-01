@@ -8,11 +8,11 @@ A data-driven collection control that incorporates a flexible layout system, cus
 
 The only difference between the two controls is that in Avalonia the `ItemsSource` is called `Items`.
 
-### Reference <a id="reference"></a>
+## Reference <a id="reference"></a>
 
 [ItemsRepeater](http://reference.avaloniaui.net/api/Avalonia.Controls/ItemsRepeater/)
 
-### Source code <a id="source-code"></a>
+## Source code <a id="source-code"></a>
 
 [ItemsRepeater.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Repeater/ItemsRepeater.cs)
 
