@@ -93,7 +93,7 @@ Pseudoclasses provide the functionality of `Triggers` in WPF and `VisualStateMan
 </StackPanel>
 ```
 
-Another example that involves changing properties inside of control template:
+Another example that involves changing properties inside of control [template](selectors.md#template):
 
 ```markup
 <StackPanel>
