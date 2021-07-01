@@ -1,6 +1,6 @@
 # Add and Layout Controls
 
-### Add and Layout some Controls <a id="add-and-layout-some-controls"></a>
+## Add and Layout some Controls <a id="add-and-layout-some-controls"></a>
 
 Let's start by adding a `Button` to the `MainWindow`. The button will allow the `user` to purchase music in order to add to their collection.
 
@@ -17,7 +17,7 @@ In `MainWindow.axaml` change the code as follows, adding a Button inside the Pan
                  MaterialOpacity="0.65" />
         </ExperimentalAcrylicBorder.Material>
      </ExperimentalAcrylicBorder>
-        
+
      <Button Content="Buy Music" Command="{Binding BuyMusicCommand}"/>
 </Panel>
 ```
@@ -40,7 +40,7 @@ public class MainWindowViewModel : ViewModelBase
                 // Code here will be executed when the button is clicked.
             });
         }
-        
+
         public ICommand BuyMusicCommand { get; }
     }
 ```

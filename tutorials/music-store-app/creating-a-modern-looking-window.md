@@ -1,6 +1,6 @@
 # Creating a Modern looking Window
 
-### Use Dark Mode and Add a little Acrylic <a id="use-dark-mode-and-add-a-little-acrylic"></a>
+## Use Dark Mode and Add a little Acrylic <a id="use-dark-mode-and-add-a-little-acrylic"></a>
 
 Let's try and make this look a little more modern by applying `Dark` mode and some `Acrylic` styling to the Window.
 
@@ -36,7 +36,7 @@ Let's try and make this look a little more modern by applying `Dark` mode and so
         x:Class="Avalonia.MusicStore.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Avalonia.MusicStore"
-   
+
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent">
 ```
@@ -57,11 +57,11 @@ To apply acrylic to the window, that we can tint and customize for a modern look
            Title="Avalonia.MusicStore"
            TransparencyLevelHint="AcrylicBlur"
            Background="Transparent">
-   
+
        <Design.DataContext>
            <vm:MainWindowViewModel />
        </Design.DataContext>
-   
+
        <Panel>
            <ExperimentalAcrylicBorder IsHitTestVisible="False">
                <ExperimentalAcrylicBorder.Material>
@@ -102,7 +102,7 @@ Notice we have a nice acrylic window effect. Shame about the titlebar, though. L
            Title="Avalonia.MusicStore"
            TransparencyLevelHint="AcrylicBlur"
            Background="Transparent"
-           
+
            ExtendClientAreaToDecorationsHint="True">
 ```
 
