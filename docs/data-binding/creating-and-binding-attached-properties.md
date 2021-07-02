@@ -23,12 +23,17 @@ In this example file we create two attached properties that interact with each o
 /// </summary>
 public class DoubleTappedBehav : AvaloniaObject
 {
+    static DoubleTappedBehav()
+    {
+        CommandProperty.Changed.Subscribe(x => HandleCommandChanged(x.Sender, x.NewValue.GetValueOrDefault<ICommand>()));
+    }
+
     /// <summary>
     /// Identifies the <seealso cref="CommandProperty"/> avalonia attached property.
     /// </summary>
     /// <value>Provide an <see cref="ICommand"/> derived object or binding.</value>
     public static readonly AttachedProperty<ICommand> CommandProperty = AvaloniaProperty.RegisterAttached<DoubleTappedBehav, Interactive, ICommand>(
-        "Command", default(ICommand), false, BindingMode.OneTime, ValidateCommand);
+        "Command", default(ICommand), false, BindingMode.OneTime);
 
     /// <summary>
     /// Identifies the <seealso cref="CommandParameterProperty"/> avalonia attached property.
@@ -40,13 +45,11 @@ public class DoubleTappedBehav : AvaloniaObject
 
 
     /// <summary>
-    /// The coerce value function. Returns the final (probably corrected result).
-    /// can be used to perform actions during assign.
+    /// <see cref="CommandProperty"/> changed event handler.
     /// </summary>
-    private static ICommand ValidateCommand(Interactive element, ICommand commandValue)
+    private static void HandleCommandChanged(IAvaloniaObject element, ICommand commandValue)
     {
-        Interactive interactElem = element;
-        if (interactElem != null)
+        if (element is Interactive interactElem)
         {
             if (commandValue != null)
             {
@@ -59,8 +62,6 @@ public class DoubleTappedBehav : AvaloniaObject
                 interactElem.RemoveHandler(InputElement.DoubleTappedEvent, Handler);
             }
         }
-
-        return commandValue;
 
         // local handler fcn
         void Handler(object s, RoutedEventArgs e)
