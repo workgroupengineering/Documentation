@@ -42,7 +42,7 @@ The following example describes how to create the layout in the preceding illust
 
 The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample. Subsequent sections in this topic describe in greater detail how to use each positioning property.
 
-![VerticalAlignment property sample](../../.gitbook/assets/layout-vertical-alignment-graphic.png)
+![Positioning Properties](../../.gitbook/assets/layout-margins-padding-alignment-graphic2.png)
 
 ### Understanding Alignment Properties <a id="understanding-alignment-properties"></a>
 
@@ -71,6 +71,8 @@ The following example shows how to apply the `HorizontalAlignment` property to `
 ```
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `HorizontalAlignment` value are visible in the illustration.
+
+![HorizontalAlignment Sample](../../.gitbook/assets/layout-horizontal-alignment-graphic.png)
 
 #### VerticalAlignment Property <a id="verticalalignment-property"></a>
 
@@ -109,6 +111,8 @@ The following example shows how to apply the `VerticalAlignment` property to `Bu
 ```
 
 The preceding code yields a layout similar to the following image. The positioning effects of each `VerticalAlignment` value are visible in the illustration.
+
+![VerticalAlignment property sample](../../.gitbook/assets/layout-vertical-alignment-graphic.png)
 
 ### Understanding Margin Properties <a id="understanding-margin-properties"></a>
 
