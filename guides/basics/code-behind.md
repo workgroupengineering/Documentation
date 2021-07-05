@@ -2,7 +2,7 @@
 
 [Window](http://avaloniaui.net/docs/window) and [UserControl](http://avaloniaui.net/docs/usercontrol) files also have an associated _code-behind_ file which usually has the extension `.xaml.cs` or `.axaml.cs` and may be displayed collapsed under the XAML file in your editor. Below you can see a `MainWindow.xaml` file along with its markdown file `MainWindow.xaml.cs` in Visual Studio:
 
-![Code-behind in Visual Studio](http://avaloniaui.net/docs/quickstart/images/codebehind-vs.png)
+![Code-behind in Visual Studio](../../.gitbook/assets/codebehind-vs.png)
 
 The code-behind file by default defines a .NET class with the same name as your XAML file, e.g.
 
