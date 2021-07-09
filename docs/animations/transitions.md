@@ -70,4 +70,77 @@ The following transition types are available. The correct type must be used depe
 * `DoubleTransitions`: For `double` target properties
 * `FloatTransitions`: For `float` target properties
 * `IntegerTransitions`: For `int` target properties
+* `TransformOperationsTransition` : For `ITransform` properties
+
+## Transitioning Render Transforms
+
+Render transforms applied to controls using CSS-like syntax can be transitioned. The following example shows a Border which rotates 45 degrees when the pointer is hovered over it:
+
+{% tabs %}
+{% tab title="XAML" %}
+```markup
+<Border Width="100" Height="100" Background="Red">
+    <Border.Styles>
+        <Style Selector="Border">
+            <Setter Property="RenderTransform" Value="rotate(0)"/>
+        </Style>
+        <Style Selector="Border:pointerover">
+            <Setter Property="RenderTransform" Value="rotate(45deg)"/>
+        </Style>
+    </Border.Styles>
+    <Border.Transitions>
+        <Transitions>
+            <TransformOperationsTransition Property="RenderTransform" Duration="0:0:1"/>
+        </Transitions>
+    </Border.Transitions>
+</Border>
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```
+new Border
+{
+    Width = 100,
+    Height = 100,
+    Background = Brushes.Red,
+    Styles =
+    {
+        new Style(x => x.OfType<Border>())
+        {
+            Setters =
+            {
+                new Setter(
+                    Border.RenderTransformProperty,
+                    TransformOperations.Parse("rotate(0)"))
+            },
+        },
+        new Style(x => x.OfType<Border>().Class(":pointerover"))
+        {
+            Setters =
+            {
+                new Setter(
+                    Border.RenderTransformProperty,
+                    TransformOperations.Parse("rotate(45deg)"))
+            },
+        },
+    },
+    Transitions = new Transitions
+    {
+        new TransformOperationsTransition
+        {
+            Property = Border.RenderTransformProperty,
+            Duration = TimeSpan.FromSeconds(1),
+        }
+    }
+};
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Avalonia also supports WPF-style render transforms such as `otateTransform`, `ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
+{% endhint %}
+
+
 
