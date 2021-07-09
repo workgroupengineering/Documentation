@@ -139,7 +139,7 @@ new Border
 {% endtabs %}
 
 {% hint style="info" %}
-Avalonia also supports WPF-style render transforms such as `otateTransform`, `ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
+Avalonia also supports WPF-style render transforms such as`RotateTransform` ,`ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
 {% endhint %}
 
 
