@@ -205,5 +205,5 @@ Now, you can run the app and see routing in action!
 dotnet run --framework netcoreapp2.1
 ```
 
-![](http://avaloniaui.net/images/docs/routing.gif)
+![](../../../.gitbook/assets/routing.gif)
 
