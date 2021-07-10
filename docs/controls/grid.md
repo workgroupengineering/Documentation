@@ -30,7 +30,11 @@ Below is an example that shows:
 </Grid>
 ```
 
-In the above example the "Auto" keyword is used to have the row or column geometry be determined by the containing control's definitions. The asterisk is used for denoting proportional spacing. The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Colum 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
+In the above example we have two keywords: **asterix** and **Auto**. Here is explanation for them:
+- The **"Auto"** keyword is used to have the row or column geometry be determined by the containing control's definitions.
+- The **asterisk** is used for denoting proportional spacing. 
+
+The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Colum 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
 
 ![Grid Using Properties and Spanning Columns](../../.gitbook/assets/grid_example.png)
 
@@ -70,4 +74,3 @@ For more complex row and column definitions it's possible to explicitly use `Gri
 | `Grid.Row` | Attached property to assign a control into a zero based row |
 | `Grid.ColumnSpan` | Attached property to define the number of columns a control will span |
 | `Grid.RowSpan` | Attached property to define the number of rows a control will span |
-
