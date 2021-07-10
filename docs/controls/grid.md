@@ -30,7 +30,7 @@ Below is an example that shows:
 </Grid>
 ```
 
-In the above example we have two keywords: **asterix** and **Auto** here is explanation for them:
+In the above example we have two keywords: **asterix** and **Auto**. Here is explanation for them:
 - The **"Auto"** keyword is used to have the row or column geometry be determined by the containing control's definitions.
 - The **asterisk** is used for denoting proportional spacing. 
 
@@ -74,4 +74,3 @@ For more complex row and column definitions it's possible to explicitly use `Gri
 | `Grid.Row` | Attached property to assign a control into a zero based row |
 | `Grid.ColumnSpan` | Attached property to define the number of columns a control will span |
 | `Grid.RowSpan` | Attached property to define the number of rows a control will span |
-
