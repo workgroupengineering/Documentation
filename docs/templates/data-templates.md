@@ -79,7 +79,7 @@ The easiest way to do this on `Window` \(and any control that inherits from `Con
 </Window>
 ```
 
-![Student first and last name](../../.gitbook/assets/student-first-last-name%20%281%29%20%281%29%20%281%29.png)
+![Student first and last name](../../.gitbook/assets/student-first-last-name%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 The data template for the window content doesn't only come from the `ContentTemplate` property. Every control also has a `DataTemplates` collection into which any number of data templates can be placed. If a control doesn't have a template set locally \(e.g. in `ContentTemplate`\) then it will look in its `DataTemplates` collection for a matching template. If a match isn't found there it will then go on to search its parent's `DataTemplates`, then its grandparent's, and so on until it reaches the `Window`. If it _still_ hasn't found a match it will then look in `App.xaml`/`App.axaml` for a matching `DataTemplate` and finally when all those options have been exhausted it will simply call `.ToString()` on the object.
 

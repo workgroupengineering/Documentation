@@ -29,7 +29,7 @@ When we talk about the MVVM pattern, the most important parts are the **View** l
 
 One way to imagine an MVVM application is to imagine these two layers as hovering over one another, connected by bindings:
 
-![Diagram of MVVM](../../.gitbook/assets/mvvm%20%281%29.png)
+![Diagram of MVVM](../../.gitbook/assets/mvvm%20%281%29%20%281%29.png)
 
 The above example has, at the View layer:
 

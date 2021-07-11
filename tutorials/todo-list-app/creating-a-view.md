@@ -92,7 +92,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
 If you're using the Visual Studio extension you should see the contents of the control displayed in the previewer after completing a build:
 
-![Designer view](http://avaloniaui.net/docs/tutorial/images/creating-a-view-todolistview.png)
+![Designer view](../../.gitbook/assets/creating-a-view-todolistview.png)
 
 ### What does it all mean? <a id="what-does-it-all-mean"></a>
 
@@ -192,5 +192,5 @@ Using the XML namespace we've just declared we now place the `TodoListView` cont
 
 If you now run the application \(by pressing `F5` in Visual Studio or executing `dotnet run` in .NET Core\) you should see the application running in all its glory:
 
-![The running application](http://avaloniaui.net/docs/tutorial/images/creating-a-view-run.png)
+![The running application](../../.gitbook/assets/creating-a-view-run.png)
 
