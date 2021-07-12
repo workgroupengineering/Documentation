@@ -196,7 +196,7 @@ static MyControl()
     MyEvent.AddClassHandler<MyControl>((x, e) => x.OnMyEvent(e));
 }
 
-protected virutual void OnMyEvent(MyEventArgs e)
+protected virtual void OnMyEvent(MyEventArgs e)
 {
     // Handle event here.
 }
