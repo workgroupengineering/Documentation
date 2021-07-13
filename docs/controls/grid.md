@@ -43,18 +43,19 @@ Here is another example showing the difference between those two.
 
 First let's create sample 2x2 grid in our View, we can achieve this simply by writing code looking like this:
 
-```markdown
-	<Grid ShowGridLines="True">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="*"></RowDefinition>
-			<RowDefinition Height="*"></RowDefinition>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*"></ColumnDefinition>
-			<ColumnDefinition Width="*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-	</Grid>
+```text
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    </Grid>
 ```
+
 As you can see we created equal grid, I left `ShowGridLines` parameter set to `True` for better visibility.
 
 ![Grid Using Asterix Symbols](../../.gitbook/assets/grid_asterix_example.png)
@@ -65,22 +66,22 @@ Now let's fill our grid with some elements, i will fill exery field with button,
 
 Now our View code look's like this:
 
-```markdown
-	<Grid ShowGridLines="True">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="*"></RowDefinition>
-			<RowDefinition Height="*"></RowDefinition>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*"></ColumnDefinition>
-			<ColumnDefinition Width="*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
+```text
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-		<Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
-		<Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
-		<Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
-		<Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
-	</Grid>
+        <Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
+        <Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
+        <Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
+        <Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
+    </Grid>
 ```
 
 In this moment our **asterix** symbols are forcing our grid to become equal, now let's see what will happen when we replace **asterix** with the **Auto** keyword
@@ -91,22 +92,22 @@ As you can see our grid become sticky to it's content, it is very usefull when w
 
 This new View code look's like this:
 
-```markdown
-	<Grid ShowGridLines="True">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"></RowDefinition>
-			<RowDefinition Height="Auto"></RowDefinition>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="Auto"></ColumnDefinition>
-			<ColumnDefinition Width="Auto"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
+```text
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-		<Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
-		<Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
-		<Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
-		<Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
-	</Grid>
+        <Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
+        <Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
+        <Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
+        <Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
+    </Grid>
 ```
 
 ### Using Verbose Row/Column Definitions <a id="using-verbose-rowcolumn-definitions"></a>

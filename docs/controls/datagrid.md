@@ -12,13 +12,22 @@ The `DataGrid` control is a control that displays data in a customizable grid.
 
 ## Add required styles to App.axaml
 
-* The Themes can be changed to light or dark to fit your application theme.
+The Themes can be changed to light or dark to fit your application theme.
 
 ```markup
 <Application.Styles>
     <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
     <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>
+</Application.Styles>
+```
+
+Or if you are using new Fluent theme, you will need to include styles created specifically for that:
+
+```markup
+<Application.Styles>
+    <FluentTheme Mode="Light" />
+    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
 </Application.Styles>
 ```
 
