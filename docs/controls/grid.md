@@ -39,6 +39,76 @@ The multiplier used in front of the proportional spacing value is used to figure
 
 ![Grid Using Properties and Spanning Columns](../../.gitbook/assets/grid_example.png)
 
+Here is another example showing the difference between those two.
+
+First let's create sample 2x2 grid in our View, we can achieve this simply by writing code looking like this:
+
+```markdown
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+	</Grid>
+```
+As you can see we created equal grid, I left `ShowGridLines` parameter set to `True` for better visibility.
+
+![Grid Using Asterix Symbols](../../.gitbook/assets/grid_asterix_example.png)
+
+Now let's fill our grid with some elements, i will fill exery field with button, you can use anything you want.
+
+![Grid Using Sterix Symbols Filled With Buttons](../../.gitbook/assets/grid_asterix_example_buttons.png)
+
+Now our View code look's like this:
+
+```markdown
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
+		<Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
+		<Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
+		<Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
+	</Grid>
+```
+
+In this moment our **asterix** symbols are forcing our grid to become equal, now let's see what will happen when we replace **asterix** with the **Auto** keyword
+
+![Grid Using Auto Keyword](../../.gitbook/assets/grid_auto_example_buttons.png)
+
+As you can see our grid become sticky to it's content, it is very usefull when we have components with variable `Height` propety.
+
+This new View code look's like this:
+
+```markdown
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Button Grid.Row="0" Grid.Column="0">Some text written on a button</Button>
+		<Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
+		<Button Grid.Row="1" Grid.Column="0">Some text written on a button</Button>
+		<Button Grid.Row="1" Grid.Column="1">Some text written on a button</Button>
+	</Grid>
+```
+
 ### Using Verbose Row/Column Definitions <a id="using-verbose-rowcolumn-definitions"></a>
 
 For more complex row and column definitions it's possible to explicitly use `Grid.ColumnDefinitions` and `Grid.RowDefinitions` XAML fields to provide access to these additional settings. The below code produces is exactly the same except for the fact we set the minimum width on the second column to be 300.
