@@ -91,5 +91,5 @@ How each item is displayed is controlled by the `ItemTemplate`. The `ItemTemplat
 
 If you now run the application you will see the items in the \(fake\) database displayed.
 
-![The running application](http://avaloniaui.net/docs/tutorial/images/wiring-up-views-run.png)
+![The running application](../../.gitbook/assets/wiring-up-views-run.png)
 
