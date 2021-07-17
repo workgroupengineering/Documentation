@@ -27,7 +27,7 @@ Views/AddItemView.axaml
 
 This gives us a view which looks like this:
 
-![The view](http://avaloniaui.net/docs/tutorial/images/adding-new-items-view.png)
+![The view](../../.gitbook/assets/adding-new-items-view.png)
 
 The only new thing here is the `<TextBox>` control which is a control that allows a user to input text. We set three properties on it:
 
@@ -159,7 +159,7 @@ If you're familiar with WPF or UWP you may think it strange that we're binding `
 
 If you now run the application and click the "Add an item" button you should see the new view appear.
 
-![The running application](http://avaloniaui.net/docs/tutorial/images/adding-new-item-run.gif)
+![The running application](../../.gitbook/assets/adding-new-item-run.gif)
 
 Now we have the "Add new item" view appearing we need to make it work. In particular we need to enable/disable the OK button depending on whether the user has typed anything in the `Description`.
 
@@ -362,5 +362,5 @@ Finally we subscribe to the result of the observable sequence. If the command re
 
 ### Run the application <a id="run-the-application"></a>
 
-![The running application](http://avaloniaui.net/docs/tutorial/images/adding-new-items-2-run.gif)
+![The running application](../../.gitbook/assets/adding-new-items-2-run.gif)
 
