@@ -48,7 +48,7 @@ In WPF and UWP this is done via the `ItemContainerStyle` - this property does no
 
 There are several properties related to selection on `ListBox`:
 
-It is reccomended thay you only bind one of the `SelectedIndex`, `SelectedItem`, `SelectedItems` or `Selection` properties.
+It is recommended that you only bind one of the `SelectedIndex`, `SelectedItem`, `SelectedItems` or `Selection` properties.
 
 ### SelectionMode <a id="selectionmode"></a>
 
