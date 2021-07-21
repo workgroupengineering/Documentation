@@ -76,7 +76,7 @@ Now open `MainWindowViewModel.cs` and add the following code:
 public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
 ```
 
-The contructor will also change so that it instantiates the `ShowDialog` interaction. Notice that the `System.Reactive.Linq` namespace is added to the top and the BuyMusicCommand is changed to use `CreateFromTask`.
+The constructor will also change so that it instantiates the `ShowDialog` interaction. Notice that the `System.Reactive.Linq` namespace is added to the top and the BuyMusicCommand is changed to use `CreateFromTask`.
 
 ```csharp
 using System;
