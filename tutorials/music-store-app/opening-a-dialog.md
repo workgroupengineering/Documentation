@@ -1,6 +1,6 @@
 # Opening a Dialog
 
-### Opening a Dialog <a id="opening-a-dialog"></a>
+## Opening a Dialog <a id="opening-a-dialog"></a>
 
 Opening a dialog is an advanced topic, if you are very new to Avalonia, try not to get too stuck on this section, you may want to just copy in the code and move on. Then come back once you have a better understanding of some of the basics.
 
@@ -48,9 +48,9 @@ Change this code as follows to enable the Acrylic and extended client area so th
                     MaterialOpacity="0.65" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
-        
+
         <Panel Margin="40">
-            
+
         </Panel>
     </Panel>
 </Window>
@@ -93,7 +93,7 @@ namespace Avalonia.MusicStore.ViewModels
         public MainWindowViewModel()
         {
             ShowDialog = new Interaction<MusicStoreViewModel, AlbumViewModel?>();
-            
+
             BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
             {
                 var store = new MusicStoreViewModel();
@@ -101,9 +101,9 @@ namespace Avalonia.MusicStore.ViewModels
                 var result = await ShowDialog.Handle(store);
             });
         }
-        
+
         public ICommand BuyMusicCommand { get; }
-        
+
         public Interaction<MusicStoreViewModel, AlbumViewModel?> ShowDialog { get; }
     }
 }

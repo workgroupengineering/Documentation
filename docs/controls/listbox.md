@@ -194,7 +194,6 @@ By default if an item is too wide to display in the `ListBox`, a horizontal scro
         </DataTemplate>
     </ListBox.ItemTemplate>
 </ListBox>
-
 ```
 
 ## Source code <a id="source-code"></a>
