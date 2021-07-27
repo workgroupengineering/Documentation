@@ -1,6 +1,6 @@
 # CheckBox
 
-The `CheckBox` control is a [`ContentControl`](http://avaloniaui.net/docs/controls/contentcontrol) which allows user to check an option. It is usually used to display a boolean option where selection is either _checked_ or _unchecked_. But it also supports three state mode where selection is either _checked_, _indeterminate_ or _unchecked_.
+The `CheckBox` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol) which allows user to check an option. It is usually used to display a boolean option where selection is either _checked_ or _unchecked_. But it also supports three state mode where selection is either _checked_, _indeterminate_ or _unchecked_.
 
 ## Common Properties
 
@@ -11,7 +11,7 @@ The `CheckBox` control is a [`ContentControl`](http://avaloniaui.net/docs/contro
 
 ## Reference
 
-[Checkbox](http://reference.avaloniaui.net/api/Avalonia.Controls/Checkbox/)
+[Checkbox](http://reference.avaloniaui.net/api/Avalonia.Controls/CheckBox/)
 
 ## Source code
 
