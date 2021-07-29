@@ -12,7 +12,7 @@ Keyframe animations are applied using styles. They can be defined on any style b
         <Style Selector="Rectangle.red">
             <Setter Property="Height" Value="100"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Fill" Value="Red"/>
             <Style.Animations>
                 <Animation Duration="0:0:1"> 
                     <KeyFrame Cue="0%">
