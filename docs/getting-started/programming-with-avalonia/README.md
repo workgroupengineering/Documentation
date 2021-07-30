@@ -1,6 +1,6 @@
 # Programming with Avalonia
 
-Avalonia lets you develop an appliction using the [XAML markup language](https://docs.avaloniaui.net/guides/basics/introduction-to-xaml) and C\# \(or another .NET language\) for code. You generally use XAML markup to implement the appearance of an application while using code to implement its behavior.
+Avalonia lets you develop an application using the [XAML markup language](https://docs.avaloniaui.net/guides/basics/introduction-to-xaml) and C\# \(or another .NET language\) for code. You generally use XAML markup to implement the appearance of an application while using code to implement its behavior.
 
 ## Markup
 
