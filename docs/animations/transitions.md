@@ -98,7 +98,7 @@ Render transforms applied to controls using CSS-like syntax can be transitioned.
 {% endtab %}
 
 {% tab title="C\#" %}
-```
+```text
 new Border
 {
     Width = 100,
@@ -141,6 +141,4 @@ new Border
 {% hint style="info" %}
 Avalonia also supports WPF-style render transforms such as`RotateTransform` ,`ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
 {% endhint %}
-
-
 

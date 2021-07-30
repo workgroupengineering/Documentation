@@ -1,6 +1,6 @@
 # Border
 
-The `Border` control decorates a child with a border and background. It can also be used to display rounded corners by setting the [`CornerRadius`](http://avaloniaui.net/api/Avalonia.Controls/Border/60DC8BED) property.
+The `Border` control decorates a child with a border and background. It can also be used to display rounded corners by setting the [`CornerRadius`](http://reference.avaloniaui.net/api/Avalonia/CornerRadius/) property.
 
 An example of a border with a red background, 2 pixel black border, 3 pixel corner radius and a 4 pixel padding around its content:
 
