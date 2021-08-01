@@ -1,18 +1,18 @@
 # Button
 
-The `Button` control is a [`ContentControl`](http://avaloniaui.net/docs/controls/contentcontrol) which reacts to pointer presses.
+The `Button` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol) which reacts to pointer presses.
 
-A button notifies clicks by raising the [`Click`](http://avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released \(although this behavior can be changed by setting the [`ClickMode`](http://avaloniaui.net/api/Avalonia.Controls/Button/7B4CADF5) property\).
+A button notifies clicks by raising the [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released \(although this behavior can be changed by setting the [`ClickMode`](http://reference.avaloniaui.net/api/Avalonia.Controls/ClickMode/) property\).
 
-Alternatively an instance of [`ICommand`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0) can be assigned or bound to the button's [`Command`](http://avaloniaui.net/api/Avalonia.Controls/Button/4AAA993D) property. This command will be executed when the button is clicked. For more information see [binding to commands](http://avaloniaui.net/docs/binding/binding-to-commands).
+Alternatively an instance of [`ICommand`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0) can be assigned or bound to the button's [`Command`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/4AAA993D) property. This command will be executed when the button is clicked. For more information see [binding to commands](http://reference.avaloniaui.net/api/Avalonia.Data/Binding/).
 
-[`Click`](http://avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) is just one of several events that Buttons have. Another example is [`PointerEnter`](http://avaloniaui.net/api/Avalonia.Input/InputElement/B4FED8A5) or [`PointerLeave`](http://avaloniaui.net/api/Avalonia.Input/InputElement/0ABE1887). You can get the full list of Button Events [here](http://avaloniaui.net/api/Avalonia.Controls/Button/#Events).
+[`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) is just one of several events that Buttons have. Another example is [`PointerEnter`](http://reference.avaloniaui.net/api/Avalonia.Input/InputElement/B4FED8A5) or [`PointerLeave`](http://reference.avaloniaui.net/api/Avalonia.Input/InputElement/0ABE1887). You can get the full list of Button Events [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/#Events).
 
-The Button control's full documentation can be found [here](http://avaloniaui.net/api/Avalonia.Controls/Button)
+The Button control's full documentation can be found [here](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/)
 
 ## Subclasses
 
-1. [ToggleButton](https://avaloniaui.net/docs/controls/drawingpresenter) - Toggles between checked and unchecked on click.
+1. [ToggleButton](http://reference.avaloniaui.net/api/Avalonia.Controls/DrawingPresenter/) - Toggles between checked and unchecked on click.
 
 ## Common Properties
 
