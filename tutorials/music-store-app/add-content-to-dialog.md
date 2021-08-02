@@ -111,11 +111,11 @@ namespace Avalonia.MusicStore.ViewModels
 }
 ```
 
-Return to the \`MusicStoreView.axaml. So that we can add the remaining controls.
+Return to the `MusicStoreView.axaml`. So that we can add the remaining controls.
 
 Back inside our DockPanel add a `Button` and set it to Dock at the bottom. Set its `Content` to "Buy Album" its `HorizontalAlignment` to `Center`.
 
-Then bind its `Command` to `BuyMusicCommand`.
+Then bind its `Command` to `BuyMusicCommand` which we will create in the next chapter.
 
 ```markup
 <DockPanel>
@@ -127,34 +127,9 @@ Then bind its `Command` to `BuyMusicCommand`.
 </DockPanel>
 ```
 
-now return to your `MusicStoreViewModel.cs`
-
-Add a BuyMusicCommand property like so:
-
-```csharp
-public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
-```
-
-In the contructor add the following:
-
-```csharp
-BuyMusicCommand = ReactiveCommand.CreateFromTask(async () =>
-{
-    if (SelectedAlbum is { })
-    {
-        return SelectedAlbum;
-    }
-    return null;
-});
-```
-
-This will cause the `BuyMusicCommand` to return the `SelectedAlbum`'s View Model to the main window if there is a selection. Otherwise, it will return `null`.
-
-Return to the `MusicStoreView.axaml`
-
 Add a `ListBox` to the `DockPanel`. Since this is the last item in the Panel it will fill the remaining space, and since the `TextBox` and `ProgressBar` are docked to the top inside a `StackPanel` and the `Button` is docked to the bottom. This ListBox will appear in between them and fill the space.
 
-Bind the `Items` and `SelectedItem` properties as shown, set the `Background` to `Transparent`. Add a `Margin` or `0 20`. This mean left and right sides have 0 and top and bottom have 20. This creates some space between the other controls.
+Bind the `Items` and `SelectedItem` properties as shown, set the `Background` to `Transparent`. Add a `Margin` of `0 20`. This means left and right sides have 0 and top and bottom have 20. This creates some space between the other controls.
 
 ```markup
 <ListBox Items="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" Background="Transparent" Margin="0 20" />
@@ -182,7 +157,7 @@ The `SearchResults` property does not require this pattern and is a special type
 
 An observable collection is simply a `List` or `Colleciton` that when items are added or removed from it, it fires `events` so other code can be notified of changes to the list.
 
-Notice this property is instantiated with `= new ();`. Forget this and it will be `null` and wont work.
+Notice this property is instantiated with `= new ();`. Forget this and it will be `null` and won't work.
 
 Since we are using `ObservableCollection` when we `bind` the `ListBox`s `Items` property to it, then the `ListBox` control will start listening to events and keep the `Items` inside the `ListBox` in sync with the `ObservableCollection` on the `ViewModel`.
 
@@ -333,5 +308,5 @@ Now when we run the application we get:
 
 As our list gets more items the will wrap around onto the next line, and the user will be able to scroll.
 
-This is a very powerful and flexible feature in Avalonia. Any layout can be acheived, by implementing your own `Panel` class. However that is outside the scope of this tutorial.
+This is a very powerful and flexible feature in Avalonia. Any layout can be achieved, by implementing your own `Panel` class. However that is outside the scope of this tutorial.
 

@@ -4,13 +4,13 @@
 
 Now that the user can select one of our Albums, we need to be able to close the Dialog and return the result to the `ViewModel` that called the dialog.
 
-Notice that our `MusicStoreViewModel` has a `SelectedAlbum` property that we added previously and that the `ListBox` on the `MusicStoreView` has its `SelectedItem` property bound to this `SelectedAlbum` property of the `viewmodel`.
+Notice that our `MusicStoreViewModel` has a `SelectedAlbum` property that we added previously and that the `ListBox` on the `MusicStoreView` has its `SelectedItem` property bound to this `SelectedAlbum` property of the view model.
 
 This means that when the user clicks to select an album, the listbox shows that it is selected by highlighting the item.
 
 At the same time the `SelectedAlbum` property will be kept in sync and set to the `AlbumViewModel` instance that represents the `SelectedItem` of the `ListBox`.
 
-The `Button` of the `MusicStoreView` has its `Command` property bound to `BuyMusicCommand`. This doesnt exist yet so lets add this to `MusicStoreViewModel` with the following code.
+The `Button` of the `MusicStoreView` has its `Command` property bound to `BuyMusicCommand`. This doesn't exist yet so lets add this to `MusicStoreViewModel` with the following code.
 
 ```csharp
 public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
@@ -20,30 +20,27 @@ Note we are using `ReactiveCommand` this is where we are using ReactiveUI to pro
 
 Note that `ReactiveCommand<TParam, TResult>` has some type arguments. Commands can take a parameter, however we do not need a paramter in this case, so we use `Unit` which is kind of a dummy type, it contains no data. Reactive Commands can also return a result. This will be useful for returning the Album the user wants to buy.
 
-Now add a constructor to `MusicStoreViewModel` where we can instantiate the command, and implement the code needed to return a result from the dialog.
+Now add the following lines to the constructor of `MusicStoreViewModel` in order to instantiate the command and implement the code needed to return a result from the dialog:
 
 ```csharp
-public MusicStoreViewModel()
+BuyMusicCommand = ReactiveCommand.Create(() =>
 {
-    BuyMusicCommand = ReactiveCommand.Create(() =>
-    {
-        return SelectedAlbum;
-    });
-}
+    return SelectedAlbum;
+});
 ```
 
 Simply when the button is clicked, this code will execute, and return the value assigned to `SelectedAlbum`.
 
 So far so good, but how does the actual dialog get closed?
 
-To close the dialog, we need to open MusicStoreWindow.axaml.cs and make a few changes.
+To close the dialog, we need to open `MusicStoreWindow.axaml.cs` and make a few changes.
 
 Firstly make it inherit `ReactiveWindow<MusicStoreViewModel>` so that ReactiveUI can help us out.
 
 Then add the following line to the end of the constructor.
 
 ```csharp
-this.WhenActivated(d => d(ViewModel.BuyMusicCommand.Subscribe(Close)));
+this.WhenActivated(d => d(ViewModel!.BuyMusicCommand.Subscribe(Close)));
 ```
 
 This line says when the Window is activated \(becomes visible on the screen\), the lambda expression will be called.
@@ -76,7 +73,7 @@ namespace Avalonia.MusicStore.Views
             this.AttachDevTools();
 #endif
 
-            this.WhenActivated(d => d(ViewModel.BuyMusicCommand.Subscribe(Close)));
+            this.WhenActivated(d => d(ViewModel!.BuyMusicCommand.Subscribe(Close)));
         }
 
         private void InitializeComponent()

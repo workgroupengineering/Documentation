@@ -93,7 +93,7 @@ private async void LoadCovers(CancellationToken cancellationToken)
 }
 ```
 
-Calling this asynchronous method will itereate through each item in the `SearchResults` and call our `AlbumViewModel`s `LoadCover` method.
+Calling this asynchronous method will itereate through each item in a copy of the `SearchResults` and call our `AlbumViewModel`s `LoadCover` method. Creating a copy with `.ToList()` is necessary because this method is async and `SearchResults` might be updated by another thread.
 
 Notice a `CancellationToken` is used to check if we want to stop loading album covers.
 
@@ -102,16 +102,17 @@ Now add the following code to the beggining of `DoSearch` method of `MusicStoreV
 ```csharp
 _cancellationTokenSource?.Cancel();
 _cancellationTokenSource = new CancellationTokenSource();
+var cancellationToken = _cancellationTokenSource.Token;
 ```
 
-This will mean that if there is an existing request still loading Album art, we can cancel them.
+If there is an existing request still loading Album art, we can cancel it. Because `_cancellationTokenSource` might be replaced asynchronously we have to store the cancellation token in a local variable.
 
 Now add the following code to the end of `DoSearch` method of `MusicStoreViewModel` before the `IsBusy = false;` line.
 
 ```csharp
-if (!_cancellationTokenSource.IsCancellationRequested)
+if (!cancellationToken.IsCancellationRequested)
 {
-    LoadCovers(_cancellationTokenSource.Token);
+    LoadCovers(cancellationToken);
 }
 ```
 
@@ -123,8 +124,9 @@ private async void DoSearch(string s)
     IsBusy = true;
     SearchResults.Clear();
 
-      _cancellationTokenSource?.Cancel();
+    _cancellationTokenSource?.Cancel();
     _cancellationTokenSource = new CancellationTokenSource();
+    var cancellationToken = _cancellationTokenSource.Token;
 
     var albums = await Album.SearchAsync(s);
 
@@ -135,9 +137,9 @@ private async void DoSearch(string s)
         SearchResults.Add(vm);
     }
 
-    if (!_cancellationTokenSource.IsCancellationRequested)
+    if (!cancellationToken.IsCancellationRequested)
     {
-        LoadCovers(_cancellationTokenSource.Token);
+        LoadCovers(cancellationToken);
     }
 
     IsBusy = false;

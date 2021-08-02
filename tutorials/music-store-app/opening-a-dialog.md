@@ -143,12 +143,12 @@ Once the dialog has closed, it will return the result, which will be of type `Al
 * Add the following `WhenActivated` call to the Windows constructor.
 
 ```csharp
-this.WhenActivated(d => d(ViewModel.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+this.WhenActivated(d => d(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
 ```
 
 `d` is an `Action` that takes a `disposable`, this means that ReactiveUI will clean up any subscriptions when this View is not on the screen for us.
 
-Our entire \`MainWindow.xaml.cs should now look like:
+Our entire `MainWindow.xaml.cs` should now look like:
 
 ```csharp
 using System.Threading.Tasks;
@@ -169,7 +169,7 @@ namespace Avalonia.MusicStore.Views
 #if DEBUG
             this.AttachDevTools();
 #endif
-            this.WhenActivated(d => d(ViewModel.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+            this.WhenActivated(d => d(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
         }
 
         private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, AlbumViewModel?> interaction)
