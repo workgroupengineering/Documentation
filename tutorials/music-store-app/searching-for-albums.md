@@ -130,7 +130,6 @@ Open `MusicStoreViewModel.cs` and add the following code to the constructor.
 
 ```csharp
 this.WhenAnyValue(x => x.SearchText)
-        .Where(x => !string.IsNullOrWhiteSpace(x))
         .Throttle(TimeSpan.FromMilliseconds(400))
         .ObserveOn(RxApp.MainThreadScheduler)
         .Subscribe(DoSearch!);
@@ -138,9 +137,7 @@ this.WhenAnyValue(x => x.SearchText)
 
 The `WhenAnyValue` method is provided thanks to Reactive UI and it takes a lambda expression of the property we want to `Observe`. By selecting the `SearchText` property we will fire an event when ever the user types.
 
-the `Where` Linq expression filters out any queries that dont contain valid words.
-
-since users can type quite quickly it is not a good idea to try and run a search on every keypress. This is where the `Throttle` call comes in. `Throttle` is built into .NET and it takes a `TimeSpan` in this case 400 milliseconds.
+Since users can type quite quickly it is not a good idea to try and run a search on every keypress. This is where the `Throttle` call comes in. `Throttle` is built into .NET and it takes a `TimeSpan` in this case 400 milliseconds.
 
 This means we will only see a value if the user has stopped typing for 400 milliseconds or longer.
 
@@ -183,13 +180,16 @@ private async void DoSearch(string s)
     IsBusy = true;
     SearchResults.Clear();
 
-    var albums = await Album.SearchAsync(s);
-
-    foreach (var album in albums)
+    if (!string.IsNullOrWhiteSpace(s))
     {
-        var vm = new AlbumViewModel(album);
-        
-        SearchResults.Add(vm);
+        var albums = await Album.SearchAsync(s);
+
+        foreach (var album in albums)
+        {
+            var vm = new AlbumViewModel(album);
+
+            SearchResults.Add(vm);
+        }
     }
 
     IsBusy = false;

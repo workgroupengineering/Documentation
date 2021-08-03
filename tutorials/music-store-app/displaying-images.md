@@ -6,7 +6,7 @@ So we have the Albums showing with the Artist name and Title, however if we can 
 
 Fortunately our buisness logic code provides a convenient `LoadCoverBitmapAsync` this returns a stream that can be used to load a bitmap from.
 
-Firstly open `AlbumViewModel.cs` and add a property of type `Bitmap?` named `Cover` using the usually pattern so that it can notify the UI when it changes.
+Firstly open `AlbumViewModel.cs` and add a property of type `Bitmap?` named `Cover` using the common pattern so that it can notify the UI when it changes. You will need a `using Avalonia.Media.Imaging;` directive to do so.
 
 ```csharp
 private Bitmap? _cover;
@@ -107,7 +107,7 @@ var cancellationToken = _cancellationTokenSource.Token;
 
 If there is an existing request still loading Album art, we can cancel it. Because `_cancellationTokenSource` might be replaced asynchronously we have to store the cancellation token in a local variable.
 
-Now add the following code to the end of `DoSearch` method of `MusicStoreViewModel` before the `IsBusy = false;` line.
+Now add the following code to the end of `DoSearch` method of `MusicStoreViewModel` after the `foreach` loop.
 
 ```csharp
 if (!cancellationToken.IsCancellationRequested)
@@ -128,18 +128,21 @@ private async void DoSearch(string s)
     _cancellationTokenSource = new CancellationTokenSource();
     var cancellationToken = _cancellationTokenSource.Token;
 
-    var albums = await Album.SearchAsync(s);
-
-    foreach (var album in albums)
+    if (!string.IsNullOrWhiteSpace(s))
     {
-        var vm = new AlbumViewModel(album);
+        var albums = await Album.SearchAsync(s);
 
-        SearchResults.Add(vm);
-    }
+        foreach (var album in albums)
+        {
+            var vm = new AlbumViewModel(album);
 
-    if (!cancellationToken.IsCancellationRequested)
-    {
-        LoadCovers(cancellationToken);
+            SearchResults.Add(vm);
+        }
+
+        if (!cancellationToken.IsCancellationRequested)
+        {
+            LoadCovers(cancellationToken);
+        }
     }
 
     IsBusy = false;

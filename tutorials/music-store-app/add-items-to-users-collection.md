@@ -14,7 +14,6 @@ We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `I
         xmlns:vm="using:Avalonia.MusicStore.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:Avalonia.MusicStore.Views"
         xmlns:local="clr-namespace:Avalonia.MusicStore.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Avalonia.MusicStore.Views.MainWindow"
@@ -64,6 +63,8 @@ We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `I
     </Panel>
 </Window>
 ```
+
+Just like in `MusicStoreWindow.axaml` we have to add `xmlns:local="clr-namespace:Avalonia.MusicStore.Views"` to the `Window` properties in order to use our custom control.
 
 Now open `MainWindowViewModel` and add the following properties.
 
