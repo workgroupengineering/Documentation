@@ -45,9 +45,9 @@ this.WhenActivated(d => d(ViewModel!.BuyMusicCommand.Subscribe(Close)));
 
 This line says when the Window is activated \(becomes visible on the screen\), the lambda expression will be called.
 
-the `d` is an action that we can pass a disposable to, so things can be unsubscribed when the Window is no longer active.
+The `d` is an action that we can pass a disposable to, so things can be unsubscribed when the Window is no longer active.
 
-We pass to that a `Subscription` to our `ViewModel`s `BuyMusicCommand`. We subscribe it directly to the `Window`s `Close` method.
+We pass to that a `Subscription` to our `ViewModel`s `BuyMusicCommand`. We subscribe it directly to the `Window`s `Close` method. A `using System;` directive is required for this step.
 
 This means the result of the `BuyMusicCommand` will be passed to the `Close` method. Causing the Window to close and its result to be returned from the `ShowDialog` call we made in the `MainWindow.xaml.cs` code.
 
