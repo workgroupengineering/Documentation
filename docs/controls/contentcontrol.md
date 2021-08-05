@@ -20,7 +20,7 @@ description: The ContentControl displays data according to a data template.
 
 ## Display content
 
-At its simplest, a `ContentControl` displays the data assigned to its [`Content`](http://avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) property.
+At its simplest, a `ContentControl` displays the data assigned to its [`Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) property.
 
 For example:
 
@@ -44,7 +44,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 
 ### Display content with templates <a id="display-content-with-templates"></a>
 
-So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](http://avaloniaui.net/docs/binding) and [data templates](http://avaloniaui.net/docs/templates/datatemplate). By setting the [`ContentTemplate`](http://avaloniaui.net/api/Avalonia.Controls/ContentControl/ACED680E) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
+So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](https://docs.avaloniaui.net/docs/data-binding) and [data templates](https://docs.avaloniaui.net/docs/templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 
 ```csharp
 namespace Example
@@ -74,7 +74,7 @@ namespace Example
 }
 ```
 
-> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](http://avaloniaui.net/docs/binding/datacontext) for more information.
+> Note: The following examples assume an instance of `MainWindowVieModel` is assigned to the Window's `DataContext`. See [the section on `DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext) for more information.
 
 We can display the student's first and last name in a `ContentControl` using the `ContentTemplate` property:
 
@@ -97,5 +97,5 @@ We can display the student's first and last name in a `ContentControl` using the
 
 ![Student first and last name](../../.gitbook/assets/student-first-last-name%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
-For more information see the [data templates](http://avaloniaui.net/docs/templates/datatemplate) section.
+For more information see the [data templates](https://docs.avaloniaui.net/docs/templates/data-templates) section.
 

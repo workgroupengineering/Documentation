@@ -1,6 +1,6 @@
 # Searching for Albums
 
-### Searching For Albums <a id="searching-for-albums"></a>
+## Searching For Albums <a id="searching-for-albums"></a>
 
 In order for our application to work we are going to need some buisness logic. This code is not relevant to the tutorial, except for the fact that it will provide the following services:
 
@@ -35,20 +35,20 @@ namespace Avalonia.MusicStore.Models
     {
         private static HttpClient s_httpClient = new();
         private static iTunesSearchManager s_SearchManager = new();
-        
+
         public Album(string artist, string title, string coverUrl)
         {
             Artist = artist;
             Title = title;
             CoverUrl = coverUrl;
         }
-        
+
         public string Artist { get; set; }
-        
+
         public string Title { get; set; }
-        
+
         public string CoverUrl { get; set; }
-        
+
         private string CachePath => $"./Cache/{Artist} - {Title}";
 
         public async Task<Stream> LoadCoverBitmapAsync()
@@ -105,7 +105,7 @@ namespace Avalonia.MusicStore.Models
             foreach (var file in Directory.EnumerateFiles("./Cache"))
             {
                 if (!string.IsNullOrWhiteSpace(new DirectoryInfo(file).Extension)) continue;
-                
+
                 await using var fs = File.OpenRead(file);
                 results.Add(await Album.LoadFromStream(fs).ConfigureAwait(false));
             }
