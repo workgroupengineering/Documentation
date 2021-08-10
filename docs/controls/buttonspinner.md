@@ -1,14 +1,16 @@
 # ButtonSpinner
 
-{% hint style="warning" %}
-**Whoops!** 
+Represents a spinner control that includes two Buttons.
 
-It looks like we're missing this doc. Do you know how the ButtonSpinner works and fancy contributing to a growing OSS project? We're always open to new contributors and documentation is a great way to get started. To learn more about contributing, check out our community guide.
-{% endhint %}
+## Attributes
 
-### Reference
+| Type | Description |
+| :--- | :--- |
+| `PseudoClassesAttribute` |  |
 
-Todo
+## API Reference
+
+[ButtonSpinner](http://reference.avaloniaui.net/api/Avalonia.Controls/ButtonSpinner/)
 
 ### Source Code
 
