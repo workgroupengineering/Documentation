@@ -29,7 +29,7 @@ Separators are added by including a `Separator` control or a `MenuItem` with a h
 
 ### Menu Commands <a id="menu-commands"></a>
 
-Like `Button`, commands can be [bound](https://avaloniaui.net/docs/binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
+Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
 
 ```markup
 <Menu>
@@ -39,7 +39,7 @@ Like `Button`, commands can be [bound](https://avaloniaui.net/docs/binding/bindi
 </Menu>
 ```
 
-> See the [Binding to Commands](https://avaloniaui.net/docs/binding/binding-to-commands) section for more information on binding to commands.
+> See the [Binding to Commands](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) section for more information on binding to commands.
 
 ### Menu Icons <a id="menu-icons"></a>
 
@@ -71,7 +71,7 @@ Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `Men
 
 ### Dynamically Creating Menus <a id="dynamically-creating-menus"></a>
 
-Menus can also be dynamically created using bindings and [`DataTemplate`s](https://avaloniaui.net/docs/templates/datatemplate). To do this, you will usually create a view model to represent your `Window` with a set of commands relating to the menu commands:
+Menus can also be dynamically created using bindings and [`DataTemplate`s](https://docs.avaloniaui.net/misc/wpf/datatemplates). To do this, you will usually create a view model to represent your `Window` with a set of commands relating to the menu commands:
 
 ```csharp
 public class MainWindowViewModel
