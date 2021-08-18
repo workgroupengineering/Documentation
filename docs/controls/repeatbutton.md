@@ -1,6 +1,6 @@
 # RepeatButton
 
-The `RepeatButton` is a `Button` control that has the added feature of regularly generating [`Click`](https://avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) events while the button is being pressed down.
+The `RepeatButton` is a `Button` control that has the added feature of regularly generating [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) events while the button is being pressed down.
 
 ### Reference <a id="reference"></a>
 

@@ -1,8 +1,8 @@
 # Creating a new project
 
-### Visual Studio <a id="visual-studio"></a>
+## Visual Studio <a id="visual-studio"></a>
 
- The easiest way to get started with Avalonia from Visual Studio is to [install the extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio) from the Visual Studio Marketplace. Once that is installed, you can create an Avalonia MVVM application:
+The easiest way to get started with Avalonia from Visual Studio is to [install the extension](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio) from the Visual Studio Marketplace. Once that is installed, you can create an Avalonia MVVM application:
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
@@ -13,7 +13,7 @@
 * [ ] Enter "Todo" as the Project name
 * [ ] Click "Create"
 
-### .NET Core CLI <a id="net-core-cli"></a>
+## .NET Core CLI <a id="net-core-cli"></a>
 
 First install the Avalonia templates for .NET Core by following the instructions [here](https://github.com/AvaloniaUI/avalonia-dotnet-templates).
 
@@ -23,7 +23,7 @@ Now you can create the application from the template:
 dotnet new avalonia.mvvm -o Todo -n Todo
 ```
 
-### Project structure <a id="project-structure"></a>
+## Project structure <a id="project-structure"></a>
 
 The newly created project will be pre-filled with a number of files and directories:
 
@@ -57,7 +57,7 @@ You can see there are directories for each of the concepts in the MVVM pattern \
 * The **ViewLocator.cs** file is used to look up views for view models. This will be explained in more detail later.
 
 {% hint style="info" %}
- **.xaml or .axaml?**
+**.xaml or .axaml?**
 
 In this tutorial we will use the `.axaml` file extension for XAML files which is what will be created by the Visual Studio extension. If you're using the .NET Core CLI, the extension will be `.xaml`. See the [Intro to XAML](https://docs.avaloniaui.net/guides/basics/introduction-to-xaml#xaml-or-axaml-file) page for information on why this happens.
 {% endhint %}

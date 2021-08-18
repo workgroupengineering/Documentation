@@ -27,7 +27,7 @@ The text of the `MenuItem` is displayed by the `Header` property; the inner cont
 
 Separators are added by including a `Separator` control or a `MenuItem` with a header of `"-"`.
 
-### Menu Commands <a id="menu-commands"></a>
+## Menu Commands <a id="menu-commands"></a>
 
 Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
 
@@ -41,7 +41,7 @@ Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-bin
 
 > See the [Binding to Commands](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) section for more information on binding to commands.
 
-### Menu Icons <a id="menu-icons"></a>
+## Menu Icons <a id="menu-icons"></a>
 
 A menu icon can be displayed by placing an `Image` in the `Icon` property:
 
@@ -53,7 +53,7 @@ A menu icon can be displayed by placing an `Image` in the `Icon` property:
     </MenuItem>
 ```
 
-### Checkboxes <a id="checkboxes"></a>
+## Checkboxes <a id="checkboxes"></a>
 
 Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `MenuItem` checkable:
 
@@ -69,7 +69,7 @@ Similarly, a `CheckBox` can be displayed in the `Icon` property to make the `Men
     </MenuItem>
 ```
 
-### Dynamically Creating Menus <a id="dynamically-creating-menus"></a>
+## Dynamically Creating Menus <a id="dynamically-creating-menus"></a>
 
 Menus can also be dynamically created using bindings and [`DataTemplate`](https://docs.avaloniaui.net/misc/wpf/datatemplates) s. To do this, you will usually create a view model to represent your `Window` with a set of commands relating to the menu commands:
 
@@ -196,17 +196,15 @@ Finally assign the bindings to the view model in a `Style` within the menu:
 </Menu>
 ```
 
-### Reference <a id="reference"></a>
+## Reference <a id="reference"></a>
 
 [Menu](http://reference.avaloniaui.net/api/Avalonia.Controls/Menu/)
 
-### Source code <a id="source-code"></a>
+## Source code <a id="source-code"></a>
 
 [Menu.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Menu.cs)
 
-### Related Controls
+## Related Controls
 
 {% page-ref page="separator.md" %}
-
-
 
