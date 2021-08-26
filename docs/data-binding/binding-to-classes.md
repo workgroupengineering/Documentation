@@ -5,7 +5,7 @@ Sometimes it could be useful to switch classes depending on some logic,
 and for those purposes, you can use Binding to Classes API.
 There is the sample usage of Binding to Classes. We have two different styles and we want to switch between them depending on `MyProperty` state.
 
-```
+```markup
  <ListBox Items="{Binding MyItems}">
         <ListBox.Styles>
             <Style Selector="TextBlock.myClass">
