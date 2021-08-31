@@ -28,4 +28,3 @@ There is the sample usage of Binding Classes. We have two different styles and w
  </ListBox>
 ```
 When you bind to classes Avalonia would expect bool value. This API was introduced in 0.10.1
-{% hint style="info" %} Note that in case you are binding to a non-existent or invalid class Avalonia would not throw an Exception or write something to output. {% endhint %}
