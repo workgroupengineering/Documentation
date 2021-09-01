@@ -319,14 +319,14 @@ If you distribute your app in a `.dmg`, you will want to modify the steps slight
 
 You need a lot of things:
 * Apple Developer Account, with your Apple ID connected to it.
-* Your app is registered in (App Store Connect)[https://appstoreconnect.apple.com/apps]
+* Your app is registered in (App Store Connect)[https://appstoreconnect.apple.com/apps].
 * Transporter app installed from App Store.
-* latest Xcode with your Apple ID authorized into it.
-* Two certificates: `Developer ID Installer` for signing `.pkg` file and `Apple Distribution` for signing all files in `.app`.
+* Latest Xcode installed with your Apple ID authorized into it.
+* Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `Apple Distribution` for signing all files in `.app`.
 * App Store Provision Profile - get it for your app [here](https://developer.apple.com/account/resources/profiles/list).
 * Two entitlements: One for signing `.app` and other for signing all files inside `.app`.
-* `.app` structure ready with valid `Info.plist`
-* Your app is ready to be launched inside a (sandbox)[https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html]
+* `.app` structure ready with valid `Info.plist`.
+* Your app is ready to be launched inside a (sandbox)[https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html].
 
 ### Getting certificates <a id="notarizing-your-software"></a>
 
@@ -334,8 +334,9 @@ You need a lot of things:
 * Add them if they do not exists.
 * Export them with a password. 
 * Open them and import into KeyChain Access.
+* In KeyChain you should see this certificates `3rd Party Mac Developer Installer` and `Apple Distribution`. If cert names are started with another strings - you've created a wrong certificate. Try again.
 * Expand imported keys in KeyChain and double click on a private key inside.
-* Go to Access Control Tab
+* Go to Access Control Tab.
 * Select `Allow all applications to access this item` in case you don't want to enter a mac profile password for every file sign.
 
 ### Sandbox and entitlements <a id="sandbox-and-entitlements"></a>
@@ -361,7 +362,7 @@ First entitlements file is to sign all files inside `.app/Content/MacOS/` folder
 </plist>
 ```
 
-Second entitlements file is to sign app package. Should contain all permissions. Here is an example:
+Second entitlements file is to sign app package. Should contain all app's permissions. Here is an example:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -378,6 +379,17 @@ Second entitlements file is to sign app package. Should contain all permissions.
 	<true/>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
+	<key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
+	<array>
+		<string>com.apple.coreservices.launchservicesd</string>
+	</array>
+</dict>
+</plist>
+```
+
+Also here is some optional parameters your app can need:
+
+```
 	<key>com.apple.security.network.client</key>
 	<true/>
 	<key>com.apple.security.network.server</key>
@@ -390,9 +402,8 @@ Second entitlements file is to sign app package. Should contain all permissions.
     <array>
       <string>[Your Team ID].[Your App ID]</string>
     </array>
-</dict>
-</plist>
 ```
+
 
 ### Packaging script <a id="packaging-script"></a>
 
@@ -408,18 +419,18 @@ mkdir -p "App/AppName.app/Contents/Frameworks/"
 mkdir -p "App/AppName.app/Contents/MacOS/"
 
 #Build app
-dotnet publish ../../AppName/AppName.Avalonia/AppName.Avalonia.csproj -c release -f net5.0 -r osx-x64 --self-contained true
+dotnet publish ../../ProjectFolder/AppName.csproj -c release -f net5.0 -r osx-x64 --self-contained true
 
 #Move app
 cd ..
 cd ..
-cp -R -f AppName/AppName.Avalonia/bin/release/net5.0/osx-x64/publish/* "build/osx/App/AppName.app/Contents/MacOS/"
+cp -R -f ProjectFolder/bin/release/net5.0/osx-x64/publish/* "build/osx/App/AppName.app/Contents/MacOS/"
 cd "build/osx/"
 
 APP_ENTITLEMENTS="AppEntitlements.entitlements"
 FILE_ENTITLEMENTS="FileEntitlements.entitlements"
 APP_SIGNING_IDENTITY="Apple Distribution: [***]"
-INSTALLER_SIGNING_IDENTITY="Developer ID Installer: [***]"
+INSTALLER_SIGNING_IDENTITY="3rd Party Mac Developer Installer: [***]"
 APP_NAME="App/AppName.app"
 
 echo "[INFO] Switch provisionprofile to AppStore"
@@ -442,6 +453,7 @@ productbuild --component App/AppName.app /Applications --sign "$INSTALLER_SIGNIN
 ### Testing a package <a id="testing-a-package"></a>
 
 Copy your `.app` into Applications folder and launch it. If it launches correctly - you did everything right.
+If it crashes - open Console app and check a crash report.
 
 ### Uploading a package to app store <a id="uploading-a-package-to-app-store"></a>
 
