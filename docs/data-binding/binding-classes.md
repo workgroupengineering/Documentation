@@ -1,9 +1,6 @@
 # Binding Classes
 
-In Avalonia, you also can bind classes.
-Sometimes it could be useful to switch classes depending on some logic,
-and for those purposes, you can use Binding Classes API.
-There is the sample usage of Binding Classes. We have two different styles and we want to switch between them depending on `MyProperty` state.
+In Avalonia, you also can bind classes. Sometimes it could be useful to switch classes depending on some logic, and for those purposes, you can use Binding Classes API. There is the sample usage of Binding Classes. We have two different styles and we want to switch between them depending on `MyProperty` state.
 
 ```markup
  <ListBox Items="{Binding MyItems}">
@@ -27,4 +24,6 @@ There is the sample usage of Binding Classes. We have two different styles and w
     </ListBox.ItemTemplate>
  </ListBox>
 ```
+
 When you bind to classes Avalonia would expect bool value. This API was introduced in 0.10.1
+
