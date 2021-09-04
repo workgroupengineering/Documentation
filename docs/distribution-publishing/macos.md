@@ -398,6 +398,8 @@ Also here is some optional parameters your app can need:
 	<true/>
 	<key>com.apple.security.files.user-selected.read-write</key>
 	<true/>
+    <key>com.apple.security.files.bookmarks.document-scope</key>
+	<true/>
 	<key>com.apple.security.application-groups</key>
     <array>
       <string>[Your Team ID].[Your App ID]</string>
