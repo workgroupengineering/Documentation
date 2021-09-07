@@ -1,6 +1,6 @@
 # Data Templates
 
- Many controls have a `Content` property, such as [`ContentControl.Content`](http://avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756). `Window` inherits from [`ContentControl`](http://avaloniaui.net/docs/controls/contentcontrol), so lets use that as an example. You're probably familiar with what happens when you put a control in the `Window.Content` property - the window displays the control:
+ Many controls have a `Content` property, such as [`ContentControl.Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756). `Window` inherits from [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol), so lets use that as an example. You're probably familiar with what happens when you put a control in the `Window.Content` property - the window displays the control:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -56,7 +56,7 @@ namespace Example
 
 Not very helpful. That's because Avalonia doesn't know _how_ to display an object of type `Student` - because it's not a control it falls back to just calling `.ToString()` on the object. We can tell Avalonia how to display non-control objects by defining a data template.
 
-The easiest way to do this on `Window` \(and any control that inherits from `ContentControl`\) is to set the [`ContentTemplate`](http://avaloniaui.net/api/Avalonia.Controls/ContentControl/7AA9343E) property:
+The easiest way to do this on `Window` \(and any control that inherits from `ContentControl`\) is to set the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/7AA9343E) property:
 
 ```text
 <Window xmlns="https://github.com/avaloniaui"
