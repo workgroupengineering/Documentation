@@ -4,9 +4,9 @@ description: Understanding the Model-View-ViewModel architectural pattern.
 
 # MVVM Architecture
 
-The Model-View-ViewModel pattern \(MVVM\) is a common way of structuring a UI application. It takes advantage of Avalonia's [binding](http://avaloniaui.net/docs/binding/bindings) system to separate the logic of the application from the display of the application.
+The Model-View-ViewModel pattern \(MVVM\) is a common way of structuring a UI application. It takes advantage of Avalonia's [binding](https://docs.avaloniaui.net/docs/data-binding) system to separate the logic of the application from the display of the application.
 
-MVVM might be overkill for a simple application, but as applications grow over time, they usually reach a point where tracking logic in [code-behind](http://avaloniaui.net/docs/quickstart/codebehind) becomes problematic for two main reasons:
+MVVM might be overkill for a simple application, but as applications grow over time, they usually reach a point where tracking logic in [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind) becomes problematic for two main reasons:
 
 * The interactions between UI components becomes overly complicated and error-prone
 * It's very difficult to unit test code in code-behind
@@ -25,7 +25,7 @@ Many people prefer to start off their application using code-behind and once thi
 
 ### Views and ViewModels <a id="views-and-viewmodels"></a>
 
-When we talk about the MVVM pattern, the most important parts are the **View** layer and the **ViewModel** layer. Views are usually implemented as [`Window`](http://avaloniaui.net/docs/quickstart/window)s and [`UserControl`](http://avaloniaui.net/docs/quickstart/usercontrol)s while ViewModels are .NET classes.
+When we talk about the MVVM pattern, the most important parts are the **View** layer and the **ViewModel** layer. Views are usually implemented as [`Window`](https://docs.avaloniaui.net/docs/controls/window)s and [`UserControl`](https://docs.avaloniaui.net/docs/controls/usercontrol)s while ViewModels are .NET classes.
 
 One way to imagine an MVVM application is to imagine these two layers as hovering over one another, connected by bindings:
 

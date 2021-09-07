@@ -25,7 +25,7 @@ A basic Avalonia XAML file looks like this:
 
 There are three parts to this file:
 
-* The root element `Window` - this descibes the type of the root control in the XAML file; in this case [`Window`](http://avaloniaui.net/api/Avalonia.Controls/Window/)
+* The root element `Window` - this descibes the type of the root control in the XAML file; in this case [`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/)
 * `xmlns="https://github.com/avaloniaui"` - this is the XAML namespace for Avalonia. Without this, the file will not be recognised as an Avalonia XAML document.
 * `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the XAML-language XAML namespace. This isn't strictly necessary, but you will probably need it for accessing certain features of the XAML language.
 * `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find the associated class for this file, defined in [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind)
@@ -67,7 +67,7 @@ You may notice that the button above has its "Hello World!" content placed direc
 </Window>
 ```
 
-This is because [`Button.Content`](http://avaloniaui.net/api/Avalonia.Controls/ContentControl/4B02A756) is declared as a _`[Content]` Property_ which means that any content placed inside its XML tag will be assigned to this property.
+This is because [`Button.Content`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) is declared as a _`[Content]` Property_ which means that any content placed inside its XML tag will be assigned to this property.
 
 ## Binding <a id="binding"></a>
 
@@ -80,9 +80,9 @@ You can bind a property using the `{Binding}` markup extension:
 </Window>
 ```
 
-For more information, see the [binding documentation](http://avaloniaui.net/docs/binding).
+For more information, see the [binding documentation](https://docs.avaloniaui.net/docs/data-binding).
 
 ## Code-behind <a id="code-behind"></a>
 
-Many XAML files also have an associated _code-behind_ file which usually has the extension `.xaml.cs`. For more information see the [codebehind documentation](http://avaloniaui.net/docs/quickstart/codebehind).
+Many XAML files also have an associated _code-behind_ file which usually has the extension `.xaml.cs`. For more information see the [codebehind documentation](https://docs.avaloniaui.net/guides/basics/code-behind).
 
