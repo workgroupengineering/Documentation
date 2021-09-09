@@ -147,6 +147,7 @@
     * [Routing](guides/deep-dives/reactiveui/routing.md)
     * [Data Persistence](guides/deep-dives/reactiveui/data-persistence.md)
 * [Developer Guides](guides/developer-guides/README.md)
+  * [Debugging Previewer](guides/developer-guides/debugging-previewer.md)
   * [MacOS Development](guides/developer-guides/macos-development.md)
   * [Release Process](guides/developer-guides/release-process.md)
   * [Maintaining Stable Branch](guides/developer-guides/maintaining-stable-branch-pr-merge-process.md)
