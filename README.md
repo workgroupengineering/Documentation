@@ -8,6 +8,29 @@ If you can't find what you need here, [visit our friendly community ](https://gi
 If you're familiar with WPF or UWP then you should feel right at home with Avalonia. Although Avalonia is not API compatible with either of these frameworks \(and so controls can't be used without porting\), there's a lot of similarity. If you're a WPF user we have a [page which describes the main differences between WPF and Avalonia](misc/wpf/).
 {% endhint %}
 
+## Runtime Requirements
+
+### Windows
+
+- .NET Core 3.1+ for Windows 8 and above.
+- Windows 7 and below are not officially supported.
+
+### Linux
+
+- .NET Core 3.1+
+- Debian 9 (Stretch)+
+- Ubuntu 16.04+
+- Fedora 30+
+- Skia is built against glibc. If your distro uses something else instead, you need to build your own libSkiaSharp.so at https://github.com/mono/SkiaSharp . We provide a precompiled binary *only* for Intel x86-64. ARM/ARM64 support is planned.
+
+### macOS
+
+- .NET Core 3.1+
+- macOS High Sierra 10.13+
+
+
+{% endhint %}
+
 ## Getting Started
 
 Everything you'll need to kick start your development with Avalonia.
