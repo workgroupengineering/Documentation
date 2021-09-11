@@ -1,6 +1,6 @@
 # Code-behind
 
-[Window](http://avaloniaui.net/docs/window) and [UserControl](http://avaloniaui.net/docs/usercontrol) files also have an associated _code-behind_ file which usually has the extension `.xaml.cs` or `.axaml.cs` and may be displayed collapsed under the XAML file in your editor. Below you can see a `MainWindow.xaml` file along with its markdown file `MainWindow.xaml.cs` in Visual Studio:
+[Window](https://docs.avaloniaui.net/docs/controls/window) and [UserControl](https://docs.avaloniaui.net/docs/controls/usercontrol) files also have an associated _code-behind_ file which usually has the extension `.xaml.cs` or `.axaml.cs` and may be displayed collapsed under the XAML file in your editor. Below you can see a `MainWindow.xaml` file along with its markdown file `MainWindow.xaml.cs` in Visual Studio:
 
 ![Code-behind in Visual Studio](../../.gitbook/assets/codebehind-vs.png)
 
@@ -48,7 +48,7 @@ If you make any changes to the base class, namespace, or name of the class, make
 
 In addition, the class contains two more things of interest:
 
-* It enables [DevTools](http://avaloniaui.net/docs/quickstart/devtools) in debug mode
+* It enables [DevTools](https://docs.avaloniaui.net/docs/getting-started/developer-tools) in debug mode
 * It defines an `InitializeComponent` method which is used to load the XAML at runtime
 
 ### Locating Controls <a id="locating-controls"></a>
