@@ -21,7 +21,10 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 * Debian 9 \(Stretch\)+
 * Ubuntu 16.04+
 * Fedora 30+
-* Skia is built against glibc. If your distro uses something else instead, you need to build your own libSkiaSharp.so at [https://github.com/mono/SkiaSharp](https://github.com/mono/SkiaSharp) . We provide a precompiled binary _only_ for Intel x86-64. ARM/ARM64 support is planned.
+
+{% hint style="info" %}
+Skia is built against glibc. If your distro uses something else instead, you need to build your own libSkiaSharp.so at [SkiaSharp](https://github.com/mono/SkiaSharp). We provide a precompiled binary _only_ for Intel x86-64. ARM/ARM64 support is planned.
+{% endhint %}
 
 ### macOS
 
@@ -53,4 +56,3 @@ Guided learning from the creators of Avalonia.
 ## Samples
 
 You can find our [samples](https://github.com/AvaloniaUI/Avalonia/tree/master/samples)on GitHub but there also exists a huge array of OSS projects built with Avalonia which provide valuable opportunities to learn. You can find a few of these projects on the [Awesome-Avalonia](https://github.com/AvaloniaCommunity/awesome-avalonia) list over on GitHub.
-
