@@ -147,6 +147,7 @@
     * [Routing](guides/deep-dives/reactiveui/routing.md)
     * [Data Persistence](guides/deep-dives/reactiveui/data-persistence.md)
 * [Developer Guides](guides/developer-guides/README.md)
+  * [Comparison of Avalonia with WPF and UWP](developer-guides/Comparison-of-Avalonia-with-WPF-and-UWP)
   * [Debugging Previewer](guides/developer-guides/debugging-previewer.md)
   * [MacOS Development](guides/developer-guides/macos-development.md)
   * [Release Process](guides/developer-guides/release-process.md)
@@ -192,4 +193,3 @@
   * [PropertyChangedCallback](misc/wpf/propertychangedcallback.md)
   * [RenderTransforms and RenderTransformOrigin](misc/wpf/rendertransforms-and-rendertransformorigin.md)
 * [❔ FAQ](misc/faq.md)
-
