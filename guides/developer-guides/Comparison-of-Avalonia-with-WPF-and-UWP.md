@@ -72,8 +72,8 @@ Legend:
 
 This section describes the differences in controls in vanilla WPF and UWP (with the WinUI 2.x library). It excludes some primitives and shapes (Ellipse, Rect, etc.)
 
-|Item|Avalonia|WPF|UWP|Notes|
-|-----|:---:|:---:|:---:|----------|
+|Avalonia|WPF|UWP|Notes|
+|:---:|:---:|:---:|----------|
 |&#10006;|&#10006;|AppBarButton||
 |&#10006;|&#10006;|AppBarSeparator||
 |&#10006;|&#10006;|AppBarToggleButton||
