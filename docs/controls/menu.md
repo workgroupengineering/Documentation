@@ -27,6 +27,12 @@ The text of the `MenuItem` is displayed by the `Header` property; the inner cont
 
 Separators are added by including a `Separator` control or a `MenuItem` with a header of `"-"`.
 
+## Accelerator Keys
+
+An accelerator key is a key on your keyboard that you can press to quickly access a menu. It is also sometimes called a hot key, access key or mnemonic.
+
+If you will press Alt with the example above you will see that some letters are underlined. You can use a combination of Alt + underlined letter to navigate within a menu. In Avalonia to identify the accelerator key, you will need to use `_` next character to this character would be an accelerator key.
+
 ## Menu Commands <a id="menu-commands"></a>
 
 Like `Button`, commands can be [bound](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands) to `MenuItem`s. The command will be executed when the menu item is clicked or selected with the keyboard:
