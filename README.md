@@ -56,3 +56,4 @@ Guided learning from the creators of Avalonia.
 ## Samples
 
 You can find our [samples](https://github.com/AvaloniaUI/Avalonia/tree/master/samples) on GitHub but there also exists a huge array of OSS projects built with Avalonia which provide valuable opportunities to learn. You can find a few of these projects on the [Awesome-Avalonia](https://github.com/AvaloniaCommunity/awesome-avalonia) list over on GitHub.
+

@@ -7,10 +7,10 @@ description: A tutorial demonstrating how to build a music store app.
 {% hint style="info" %}
 The completed project can be found at [https://github.com/AvaloniaUI/Avalonia.MusicStore](https://github.com/AvaloniaUI/Avalonia.MusicStore).
 
-It was created by [Dan Walmsley ](https://twitter.com/dwuk86)for a [webinar ](https://www.youtube.com/watch?v=kZCIporjJ70)hosted by [JetBrains](https://www.jetbrains.com/). 
+It was created by [Dan Walmsley ](https://twitter.com/dwuk86)for a [webinar ](https://www.youtube.com/watch?v=kZCIporjJ70)hosted by [JetBrains](https://www.jetbrains.com/).
 {% endhint %}
 
-In this tutorial, you will see just how easy it is to build great looking visual desktop applications using  Avalonia. 
+In this tutorial, you will see just how easy it is to build great looking visual desktop applications using Avalonia.
 
 This guide has instructions for Rider on OSX, however the steps will be almost the same on other operating systems, and reasonably similar on other IDEs such as Visual Studio.
 
@@ -18,7 +18,7 @@ Our livestream assumes some knowledge of [XAML](../../guides/basics/introduction
 
 ![](http://avaloniaui.net/docs/advanced-tutorial/images/image-20210310184538120.png)
 
-### A little background to Avalonia <a id="a-little-background-to-avalonia"></a>
+## A little background to Avalonia <a id="a-little-background-to-avalonia"></a>
 
 Avalonia is a "[Template](../../docs/templates/)" based UI framework. This means that controls have `Templates` that describe how they look on the screen.
 
@@ -30,7 +30,7 @@ Avalonia is suited to these "Pixel Perfect" style apps, providing the advantage 
 
 If you are already familiar with MVVM you may wish to skip this next section, if your new to Avalonia read on.
 
-#### Model View ViewModel
+### Model View ViewModel
 
 The best architecture to use Avalonia with \(not compulsory, just works best\) is MVVM \(**M**odel **V**iew **V**iew**M**odel\).
 
@@ -96,7 +96,7 @@ A View provides the look, layout and content of the UI.
 
 Lets get started building something!
 
-### In This Section <a id="in-this-section"></a>
+## In This Section <a id="in-this-section"></a>
 
 {% page-ref page="setup-development-environment.md" %}
 
