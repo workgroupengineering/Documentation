@@ -81,7 +81,7 @@ This section describes the differences in controls in vanilla WPF and UWP (with 
 |Border|Border|Border||
 |BulletDecorator|&#10006;||
 |Button|Button|Button||
-CalendarDatePicker|DatePicker|CalendarDatePicker|UWP DatePicker is different from WPF DatePicker. The WPF DatePicker is closer to the UWP CalendarDatePicker in functionality.|
+|CalendarDatePicker|DatePicker|CalendarDatePicker|UWP DatePicker is different from WPF DatePicker. The WPF DatePicker is closer to the UWP CalendarDatePicker in functionality.|
 |Calendar|Calendar|CalendarView||
 |Canvas|Canvas|Canvas||
 |&#10006;|&#10006;|CaptureElement||
