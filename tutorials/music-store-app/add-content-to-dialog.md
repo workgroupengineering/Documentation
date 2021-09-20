@@ -306,7 +306,7 @@ Now when we run the application we get:
 
 ![image-20210310011526700](http://avaloniaui.net/docs/advanced-tutorial/images/image-20210310011526700.png)
 
-As our list gets more items the will wrap around onto the next line, and the user will be able to scroll.
+As our list gets more items, that will wrap around onto the next line, and the user will be able to scroll.
 
 This is a very powerful and flexible feature in Avalonia. Any layout can be achieved, by implementing your own `Panel` class. However that is outside the scope of this tutorial.
 
