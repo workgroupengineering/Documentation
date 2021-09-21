@@ -1,6 +1,6 @@
 # Wiring up the Views
 
-Now that we've got the view models set up, we need to make our views use these view models. We do this by making use of Avalonia's [data binding](http://avaloniaui.net/docs/binding) feature.
+Now that we've got the view models set up, we need to make our views use these view models. We do this by making use of Avalonia's [data binding](https://docs.avaloniaui.net/docs/getting-started/programming-with-avalonia/data-binding) feature.
 
 ## Update MainWindow <a id="update-mainwindow"></a>
 
@@ -25,9 +25,9 @@ The main change is that instead of using a `<views:TodoListView/>` control as th
 Content="{Binding List}"
 ```
 
-`{Binding}` is a markup extension which instantiates a [binding](http://avaloniaui.net/docs/binding/bindings) to a property on a control's `DataContext`. You'll remember that in `App.axaml.cs` we [assigned an instance of `MainWindowViewModel` to the window's `DataContext` property](http://avaloniaui.net/docs/tutorial/creating-model-viewmodel#create-an-instance-of-todolistviewmodel).
+`{Binding}` is a markup extension which instantiates a [binding](https://docs.avaloniaui.net/docs/data-binding/bindings) to a property on a control's `DataContext`. You'll remember that in `App.axaml.cs` we [assigned an instance of `MainWindowViewModel` to the window's `DataContext` property](https://docs.avaloniaui.net/tutorials/todo-list-app/creating-a-model-and-viewmodel#create-an-instance-of-todolistviewmodel).
 
-The `Window.Content` property can either be set by placing a control as a child of the `Window` \([as we were doing previously](http://avaloniaui.net/docs/tutorial/creating-a-view#display-the-view-in-the-window)\), or by assigning a value to the `Content` property. Both of these syntaxes are equivalent, meaning that writing:
+The `Window.Content` property can either be set by placing a control as a child of the `Window` \([as we were doing previously](https://docs.avaloniaui.net/tutorials/todo-list-app/creating-a-view#display-the-view-in-the-window)\), or by assigning a value to the `Content` property. Both of these syntaxes are equivalent, meaning that writing:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui">Hello World!</Window>

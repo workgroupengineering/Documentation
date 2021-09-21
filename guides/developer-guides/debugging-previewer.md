@@ -6,11 +6,9 @@ By default, even if you would put a breakpoint in Avalonia main repo directly it
 
 You may try to attach the debugger manually. For doing that you will need to find a previewer process. You may use e.g "Process Hacker". Here you will see all processes in the system. Everything you will need to do is to type Avalonia in the search field.
 
- 
-
 ![](https://user-images.githubusercontent.com/53405089/132685500-1807dd51-b34c-47ea-b9dd-b1756189c620.png)
 
-In my case process was called **.NET Host**. You can understand that this process is Avalonia Previewer by clicking with the right mouse button on the process and selecting "Properties".Here in the "Command line" field, you will see a command that invokes previewer. 
+In my case process was called **.NET Host**. You can understand that this process is Avalonia Previewer by clicking with the right mouse button on the process and selecting "Properties".Here in the "Command line" field, you will see a command that invokes previewer.
 
 ![](https://user-images.githubusercontent.com/53405089/132685764-7feff643-8c86-4095-bdad-0d168e435ac4.png)
 
