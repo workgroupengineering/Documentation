@@ -106,7 +106,7 @@ namespace RoutingExample
 
 **MainWindow.xaml**
 
-Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embedd appropriate views for the view models. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.FadeInAnimation` and `RoutedViewHost.FadeOutAnimation` properties in XAML.
+Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embedd appropriate views for the view models. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML. To disabling the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`.
 
 For latest builds from MyGet use `xmlns:rxui="http://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
 
