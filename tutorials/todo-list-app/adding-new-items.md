@@ -165,7 +165,7 @@ Now we have the "Add new item" view appearing we need to make it work. In partic
 
 ### Implement the OK and Cancel commands <a id="implement-the-ok-and-cancel-commands"></a>
 
-In the last section we bound a `Button.Command` to a method on the view model, but if we want to be able to control the enabled state of the button we need to bind to an [`ICommand`](http://avaloniaui.net/docs/binding/binding-to-commands). Again we're going to take advantage of ReactiveUI and use [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/).
+In the last section we bound a `Button.Command` to a method on the view model, but if we want to be able to control the enabled state of the button we need to bind to an [`ICommand`](https://docs.avaloniaui.net/docs/data-binding/binding-to-commands). Again we're going to take advantage of ReactiveUI and use [`ReactiveCommand`](https://reactiveui.net/docs/handbook/commands/).
 
 ViewModels\AddItemViewModel.cs
 
@@ -204,7 +204,7 @@ namespace Todo.ViewModels
 }
 ```
 
-First we modify the `Description` property to raise [change notifications](http://avaloniaui.net/docs/binding/change-notifications). We [saw this pattern before](http://avaloniaui.net/docs/tutorial/adding-new-items#swap-out-the-list-view-model) in the main window view model. In this case though, we're implementing change notifications for `ReactiveUI` rather than for Avalonia specifically:
+First we modify the `Description` property to raise [change notifications](https://docs.avaloniaui.net/docs/data-binding/change-notifications). We [saw this pattern before](https://docs.avaloniaui.net/tutorials/todo-list-app/adding-new-items#swap-out-the-list-view-model) in the main window view model. In this case though, we're implementing change notifications for `ReactiveUI` rather than for Avalonia specifically:
 
 ```csharp
 var okEnabled = this.WhenAnyValue(
