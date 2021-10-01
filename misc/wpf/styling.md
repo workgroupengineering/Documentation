@@ -1,6 +1,6 @@
 # Styling
 
-The most obvious difference from other XAML frameworks is that Avalonia uses a [CSS-like styling system](http://avaloniaui.net/docs/styles/styles). Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection:
+The most obvious difference from other XAML frameworks is that Avalonia uses a [CSS-like styling system](https://docs.avaloniaui.net/docs/styling/styles). Styles aren't stored in a `Resources` collection as in WPF, they are stored in a separate `Styles` collection:
 
 ```markup
 <UserControl>

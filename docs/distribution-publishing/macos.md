@@ -45,10 +45,11 @@ The `.app` structure relies on the `Info.plist` file being properly formatted an
 * [`CFBundleVersion`](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleversion) is set to the version for your bundle, e.g. 1.4.2.
 * [`CFBundleShortVersionString`](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) is set to the user-visible string for your application's version, e.g. `Major.Minor.Patch`.
 
-If you need a protocol registration or file associations - open plist files from other apps in Applications folder and check out their fields. 
+If you need a protocol registration or file associations - open plist files from other apps in Applications folder and check out their fields.
 
 Example protocol:
-```
+
+```text
   <key>CFBundleURLTypes</key>
   <array>
     <dict>
@@ -65,7 +66,8 @@ Example protocol:
 ```
 
 Example file association
-```
+
+```text
   <key>CFBundleDocumentTypes</key>
   <array>
     <dict>
@@ -318,19 +320,20 @@ If you distribute your app in a `.dmg`, you will want to modify the steps slight
 ## App Store Packaging <a id="app-store-packaging"></a>
 
 You need a lot of things:
+
 * Apple Developer Account, with your Apple ID connected to it.
-* Your app is registered in (App Store Connect)[https://appstoreconnect.apple.com/apps].
+* Your app is registered in \(App Store Connect\)\[[https://appstoreconnect.apple.com/apps](https://appstoreconnect.apple.com/apps)\].
 * Transporter app installed from App Store.
 * Latest Xcode installed with your Apple ID authorized into it.
 * Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `Apple Distribution` for signing all files in `.app`.
 * App Store Provision Profile - get it for your app [here](https://developer.apple.com/account/resources/profiles/list).
 * Two entitlements: One for signing `.app` and other for signing all files inside `.app`.
 * `.app` structure ready with valid `Info.plist`.
-* Your app is ready to be launched inside a (sandbox)[https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html].
+* Your app is ready to be launched inside a \(sandbox\)\[[https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html)\].
 
 ### Getting certificates <a id="notarizing-your-software"></a>
 
-* go to Xcode > Preferences > Account > Manage Certificates... 
+* go to Xcode &gt; Preferences &gt; Account &gt; Manage Certificates... 
 * Add them if they do not exists.
 * Export them with a password. 
 * Open them and import into KeyChain Access.
@@ -341,20 +344,20 @@ You need a lot of things:
 
 ### Sandbox and entitlements <a id="sandbox-and-entitlements"></a>
 
-App Store required app to be launched inside a sandbox. That means app will have no access to everything and cannot harm user's PC. 
+App Store required app to be launched inside a sandbox. That means app will have no access to everything and cannot harm user's PC.
 
 Your app should be ready for this and do not crash if any folder is read/write protected.
 
-You should read all (entitlements documentation)[https://developer.apple.com/documentation/bundleresources/entitlements] and peek ones your app will access.
+You should read all \(entitlements documentation\)\[[https://developer.apple.com/documentation/bundleresources/entitlements](https://developer.apple.com/documentation/bundleresources/entitlements)\] and peek ones your app will access.
 
 First entitlements file is to sign all files inside `.app/Content/MacOS/` folder. It should look like this.
 
-```
+```text
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.apple.security.app-sandbox</key>
+    <key>com.apple.security.app-sandbox</key>
     <true/>
     <key>com.apple.security.inherit</key>
     <true/>
@@ -364,48 +367,47 @@ First entitlements file is to sign all files inside `.app/Content/MacOS/` folder
 
 Second entitlements file is to sign app package. Should contain all app's permissions. Here is an example:
 
-```
+```text
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.apple.security.cs.allow-jit</key>
-	<true/>
-	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
-	<true/>
-	<key>com.apple.security.cs.disable-library-validation</key>
-	<true/>
-	<key>com.apple.security.cs.allow-dyld-environment-variables</key>
-	<true/>
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
-	<key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
-	<array>
-		<string>com.apple.coreservices.launchservicesd</string>
-	</array>
+    <key>com.apple.security.cs.allow-jit</key>
+    <true/>
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <true/>
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    <key>com.apple.security.cs.allow-dyld-environment-variables</key>
+    <true/>
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+    <key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
+    <array>
+        <string>com.apple.coreservices.launchservicesd</string>
+    </array>
 </dict>
 </plist>
 ```
 
 Also here is some optional parameters your app can need:
 
-```
-	<key>com.apple.security.network.client</key>
-	<true/>
-	<key>com.apple.security.network.server</key>
-	<true/>
-	<key>com.apple.security.automation.apple-events</key>
-	<true/>
-	<key>com.apple.security.files.user-selected.read-write</key>
-	<true/>
+```text
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <key>com.apple.security.network.server</key>
+    <true/>
+    <key>com.apple.security.automation.apple-events</key>
+    <true/>
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
     <key>com.apple.security.files.bookmarks.document-scope</key>
-	<true/>
-	<key>com.apple.security.application-groups</key>
+    <true/>
+    <key>com.apple.security.application-groups</key>
     <array>
       <string>[Your Team ID].[Your App ID]</string>
     </array>
 ```
-
 
 ### Packaging script <a id="packaging-script"></a>
 
@@ -454,13 +456,13 @@ productbuild --component App/AppName.app /Applications --sign "$INSTALLER_SIGNIN
 
 ### Testing a package <a id="testing-a-package"></a>
 
-Copy your `.app` into Applications folder and launch it. If it launches correctly - you did everything right.
-If it crashes - open Console app and check a crash report.
+Copy your `.app` into Applications folder and launch it. If it launches correctly - you did everything right. If it crashes - open Console app and check a crash report.
 
 ### Uploading a package to app store <a id="uploading-a-package-to-app-store"></a>
 
-Open a Transporter app, sign in, select your *.pkg package and wait for validation and uploading to app store.
+Open a Transporter app, sign in, select your \*.pkg package and wait for validation and uploading to app store.
 
 If you will receive any errors - fix them, package app again, remove file in Transporter and select it again.
 
 When upload succedes - you will see your package in App Store Connect.
+
