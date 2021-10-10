@@ -127,7 +127,7 @@ namespace Example
 
 **Trigger ICommand.CanExecute**
 
-if you want trigger CanExecute from your ViewModel, you have to decorate it with one or more DependsOn attributes, where propertyName is the name of the property that will activate the CanExceute method when it changes value.
+if you want trigger CanExecute from your ViewModel, you have to decorate it with one or more DependsOn attributes, where propertyName is the name of the property that will activate the CanExecute method when it changes value.
 
 ```csharp
 namespace Example
