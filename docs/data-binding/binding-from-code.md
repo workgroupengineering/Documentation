@@ -152,3 +152,18 @@ private void FooChanged(AvaloniaPropertyChangedEventArgs e)
 }
 ```
 
+## Binding to `INotifyPropertyChanged` objects
+
+Binding to objects that implements `INotifyPropertyChanged` is also available.
+
+```csharp 
+var textBlock = new TextBlock();
+
+var binding = new Binding 
+{ 
+    Source = someObjectImplementingINotifyPropertyChanged, 
+    Path = nameof(someObjectImplementingINotifyPropertyChanged.MyProperty)
+}; 
+
+textBlock.Bind(TextBlock.TextProperty, binding);
+```
