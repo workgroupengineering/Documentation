@@ -152,7 +152,7 @@ private void FooChanged(AvaloniaPropertyChangedEventArgs e)
 }
 ```
 
-## Binding to Objects that Implement INotifyPropertyChanged
+## Binding to `INotifyPropertyChanged` objects
 
 Binding to objects that implements `INotifyPropertyChanged` is also available.
 
