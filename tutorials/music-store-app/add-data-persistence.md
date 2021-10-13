@@ -2,7 +2,7 @@
 
 ## Persisting Music Collection
 
-Persistence is the job of the business logic \(`model`\) code. However here we will see its very simple to wire this up to the UI.
+Persistence is the job of the business logic \(`model`\) code. However here we will see it's very simple to wire this up to the UI.
 
 Add the following method to `AlbumViewModel` this will call our backend logic to save the Album to the users collection. The backend also provides a way to cache the album bitmap. It provides us a stream we can save our bitmap to.
 
