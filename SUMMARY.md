@@ -192,5 +192,6 @@
   * [Class Handlers](misc/wpf/class-handlers.md)
   * [PropertyChangedCallback](misc/wpf/propertychangedcallback.md)
   * [RenderTransforms and RenderTransformOrigin](misc/wpf/rendertransforms-and-rendertransformorigin.md)
+* [📋 Projects that are using Avalonia](misc/projects-that-are-using-avalonia.md)
 * [❔ FAQ](misc/faq.md)
 
