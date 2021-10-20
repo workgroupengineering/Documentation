@@ -107,6 +107,15 @@ The console can be shown using the "View" → "Console" menu. The console implem
 * `e`: The control currently selected in the logical or visual tree
 * `root`: The root of the visual tree
 
+## Hotkeys
+
+| Keys Combination | Function |
+|-|-|
+| Alt+S | Enable Snapshot Styles |
+| Alt+D | Disable Snapshot Styles |
+| CRTL+Shift | Inspect Control over Pointer |
+| CRTL+Alt+F | Toggle Popup freeze |
+
 ## Examples
 
 ### Changing a property value
@@ -116,4 +125,3 @@ The console can be shown using the "View" → "Console" menu. The console implem
 ### Changing layout properties
 
 ![](../../.gitbook/assets/devtools-change-layout.gif)
-
