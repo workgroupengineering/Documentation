@@ -56,6 +56,7 @@ Avalonia is supported for .NET Core 3.1 and higher.
 Avalonia is supported on the following platforms:
 
 * Windows 8 and higher
+  * **Note**: Avalonia works correctly on Windows 7 also,but not supported *officially*
 * MaxOS High Sierra 10.13 and higher
 * for Linux:
   * Debian 9 \(Stretch\) and higher
@@ -67,111 +68,7 @@ Avalonia is supported on the following platforms:
 The following environments support Avalonia XAML with IntelliSense:
 
 * Visual Studio 2017 and higher \(with or without Resharper 2020.3\). Avalonia Visual Designer is also supported.
-* JetBrains Rider 2020.3 and higher \(Avalonia Designer coming soon to Rider\).
+* JetBrains Rider 2020.3 and higher.
 
-## Installing Avalonia Extension for Visual Studio
-
-In order to start using Avalonia, you need to set up your development environment \(Visual Studio or Rider\) first. 
-
-You achieve in in Visual Studio by installing "Avalonia for Visual Studio" extension as described below.
-
-Open you VS extension manager \(in VS 2019 it is located under Extensions menu\). Find the extension called "Avalonia for Visual Studio" online and install it:
-
-![Installing Avalonia for Visual Studio extension](.gitbook/assets/installavaloniaextension.png)
-
-Avalonia for Visual Studio extension installs the templates for creating the Avalonia UI projects and various XAML based files and it also installs the intellisense for XAML. 
-
-## Creating and Running a Simple Avalonia Application under Visual Studio
-
-Once you have installed the "Avalonia for Visual Studio" extension, start Visual Studio choose New-&gt;Project menu item for the File menu:
-
-![Creating new Project in Visual Studio](.gitbook/assets/createnewproject.png)
-
-and choose "Avalonia Application" project type:
-
-![Choosing Avalonia Application Project Type](.gitbook/assets/avaloniaappprojecttype.png)
-
- Press button "Next" and choose the name and location for your first Avalonia project, e.g:
-
-![Creating simple avalonia project](.gitbook/assets/createsimpleavaloniaproject.png)
-
-Pressing button "Create" will create the Avalonia Application project. It will have dependencies on three Avalonia nuget packages:  `Avalonia`, `Avalonia.Desktop` and `Avalonia.Diagnostics`:
-
-![Avalonia Application project Files and Dependencies](.gitbook/assets/projectpackagesandfiles.png)
-
-The newly created project contains five files:  _App.axaml_, _App.axaml.cs_, _MainWindow.axaml_, _MainWindow.axaml.cs_ and _Program.cs_. Note that Avalonia XAML files have "._axaml_" extension \(unlike WPF XAML files that have "._xaml_" extension\). The Avalonia XAML syntax is very similar to WPF XAML syntax, with some specialty when it comes to the so called Style Selectors \(which will be explained in the future\). 
-
-Among the five files listed above, it is likely you will have to modify _MainWindow.axaml_ and _MainWindow.axaml.cs_ files most, then perhaps slightly change also _App.axaml_ and _App.axaml.cs_ files and you probably won't have to change _Program.cs_ file ever.
-
- Open _MainWindow.xaml_ file and replace its content \(which by default consists of "`Welcome to Avalonia!`" text\) with the following code:
-
-```markup
-<Button x:Name="CloseWindowButton"
-        Content="Close Window"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Padding="10,5"/>
-```
-
-If you run the application now, there will be a Button in the middle of the window \(which is ensured by Horizontal and Vertical Alignments - the words "**Close Window**" will be written in the middle of the button \(`Button`'s content\) and the margins from the "**Close Button**" text to the sides of the button will be 10 generic pixels on the right and left and 5 generic pixels at the top and the bottom \(specified by the `Padding` property\):
-
-![](.gitbook/assets/windowwithbutton.png)
-
- So far so good, but if you press the button, nothing is going to happen. We need to try to connect the button's "Click" event to the action that closes the window. In this first sample, we are going to employ the simplest, but also the **worst** way of achieving such purpose - the code behind. File _MainWindow.xaml.cs_ contains the so called "code behind" - C\# code for the _MainWindow.xaml_ file:
-
-```csharp
-public partial class MainWindow : Window
-{
-    public MainWindow()
-    {
-        InitializeComponent();
-#if DEBUG
-        this.AttachDevTools();
-#endif
-    }
-
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
-    }
-}
-```
-
- We named out button "`CloseWindowButton`". In WPF, the corresponding class member would have been generated. `Avalonia`, still does not include this feature, but we can easily find the button by adding the following line:
-
-```csharp
-var button = this.FindControl<Button>("CloseWindowButton");
-```
-
-after `InitializeComponent();` is called within the constructor. Then we can add a handler to the button's `Click` event: `button.Click += Button_Click;`. Finally, within the handler we can call `Close()` method on the window:
-
-```csharp
-private void Button_Click(object? sender, RoutedEventArgs e)
-{
-    this.Close();
-}
-```
-
- The full code for `MainWindow` constructor and the handler will look like below:
-
-```csharp
-public MainWindow()
-{
-    InitializeComponent();
-#if DEBUG
-    this.AttachDevTools();
-#endif
-    var button = this.FindControl<Button>("CloseWindowButton");
-
-    button.Click += Button_Click;
-}
-
-private void Button_Click(object? sender, RoutedEventArgs e)
-{
-    this.Close();
-}
-```
-
-Now if you run the application and press "**Close**" button, the window will close.
-
-The code for this application is located under [_NP.Demos.SimpleAvaloniaProject_](https://github.com/npolyak/NP.CodeForAvaloniaInEasySampleArticle/tree/main/NP.Demos.SimpleAvaloniaProject), but if you are new to Avalonia and WPF, it is imperative that you should go over the exercise above.
+[Installing Avalonia Extension for Visual Studio](docs/getting-started/ide-support/README.md)
+[JetBrains Rider Setup](docs/getting-started/ide-support/jetbrains-rider-setup.md)
