@@ -7,8 +7,8 @@ Welcome to Avalonia - the best open source, easy to learn .NET C\# multiplatform
 * Avalonia is being developed very fast by [extremely bright people](https://github.com/AvaloniaUI/Avalonia/graphs/contributors).
 * Avalonia is [100% open source - and will continue as an open source project](https://github.com/AvaloniaUI/Avalonia) and has great and constantly expanding documentation and a great number of open source samples showing how to use Avalonia.
 * Avalonia has a decent [free support on Avalonia Gitter](https://gitter.im/AvaloniaUI/Avalonia), one can also post questions on [Avalonia Github Discussions](https://github.com/AvaloniaUI/Avalonia/discussions). If you're in need of more support you can opt for a  [paid support plan](https://avaloniaui.net/support.html) which helps support the continued growth of the project.
-* Avalonia has Visual Studio and Rider support for creating XAML files while having advantage of XAML intellisense. Visual Studio also has a designer view available.
-* Avalonia has a tool that facilitate the visual development and debugging. This tool is also multiplatform - meaning you can use it on Mac and Linux and completely open source.
+* Avalonia has Visual Studio and Rider support for creating XAML files while having advantage of XAML IntelliSense. Visual Studio also has a designer view available.
+* Avalonia has a tool that facilitate the visual development and debugging called [DevTools](docs/getting-started/developer-tools.md). This tool is also multiplatform - meaning you can use it on Mac and Linux and completely open source.
 
 If you're familiar with WPF or UWP then you should feel right at home with Avalonia. Although Avalonia is not API compatible with either of these frameworks \(and so controls can't be used without porting\), there's a lot of similarity. If you're a WPF user we have a [page which describes the main differences between WPF and Avalonia](misc/wpf/).
 
@@ -47,28 +47,6 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 
   All these paradigms have been implemented for multiple platforms in Avalonia.
 
-## Why Avalonia is Better than other Multiplatform UI Frameworks
-
-Here we shall go over the reasons why Avalonia is better for Desktop/Mobile development than other frameworks including Web development \(JavaScript/TypeScript\), Xamarin, Java and C++. 
-
-The main disadvantage of every other competing platform is that it is not compositional to the same degree as Avalonia \(or WPF\). In JavaScript/TypeScript, Xamarin or Java - the basic primitives are buttons, dropdowns, menus and so on, while in Avalonia, the buttons, dropdowns, menus, check boxes can be composed out of much more basic primitives. Because of that the customization of look and feel and control behaviors in Avalonia is much easier to achieve.
-
-For example, you cannot pack HTML5 canvas rectangles into a reusable button control that will show in similar ways in the center of the Web page and at the bottom of it \(without some extra customization\). Instead, the controls come predefined with the browser with a million ways to customize them \(some of the customizations are specific to each browser\). In Web development - creating a re-usable custom control is virtually impossible - you are stuck with customization of already existing controls or some widgets coming from the 3rd party tools.
-
-Web programming \(based on JavaScript/TypeScript languages and  frameworks like Angular or React\) is not very suitable for building desktop and mobile applications - I saw a couple of projects failing because the clients were expecting to have as high degree of customization as they had in a WPF project. There is a very successful state of art Visual Studio Code application built in TypeScript by Microsoft - I would warn you that a company that is less well funded than Microsoft, will not achieve results that are even anywhere close to Visual Studio Code within reasonable time. Using Avalonia, though, it is quite reasonable to build a comparable application within several months to a year. Besides, even Visual Studio Code does not allow to have multi-window layouts, while Visual Studio \(built mostly in WPF\) allows decomposing the application into multiple windows by dragging the panes out of the main application - for some people it is a big deal.
-
-Also JavaScript \(and TypeScript\) are considerably slower than C\#: you can check [benchmarks ](https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/csharp.html)website where C\# and JavaScript on Node.js are matched against Java language with C\# being faster and JavaScript slower on average than Java. This is to be expected since C\# is compiled to pseudo code  which is much closer to the native code than the Web languages.
-
-Xamarin \(and its descendant MAUI\) is also not as compositional as Avalonia \(or WPF\). Its primitives are also basic controls like Buttons, Checkboxes, menus etc. In fact those controls are displayed and behave differently on each of the OS - since they are based on the native OS controls. Also Xamarin \(and MAUI\) were originally built for the mobile development and are not very suited for desktop development. 
-
-People who are serious about the look and feel of their UI application usually do not use Java language to build it. Java applications are knows for very old look and feel and few if any customization capabilities.
-
-There are also some multiplatform C++ WPF-Like frameworks which are not well known to mention their names, but they force the developers to work in C++ which is plagued by the common C++ development problem - very slow compilation/linking and prototyping difficulty because of that. 
-
-Also programming Xamarin or C++ will force to compile the project into separate binaries for different operating systems, while .NET Core programming with Avalonia will allow to keep the binaries the same while testing the product on different machines.
-
-Another reason to prefer Avalonia is that it implements all the great concepts that WPF originally came up with and which make it considerably easier to build UI applications, while the competing frameworks at most implement just a pale imitation of those concepts. E.g. React and Angular frameworks implement bindings, but do not implement bindings that can connect to a property defined up the Visual Tree. Custom attached properties and custom Routed Events are not implemented either. Xamarin does not support Routed Events that can travel on trees, neither it supports a differentiation between the logical and visual trees.  
-
 ## Supported .NET Version
 
 Avalonia is supported for .NET Core 3.1 and higher.
@@ -86,7 +64,7 @@ Avalonia is supported on the following platforms:
 
 ## Supported Development Environments
 
-The following environments support Avalonia XAML with intellisense:
+The following environments support Avalonia XAML with IntelliSense:
 
 * Visual Studio 2017 and higher \(with or without Resharper 2020.3\). Avalonia Visual Designer is also supported.
 * JetBrains Rider 2020.3 and higher \(Avalonia Designer coming soon to Rider\).
