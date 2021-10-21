@@ -32,7 +32,7 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 * Several extremely popular .NET open source projects have been ported to Avalonia. Among them are
   * [AvalonEdit](http://avalonedit.net/) - the port is available as [AvaloniaEdit](https://github.com/AvaloniaUI/AvaloniaEdit) - Rich Text Editor.
   * [RoslynPad](https://roslynpad.net/) - C\# code editor with intellisense.
-* Avalonia \(just like WPF and Silverlight\) is fully compositional: you can create a button out of Avalonia primitives in a fashion similar to creating a complex page, while its competitors \(Web, Xamarin and Java\) packages are not compositional to the same degree as will be detailed later.
+* Avalonia \(just like WPF and Silverlight\) is fully compositional: you can create a button out of Avalonia primitives in a fashion similar to creating a complex page, while its competitors \(Web, Xamarin and Java\) packages are not compositional to the same degree.
 * Avalonia UI, unlike JavaScript has full advantage of a strongly typed language. Also Avalonia has full advantage of a compiled-to-binary code language.
 * Avalonia is an open source multiplatform descendant of great Microsoft packages - WPF and Silverlight which brought the UI development on a completely new level creating a set of new concepts and which allow to create a full blown UI application in fraction of time and effort in comparison to other technologies. Here is the list of some of the concepts:
 
@@ -71,4 +71,5 @@ The following environments support Avalonia XAML with IntelliSense:
 * JetBrains Rider 2020.3 and higher.
 
 [Installing Avalonia Extension for Visual Studio](docs/getting-started/ide-support/README.md)
+
 [JetBrains Rider Setup](docs/getting-started/ide-support/jetbrains-rider-setup.md)
