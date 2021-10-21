@@ -2,13 +2,13 @@
 
 ## Welcome
 
-Welcome to Avalonia - the best open source, easy to learn .NET C\# multiplatform package for desktop \(Windows, Mac and Linux\) C\# development.
+Welcome to Avalonia - the best open source, easy to learn .NET C\# multiplatform package for desktop \(Windows, Mac and Linux\)  development.
 
 * Avalonia is being developed very fast by [extremely bright people](https://github.com/AvaloniaUI/Avalonia/graphs/contributors).
 * Avalonia is [100% open source - and will continue as an open source project](https://github.com/AvaloniaUI/Avalonia) and has great and constantly expanding documentation and a great number of open source samples showing how to use Avalonia.
-* Avalonia has a decent [free support on Avalonia Gitter](https://gitter.im/AvaloniaUI/Avalonia), one can also post questions on [Avalonia Github Discussions](https://github.com/AvaloniaUI/Avalonia/discussions). if you're in need of more support you can opt for a  [paid support plan](https://avaloniaui.net/support.html) which helps support the continued growth of the project.
+* Avalonia has a decent [free support on Avalonia Gitter](https://gitter.im/AvaloniaUI/Avalonia), one can also post questions on [Avalonia Github Discussions](https://github.com/AvaloniaUI/Avalonia/discussions). If you're in need of more support you can opt for a  [paid support plan](https://avaloniaui.net/support.html) which helps support the continued growth of the project.
 * Avalonia has Visual Studio and Rider support for creating XAML files while having advantage of XAML intellisense. Visual Studio also has a designer view available.
-* Avalonia has a tool that facilitate the visual development and debugging \(akin to WPF Snoop\). This tool is also multiplatform - meaning you can use it on Mac and Linux and completely open source.
+* Avalonia has a tool that facilitate the visual development and debugging. This tool is also multiplatform - meaning you can use it on Mac and Linux and completely open source.
 
 If you're familiar with WPF or UWP then you should feel right at home with Avalonia. Although Avalonia is not API compatible with either of these frameworks \(and so controls can't be used without porting\), there's a lot of similarity. If you're a WPF user we have a [page which describes the main differences between WPF and Avalonia](misc/wpf/).
 
