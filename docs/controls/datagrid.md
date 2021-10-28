@@ -52,7 +52,7 @@ This will generate a DataGrid with column header names. FirstName and LastName.
 </Window>
 ```
 
-```markup
+```csharp
 public class Person
 {
     public string FirstName { get; set; }
