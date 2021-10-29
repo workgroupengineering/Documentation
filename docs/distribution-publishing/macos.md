@@ -113,9 +113,9 @@ The file that is actually executed by macOS when starting your `.app` bundle wil
 
 * Add `-p:UseAppHost=true` to your `dotnet publish` command.
 
-### Dotnet.Bundle <a id="dotnet-bundle"></a>
+### dotnet-bundle <a id="dotnet-bundle"></a>
 
-[Dotnet.Bundle](https://www.nuget.org/packages/DotNet.Bundle/0.9.13) is a [NuGet package](https://www.nuget.org/packages/Dotnet.Bundle/) that publishes your project and then creates the `.app` file for you.
+[dotnet-bundle](https://github.com/egramtel/dotnet-bundle) is a [NuGet package](https://www.nuget.org/packages/Dotnet.Bundle/) that publishes your project and then creates the `.app` file for you.
 
 You'll first have to add the project as a `PackageReference` in your project. Add it to your project via NuGet package manager or by adding the following line to your `.csproj` file:
 
