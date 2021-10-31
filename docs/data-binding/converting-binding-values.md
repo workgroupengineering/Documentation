@@ -1,6 +1,6 @@
 # Converting Binding Values
 
-### Negating Values <a id="negating-values"></a>
+### Negating Values <a href="negating-values" id="negating-values"></a>
 
 Often you will need to negate a value that you're binding to. A frequent use for this is to show or hide and control or to enable/disable it. You can negate a binding value by prepending a "bang" operator: `!`.
 
@@ -30,9 +30,9 @@ A "double-bang" can be used to convert a non-boolean value to a boolean value. F
 </Panel>
 ```
 
-### Binding Converters <a id="binding-converters"></a>
+### Binding Converters <a href="binding-converters" id="binding-converters"></a>
 
-For more advanced conversions, Avalonia supports [`IValueConverter` ](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1)the same as other XAML frameworks.
+For more advanced conversions, Avalonia supports [`IValueConverter `](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1)the same as other XAML frameworks.
 
 > Note: The `IValueConverter` interface is not available in .NET standard 2.0 so we ship our own, in the `Avalonia.Data.Converters` namespace.
 
@@ -51,17 +51,17 @@ Usage is identical to other XAML frameworks:
 </Window>
 ```
 
-### Built-in Converters <a id="built-in-converters"></a>
+### Built-in Converters <a href="built-in-converters" id="built-in-converters"></a>
 
 Avalonia supplies a number of built-in value converters for common scenarios:
 
-| Converter | Description |
-| :--- | :--- |
-| `StringConverters.IsNullOrEmpty` |  Returns `true` if the input string is null or empty |
-| `StringConverters.IsNotNullOrEmpty` |  Returns `false` if the input string is null or empty |
-| `ObjectConverters.IsNull` |  Returns `true` if the input is null |
-| `ObjectConverters.IsNotNull` |  Returns `false` if the input is null |
-| `BoolConverters.And` |  A multi-value converter that returns `true` if all inputs are true. |
+| Converter                           | Description                                                          |
+| ----------------------------------- | -------------------------------------------------------------------- |
+| `StringConverters.IsNullOrEmpty`    |  Returns `true` if the input string is null or empty                 |
+| `StringConverters.IsNotNullOrEmpty` |  Returns `false` if the input string is null or empty                |
+| `ObjectConverters.IsNull`           |  Returns `true` if the input is null                                 |
+| `ObjectConverters.IsNotNull`        |  Returns `false` if the input is null                                |
+| `BoolConverters.And`                |  A multi-value converter that returns `true` if all inputs are true. |
 
 ### Examples
 
@@ -78,4 +78,3 @@ Hiding a `ContentControl` if the bound content is null or empty:
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, Converter={x:Static ObjectConverters.IsNotNull}}"/>
 ```
-

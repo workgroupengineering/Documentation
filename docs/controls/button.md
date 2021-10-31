@@ -2,7 +2,7 @@
 
 The `Button` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/controls/contentcontrol) which reacts to pointer presses.
 
-A button notifies clicks by raising the [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released \(although this behavior can be changed by setting the [`ClickMode`](http://reference.avaloniaui.net/api/Avalonia.Controls/ClickMode/) property\).
+A button notifies clicks by raising the [`Click`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/61B1E7A8) event. A click is distinct from a `PointerDown` event in that it is raised by default when the button is pressed and then released (although this behavior can be changed by setting the [`ClickMode`](http://reference.avaloniaui.net/api/Avalonia.Controls/ClickMode/) property).
 
 Alternatively an instance of [`ICommand`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.input.icommand?view=netstandard-2.0) can be assigned or bound to the button's [`Command`](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/4AAA993D) property. This command will be executed when the button is clicked. For more information see [binding to commands](http://reference.avaloniaui.net/api/Avalonia.Data/Binding/).
 
@@ -16,20 +16,20 @@ The Button control's full documentation can be found [here](http://reference.ava
 
 ## Common Properties
 
-| Property | Description |
-| :--- | :--- |
-| `ClickMode` | Describes how the button should react to clicks |
-| `Command` | A command to be invoked when the button is clicked |
-| `CommandParameter` | A parameter to be passed to `Command` |
-| `Content` | The content to display in the button |
-| `IsDefault` | When set, pressing the enter key clicks the button even if not focused |
-| `IsPressed` | Set when the button is depressed |
+| Property           | Description                                                            |
+| ------------------ | ---------------------------------------------------------------------- |
+| `ClickMode`        | Describes how the button should react to clicks                        |
+| `Command`          | A command to be invoked when the button is clicked                     |
+| `CommandParameter` | A parameter to be passed to `Command`                                  |
+| `Content`          | The content to display in the button                                   |
+| `IsDefault`        | When set, pressing the enter key clicks the button even if not focused |
+| `IsPressed`        | Set when the button is depressed                                       |
 
 ## Pseudoclasses
 
-| Pseudoclass | Description |
-| :--- | :--- |
-| `:pressed` | Set when the button is depressed |
+| Pseudoclass | Description                      |
+| ----------- | -------------------------------- |
+| `:pressed`  | Set when the button is depressed |
 
 ## API Reference
 
@@ -57,10 +57,10 @@ The Button control's full documentation can be found [here](http://reference.ava
 </Window>
 ```
 
-produces following output with **Windows 10**  
+produces following output with **Windows 10**\
 
 
-![Basic button](../../.gitbook/assets/button_basic%20%281%29%20%281%29.png)
+![Basic button](<../../.gitbook/assets/button\_basic (1).png>)
 
 ### Colored button
 
@@ -78,10 +78,10 @@ produces following output with **Windows 10**
 </Window>
 ```
 
-produces following output with **Windows 10**  
+produces following output with **Windows 10**\
 
 
-![Basic button](../../.gitbook/assets/button_basic%20%281%29.png)
+![Basic button](<../../.gitbook/assets/button\_basic (1) (1).png>)
 
 ### Play button
 
@@ -162,7 +162,7 @@ public ReactiveCommand OnClickCommand { get; }
 </Window>
 ```
 
-The corresponding C\# code in the View's cs file:
+The corresponding C# code in the View's cs file:
 
 ```csharp
 private void OnButtonClick(object sender, RoutedEventArgs e)
@@ -175,4 +175,3 @@ private void OnPointerEnter(object sender, PointerEventArgs e)
 	//do something when pointer enters
 }
 ```
-

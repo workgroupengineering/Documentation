@@ -4,9 +4,9 @@ The `CheckBox` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/
 
 ## Common Properties
 
-| Property | Description |
-| :--- | :--- |
-| `IsChecked` | Is `CheckBox` checked |
+| Property       | Description                       |
+| -------------- | --------------------------------- |
+| `IsChecked`    | Is `CheckBox` checked             |
 | `IsThreeState` | Is `CheckBox` in three state mode |
 
 ## Reference
@@ -36,10 +36,10 @@ The `CheckBox` control is a [`ContentControl`](https://docs.avaloniaui.net/docs/
 </Window>
 ```
 
-produces following output with **Windows 10**  
+produces following output with **Windows 10**\
 
 
-![Basic checkbox](../../.gitbook/assets/checkbox_basic.png)
+![Basic checkbox](../../.gitbook/assets/checkbox\_basic.png)
 
 ### Three state checkbox
 
@@ -59,8 +59,7 @@ produces following output with **Windows 10**
 </Window>
 ```
 
-produces following output with **Windows 10**  
+produces following output with **Windows 10**\
 
 
-![Three state checkbox](../../.gitbook/assets/checkbox_threestate.png)
-
+![Three state checkbox](../../.gitbook/assets/checkbox\_threestate.png)

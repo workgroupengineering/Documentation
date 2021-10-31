@@ -6,28 +6,28 @@ Because this is a first tutorial, we're going to first just populate the view wi
 
 Our view is going to be a `UserControl`.
 
-### Create the UserControl <a id="create-the-usercontrol"></a>
+### Create the UserControl <a href="create-the-usercontrol" id="create-the-usercontrol"></a>
 
 We're going to create the `UserControl` from a template. Follow the instructions below:
 
-#### Visual Studio <a id="visual-studio"></a>
+#### Visual Studio <a href="visual-studio" id="visual-studio"></a>
 
 1. Right click your project's `Views` folder in Solution Explorer
 2. Select the `Add -> New Item` menu item
 3. In the dialog that appears, navigate to the "Avalonia" section in the category tree
-4. Select "User Control \(Avalonia\)"
+4. Select "User Control (Avalonia)"
 5. Enter `TodoListView` as the "Name"
 6. Click the "Add" button
 
-#### .NET Core CLI <a id="net-core-cli"></a>
+#### .NET Core CLI <a href="net-core-cli" id="net-core-cli"></a>
 
-Run this command from the root directory of your project \(the directory that contains "Program.cs" and the "Views" directory\):
+Run this command from the root directory of your project (the directory that contains "Program.cs" and the "Views" directory):
 
-```text
+```
 dotnet new avalonia.usercontrol -o Views -n TodoListView  --namespace Todo.Views
 ```
 
-### The UserControl <a id="the-usercontrol"></a>
+### The UserControl <a href="the-usercontrol" id="the-usercontrol"></a>
 
 The template should create a XAML file with the following contents in the `Views` directory, alongside `MainWindow.axaml`
 
@@ -42,7 +42,7 @@ The template should create a XAML file with the following contents in the `Views
 </UserControl>
 ```
 
-Alongside the XAML, you will also find a `TodoListView.axaml.cs` file containing the code-behind for the view \(in Visual Studio this is nested under the XAML file so click the expander next to the XAML file in Solution Explorer to see it\):  
+Alongside the XAML, you will also find a `TodoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the XAML file so click the expander next to the XAML file in Solution Explorer to see it):\
 
 
 ```csharp
@@ -69,7 +69,7 @@ namespace Todo.Views
 
 We're not going to touch the code-behind file for a little while, but notice that the class is called `TodoListView` and it's located in the `Todo.Views` namespace.
 
-### Edit the UserControl <a id="edit-the-usercontrol"></a>
+### Edit the UserControl <a href="edit-the-usercontrol" id="edit-the-usercontrol"></a>
 
 Edit the contents of `Views/TodoListView.axaml` to contain the following:
 
@@ -94,7 +94,7 @@ If you're using the Visual Studio extension you should see the contents of the c
 
 ![Designer view](../../.gitbook/assets/creating-a-view-todolistview.png)
 
-### What does it all mean? <a id="what-does-it-all-mean"></a>
+### What does it all mean? <a href="what-does-it-all-mean" id="what-does-it-all-mean"></a>
 
 Lets take a look at the code we just entered line-by-line.
 
@@ -149,14 +149,14 @@ Next we add another panel: a `StackPanel`. `StackPanel` lays out its child contr
 
 Because this is the last child in the `DockPanel` it will fill the remaining space in the center of the control.
 
-```text
+```
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```
 
 Last of all, we add two `CheckBox` controls to represent the TODO items. We're also giving the controls a margin to separate them a little bit visually.
 
-### Display the view in the Window <a id="display-the-view-in-the-window"></a>
+### Display the view in the Window <a href="display-the-view-in-the-window" id="display-the-view-in-the-window"></a>
 
 To see the view we've just created, we need to add it to the application's main window. Open the `Views/MainWindow.axaml` file and edit it to have the following content:
 
@@ -180,7 +180,7 @@ A lot of this is similar to the markup we've already seen, so lets just look at 
 xmlns:views="clr-namespace:Todo.Views"
 ```
 
-We want to display the `TodoListView` control we just created, which is in the `Todo.Views` C\# namespace. Here we're mapping the `Todo.Views` namespace to the `views` XML namespace. Any control that is not a core Avalonia control will generally need this type of mapping in order for the XAML engine to find the control.
+We want to display the `TodoListView` control we just created, which is in the `Todo.Views` C# namespace. Here we're mapping the `Todo.Views` namespace to the `views` XML namespace. Any control that is not a core Avalonia control will generally need this type of mapping in order for the XAML engine to find the control.
 
 ```markup
 <views:TodoListView/>
@@ -188,9 +188,8 @@ We want to display the `TodoListView` control we just created, which is in the `
 
 Using the XML namespace we've just declared we now place the `TodoListView` control as the content of our `Window`.
 
-### Run the application <a id="run-the-application"></a>
+### Run the application <a href="run-the-application" id="run-the-application"></a>
 
-If you now run the application \(by pressing `F5` in Visual Studio or executing `dotnet run` in .NET Core\) you should see the application running in all its glory:
+If you now run the application (by pressing `F5` in Visual Studio or executing `dotnet run` in .NET Core) you should see the application running in all its glory:
 
 ![The running application](../../.gitbook/assets/creating-a-view-run.png)
-
