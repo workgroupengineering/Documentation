@@ -156,7 +156,7 @@ Pros:
 
 * No additional object is allocated per-instance for the property
 * Property getter is a standard C\# property getter
-* Property setter is is a standard C\# property setter that raises an event.
+* Property setter is a standard C\# property setter that raises an event.
 
 Cons:
 
