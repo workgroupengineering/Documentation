@@ -76,7 +76,7 @@ Let's imagine a situation in which you might expect a second style to override p
 With this code example the `Border` has a Red background normally and Blue when the pointer is over it. This is because as with CSS more specific selectors have precedence. It is an issue, when you want to override default styles of any state (pointerover, pressed or others) with a single style. To achieve it you will need to have new styles for these states as well.&#x20;
 
 {% hint style="info" %}
-Visit the Avalonia source code to find the[ original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with psuedoclasses into your code.
+Visit the Avalonia source code to find the [original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with psuedoclasses into your code.
 
 
 {% endhint %}
@@ -134,3 +134,11 @@ Why default styles change the ContentPresenter `Background` property directly in
 
 This is because if the user were to set a local value on the button, it would override all styles, and make button always the same color. For more details see this [reverted PR](https://github.com/AvaloniaUI/Avalonia/pull/2662#issuecomment-515764732).
 {% endhint %}
+
+
+### Weird behaviour with specific properties, previous value is not restored when style is not applied anymore
+
+In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achive lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details about properties [here](../authoring-controls/defining-properties.md#direct-avaloniaproperties).
+
+Typical example is [CommandProperty](http://reference.avaloniaui.net/api/Avalonia.Controls/Button/B9689B29). It is defined as a DirectProperty, and it will never work properly.
+In the future attempt to style direct property will be resulted in compile time error, see [#6837](https://github.com/AvaloniaUI/Avalonia/issues/6837).
