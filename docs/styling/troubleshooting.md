@@ -136,7 +136,7 @@ This is because if the user were to set a local value on the button, it would ov
 {% endhint %}
 
 
-### Weird behaviour with specific properties, previous value is not restored when style is not applied anymore
+### Previous value of specific properties is not restored when style is not applied anymore
 
 In Avalonia we have multiple types of properties, and one of them, Direct Property, doesn't support styling at all. These properties work in simplified way to achive lower overhead and higher performance, and do not store multiple values depending on priority. Instead only latest value is saved and cannot be restored. You can find more details about properties [here](../authoring-controls/defining-properties.md#direct-avaloniaproperties).
 
