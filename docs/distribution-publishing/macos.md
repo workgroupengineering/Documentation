@@ -333,7 +333,7 @@ You need a lot of things:
 * Your app content is [bundled correctly](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
 * Your bundle is signed correctly.
 * Your `.dylib` files doesn't contain any non-ARM/x64 architectures. You can remove these by using `lipo` command line tool.
-* Your app is ready to be launched inside a [sandbox](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html).
+* Your app is ready to be launched from inside a [sandbox](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html).
 
 ### Getting certificates <a id="notarizing-your-software"></a>
 
