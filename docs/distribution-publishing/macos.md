@@ -374,7 +374,7 @@ Also it's better to rewrite your app's resources access scheme to directly acces
 
 You should read all [entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements) and choose the ones your app requires.
 
-First entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
+First for the entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
 
 ```text
 <?xml version="1.0" encoding="UTF-8"?>
