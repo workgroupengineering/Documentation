@@ -367,7 +367,7 @@ To satisfy this requirement without a lot of pain you can use relative symlinks 
 
 `ln -s fromFile toFile`
 
-Also better rewrite resources access code for Mac App Store build to directly access `Resources/` folder without symlinks, because over symlinks you can have IO access issues in sandbox.
+Also it's better to rewrite your app's resources access scheme to directly access `Resources/` folder without using any symlinks, because over symlinks you might get I/O access issues in sandbox.
 
 
 ### Sandbox entitlements and signing <a id="sandbox-entitlements-and-signing"></a>
