@@ -389,7 +389,7 @@ First entitlements file is to sign all helper executables inside `.app/Content/M
 </plist>
 ```
 
-Second entitlements file is to sign app executable and a whole app bundle. Should contain all app's permissions. Here is an example:
+Second is to sign app executable and a whole app bundle. It should contain all app's permissions. Here is an example:
 
 ```text
 <?xml version="1.0" encoding="UTF-8"?>
