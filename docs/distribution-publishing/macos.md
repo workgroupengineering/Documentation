@@ -321,15 +321,19 @@ If you distribute your app in a `.dmg`, you will want to modify the steps slight
 
 You need a lot of things:
 
+* Your app satisfies [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
+* Your app satisfies [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/).
 * Apple Developer Account, with your Apple ID connected to it.
-* Your app is registered in \(App Store Connect\)\[[https://appstoreconnect.apple.com/apps](https://appstoreconnect.apple.com/apps)\].
+* Your app is registered in [App Store Connect](https://appstoreconnect.apple.com/apps/).
 * Transporter app installed from App Store.
 * Latest Xcode installed with your Apple ID authorized into it.
-* Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `Apple Distribution` for signing all files in `.app`.
+* Two certificates: `3rd Party Mac Developer Installer` for signing `.pkg` file and `3rd Party Mac Developer Application` for signing a bundle.
 * App Store Provision Profile - get it for your app [here](https://developer.apple.com/account/resources/profiles/list).
-* Two entitlements: One for signing `.app` and other for signing all files inside `.app`.
-* `.app` structure ready with valid `Info.plist`.
-* Your app is ready to be launched inside a \(sandbox\)\[[https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html)\].
+* Two entitlements: One for signing `.app` and other for signing app helpers.
+* Your app content is [bundled correctly](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
+* Your bundle is signed correctly.
+* Your `.dylib` files doesn't contain any non-ARM/x64 architectures. You can remove these by using `lipo` command line tool.
+* Your app is ready to be launched from inside a [sandbox](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html).
 
 ### Getting certificates <a id="notarizing-your-software"></a>
 
@@ -342,15 +346,35 @@ You need a lot of things:
 * Go to Access Control Tab.
 * Select `Allow all applications to access this item` in case you don't want to enter a mac profile password for every file sign.
 
-### Sandbox and entitlements <a id="sandbox-and-entitlements"></a>
+### Sandbox and bundle <a id="sandbox-and-bundle"></a>
 
 App Store required app to be launched inside a sandbox. That means app will have no access to everything and cannot harm user's PC.
 
 Your app should be ready for this and do not crash if any folder is read/write protected.
 
-You should read all \(entitlements documentation\)\[[https://developer.apple.com/documentation/bundleresources/entitlements](https://developer.apple.com/documentation/bundleresources/entitlements)\] and peek ones your app will access.
+.NET 6 apps will not crash inside a sandbox only if it's published with single file option enabled. Example:
 
-First entitlements file is to sign all files inside `.app/Content/MacOS/` folder. It should look like this.
+`dotnet publish src/MyApp.csproj -c Release -f net6.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
+
+Your app content should be bundled correctly. [Here's an article from Apple with a lot of useful info](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
+
+Most important rules from the article: 
+* `.dll` files are not concidered as a code by Apple. So it should be placed inside `/Resources` folder and can be not signed.
+* `/MacOS` files should contain only executable mach-o - you app executable and any other helper executables
+* All other mach-o `.dylib` files shoul be inside `Frameworks/` folder.
+
+To satisfy this requirement without a lot of pain you can use relative symlinks from `MacOS/` folder to `Resources/` and `Frameworks/` folders. As an example:
+
+`ln -s fromFile toFile`
+
+Also it's better to rewrite your app's resources access scheme to directly access `Resources/` folder without using any symlinks, because over symlinks you might get I/O access issues in sandbox.
+
+
+### Sandbox entitlements and signing <a id="sandbox-entitlements-and-signing"></a>
+
+You should read all [entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements) and choose the ones your app requires.
+
+First for the entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
 
 ```text
 <?xml version="1.0" encoding="UTF-8"?>
@@ -365,7 +389,7 @@ First entitlements file is to sign all files inside `.app/Content/MacOS/` folder
 </plist>
 ```
 
-Second entitlements file is to sign app package. Should contain all app's permissions. Here is an example:
+Second is to sign app executable and a whole app bundle. It should contain all app's permissions. Here is an example:
 
 ```text
 <?xml version="1.0" encoding="UTF-8"?>
@@ -423,7 +447,7 @@ mkdir -p "App/AppName.app/Contents/Frameworks/"
 mkdir -p "App/AppName.app/Contents/MacOS/"
 
 #Build app
-dotnet publish ../../ProjectFolder/AppName.csproj -c release -f net5.0 -r osx-x64 --self-contained true
+dotnet publish ../../ProjectFolder/AppName.csproj -c release -f net5.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true
 
 #Move app
 cd ..
@@ -432,23 +456,32 @@ cp -R -f ProjectFolder/bin/release/net5.0/osx-x64/publish/* "build/osx/App/AppNa
 cd "build/osx/"
 
 APP_ENTITLEMENTS="AppEntitlements.entitlements"
-FILE_ENTITLEMENTS="FileEntitlements.entitlements"
-APP_SIGNING_IDENTITY="Apple Distribution: [***]"
+APP_SIGNING_IDENTITY="3rd Party Mac Developer Application: [***]"
 INSTALLER_SIGNING_IDENTITY="3rd Party Mac Developer Installer: [***]"
 APP_NAME="App/AppName.app"
+
+#<here is moving your app resources to Resources folder using relative symlinks>
+
+#<here is moving your .dylib files to Frameworks folder using relative symlinks>
 
 echo "[INFO] Switch provisionprofile to AppStore"
 \cp -R -f AppNameAppStore.provisionprofile "App/AppName.app/Contents/embedded.provisionprofile"
 
-find "$APP_NAME/Contents/MacOS/"|while read fname; do
+echo "[INFO] Fix libuv.dylib architectures"
+lipo -remove i386 "App/AppName.app/Contents/Frameworks/libuv.dylib" "App/AppName.app/Contents/Frameworks/libuv.dylib"
+
+find "$APP_NAME/Contents/Frameworks/"|while read fname; do
     if [[ -f $fname ]]; then
         echo "[INFO] Signing $fname"
-        codesign --force --timestamp --deep --options=runtime --entitlements "$FILE_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "$fname"
+        codesign --force --sign "$APP_SIGNING_IDENTITY" "$fname"
     fi
 done
 
-echo "[INFO] Signing app file"
-codesign --force --timestamp --deep --options=runtime --entitlements "$APP_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "$APP_NAME"
+echo "[INFO] Signing app executable"
+codesign --force --entitlements "$FILE_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "App/AppName.app/Contents/MacOS/AppName"
+
+echo "[INFO] Signing app bundle"
+codesign --force --entitlements "$APP_ENTITLEMENTS" --sign "$APP_SIGNING_IDENTITY" "$APP_NAME"
 
 echo "[INFO] Creating AppName.pkg"
 productbuild --component App/AppName.app /Applications --sign "$INSTALLER_SIGNING_IDENTITY" AppName.pkg
