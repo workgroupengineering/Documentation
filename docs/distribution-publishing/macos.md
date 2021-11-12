@@ -322,7 +322,7 @@ If you distribute your app in a `.dmg`, you will want to modify the steps slight
 You need a lot of things:
 
 * Your app satisfies [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
-* Your app satisfies [MacOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/).
+* Your app satisfies [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/).
 * Apple Developer Account, with your Apple ID connected to it.
 * Your app is registered in [App Store Connect](https://appstoreconnect.apple.com/apps/).
 * Transporter app installed from App Store.
