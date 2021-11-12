@@ -356,7 +356,7 @@ Your app should be ready for this and do not crash if any folder is read/write p
 
 `dotnet publish src/MyApp.csproj -c Release -f net6.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
 
-Your app content should be bundled correctly. [Here is Apple article with a lot of info](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle)
+Your app content should be bundled correctly. [Here's an article from Apple with a lot of useful info](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
 
 Most important rules from the article: 
 * `.dll` files are not concidered as a code by Apple. So it should be placed inside `/Resources` folder and can be not signed.
