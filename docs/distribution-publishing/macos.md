@@ -372,7 +372,7 @@ Also it's better to rewrite your app's resources access scheme to directly acces
 
 ### Sandbox entitlements and signing <a id="sandbox-entitlements-and-signing"></a>
 
-You should read all [entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements) and peek ones your app will access.
+You should read all [entitlements documentation](https://developer.apple.com/documentation/bundleresources/entitlements) and choose the ones your app requires.
 
 First entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
 
