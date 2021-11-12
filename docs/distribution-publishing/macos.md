@@ -352,7 +352,7 @@ App Store required app to be launched inside a sandbox. That means app will have
 
 Your app should be ready for this and do not crash if any folder is read/write protected.
 
-.NET 6 is not crushing inside a sandbox only if it's published with single file option enabled. Example:
+.NET 6 apps will not crash inside a sandbox only if it's published with single file option enabled. Example:
 
 `dotnet publish src/MyApp.csproj -c Release -f net6.0 -r osx-x64 --self-contained true -p:PublishSingleFile=true`
 
