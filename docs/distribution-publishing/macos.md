@@ -363,7 +363,7 @@ Most important rules from the article:
 * `/MacOS` files should contain only executable mach-o - you app executable and any other helper executables
 * All other mach-o `.dylib` files shoul be inside `Frameworks/` folder.
 
-To satisfy this requirement without a lot of pain you can use relative symlinks from `MacOS/` folder to `Resources/` and `Frameworks/` folders. Example command:
+To satisfy this requirement without a lot of pain you can use relative symlinks from `MacOS/` folder to `Resources/` and `Frameworks/` folders. As an example:
 
 `ln -s fromFile toFile`
 
