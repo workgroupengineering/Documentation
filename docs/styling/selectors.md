@@ -176,3 +176,39 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 Negates an inner selector.
 
+## Nth Child <a id="nth-child"></a>
+
+{% tabs %}
+{% tab title="XAML" %}
+```markup
+<Style Selector="TextBlock:nth-child(2n+3)">
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+new Style(x => x.OfType<TextBlock>().NthChild(2, 3));
+```
+{% endtab %}
+{% endtabs %}
+
+Matches elements based on their position in a group of siblings.
+
+
+## Nth Last Child <a id="nth-last-child"></a>
+
+{% tabs %}
+{% tab title="XAML" %}
+```markup
+<Style Selector="TextBlock:nth-last-child(2n+3)">
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
+```
+{% endtab %}
+{% endtabs %}
+
+Matches elements based on their position among a group of siblings, counting from the end.
