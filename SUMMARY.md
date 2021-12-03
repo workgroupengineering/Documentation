@@ -92,6 +92,7 @@
   * [Defining Properties](docs/authoring-controls/defining-properties.md)
 * [🖱️ Input](docs/input/README.md)
   * [Routed Events](docs/input/routed-events.md)
+  * [Clipboard](docs/input/clipboard.md)
 * [🗝️ Animations](docs/animations/README.md)
   * [Keyframe Animations](docs/animations/keyframe-animations.md)
   * [Transitions](docs/animations/transitions.md)
