@@ -176,6 +176,22 @@ new Style(x => x.OfType<TextBlock>().Not(y => y.Class("h1")));
 
 Negates an inner selector.
 
+
+## Or <a id="or"></a>
+
+{% tabs %}
+{% tab title="XAML" %}
+```markup
+<Style Selector="TextBlock1,TextBlock2">
+```
+{% endtab %}
+
+{% tab title="C\#" %}
+```csharp
+```
+{% endtab %}
+{% endtabs %}
+
 ## Nth Child <a id="nth-child"></a>
 
 {% tabs %}
