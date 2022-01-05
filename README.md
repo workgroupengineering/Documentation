@@ -15,6 +15,7 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 ## Why Choose Avalonia?
 
 * Avalonia allows creating applications that look and behave the same on most popular Desktop platforms (Windows, Mac, various flavors of Linux) while also allowing the platform specific customizations.
+* Avalonia is, first and foremost, and UI framework and gives you the freedom to use your favourite MVVM framework (by default we include ReactiveUI).
 * Avalonia is supported by the following companies:
 
 [![](.gitbook/assets/se.png)](https://www.se.com/us/en/) [![](<.gitbook/assets/jblogo (2).png>)](https://www.jetbrains.com) [![](.gitbook/assets/unitylogo.png)](https://unity.com) [![](.gitbook/assets/logo\_thales\_500.png)](https://www.thalesgroup.com) [![](.gitbook/assets/synergy-logo.png)](https://synergysports.com) [![](.gitbook/assets/gritworld-logo.png)](https://en.gritworld.com) [![](.gitbook/assets/wasabi-wallet-logo.svg)](https://www.wasabiwallet.io) [![](.gitbook/assets/mailbird-logo.png)](https://www.getmailbird.com)
