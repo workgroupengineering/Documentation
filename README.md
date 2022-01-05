@@ -2,7 +2,7 @@
 
 ## Welcome
 
-Welcome to Avalonia - the best open source, easy to learn .NET C# multiplatform package for desktop (Windows, Mac and Linux) development.
+Welcome to Avalonia - the best open source, easy to learn, .NET C# multiplatform package for desktop GUI development (Windows, Mac and Linux).
 
 * Avalonia is under rapid development by [a large group of open source contributors](https://github.com/AvaloniaUI/Avalonia/graphs/contributors).
 * Avalonia is [100% open source - and will continue as an open source project](https://github.com/AvaloniaUI/Avalonia), has constantly expanding documentation and a large number of open source samples showing how to use it.
@@ -22,9 +22,9 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 
 and many other smaller companies.
 
-* Avalonia (just like WPF and Silverlight) is fully compositional: you can create a button out of Avalonia primitives in a fashion similar to creating a complex page, while its competitors (Web, Xamarin and Java) packages are not compositional to the same degree.
+* Avalonia (just like WPF and Silverlight) is fully compositional: you can create a button out of Avalonia primitives in a fashion similar to creating a complex page, while its competitors packages (Web, Xamarin and Java) are not compositional to the same degree.
 * Avalonia UI, unlike JavaScript has full advantage of a strongly typed language. Also Avalonia has full advantage of a compiled-to-binary code language.
-*   Avalonia is an open source multiplatform descendant of great Microsoft packages - WPF and Silverlight which brought the UI development on a completely new level creating a set of new concepts and which allow to create a full blown UI application in fraction of time and effort in comparison to other technologies. Here is the list of some of the concepts:
+*   Avalonia is an open source multiplatform descendant of great Microsoft packages (WPF and Silverlight) which brought the UI development on a completely new level, creating a set of new concepts which allow to create a full blown UI application in a fraction of the time and effort compared to other technologies. Here is the list of some of the concepts:
 
     * Visual and Logical Trees
     * Attached or Dependency Properties which can be defined outside of the object on which they are used and do not take any extra memory unless they are assigned a non-default value and have a special event to fire when their values change.
@@ -46,8 +46,8 @@ Avalonia is supported on [all platforms that support .NET Standard 2.0](https://
 Avalonia is supported on the following platforms:
 
 * Windows 8 and higher
-  * **Note**: Avalonia works correctly on Windows 7 also,but not supported _officially_
-* MaxOS High Sierra 10.13 and higher
+  * **Note**: Avalonia works correctly on Windows 7 also, but not supported _officially_
+* MacOS High Sierra 10.13 and higher
 * for Linux:
   * Debian 9 (Stretch) and higher
   * Ubuntu 16.5 and higher
