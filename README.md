@@ -14,8 +14,6 @@ If you're familiar with WPF or UWP then you should feel right at home with Avalo
 
 ## Why Choose Avalonia?
 
-## Why Avalonia is a Hit
-
 * Avalonia allows creating applications that look and behave the same on most popular Desktop platforms (Windows, Mac, various flavors of Linux) while also allowing the platform specific customizations.
 * Avalonia is supported by the following companies:
 
