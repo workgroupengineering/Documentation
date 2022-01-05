@@ -145,6 +145,7 @@
   * [MVVM Architecture](guides/basics/mvvm.md)
 * [🤿 Deep dives](guides/deep-dives/README.md)
   * [Running your app on a Raspberry Pi](guides/deep-dives/running-your-app-on-a-raspberry-pi.md)
+  * [Running your app on a Raspberry Pi with Raspbian Lite](guides/deep-dives/running-on-raspbian-lite-via-drm.md)
   * [ReactiveUI](guides/deep-dives/reactiveui/README.md)
     * [View Activation](guides/deep-dives/reactiveui/view-activation.md)
     * [Routing](guides/deep-dives/reactiveui/routing.md)
