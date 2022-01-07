@@ -27,7 +27,7 @@ Similarly if you put a string as the window content, the window will display the
 
 But what happens if you try to display an object as the window content?
 
-```text
+```csharp
 namespace Example
 {
     public class Student
@@ -44,7 +44,7 @@ namespace Example
 }
 ```
 
-```text
+```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">
@@ -58,7 +58,7 @@ Not very helpful. That's because Avalonia doesn't know _how_ to display an objec
 
 The easiest way to do this on `Window` \(and any control that inherits from `ContentControl`\) is to set the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/7AA9343E) property:
 
-```text
+```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Example">

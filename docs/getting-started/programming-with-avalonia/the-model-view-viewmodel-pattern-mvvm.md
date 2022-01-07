@@ -2,7 +2,9 @@
 
 As well as writing code in code-behind, Avalonia supports using the [Model-View-ViewModel](https://docs.avaloniaui.net/guides/basics/mvvm) pattern \(or MVVM\). MVVM is a common way to structure UI applications that separates view logic from application logic in a way that allows your applications to become unit-testable.
 
-MVVM relies upon Avalonia's [binding](https://docs.avaloniaui.net/docs/data-binding/bindings) capabilities to separate your application into a View layer which displays standard Avalonia windows and controls, and a ViewModel layer which defines the functionality of the application independently of Avalonia itself. The following example shows the code from the previous example implemented using the MVVM pattern:
+MVVM relies upon Avalonia's [binding](https://docs.avaloniaui.net/docs/data-binding/bindings) capabilities to separate your application into a View layer which displays standard Avalonia windows and controls, and a ViewModel layer which defines the functionality of the application independently of Avalonia itself. 
+
+The following example shows the code from the previous example implemented using the MVVM pattern:
 
 {% tabs %}
 {% tab title="XAML" %}
