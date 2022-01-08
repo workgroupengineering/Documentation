@@ -26,7 +26,7 @@ Yes. You can develop for Android today and we have a preview demonstrating the b
 
 ### Can I build a website with Avalonia?
 
-No. We have an [experimental proof-of-concept](http://testapp.keks-n.net/) that demonstrates Avalonia running in the browser using Wasm but it's not considered production ready. We're waiting on upstream improvements before continuing with this work.
+Its early days and not ready for production , but yes you can. Avalonia now supports [webassembly](https://webassembly.org). See a quick demo: [NodeEditor Demo](https://wieslawsoltes.github.io/NodeEditor/). This means that your full Avalonia application can run in all modern web browsers.
 
 ### How can I get involved?
 
@@ -34,7 +34,7 @@ Check out the [community guide](community.md) to see how you can get involved wi
 
 ### What Linux Distros are supported?
 
-* Debian 9 \(Stretch\)+
+* Debian 9 (Stretch)+
 * Ubuntu 16.04+
 * Fedora 30+
 
@@ -51,4 +51,3 @@ Skia is built against glibc. If your distro uses something else instead, you nee
 
 Portions of this documentation were adapted from [Dotnet docs](https://github.com/dotnet/docs/) licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 {% endhint %}
-
