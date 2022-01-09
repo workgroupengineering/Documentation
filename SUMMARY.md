@@ -2,7 +2,7 @@
 
 * [👋 Welcome](README.md)
 
-## Documentation <a href="docs" id="docs"></a>
+## Documentation <a href="#docs" id="docs"></a>
 
 * [⚡ Getting Started](docs/getting-started/README.md)
   * [IDE Support](docs/getting-started/ide-support/README.md)
@@ -104,7 +104,7 @@
 * [📦 Distribution / Publishing](docs/distribution-publishing/README.md)
   * [macOS](docs/distribution-publishing/macos.md)
 
-## API Reference <a href="api" id="api"></a>
+## API Reference <a href="#api" id="api"></a>
 
 * [🧾 Namespaces](api/untitled/README.md)
   * [Avalonia](api/untitled/avalonia-ui-framework.md)
@@ -182,6 +182,7 @@
   * [Add Data Persistence](tutorials/music-store-app/add-data-persistence.md)
   * [Load data at Startup](tutorials/music-store-app/load-data-at-startup.md)
   * [Summary](tutorials/music-store-app/summary.md)
+* [Running in the Browser](tutorials/running-in-the-browser.md)
 
 ## Misc
 
