@@ -27,11 +27,11 @@ The cornerstone of the layout system is relative positioning, which increases th
 The layout system is exposed to child controls through base Avalonia classes. For common layouts such as grids, stacking, and docking, Avalonia includes several layout controls
 
 * [`Panel`](../../controls/panel.md): Child controls are stacked on top of each other to fill the panel
-* [`Canvas`](../../controls/canvas.md): Child controls provide their own layout
 * [`DockPanel`](../../controls/dockpanel.md): Child controls are aligned to the edges of the panel
-* [`Grid`](../../controls/grid.md): Child controls are positioned by rows and columns
 * [`StackPanel`](../../controls/stackpanel.md): Child controls are stacked either vertically or horizontally
 * [`WrapPanel`](../../controls/wrappanel.md): Child controls are positioned in left-to-right order and wrapped to the next line when there are more controls on the current line than space allows
+* [`Grid`](../../controls/grid.md): Child controls are positioned by rows and columns
+* [`Canvas`](../../controls/canvas.md): Child controls provide their own layout
 
 You can also create your own layouts by deriving from the [`Panel`](../../controls/panel.md) class.
 
