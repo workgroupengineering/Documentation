@@ -60,7 +60,7 @@ A top-level window.
 
 ### [WrapPanel](wrappanel.md)
 
-Positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. 
+Positions child elements in sequential position from left to right,&#x20;breaking content to the next line at the edge of the containing box.&#x20;
 
 ## Buttons
 
@@ -78,11 +78,11 @@ Represents a button that allows a user to select a single option from a group of
 
 ### [ToggleButton](togglebutton.md)
 
-Represents a control that a user can select \(check\) or clear \(uncheck\).
+Represents a control that a user can select (check) or clear (uncheck).
 
 ## Data Display
 
-### [DataGrid](datagrid.md)
+### [DataGrid](datagrid/)
 
 Displays data in a customizable grid.
 
@@ -163,4 +163,3 @@ A context menu attached to a control.
 ### [Menu](menu.md)
 
 A top-level menu control.
-
