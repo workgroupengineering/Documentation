@@ -1,78 +1,64 @@
 # Compiled Bindings
 
-Bindings defined in the XAML are using reflection in order to find the requested property in your ViewModel, read or update the data. In Avalonia you can also use compiled bindings, which has some benefits:
+Bindings defined in the XAML are using reflection in order to find and access the requested property in your ViewModel. In Avalonia you can also use compiled bindings, which has some benefits:
   * If you use compiled bindings and the property you bind to is not found, the application will crash. Hence you get a much better debugging experience.
   * Reflection is known to be slow ([see this article on codeproject.com](https://www.codeproject.com/Articles/1161127/Why-is-reflection-slow)). Using compiled bindings can therefore improve the performance of your application. 
  
-## How to enable / disable compiled bindings
+## Enable and disable compiled bindings
 
-Compiled bindings are not enabled by default. To enable compiled bindings, you need to define the `DataType` 
+Compiled bindings are not enabled by default. To enable compiled bindings, you will need to define the `DataType` of your `ViewModel` first. In [`DataTemplates`](https://docs.avaloniaui.net/misc/wpf/datatemplates) there is a property `DataType`, for all other elements you can set it via `x:DataType`. Most likely you will set `x:DataType` in your root node, for example in a `Window` or an `UserControl`. 
 
+You can now enable or disable compiled bindings by setting `x:CompileBindings="True|False"`. All child nodes will inherit this property, so you can enable it in your root node and disable it for a specific child, if needed.
 
-
----------
---------
-
-You bind in XAML using the `{Binding}` markup extension. By using bindings \(assuming you've implemented [change notifications](https://docs.avaloniaui.net/docs/data-binding/change-notifications)\) any changes to the data context will automatically be updated in the control.
-
-
-
-
-
-
-By default a binding binds to a property on the [`DataContext`](https://docs.avaloniaui.net/docs/data-binding/the-datacontext), e.g.:
-
-```markup
-<!-- Binds to the TextBlock's DataContext.Name property -->
-<TextBlock Text="{Binding Name}"/>
-
-<!-- Which is the same as ('Path' is optional) -->
-<TextBlock Text="{Binding Path=Name}"/>
+```xml
+<!-- Set DataType and enable compiled bindings -->
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MyApp.ViewModels"
+             x:DataType="vm:MyViewModel"
+             x:CompileBindings="True">
+    <StackPanel>
+        <TextBlock Text="Last name:" />
+        <TextBox Text="{Binding LastName}" />
+        <TextBlock Text="Given name:" />
+        <TextBox Text="{Binding GivenName}" />
+        <TextBlock Text="E-Mail:" />
+        <TextBox Text="{Binding MailAddress}" />
+        
+        <!-- We cannot use complied bindings to bind to methods, so we opt them out for the button -->
+        <Button x:CompildedBindings="False" 
+                Content="Send an E-Mail"
+                Command="{Binding SendEmailCommand}" />
+    </StackPanel>
+</UserControl>
 ```
 
-An empty binding binds to DataContext itself
+## CompiledBinding-Markup
 
-```markup
-<!-- Binds to the TextBlock's DataContext property -->
-<TextBlock Text="{Binding}"/>
+If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`. 
 
-<!-- Which is the same as -->
-<TextBlock Text="{Binding .}"/>
+```xml
+<!-- Set DataType -->
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MyApp.ViewModels"
+             x:DataType="vm:MyViewModel">
+    <StackPanel>
+        <TextBlock Text="Last name:" />
+        <TextBox Text="{CompiledBinding LastName}" />
+        <TextBlock Text="Given name:" />
+        <TextBox Text="{CompiledBinding GivenName}" />
+        <TextBlock Text="E-Mail:" />
+        <TextBox Text="{CompiledBinding MailAddress}" />
+        
+        <!-- We cannot use complied bindings to bind to methods, so we use the normal binding -->
+        <Button x:CompildedBindings="False" 
+                Content="Send an E-Mail"
+                Command="{Binding SendEmailCommand}" />
+    </StackPanel>
+</UserControl>
 ```
 
-We call the property on the control the binding _target_ and the property on the `DataContext` the binding _source_.
+## Known limitations
 
-## Binding Path <a id="binding-path"></a>
-
-The binding path above can be a single property, or it can be a chain of properties. For example if the object assigned to the `DataContext` has a `Student` property, and the value of this property has a `Name`, you can bind to the student name using:
-
-```markup
-<TextBlock Text="{Binding Student.Name}"/>
-```
-
-You can also include array/list indexers in binding paths:
-
-```markup
-<TextBlock Text="{Binding Students[0].Name}"/>
-```
-
-## Binding Modes <a id="binding-modes"></a>
-
-You can change the behavior of a `{Binding}` by specifing a binding `Mode`:
-
-```markup
-<TextBlock Text="{Binding Name, Mode=OneTime}">
-```
-
-The available binding modes are:
-
-| Mode | Description |
-| :--- | :--- |
-| `OneWay` | Changes to the source are automatically propagated to the target |
-| `TwoWay` | Changes to the source are automatically propagated to the target and vice-versa |
-| `OneTime` | The value from the source is propagated at initialization to the target and subsequent changes are ignored |
-| `OneWayToSource` | Changes to the target are propagated to the source |
-| `Default` | The binding mode is based on the property |
-
-The `Default` mode is assumed if one is not specified. This mode is generally `OneWay` for control properties that do not change due to user input \(e.g. `TextBlock.Text`\) and `TwoWay` for control properties that _do_ change due to user input \(e.g. `TextBox.Text`\).
-
+Compiled bindings have some known limitations. 
