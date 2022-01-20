@@ -185,7 +185,7 @@ Create your `Info.plist` file, adding or modifying keys as necessary:
     <key>CFBundleIdentifier</key>
     <string>com.identifier</string>
     <key>CFBundleName</key>
-    <string>DotPurple</string>
+    <string>MyApp</string>
     <key>CFBundleVersion</key>
     <string>1.0.0</string>
     <key>LSMinimumSystemVersion</key>
