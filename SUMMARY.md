@@ -21,6 +21,7 @@
   * [The DataContext](docs/data-binding/the-datacontext.md)
   * [Change Notifications](docs/data-binding/change-notifications.md)
   * [Bindings](docs/data-binding/bindings.md)
+  * [Compiled Bindings](docs/data-binding/compiledbindings.md)
   * [Binding to Controls](docs/data-binding/binding-to-controls.md)
   * [Converting Binding Values](docs/data-binding/converting-binding-values.md)
   * [Binding to Commands](docs/data-binding/binding-to-commands.md)
