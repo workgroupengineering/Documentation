@@ -53,6 +53,7 @@
   * [DatePicker](docs/controls/datepicker.md)
   * [DockPanel](docs/controls/dockpanel.md)
   * [Expander](docs/controls/expander.md)
+  * [Flyouts](docs/controls/flyouts.md)
   * [Grid](docs/controls/grid.md)
   * [GridSplitter](docs/controls/gridsplitter.md)
   * [Image](docs/controls/image.md)
