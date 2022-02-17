@@ -12,10 +12,6 @@ This property is available from these Controls:
 - TextBox
 - TreeView
 
-{% hint style="info" %}
-This property is available since Avalonia version 11.0.
-{% endhint %}
-
 ## Reference <a id="reference"></a>
 
 [ScrollViewer](http://reference.avaloniaui.net/api/Avalonia.Controls/ScrollViewer/)
