@@ -90,6 +90,7 @@
 * [📚 Templates](docs/templates/README.md)
   * [Data Templates](docs/templates/data-templates.md)
   * [Creating Data Templates in Code](docs/templates/creating-data-templates-in-code.md)
+  * [Implementing IDataTemplate](docs/templates/implement-IDataTemplate.md)
 * [🖌️ Authoring Controls](docs/authoring-controls/README.md)
   * [Types of Control](docs/authoring-controls/types-of-control.md)
   * [Defining Properties](docs/authoring-controls/defining-properties.md)

@@ -162,4 +162,3 @@ Now we can add a separate data template for the `Teacher` type and depending on 
 ### Evaluation Order <a id="evaluation-order"></a>
 
 Data templates in Avalonia can target interfaces and derived classes and so the order of DataTemplates can be important: DataTemplates within the same collection are evaluated in declaration order so you need to place them from most-specific to least-specific as you would in code.
-
