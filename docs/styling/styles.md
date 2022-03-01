@@ -131,7 +131,7 @@ _Selectors_ select a control using a custom selector syntax which is very simila
 | `Button#myButton` | Selects a `Button` control with a name of `myButton` |
 | `StackPanel Button.foo` | Selects all `Button`s with the `foo` class that are descendants of a `StackPanel` |
 | `StackPanel > Button.foo` | Selects all `Button`s with the `foo` class that are children of a `StackPanel` |
-| `Button /template/ ContentPreseter` | Selects all ContentPresenter controls inside of Button's template |
+| `Button /template/ ContentPresenter` | Selects all ContentPresenter controls inside of Button's template |
 
 For more information see the [selectors documentation](selectors.md).
 
