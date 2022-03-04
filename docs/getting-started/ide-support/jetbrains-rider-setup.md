@@ -49,7 +49,7 @@ Click the `+` icon and enter the url `https://plugins.jetbrains.com/plugins/dev/
 
 ![enter-plugin-repo](https://avaloniaui.net/docs/advanced-tutorial/images/enter-plugin-repo.png)
 
-Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once thats done, click the `Restart IDE` button that will appear.
+Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; once thats done, click the `Restart IDE` button that appears.
 
 ![plugin-install](https://avaloniaui.net/docs/advanced-tutorial/images/plugin-install.png)
 
