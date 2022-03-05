@@ -97,7 +97,7 @@
 * [🖌️ Authoring Controls](docs/authoring-controls/README.md)
   * [Types of Control](docs/authoring-controls/types-of-control.md)
   * [Defining Properties](docs/authoring-controls/defining-properties.md)
-* [��️ Input](docs/input/README.md)
+* [🖱️ Input](docs/input/README.md)
   * [Routed Events](docs/input/routed-events.md)
   * [Clipboard](docs/input/clipboard.md)
   * [Hotkeys](docs/input/hotkeys.md)
