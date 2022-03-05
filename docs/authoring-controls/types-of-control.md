@@ -15,10 +15,10 @@ In WPF/UWP you would inherit from the Control class to create a new templated co
 {% endhint %}
 
 {% hint style="info" %}
-If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Appliication via [`StyleInclude`](https://docs.avaloniaui.net/docs/styling/styles).
+If you want to provide a `Style` for your `TemplatedControl` in a separate file, remember to include this file in your Application via [`StyleInclude`](https://docs.avaloniaui.net/docs/styling/styles).
 {% endhint %}
 
-> #### Basic Control <a href="#basic-control" id="basic-control"></a>
+### Basic Control <a href="#basic-control" id="basic-control"></a>
 
 Basic `Control`s are the foundation of user interfaces - they draw themselves using geometry by overriding the `Visual.Render` method. Controls such as `TextBlock` and `Image` fall into this category.
 
