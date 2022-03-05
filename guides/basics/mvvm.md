@@ -15,7 +15,7 @@ MVVM solves this by abstracting the user interface into regular .NET classes tha
 
 This is intended as a brief introduction to MVVM, there are many resources online that go into this subject in more depth.
 
-## When to use MVVM <a href="when-to-use-mvvm" id="when-to-use-mvvm"></a>
+## When to use MVVM <a href="#when-to-use-mvvm" id="when-to-use-mvvm"></a>
 
 First of all, MVVM has overhead in terms of complexity.
 
@@ -23,13 +23,13 @@ Because the advantages of using the MVVM pattern usually only become apparent wh
 
 Many people prefer to start off their application using code-behind and once this starts proving problematic, refactor to use the MVVM pattern. This step usually happens while the application is relatively simple so generally doesn't take too much time.
 
-## Views and ViewModels <a href="views-and-viewmodels" id="views-and-viewmodels"></a>
+## Views and ViewModels <a href="#views-and-viewmodels" id="views-and-viewmodels"></a>
 
 When we talk about the MVVM pattern, the most important parts are the **View** layer and the **ViewModel** layer. Views are usually implemented as [`Window`](https://docs.avaloniaui.net/docs/controls/window)s and [`UserControl`](https://docs.avaloniaui.net/docs/controls/usercontrol)s while ViewModels are .NET classes.
 
 One way to imagine an MVVM application is to imagine these two layers as hovering over one another, connected by bindings:
 
-![Diagram of MVVM](<../../.gitbook/assets/mvvm (1) (1) (2) (2) (2) (2) (2) (2).png>)
+![Diagram of MVVM](<../../.gitbook/assets/mvvm (1) (1) (2) (2) (2) (2) (2) (1) (1).png>)
 
 The above example has, at the View layer:
 
@@ -48,16 +48,16 @@ At the ViewModel layer there are .NET classes which mirror the view layer:
 
 The ViewModel layer knows nothing of the view layer, so it is _independent_ of Avalonia. Each View usually has a corresponding ViewModel which contains all of the logic for the View. The View layer is connected to the ViewModel layer by bindings. Because the ViewModel layer is independent of Avalonia, it can be unit tested like any other code.
 
-## Models <a href="models" id="models"></a>
+## Models <a href="#models" id="models"></a>
 
 The Model layer is the lowest layer in an MVVM application. Models usually represent data read from a database, or classes from a low-level library which implements the business logic of the application. The Model layer will be very specific to each application.
 
 An example of a model might be a table row read from a database using Entity Framework.
 
-## Services <a href="services" id="services"></a>
+## Services <a href="#services" id="services"></a>
 
 In addition, most applications will add _services_ to this mix, which usually implement the reading and writing of models and other application-specific logic.
 
-## Frameworks <a href="frameworks" id="frameworks"></a>
+## Frameworks <a href="#frameworks" id="frameworks"></a>
 
 There are a number of frameworks designed to help write applications using the MVVM pattern. [ReactiveUI](https://reactiveui.net) is one of the most popular and has support for Avalonia which can be added via the [Avalonia.ReactiveUI NuGet package](https://www.nuget.org/packages/Avalonia.ReactiveUI/).

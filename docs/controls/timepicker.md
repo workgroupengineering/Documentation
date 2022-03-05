@@ -21,11 +21,11 @@ arrivalTimePicker.Header = "Arrival time";
 {% endtab %}
 {% endtabs %}
 
-## Remarks <a href="remarks" id="remarks"></a>
+## Remarks <a href="#remarks" id="remarks"></a>
 
 Use a `TimePicker` to let a user enter a single time value. You can customize the `DatePicker` to use a 12-hour or 24-hour clock.
 
-![](<../../.gitbook/assets/image (22) (1).png>)
+![](<../../.gitbook/assets/image (22).png>)
 
 ## 12-hour and 24-hour clocks
 
@@ -38,7 +38,7 @@ By default, the time picker shows a 12-hour clock with an AM/PM selector. You ca
 
 ![](<../../.gitbook/assets/image (19).png>)
 
-### Minute increment <a href="minute-increment" id="minute-increment"></a>
+### Minute increment <a href="#minute-increment" id="minute-increment"></a>
 
 You can set the [MinuteIncrement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.timepicker.minuteincrement?view=winrt-19041#Windows\_UI\_Xaml\_Controls\_TimePicker\_MinuteIncrement) property to indicate the time increments shown in the minute picker. For example, 15 specifies that the `TimePicker` minute control displays only the choices 00, 15, 30, 45.
 
@@ -48,7 +48,7 @@ You can set the [MinuteIncrement](https://docs.microsoft.com/en-us/uwp/api/windo
 
 ![](<../../.gitbook/assets/image (10).png>)
 
-### Time values <a href="time-values" id="time-values"></a>
+### Time values <a href="#time-values" id="time-values"></a>
 
 The time picker control has both Time / TimeChanged and SelectedTime / SelectedTimeChanged APIs. The difference between these is that `Time` is not nullable, while `SelectedTime` is nullable.
 
@@ -75,10 +75,10 @@ You can set the time value as an attribute in XAML. This is probably easiest if 
 
 To use the time value in your app, you typically use a data binding to the `SelectedTime`or `Time` property, use the time properties directly in your code, or handle the `SelectedTimeChanged` or `TimeChanged` event.
 
-## Reference <a href="reference" id="reference"></a>
+## Reference <a href="#reference" id="reference"></a>
 
 [TimePicker](http://reference.avaloniaui.net/api/Avalonia.Controls/TimePicker/)
 
-## Source code <a href="source-code" id="source-code"></a>
+## Source code <a href="#source-code" id="source-code"></a>
 
 [TimePicker.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/DateTimePickers/TimePicker.cs)

@@ -6,8 +6,8 @@ description: The ContentControl displays data according to a data template.
 
 ## Common Properties
 
-| Property | Description |
-| :--- | :--- |
+| Property  | Description                           |
+| --------- | ------------------------------------- |
 | `Content` | The content to display in the control |
 
 ## Reference
@@ -42,7 +42,7 @@ If you assign a control to a `ContentControl` then it will display the control, 
 </ContentControl>
 ```
 
-### Display content with templates <a id="display-content-with-templates"></a>
+### Display content with templates <a href="#display-content-with-templates" id="display-content-with-templates"></a>
 
 So far so uninteresting. Where `ContentControl` becomes useful is in tandem with [data binding](https://docs.avaloniaui.net/docs/data-binding) and [data templates](https://docs.avaloniaui.net/docs/templates/data-templates). By setting the [`ContentTemplate`](http://reference.avaloniaui.net/api/Avalonia.Controls/ContentControl/) property one can specify how the data in the `Content` property is displayed. For example given the following view models:
 
@@ -95,7 +95,6 @@ We can display the student's first and last name in a `ContentControl` using the
 </Window>
 ```
 
-![Student first and last name](../../.gitbook/assets/student-first-last-name%20%281%29%20%281%29%20%281%29%20%281%29.png)
+![Student first and last name](<../../.gitbook/assets/student-first-last-name (1) (1) (1) (1) (1).png>)
 
 For more information see the [data templates](https://docs.avaloniaui.net/docs/templates/data-templates) section.
-
