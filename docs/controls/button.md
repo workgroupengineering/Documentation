@@ -73,7 +73,7 @@ produces following output with **Windows 10**\
         x:Class="AvaloniaAppTemplate.MainWindow"
         Title="AvaloniaAppTemplate">
 	<StackPanel>
-		<Button Width="160" Foreground="White" Background="Red">White text, red background</Button>
+		<Button Width="200" Foreground="White" Background="Red">White text, red background</Button>
 	</StackPanel>
 </Window>
 ```
@@ -81,7 +81,7 @@ produces following output with **Windows 10**\
 produces following output with **Windows 10**\
 
 
-![Basic button](<../../.gitbook/assets/button\_basic (1).png>)
+![Colored button](<../../.gitbook/assets/image (18).png>)
 
 ### Play button
 
