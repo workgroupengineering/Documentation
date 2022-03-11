@@ -90,7 +90,6 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 ## Known limitations
 
 Compiled bindings have some known limitations: 
-* Compiled bindings cannot be used to bind to methods ([see issue #4237](https://github.com/AvaloniaUI/Avalonia/issues/4237)).
 * Compiled bindings cannot be used to bind to named elements
 * Compiled bindings cannot be used in Styles with RelativeSource set to TemplatedParent (e.g.:  `{Binding Width, RelativeSource={RelativeSource TemplatedParent}}`)
 
