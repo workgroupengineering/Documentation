@@ -1,5 +1,5 @@
 ---
-description: The TransitioningContentControl is a [ContentControl](https://docs.avaloniaui.net/docs/controls/contentcontrol) which can render PageTransions when the Content changes.
+description: The TransitioningContentControl is a [ContentControl](https://docs.avaloniaui.net/docs/controls/contentcontrol) which can render [PageTransions](https://docs.avaloniaui.net/docs/animations/PageTransitions) when the Content changes.
 ---
 
 # TransitioningContentControl
@@ -23,13 +23,13 @@ description: The TransitioningContentControl is a [ContentControl](https://docs.
 
 ## Example
 
-Let's assume we have a collection of different images and we want to show them in a slide view. In order to do this we can setup our `TransitioningContentControl` like this:
+Let's assume we have a collection of different images and we want to show them in a slideshow like view. In order to do this we can setup our `TransitioningContentControl` like this:
 
 ```markup
 <TransitioningContentControl Content="{Binding SelectedImage}" >
     <TransitioningContentControl.ContentTemplate>
         <DataTemplate DataType="Bitmap">
-            <Image Source="{Binding}"  />
+            <Image Source="{Binding}" />
         </DataTemplate>
     </TransitioningContentControl.ContentTemplate>
 </TransitioningContentControl>
@@ -39,9 +39,9 @@ Let's assume we have a collection of different images and we want to show them i
 
 ## Changing the PageTransition
 
-If you don't like the [PageTransition]() which is provided by the applied theme, you can also provide your own [PageTransition](). This can be done in XAML, provided via `Binding` or via `DynamicResource`. 
+If you don't like the `PageTransition` which is provided by the applied theme, you can also provide your own [PageTransition](https://docs.avaloniaui.net/docs/animations/PageTransitions). This can be done in XAML, provided via `Binding` or via `DynamicResource`. 
 
-In the sample below we will change the [PageTransition]() to slide the images horizontally. 
+In the sample below we will change the [PageTransition](https://docs.avaloniaui.net/docs/animations/PageTransitions) to slide the images horizontally. 
 
 ```markup
 <TransitioningContentControl Content="{Binding SelectedImage}" >

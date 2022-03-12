@@ -1,21 +1,19 @@
 # PageTransitions
 
-Page transitions are used to render a transition between two views, for example in a [carousel](https://docs.avaloniaui.net/docs/controls/carousel) or [TransitioningContentControl](https://docs.avaloniaui.net/docs/controls/TransitioningContentControl)
+`PageTransitions` are used to render a transition between two views, for example in a [Carousel](https://docs.avaloniaui.net/docs/controls/carousel) or [TransitioningContentControl](https://docs.avaloniaui.net/docs/controls/TransitioningContentControl)
 
 {% hint style="warning" %}
-The duration must be set before the transition is used and must be greater than 0. 
+The duration must be set before the transition is used and must be greater than 0. If not, you will get an error. 
 {% endhint %}
 
 ## Build-In PageTransitions
 
 ### CrossFade
 
-`CrossFade` fades out the current view and fades in the new view. 
-
+The `CrossFade` fades out the current view and fades in the new view by animating the opacity. 
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<!-- Note: The duration is not optional and must be greater than 0 -->
 <CrossFade Duration="0:00:00.500" />
 ```
 {% endtab %}
@@ -28,7 +26,7 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 {% endtabs %}
 
 #### Source code
-[CrossFade](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/CrossFade.cs)
+[CrossFade.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/CrossFade.cs)
 
 #### Reference
 [CrossFade](http://reference.avaloniaui.net/api/Avalonia.Animation/CrossFade/)
@@ -36,12 +34,11 @@ var transition = new CrossFade(TimeSpan.FromMilliseconds(500));
 
 ### PageSlide
 
-`PageSlide` slides the content either horizontally or vertically. You can specify the slide axis  via the `Orientation`-property. The default is `Horizontal`.
+The `PageSlide` slides the content either horizontally or vertically. You can specify the slide axis via the `Orientation`-property. The default value is `Horizontal`.
 
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<!-- Note: The duration is not optional and must be greater than 0 -->
 <PageSlide Duration="0:00:00.500" Orientation="Vertical" />
 ```
 {% endtab %}
@@ -54,20 +51,19 @@ var transition = new PageSlide(TimeSpan.FromMilliseconds(500), PageSlide.SlideAx
 {% endtabs %}
 
 #### Source code
-[CrossFade](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/PageSlide.cs)
+[PageSlide.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/PageSlide.cs)
 
 #### Reference
-[CrossFade](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/)
+[PageSlide](http://reference.avaloniaui.net/api/Avalonia.Animation/PageSlide/)
 
 
 ### CompositePageTransition
 
-`CompositePageTransition` is used create a single transition of several different transitions. The below sample creates a transition which slides the views diagonal (horizontally and vertically at the same time) and also fades the views out and in.
+The `CompositePageTransition` is used create a combined transition of several different transitions. The below sample creates a transition which slides the views diagonal (horizontally and vertically at the same time) and also fades the views out and in.
 
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<!-- Note: The duration is not optional and must be greater than 0 -->
 <CompositePageTransition>
     <CrossFade Duration="0:00:00.500" />
     <PageSlide Duration="0:00:00.500" Orientation="Horizontal" />
@@ -87,7 +83,7 @@ compositeTransition.PageTransitions.Add(new CrossFade(TimeSpan.FromMilliseconds(
 {% endtabs %}
 
 #### Source code
-[CompositePageTransition](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/CompositePageTransition.cs)
+[CompositePageTransition.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/CompositePageTransition.cs)
 
 #### Reference
 [CompositePageTransition](http://reference.avaloniaui.net/api/Avalonia.Animation/CompositePageTransition/)
@@ -97,7 +93,7 @@ compositeTransition.PageTransitions.Add(new CrossFade(TimeSpan.FromMilliseconds(
 
 You can also create your own `PageTransition` by implementing the `IPageTransition`-interface. 
 
-The Interface has one member which you need to implement:: 
+The Interface has one member which you need to implement: 
 ```csharp
 public Task Start(Visual? from, Visual? to, bool forward, CancellationToken cancellationToken)
 {
@@ -107,7 +103,7 @@ public Task Start(Visual? from, Visual? to, bool forward, CancellationToken canc
 
 ### Example
 
-Below is a sample which will shrink and grow the view in vertically direction. 
+Below is a sample which will shrink the old view and grow the new view in vertically direction. 
 
 ```csharp
 public class CustomTransition : IPageTransition
@@ -243,7 +239,7 @@ public class CustomTransition : IPageTransition
 ![Custom Transition Example](../../.gitbook/assets/TransitioningContentControl_03.mp4)
 
 #### Source code
-[IPageTransition](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/IPageTransition.cs)
+[IPageTransition.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/IPageTransition.cs)
 
 #### Reference
 [IPageTransition](http://reference.avaloniaui.net/api/Avalonia.Animation/IPageTransition/)
