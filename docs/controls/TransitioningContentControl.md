@@ -35,7 +35,7 @@ Let's assume we have a collection of different images and we want to show them i
 </TransitioningContentControl>
 ```
 
-![TransitioningContentControl Example](../../.gitbook/assets/TransitioningContentControl_01.mp4)
+![TransitioningContentControl Example](../../.gitbook/assets/TransitioningContentControl_01.webp)
 
 ## Changing the PageTransition
 
@@ -56,7 +56,7 @@ In the sample below we will change the [PageTransition](https://docs.avaloniaui.
 </TransitioningContentControl>
 ```
 
-![TransitioningContentControl Example](../../.gitbook/assets/TransitioningContentControl_02.mp4)
+![TransitioningContentControl Example](../../.gitbook/assets/TransitioningContentControl_02.webp)
 
 ## Disable the PageTransition
 

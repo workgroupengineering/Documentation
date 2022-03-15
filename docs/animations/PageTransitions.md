@@ -236,7 +236,7 @@ public class CustomTransition : IPageTransition
 }
 ```
 
-![Custom Transition Example](../../.gitbook/assets/TransitioningContentControl_03.mp4)
+![Custom Transition Example](../../.gitbook/assets/TransitioningContentControl_03.webp)
 
 #### Source code
 [IPageTransition.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Visuals/Animation/IPageTransition.cs)
