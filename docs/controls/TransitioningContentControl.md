@@ -1,5 +1,5 @@
 ---
-description: The TransitioningContentControl is a [ContentControl](https://docs.avaloniaui.net/docs/controls/contentcontrol) which can render [PageTransions](https://docs.avaloniaui.net/docs/animations/PageTransitions) when the Content changes.
+description: The TransitioningContentControl is a ContentControl which can render PageTransions when the Content changes.
 ---
 
 # TransitioningContentControl
