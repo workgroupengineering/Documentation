@@ -13,18 +13,18 @@ The user-selection action should be invoked immediately when pressing either the
 
 ## Common Properties
 
-| Property | Description                                                    |
-|----------|----------------------------------------------------------------|
-| Content  | The content to display in the primary part                     |
-| Flyout   | The Flyout which shows up when the secondary part is clicked   |
-| Command  | A command to be invoked when the primary button is clicked     |
+| Property  | Description                                                    |
+|-----------|----------------------------------------------------------------|
+| `Content` | The content to display in the primary part                     |
+| `Flyout`  | The `Flyout` which shows up when the secondary part is clicked |
+| `Command` | A command to be invoked when the primary button is clicked     |
 
 ## Pseudoclasses
 
 | Pseudoclass    | Description                                                                                                                                                         |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `:pressed`     | Set when the entire `SplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
-| `:flyout-open` | Set when the flyout is open                                                                                                                                         |
+| `:flyout-open` | Set when the `Flyout` is open                                                                                                                                       |
 
 ## API Reference
 
