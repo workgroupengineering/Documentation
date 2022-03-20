@@ -21,9 +21,10 @@ The user-selection action should be invoked immediately when pressing either the
 
 ## Pseudoclasses
 
-| Pseudoclass | Description                      |
-| ----------- | -------------------------------- |
-| `:flyout-open`  | Set when the flyout is open |
+| Pseudoclass    | Description                                                                                                                                                         |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `:pressed`     | Set when the entire `SplitButton` is pressed using a keyboard input such as Space or Enter. In this state no distinction is made between primary or secondary parts |
+| `:flyout-open` | Set when the flyout is open                                                                                                                                         |
 
 ## API Reference
 
@@ -61,7 +62,7 @@ The user-selection action should be invoked immediately when pressing either the
 
 *SplitButton (Flyout opened)*
 
-### Color-Picker example
+### Color-Selection example
 
 A common use case of a `SplitButton` is for coloring text within an editor. Pressing the primary part of the `SplitButton` will apply the current color to the selected text. Pressing the secondary part will open a `Flyout` and allow another color to be specified and applied. Again note that when another color is specified in the `Flyout`, the selected text color will immediately change and the current color will be updated as well.
 
@@ -98,7 +99,7 @@ A common use case of a `SplitButton` is for coloring text within an editor. Pres
 
 ![](../../.gitbook/assets/SplitButton_ColorPickerSample.png)
 
-*Sample of SplitButton for color picking*
+*Sample of SplitButton for color selection*
 
 ### Export Button Sample
 
