@@ -24,7 +24,7 @@ Avalonia is a "[Template](../../docs/templates/)" based UI framework. This means
 
 This is a different approach to other UI frameworks where native controls are used, for example a `Button` will take on the standard look of a button on its respective operating system.
 
-Some apps require or desire a native look and feel. Others require a "pixel perfect" style and design. This pixel perfect approach is becoming more popular and common place. Good examples of this kind of application are "Slack" where the companies branding is clear throughout the UI. It also looks the exact same no matter which OS you run it on.
+Some apps require or desire a native look and feel. Others require a "pixel perfect" style and design. This pixel perfect approach is becoming more popular and common place. Good examples of this kind of application are "Slack" where the company's branding is clear throughout the UI. It also looks the exact same no matter which OS you run it on.
 
 Avalonia is suited to these "Pixel Perfect" style apps, providing the advantage of native code and speed.
 
