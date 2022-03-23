@@ -6,13 +6,13 @@ Assuming you have created a project called `HelloWord`. Enter the directory `Hel
 
 To build the project for iOS run the following command.
 
-```
+```bash
 dotnet build
 ```
 
 To run the project in a simulator, run the following command.
 
-```
+```bash
 dotnet run
 ```
 

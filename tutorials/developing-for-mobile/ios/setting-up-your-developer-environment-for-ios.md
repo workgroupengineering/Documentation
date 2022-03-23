@@ -10,7 +10,7 @@ First it is very important to install the correct [dotnet SDK](https://dotnet.mi
 
 ### Install the Workload
 
-```
+```bash
 dotnet workload install ios
 ```
 

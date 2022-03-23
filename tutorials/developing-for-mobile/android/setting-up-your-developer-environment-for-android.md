@@ -36,7 +36,7 @@ This has a command line based SDK manager that can be used to install the SDK.
 
 There is also a tool in development called maui check that can do all of this for you automatically:
 
-```
+```bash
 dotnet tool install -g Redth.Net.Maui.Check
 maui-check
 ```

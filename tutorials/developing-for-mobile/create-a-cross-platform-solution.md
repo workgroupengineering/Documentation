@@ -16,7 +16,7 @@ Once the templates are installed you can generate a new project.
 
 Create a folder name that matches the name of your project. Then enter that folder.
 
-```
+```bash
 mkdir HelloWorld
 cd HelloWorld
 ```
@@ -25,7 +25,7 @@ cd HelloWorld
 
 Now create a cross platform solution using the templates.
 
-```
+```bash
 dotnet new avalonia.xplat
 ```
 

@@ -12,7 +12,7 @@ You can make changes in Xcode and compile using Cmd+B. You will then need to poi
 
 You then specify this path in your AppBuilder using:
 
-```text
+```csharp
 .With(new AvaloniaNativePlatformOptions
 { 
     AvaloniaNativeLibraryPath = “[Path to your dylib]”, 
@@ -35,7 +35,7 @@ A solution to this is to change the sample's output path to [resemble an app bun
 
 And in the `Contents` output directory place a valid `Info.plist` file. An example for ControlCatalog.NetCore is:
 
-```text
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">

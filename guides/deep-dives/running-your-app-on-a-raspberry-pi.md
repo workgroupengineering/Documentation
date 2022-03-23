@@ -12,31 +12,31 @@ You can follow [this guide](https://blogs.msdn.microsoft.com/david/2017/07/20/se
 
 * Install `curl`, `libunwind8`, `gettext` and `apt-transport-https`. The `curl` and `apt-transport-https` often are up-to-date.
 
-```text
+```bash
 sudo apt-get install curl libunwind8 gettext apt-transport-https
 ```
 
 * Download tar-ball.
 
-```text
+```bash
 curl -sSL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
 ```
 
 * Unpack tarball to `/opt/dotnet`.
 
-```text
+```bash
 sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
 ```
 
 * Link `dotnet` binary.
 
-```text
+```bash
 sudo ln -s /opt/dotnet/dotnet /usr/local/bin
 ```
 
 Alternative: You can login as superuser \(run "sudo su"\)
 
-```text
+```bash
 apt-get -y install curl libunwind8 gettext apt-transport-https
 curl -sSL -o dotnet.tar.gz https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
 mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
@@ -57,7 +57,7 @@ It includes the `libSkiaSharp.so`.
 
 * Now publish the app with the following command:
 
-```text
+```bash
 dotnet publish -r linux-arm -f netcoreapp2.0
 ```
 
