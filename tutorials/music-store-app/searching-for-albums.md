@@ -2,13 +2,13 @@
 
 ## Searching For Albums <a id="searching-for-albums"></a>
 
-In order for our application to work we are going to need some buisness logic. This code is not relevant to the tutorial, except for the fact that it will provide the following services:
+In order for our application to work we are going to need some business logic. This code is not relevant to the tutorial, except for the fact that it will provide the following services:
 
 * Searching Apple Itunes web api for Albums
 * Downloading Album art from the Itunes API.
 * Saving / Loading the Albums the user has bought to / from disk.
 
-To add this buisness logic we need 2 steps.
+To add this business logic we need 2 steps.
 
 1. Add the ItunesSearch nuget package to the project. In Rider right click on our project and select `Manage Nuget Packages`
 
@@ -162,15 +162,15 @@ public string Title => _album.Title;
 
 Now our `AlbumViewModel` directly wraps the `Album` class \(`ViewModel` wraps the `Model`\) this is a common pattern.
 
-Now we are ready to query the backend for real data. Our buisness logic or model code provides a convenient method to do this.
+Now we are ready to query the backend for real data. Our business logic or model code from `Album.cs` provides a convenient method to do this.
 
 ```csharp
 public static async Task<IEnumerable<Album>> SearchAsync(string searchTerm)
 ```
 
-calling this method will return an `IEnumerable` of `Albums`, we can call this everytime the users typing is `throttled`, get the data, then clear the list of `ViewModels` from the `SearchResults` `ObservableCollection`, and enumerate each item returned adding an `AlbumViewModel` to the `SearchResults` for each `Album`. The UI will automatically update and represent the `state` of our `ViewModel` as we do this.
+Calling this method will return an `IEnumerable` of `Albums`. We can call this every time the user's typing is `throttled`, get the data, then clear the list of `ViewModels` from the `SearchResults` `ObservableCollection` and enumerate each item returned adding an `AlbumViewModel` to the `SearchResults` for each `Album`. The UI will automatically update and represent the `state` of our `ViewModel` as we do this.
 
-To implement this functionality add the following code to `MusicStoreViewModel.cs`
+To implement this functionality, add the following code to `MusicStoreViewModel.cs`
 
 ```csharp
 private CancellationTokenSource? _cancellationTokenSource;
@@ -196,7 +196,7 @@ private async void DoSearch(string s)
 }
 ```
 
-Also before we run it we will need to remove our old dummy data from the constructor of `MusicStoreViewModel`. Remove the following lines.
+Before we run it, we will need to remove our old dummy data from the constructor of `MusicStoreViewModel`. Remove the following lines...
 
 ```csharp
 SearchResults.Add(new AlbumViewModel());
