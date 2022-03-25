@@ -81,6 +81,7 @@
   * [TreeDataGrid](docs/controls/treedatagrid/README.md)
     * [Creating a Hierarchical TreeDataGrid](docs/controls/treedatagrid/creating-a-hierarchical-treedatagrid.md)
     * [Creating a Flat TreeDataGrid](docs/controls/treedatagrid/creating-a-flat-treedatagrid.md)
+    * [TreeDataGrid column types](docs/controls/treedatagrid/treedatagrid-column-types.md)
   * [TimePicker](docs/controls/timepicker.md)
   * [TextBox](docs/controls/textbox.md)
   * [ToggleButton](docs/controls/togglebutton.md)

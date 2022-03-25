@@ -21,6 +21,12 @@ An example of `TreeDataGrid` displaying flat data:
 
 The control is currently in _early beta_. As such there will be bugs, missing features and lacking docs, but the control should be generally usable and performant.
 
+
+
+**Note**:
+
+We accept issues and pull requests but we answer and review only pull requests and issues that are created by our customers. It's a quite big project and servicing all issues and pull requests will require more time than we have. But feel free to open issues and pull requests because they may be useful for us!
+
 ### Installation
 
 * Add the `Avalonia.Controls.TreeDataGrid` NuGet package to your project
