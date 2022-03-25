@@ -13,7 +13,7 @@ dotnet workload install android
 {% hint style="info" %}
 You may need to run the command with `sudo`\
 \
-You may also need to uninstall old versions. `dotnet workload remove ios`
+You may also need to uninstall old versions. `dotnet workload remove android`
 {% endhint %}
 
 ### Install the Android SDK
