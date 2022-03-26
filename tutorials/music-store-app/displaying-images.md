@@ -2,9 +2,9 @@
 
 ## Displaying Album Cover Images <a id="displaying-album-cover-images"></a>
 
-So we have the Albums showing with the Artist name and Title, however if we can download the Album art and display it, this will really bring the app alive.
+So we have the Albums showing with the Artist name and Title, however, if we can download the Album art and display it, this will really bring the app alive.
 
-Fortunately our buisness logic code provides a convenient `LoadCoverBitmapAsync` this returns a stream that can be used to load a bitmap from.
+Fortunately our business logic code provides a convenient `LoadCoverBitmapAsync`. This returns a stream that can be used to load a bitmap from.
 
 Firstly open `AlbumViewModel.cs` and add a property of type `Bitmap?` named `Cover` using the common pattern so that it can notify the UI when it changes. You will need a `using Avalonia.Media.Imaging;` directive to do so.
 
@@ -30,9 +30,9 @@ public async Task LoadCover()
 }
 ```
 
-Notice that it uses a Task to run the Bitmap loading on a background thread, this is so that the UI thread does not get blocked and make the UI unresponsive, potentially we will be loading many images quickly.
+Notice that it uses a Task to run the Bitmap loading on a background thread, this is so that the UI thread does not get blocked and make the UI unresponsive. Potentially we will be loading many images quickly.
 
-We also use the `Bitmap.DecodeToWidth` method to create a Bitmap object. This is an important insight, if you want to display images in your UI and the jpg, png or whatever format you using provides a very large hight resolution image, but you only want to display it in a small portion of your UI. You need to decode the image so that the `Bitmap` this is displayed is not the full resolution. This `DecodeToWidth` method maintains the aspect ratio and loads to the specified width, efficiently. This means we will not waste huge amounts of memory to show our album covers even if the image files themselves turn out to be quite large.
+We also use the `Bitmap.DecodeToWidth` method to create a Bitmap object. This is an important insight if you want to display images in your UI and the format (jpg, png, and otherwise) provides a very large high resolution image but you only want to display it in a small portion of your UI. You need to decode the image so that the `Bitmap` that is displayed is not the full resolution. This `DecodeToWidth` method maintains the aspect ratio and efficiently loads to the specified width. This means we will not waste huge amounts of memory to show our album covers even if the image files themselves turn out to be quite large.
 
 Now we need to start loading the Album covers whenever a search query has been returned from the backend. Note that because loading the images takes time and is asynchronous, we may need to cancel loading them if the user makes another search request.
 
@@ -93,7 +93,7 @@ private async void LoadCovers(CancellationToken cancellationToken)
 }
 ```
 
-Calling this asynchronous method will itereate through each item in a copy of the `SearchResults` and call our `AlbumViewModel`s `LoadCover` method. Creating a copy with `.ToList()` is necessary because this method is async and `SearchResults` might be updated by another thread.
+Calling this asynchronous method will iterate through each item in a copy of the `SearchResults` and call our `AlbumViewModel`s `LoadCover` method. Creating a copy with `.ToList()` is necessary because this method is async and `SearchResults` might be updated by another thread.
 
 Notice a `CancellationToken` is used to check if we want to stop loading album covers.
 
@@ -149,7 +149,7 @@ private async void DoSearch(string s)
 }
 ```
 
-Ok run the application and search for your favourite artist.
+Now run the application and search for your favourite artist.
 
 Notice how the Albums covers load one by one, but that the UI remains responsive.
 
