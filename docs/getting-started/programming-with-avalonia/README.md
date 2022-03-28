@@ -75,11 +75,6 @@ namespace AvaloniaApplication1
             var button = (Button)sender;
             button.Content = "Hello, Avalonia!";
         }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }
 ```
