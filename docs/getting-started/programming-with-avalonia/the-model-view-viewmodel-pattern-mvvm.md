@@ -37,11 +37,6 @@ namespace AvaloniaApplication1
             InitializeComponent();
             DataContext = new MainWindowViewModel();
         }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 
     public class MainWindowViewModel : INotifyPropertyChanged
