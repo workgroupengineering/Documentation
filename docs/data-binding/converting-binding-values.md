@@ -2,7 +2,7 @@
 
 ### Negating Values <a href="negating-values" id="negating-values"></a>
 
-Often you will need to negate a value that you're binding to. A frequent use for this is to show or hide and control or to enable/disable it. You can negate a binding value by prepending a "bang" operator: `!`.
+Often you will need to negate a value that you're binding to. A frequent use for this is to show/hide a control or to enable/disable it. You can negate a binding value by prepending a "bang" operator: `!`.
 
 For example you might want to show one control when another control is disabled.
 
