@@ -27,7 +27,7 @@ If you don't want a dependency on ReactiveUI, you can implement [`INotifyPropert
 
 ### Collection Changes <a id="collection-changes"></a>
 
-Collections also need to implement change notifications. There are a number of collection which do this for you out of the box:
+Collections also need to implement change notifications. There are a number of collections which do this for you out of the box:
 
 * [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1) is available in the .NET base class library
 * [DynamicData](https://github.com/reactiveui/DynamicData) for more advanced scenarios
