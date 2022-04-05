@@ -52,16 +52,11 @@ using Avalonia.Markup.Xaml;
 
 namespace Todo.Views
 {
-    public class TodoListView : UserControl
+    public partial class TodoListView : UserControl
     {
         public TodoListView()
         {
-            this.InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
+            InitializeComponent();
         }
     }
 }

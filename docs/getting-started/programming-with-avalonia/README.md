@@ -62,10 +62,11 @@ using Avalonia.Markup.Xaml;
 
 namespace AvaloniaApplication1
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
+            // Generated with Avalonia.NameGenerator
             InitializeComponent();
         }
 
@@ -75,18 +76,14 @@ namespace AvaloniaApplication1
             var button = (Button)sender;
             button.Content = "Hello, Avalonia!";
         }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-In this example, the code-behind implements a class that derives from the [`Window`](https://docs.avaloniaui.net/docs/getting-started/windows) class. The `x:Class` attribute is used to associate the markup with the code-behind class. `InitializeComponent` is called from the code-behind class's constructor to merge the UI that is defined in markup with the code-behind class. 
+In this example, the code-behind implements a class that derives from the [`Window`](https://docs.avaloniaui.net/docs/getting-started/windows) class. The `x:Class` attribute is used to associate the markup with the code-behind class. `InitializeComponent` is called from the code-behind class's constructor to merge the UI that is defined in markup with the code-behind class.  
+You could notice `MainWindow` class is declared as `partial` and there is no `InitializeComponent` implementation visible. That's because `InitializeComponent` body was auto-generated at the partial class counterpart by the [Avalonia.NameGenerator](https://github.com/AvaloniaUI/Avalonia.NameGenerator) package which is included with Avalonia templates by default.
 
 The combination of `x:Class` and `InitializeComponent` ensure that your implementation is correctly initialised whenever it is created. The code-behind class also implements an event handler for the button's `Click` event. When the button is clicked, the event handler changes the text of the button by setting a property on the `Button` control.
 
