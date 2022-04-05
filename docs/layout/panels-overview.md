@@ -24,7 +24,7 @@ One purpose of an attached property is to allow child elements to store unique v
 
 There are several panel classes available in Avalonia that are optimized to support UI scenarios: `Panel`, `Canvas`, `DockPanel`, `Grid`, `StackPanel`, `WrapPanel` and `RelativePanel`. These panel elements are easy to use, versatile, and extensible enough for most applications.
 
-**Canvas**
+**Canvas** <a id="canvas-class"></a>
 
 The `Canvas` element enables positioning of content according to absolute _x-_ and _y-_ coordinates. Elements can be drawn in a unique location; or, if elements occupy the same coordinates, the order in which they appear in markup determines the order in which the elements are drawn.
 
@@ -84,7 +84,7 @@ XAML
 </Canvas>
 ```
 
-**DockPanel**
+**DockPanel** <a id="dockpanel-class"></a>
 
 The `DockPanel` element uses the `DockPanel.Dock` attached property as set in child content elements to position content along the edges of a container. When `DockPanel.Dock` is set to `Top` or `Bottom`, it positions child elements above or below each other. When `DockPanel.Dock` is set to `Left` or `Right`, it positions child elements to the left or right of each other. The `LastChildFill` property determines the position of the final element added as a child of a `DockPanel`.
 
@@ -193,7 +193,7 @@ XAML
 </DockPanel>
 ```
 
-**Grid**
+**Grid** <a id="grid-class"></a>
 
 The `Grid` element merges the functionality of an absolute positioning and tabular data control. A `Grid` enables you to easily position and style elements. `Grid` allows you to define flexible row and column groupings, and even provides a mechanism to share sizing information between multiple `Grid` elements.
 
@@ -300,7 +300,7 @@ grid1.Children.Add(button2);
 grid1.Children.Add(button3);
 ```
 
-**StackPanel**
+**StackPanel** <a id="stackpanel-class"></a>
 
 A `StackPanel` enables you to "stack" elements in an assigned direction. The default stack direction is vertical. The `Orientation` property can be used to control content flow.
 
@@ -334,7 +334,7 @@ myStackPanel.Children.Add(myButton2);
 myStackPanel.Children.Add(myButton3);
 ```
 
-**WrapPanel**
+**WrapPanel** <a id="wrappanel-class"></a>
 
 `WrapPanel` is used to position child elements in sequential position from left to right, breaking content to the next line when it reaches the edge of its parent container. Content can be oriented horizontally or vertically. `WrapPanel` is useful for simple flowing UI scenarios. It can also be used to apply uniform sizing to all of its child elements.
 
