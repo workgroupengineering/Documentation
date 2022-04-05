@@ -18,7 +18,7 @@ One example for populating a `TreeView` can be from a directory on the computer.
 
 In the `MainWindowViewModel.cs` you can add this code which will recursively look up all the subfolders and populate the TreeView from `Items` and `Subfolders`
 
-```markup
+```csharp
 public ObservableCollection<Node> Items { get; }
 public ObservableCollection<Node> SelectedItems { get; }
 public string strFolder { get; set; }
