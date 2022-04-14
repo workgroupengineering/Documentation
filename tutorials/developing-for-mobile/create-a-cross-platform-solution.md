@@ -4,7 +4,7 @@ description: Create a solution compatible with Desktop, Mobile and Web
 
 # Create a cross platform solution
 
-Make sure you use latest .NET 6 SDK. iOS especially requires developers to use 6.0.203 SDK or newer.
+Make sure you use latest .NET 6 SDK. iOS especially requires developers to use 6.0.202 SDK or newer.
 
 Install the Avalonia dotnet templates. Version `0.10.13` and above adds support for mobile.
 
