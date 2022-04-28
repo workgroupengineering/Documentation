@@ -30,17 +30,12 @@ using Avalonia.Markup.Xaml;
 
 namespace AvaloniaApplication1
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
         }
     }
 

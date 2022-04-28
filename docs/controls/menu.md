@@ -137,7 +137,7 @@ Next, you can create your menu structure using the view models. The following co
 ```csharp
 public MainWindow()
 {
-    this.InitializeComponent();
+    InitializeComponent();
 
     var vm = new MainWindowViewModel();
 

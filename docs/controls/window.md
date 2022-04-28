@@ -23,16 +23,24 @@ You will not usually create instances of the `Window` class directly; instead th
 
 ### The main window <a id="the-main-window"></a>
 
-The main window is the window passed to `Application.Run` in the `AppMain` method of your your `Program.cs` file:
+The main window is the window passed to `ApplicationLifetime.MainWindow` in the `OnFrameworkInitializationCompleted` method of your your `App.axaml.cs` file:
 
 ```csharp
-private static void AppMain(Application app, string[] args)
+public override void OnFrameworkInitializationCompleted()
 {
-    app.Run(new MainWindow());
+    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
+    {
+        desktopLifetime.MainWindow = new MainWindow();
+    }
 }
 ```
 
-It can be retrieved at any time using the `Application.Current.MainWindow` property.
+It can be retrieved at any time by casting `Application.ApplicationLifetime` IClassicDesktopStyleApplicationLifetime.
+
+{% hint style="info" %}
+Mobile and browser platforms don't have a concept of Window in Avalonia.
+Instead you need to set MainView control in Application.ApplicationLifetime when it implements ISingleViewApplicationLifetime interface.
+{% endhint %}
 
 ### Show, hide and close a window <a id="show-hide-and-close-a-window"></a>
 
@@ -68,15 +76,18 @@ See also [Prevent a window from closing](https://docs.avaloniaui.net/docs/contro
 You can show a window as a modal dialog by calling the `ShowDialog` method. `ShowDialog` requires an owner window to be passed:
 
 ```csharp
+// Here we assume this code is executed from our current Window class and "this" object is a Window.
+// Alternatively you can get global MainWindow from Application.ApplicationLifetime casted to IClassicDesktopStyleApplicationLifetime.
+var ownerWindow = this;
 var window = new MyWindow();
-window.ShowDialog(Application.Current.MainWindow);
+window.ShowDialog(ownerWindow);
 ```
 
 The `ShowDialog` method will return immediately. If you want to wait for the dialog to be closed, you can `await` the call:
 
 ```csharp
 var window = new MyWindow();
-await window.ShowDialog(Application.Current.MainWindow);
+await window.ShowDialog(ownerWindow);
 ```
 
 Dialogs can return a result by calling the `Close` method with an object. This result can then be read by the caller of `ShowDialog`. For example:
@@ -86,7 +97,7 @@ public class MyDialog : Window
 {
     public MyDialog()
     {
-        AvaloniaXamlLoader.Load(this);
+        InitializeComponent();
     }
 
     private void OkButton_Click(object sender, EventArgs e)
@@ -100,7 +111,7 @@ public class MyDialog : Window
 var dialog = new MyDialog();
 
 // The result is a string so call `ShowDialog<string>`.
-var result = await dialog.ShowDialog<string>(Application.Current.MainWindow);
+var result = await dialog.ShowDialog<string>(ownerWindow);
 ```
 
 ### Prevent a window from closing <a id="prevent-a-window-from-closing"></a>

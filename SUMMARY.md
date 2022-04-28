@@ -81,6 +81,7 @@
   * [TreeDataGrid](docs/controls/treedatagrid/README.md)
     * [Creating a Hierarchical TreeDataGrid](docs/controls/treedatagrid/creating-a-hierarchical-treedatagrid.md)
     * [Creating a Flat TreeDataGrid](docs/controls/treedatagrid/creating-a-flat-treedatagrid.md)
+    * [TreeDataGrid column types](docs/controls/treedatagrid/treedatagrid-column-types.md)
   * [TimePicker](docs/controls/timepicker.md)
   * [TextBox](docs/controls/textbox.md)
   * [ToggleButton](docs/controls/togglebutton.md)
@@ -192,6 +193,15 @@
   * [Load data at Startup](tutorials/music-store-app/load-data-at-startup.md)
   * [Summary](tutorials/music-store-app/summary.md)
 * [Running in the Browser](tutorials/running-in-the-browser.md)
+* [Developing for Mobile](tutorials/developing-for-mobile/README.md)
+  * [Create a cross platform solution](tutorials/developing-for-mobile/create-a-cross-platform-solution.md)
+  * [Android](tutorials/developing-for-mobile/android/README.md)
+    * [Setting up your developer environment for Android](tutorials/developing-for-mobile/android/setting-up-your-developer-environment-for-android.md)
+    * [Build and run your Application on a Simulator](tutorials/developing-for-mobile/android/build-and-run-your-application-on-a-simulator.md)
+  * [iOS](tutorials/developing-for-mobile/ios/README.md)
+    * [Setting up your developer environment for iOS](tutorials/developing-for-mobile/ios/setting-up-your-developer-environment-for-ios.md)
+    * [Build and run your application on a Simulator](tutorials/developing-for-mobile/ios/build-and-run-your-application-on-a-simulator.md)
+    * [Build and Run your Application on your iPhone or iPad](tutorials/developing-for-mobile/ios/build-and-run-your-application-on-your-iphone-or-ipad.md)
 
 ## Misc
 

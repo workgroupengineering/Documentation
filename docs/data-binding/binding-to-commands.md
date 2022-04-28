@@ -56,13 +56,13 @@ namespace Example
 }
 ```
 
-```text
+```markup
 <Window xmlns="https://github.com/avaloniaui">
     <Button Command="{Binding DoTheThing}" CommandParameter="Hello World">Do the thing!</Button>
 </Window>
 ```
 
-Note that no type conversion is carried out on `CommandParameter`, so if you need you type parameter to be something other than `string` you must supply an object of that type in XAML. For example to pass an `int` parameter you could use:
+Note that no type conversion is carried out on `CommandParameter`, so if you need your type parameter to be something other than `string` you must supply an object of that type in XAML. For example to pass an `int` parameter you could use:
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"

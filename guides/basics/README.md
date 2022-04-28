@@ -1,5 +1,5 @@
 ---
-description: Short tutorials to get you up and running if your new to Avalonia.
+description: Short tutorials to get you up and running if you're new to Avalonia.
 ---
 
 # 🐣 Basics

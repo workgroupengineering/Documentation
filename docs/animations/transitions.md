@@ -98,7 +98,7 @@ Render transforms applied to controls using CSS-like syntax can be transitioned.
 {% endtab %}
 
 {% tab title="C\#" %}
-```text
+```csharp
 new Border
 {
     Width = 100,

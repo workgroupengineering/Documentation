@@ -81,7 +81,7 @@ produces following output with **Windows 10**\
 produces following output with **Windows 10**\
 
 
-![Colored button](<../../.gitbook/assets/image (18).png>)
+![Colored button](<../../.gitbook/assets/image (18) (1).png>)
 
 ### Play button
 
