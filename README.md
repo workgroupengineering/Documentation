@@ -39,7 +39,7 @@ and many other smaller companies.
 
 ## Supported .NET Version
 
-Avalonia is supported on [all platforms that support .NET Standard 2.0](https://github.com/dotnet/standard/blob/release/3.0/docs/versions/netstandard2.0.md#platform-support)
+Avalonia is supported on [all platforms that support .NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#select-net-standard-version)
 
 ## Supported Platforms
 
