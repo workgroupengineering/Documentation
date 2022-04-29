@@ -1,8 +1,6 @@
 # 👋 Welcome
 
-## Welcome
-
-Welcome to Avalonia Docs! 
+Welcome to **Avalonia Docs**! 
 
 Learn how to create .NET GUI applications for Windows, macOS, Linux, iOS, Android and Web Assembly from a single codebase. 
 
