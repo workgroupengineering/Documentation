@@ -67,10 +67,18 @@ The easing functions are the same as those described in [Keyframe Animations](ht
 
 The following transition types are available. The correct type must be used depending on the type of the property being animated.
 
+* `BoxShadowsTransition`: For `BoxShadows` target properties
+* `BrushTransition`: For `IBrush` target properties
+* `ColorTransition`: For `Color` target properties
+* `CornerRadiusTransition`: For `CornerRadius` target properties
 * `DoubleTransitions`: For `double` target properties
 * `FloatTransitions`: For `float` target properties
 * `IntegerTransitions`: For `int` target properties
-* `TransformOperationsTransition` : For `ITransform` properties
+* `PointTransition`: For `Point` target properties
+* `SizeTransition`: For `Size` target properties
+* `ThicknessTransition`: For `Thickness` target properties
+* `TransformOperationsTransition`: For `ITransform` target properties
+* `VectorTransition`: For `Vector` target properties
 
 ## Transitioning Render Transforms
 
