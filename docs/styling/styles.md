@@ -172,6 +172,14 @@ Note that the `Setter` creates a single instance of `Value` which will be applie
 
 In the above example, the binding source will be `MyObject.DataContext`, not `MyControl.DataContext` and if `MyObject` has no data context then the binding will not be able to produce a value.
 
+Note: at present, if you are using compiled bindings, you need to explicitly set the data type of the binding source in the `<Style>` element:
+
+```markup
+<Style Selector="MyControl" x:DataType="MyViewModelClass">
+  <Setter Property="ControlProperty" Value="{Binding MyViewModelProperty}" />
+</Style>
+```
+
 ### Templates in Setters <a id="templates-in-setters"></a>
 
 As mentioned above, usually a single instance of a setter's `Value` is created and shared across all matching controls. Due to this, to use a control as a setter value, the control must be wrapped in a `<Template>`:
