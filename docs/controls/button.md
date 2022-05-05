@@ -60,7 +60,7 @@ The Button control's full documentation can be found [here](http://reference.ava
 produces following output with **Windows 10**\
 
 
-![Basic button](<../../.gitbook/assets/button\_basic (1) (1).png>)
+![Basic button](<../../.gitbook/assets/button\_basic (1).png>)
 
 ### Colored button
 

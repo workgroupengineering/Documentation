@@ -95,6 +95,6 @@ We can display the student's first and last name in a `ContentControl` using the
 </Window>
 ```
 
-![Student first and last name](<../../.gitbook/assets/student-first-last-name (1) (1) (1) (1) (1).png>)
+![Student first and last name](<../../.gitbook/assets/student-first-last-name (1) (1) (1) (1).png>)
 
 For more information see the [data templates](https://docs.avaloniaui.net/docs/templates/data-templates) section.

@@ -2,7 +2,7 @@
 description: This section describes how to develop for Mobile devices like iOS and Android.
 ---
 
-# Developing for Mobile
+# 📱 Developing for Mobile
 
 This section contains the following guides:
 

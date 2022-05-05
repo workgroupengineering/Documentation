@@ -8,8 +8,6 @@ Before continuing follow this guide to create a free Apple developer signing cer
 
 This has to be done by creating an XCode app project that has the same `bundle identifier` that you will use in your application.
 
-
-
 1. Open XCode
 
 ![](<../../../.gitbook/assets/Screenshot 2022-03-17 at 12.09.54.png>)
@@ -67,12 +65,10 @@ Add a `<CodesignKey>` tag.
 
 To find the value for this open the application `KeyChain Access`. In the search box search for development.
 
-![](<../../../.gitbook/assets/image (31).png>)
+![](<../../../.gitbook/assets/image (33).png>)
 
-Set the value exactly as the bold text at the top of the window on your selected development certificate.&#x20;
+Set the value exactly as the bold text at the top of the window on your selected development certificate.
 
 `Apple Development: dan@walms.co.uk (3L323F7VSS)` in this case.
-
-
 
 After this you can run and debug your application on the iPhone or iPad like any normal
