@@ -153,6 +153,7 @@
   * [Introduction to XAML](guides/basics/introduction-to-xaml.md)
   * [Code-behind](guides/basics/code-behind.md)
   * [MVVM Architecture](guides/basics/mvvm.md)
+  * [Accessing the UI thread](guides/basic/Dispatcher.md)
 * [🤿 Deep dives](guides/deep-dives/README.md)
   * [Running your app on a Raspberry Pi](guides/deep-dives/running-your-app-on-a-raspberry-pi.md)
   * [Running your app on a Raspberry Pi with Raspbian Lite](guides/deep-dives/running-on-raspbian-lite-via-drm.md)
