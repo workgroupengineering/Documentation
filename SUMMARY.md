@@ -160,7 +160,7 @@
     * [View Activation](guides/deep-dives/reactiveui/view-activation.md)
     * [Routing](guides/deep-dives/reactiveui/routing.md)
     * [Data Persistence](guides/deep-dives/reactiveui/data-persistence.md)
-* [Developer Guides](guides/developer-guides/README.md)
+* [👩💻 Developer Guides](guides/developer-guides/README.md)
   * [🏭 Build Avalonia from Source](guides/developer-guides/build-avalonia-from-source.md)
   * [Comparison of Avalonia with WPF and UWP](guides/developer-guides/comparison-of-avalonia-with-wpf-and-uwp.md)
   * [Debugging Previewer](guides/developer-guides/debugging-previewer.md)

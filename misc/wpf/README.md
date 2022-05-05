@@ -4,50 +4,29 @@ description: >-
   with Avalonia.
 ---
 
-# 🖥 WPF Developers Tips
+# 🖥️ WPF Developers Tips
 
 Avalonia is in general very similar to WPF, but you will find differences. Here are the most common:
 
-{% content-ref url="styling.md" %}
-[styling.md](styling.md)
-{% endcontent-ref %}
+{% page-ref page="styling.md" %}
 
-{% content-ref url="datatemplates.md" %}
-[datatemplates.md](datatemplates.md)
-{% endcontent-ref %}
+{% page-ref page="datatemplates.md" %}
 
-{% content-ref url="hierachicaldatatemplate.md" %}
-[hierachicaldatatemplate.md](hierachicaldatatemplate.md)
-{% endcontent-ref %}
+{% page-ref page="hierachicaldatatemplate.md" %}
 
-{% content-ref url="uielement-frameworkelement-and-control.md" %}
-[uielement-frameworkelement-and-control.md](uielement-frameworkelement-and-control.md)
-{% endcontent-ref %}
+{% page-ref page="uielement-frameworkelement-and-control.md" %}
 
-{% content-ref url="dependencyproperty.md" %}
-[dependencyproperty.md](dependencyproperty.md)
-{% endcontent-ref %}
+{% page-ref page="dependencyproperty.md" %}
 
-{% content-ref url="grid.md" %}
-[grid.md](grid.md)
-{% endcontent-ref %}
+{% page-ref page="grid.md" %}
 
-{% content-ref url="itemscontrol.md" %}
-[itemscontrol.md](itemscontrol.md)
-{% endcontent-ref %}
+{% page-ref page="itemscontrol.md" %}
 
-{% content-ref url="tunnelling-events.md" %}
-[tunnelling-events.md](tunnelling-events.md)
-{% endcontent-ref %}
+{% page-ref page="tunnelling-events.md" %}
 
-{% content-ref url="class-handlers.md" %}
-[class-handlers.md](class-handlers.md)
-{% endcontent-ref %}
+{% page-ref page="class-handlers.md" %}
 
-{% content-ref url="propertychangedcallback.md" %}
-[propertychangedcallback.md](propertychangedcallback.md)
-{% endcontent-ref %}
+{% page-ref page="propertychangedcallback.md" %}
 
-{% content-ref url="rendertransforms-and-rendertransformorigin.md" %}
-[rendertransforms-and-rendertransformorigin.md](rendertransforms-and-rendertransformorigin.md)
-{% endcontent-ref %}
+{% page-ref page="rendertransforms-and-rendertransformorigin.md" %}
+
