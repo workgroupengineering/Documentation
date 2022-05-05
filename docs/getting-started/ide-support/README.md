@@ -92,3 +92,18 @@ If you're having problems, try enabling verbose logging. To do this:
 
 Logs will be displayed in the Visual Studio Output window. Select "Show Output From: Avalonia Diagnostics".
 
+## Troubleshooting & FAQ
+
+**Visual Studio doesn't show the Avalonia previewer**
+
+Sometimes Visual Studio opens the `XAML`-file with the editor for WPF instead of Avalonia. Normally this issue is solved if you close the wrong shown document and open it again. 
+
+If that didn't help you can also right click on the file and select `[Open With ...]`. In the opened dialog select `[Avalonia XAML Editor]`.
+
+**My preview is empty**
+
+If your preview is not shown correctly try to (re-)build the project or solution. The previewer needs a valid build in order to work correctly. 
+
+Moreover if you have more than one project in your solution, you may need to select the project which should be used to render the preview. This can be done with the drop-down shown below.  
+
+![Shows how to select the project used to render the preview](../../../.gitbook/assets/VisualStudioPreviewer_SelectProjectForPreview.png)
