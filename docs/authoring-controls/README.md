@@ -1,12 +1,14 @@
-# 🖌️ Authoring Controls
+# ✏ Authoring Controls
 
-Learn how to create custom controls. 
+Learn how to create custom controls.&#x20;
 
-{% page-ref page="defining-properties.md" %}
+{% content-ref url="defining-properties.md" %}
+[defining-properties.md](defining-properties.md)
+{% endcontent-ref %}
 
-{% page-ref page="types-of-control.md" %}
-
-
+{% content-ref url="types-of-control.md" %}
+[types-of-control.md](types-of-control.md)
+{% endcontent-ref %}
 
 
 
