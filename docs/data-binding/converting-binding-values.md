@@ -79,11 +79,58 @@ Hiding a `ContentControl` if the bound content is null or empty:
                 IsVisible="{Binding MyContent, Converter={x:Static ObjectConverters.IsNotNull}}"/>
 ```
 
-Displaying a different `Image` based upon a value of a binded object:
+> from now on assume converters are imported as shown in the previus "Binding Converters" section
+
+Convert text to specifc case from a parameter
+```markup
+<TextBlock Text="{Binding TheContent, 
+    Converter={StaticResource textCaseConverter},
+    ConverterParameter=lower}">
+```
+```csharp
+public class TextCaseConverter : IValueConverter
+{
+    public static readonly TextCaseConverter Instance = new();
+
+    public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+        if (value is string sourceText && parameter is string targetCase
+            targetType.IsAssignableTo(typeof(string)))
+        {
+            switch (targetCase)
+            {
+                case "upper":
+                case "SQL":
+                    return sourceText.ToUpper();
+                case "lower"
+                    return sourceText.ToLower();
+                case "title":
+                    var txtinfo = new System.Globalization.CultureInfo("en-US",false).TextInfo;
+                    return txtinfo.ToTitleCase(sourceText);
+                default:
+                    // invalid option, return the exception below
+                    break;
+            }
+        }
+        // converter used for the wrong type
+        return new BindingNotification(new InvalidCastException(), BindingErrorType.Error);
+    }
+
+    public object ConvertBack( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+      throw new NotSupportedException();
+    }
+}
+```
+
+
+Converting a binded object to different target types contextually
 
 ```markup
-<!-- assume animalConverter was imported as shown in the previus "Binding Converters" section -->
-<Image Width="42" Source="{Binding Animal, Converter={StaticResource animalConverter}}"/>
+<Image Width="42" 
+       Source="{Binding Animal, Converter={StaticResource animalConverter}}"/>
+<TextBlock 
+       Text="{Binding Animal, Converter={StaticResource animalConverter}}" />
 ```
 
 ```csharp
@@ -93,24 +140,34 @@ public class AnimalConverter : IValueConverter
 
     public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
     {
-        if (value is Animal animal && targetType.IsAssignableTo(typeof(IImage)) )
+        if (value is Animal animal)
         {
-            img = @"icons/generic-animal-placeholder.png"
-            switch (animal)
+            if (targetType.IsAssignableTo(typeof(IImage)))
             {
-                case Dog d:
-                  img = d.IsGoodBoy ? @"icons/dog-happy.png" : @"icons/dog.png";
-                  break;
-                case Cat:
-                  img = @"icons/cat.png";
-                  break;
+                img = @"icons/generic-animal-placeholder.png"
+                switch (animal)
+                {
+                    case Dog d:
+                      img = d.IsGoodBoy ? @"icons/dog-happy.png" : @"icons/dog.png";
+                      break;
+                    case Cat:
+                      img = @"icons/cat.png";
+                      break;
+                    // etc. etc.
+                }
+                // see https://docs.avaloniaui.net/docs/controls/image
+                return BitmapAssetValueConverter.Instance
+                    .Convert(img, typeof(Bitmap), parameter, culture);
             }
-
-            // see https://docs.avaloniaui.net/docs/controls/image
-            return BitmapAssetValueConverter.Instance.Convert(img, typeof(Bitmap), parameter, culture);
+            else if (targetType.IsAssignableTo(typeof(string)))
+            {
+                return !string.IsNullOrEmpty(animal.NickName) ? 
+                    $"{animal.Name} \"{animal.NickName}\"" : animal.Name;
+            }
         }
         // converter used for the wrong type
         return new BindingNotification(new InvalidCastException(), BindingErrorType.Error);
+        
     }
 
     public object ConvertBack( object? value, Type targetType, object? parameter, CultureInfo culture )
