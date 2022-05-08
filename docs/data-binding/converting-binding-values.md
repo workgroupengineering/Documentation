@@ -85,7 +85,7 @@ Convert text to specifc case from a parameter
 ```markup
 <TextBlock Text="{Binding TheContent, 
     Converter={StaticResource textCaseConverter},
-    ConverterParameter=lower}">
+    ConverterParameter=lower}" />
 ```
 ```csharp
 public class TextCaseConverter : IValueConverter
@@ -95,7 +95,7 @@ public class TextCaseConverter : IValueConverter
     public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
     {
         if (value is string sourceText && parameter is string targetCase
-            targetType.IsAssignableTo(typeof(string)))
+            && targetType.IsAssignableTo(typeof(string)))
         {
             switch (targetCase)
             {
@@ -104,7 +104,7 @@ public class TextCaseConverter : IValueConverter
                     return sourceText.ToUpper();
                 case "lower"
                     return sourceText.ToLower();
-                case "title":
+                case "title": // Every First Letter Uppercase
                     var txtinfo = new System.Globalization.CultureInfo("en-US",false).TextInfo;
                     return txtinfo.ToTitleCase(sourceText);
                 default:
