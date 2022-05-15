@@ -89,8 +89,16 @@ Toggles between a "Play" icon and a "Pause" icon on click.
 
 ```markup
 <UserControl.Resources>
-    <Bitmap x:key="Play">/Assets/Player/Play.png</Bitmap>
-    <Bitmap x:key="Pause">/Assets/Player/Pause.png</Bitmap>
+    <Bitmap x:Key="Play">
+        <x:Arguments>
+            <x:String>/Assets/Player/Play.png</x:String>
+        </x:Arguments>
+    </Bitmap>
+    <Bitmap x:Key="Pause">
+        <x:Arguments>
+            <x:String>/Assets/Player/Pause.png</x:String>
+        </x:Arguments>
+    </Bitmap>
 </UserControl.Resources>
 ```
 
