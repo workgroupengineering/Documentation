@@ -9,3 +9,8 @@ In this section we describe how to setup you machine for Android development. Th
 
 
 Before getting started ensure you have followed the guide [create-a-cross-platform-solution.md](../create-a-cross-platform-solution.md "mention").
+
+
+## OS Support
+
+Avalonia has support for same version of Android, [as MAUI](https://docs.microsoft.com/en-us/dotnet/maui/supported-platforms).
