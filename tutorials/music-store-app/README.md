@@ -68,7 +68,7 @@ So now we have the `Model` part of MVVM, all self contained, the `models` know n
 
 **ViewModel \(UI Logic\)**
 
-You user interface is essentially the way your `users` interact with your business logic or `models`. There needs to be a way for your UI to interact with the business logic. We do this using a `ViewModel`. A `ViewModel` knows about the `Model` that it represents. It does not know anything about the layout or design of the UI or `View` part.
+Your user interface is essentially the way your `users` interact with your business logic or `models`. There needs to be a way for your UI to interact with the business logic. We do this using a `ViewModel`. A `ViewModel` knows about the `Model` that it represents. It does not know anything about the layout or design of the UI or `View` part.
 
 A `ViewModel` is essentially special type of `Model` that represents all the `data` that will be displayed in the UI. It also represents all the `actions` that can be done with the UI. For example what happens when a button is clicked.
 
