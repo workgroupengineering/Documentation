@@ -592,3 +592,46 @@ jobs:
 ```
 
 When configured like this you will not have to specify a specific keychain file for `codesign` or `notarytool` to use.
+
+The next steps are to publish the app and sign it. 
+Start by adding this environment variable to the job:
+
+```yaml
+    env:
+      SIGNING_IDENTITY: thumbprint_of_certificate_added_to_keychain
+```
+
+And then add these steps:
+
+```yaml
+    - name: Publish app
+      run: dotnet publish -c Release -r osx-x64 -o $RUNNER_TEMP/MyApp.app/Contents/MacOS MyApp.csproj
+    - name: Codesign app
+      run: |
+        find "$RUNNER_TEMP/MyApp.app/Contents/MacOS/"|while read fname; do
+          if [ -f "$fname" ]
+          then
+              echo "[INFO] Signing $fname"
+              codesign --force --timestamp --options=runtime --entitlements MyApp.entitlements --sign "${{ env.$SIGNING_IDENTITY }}" "$fname"
+          fi
+        done
+        codesign --force --timestamp --options=runtime --entitlements MyApp.entitlements --sign "${{ env.SIGNING_IDENTITY }}" "$RUNNER_TEMP/MyApp.app"
+```
+
+> **Note:** `RUNNER_TEMP` is an environment variable provided by GitHub Actions
+
+After code signing the app bundle can now be notarised, by adding this step to the job:
+
+```yaml
+    - name: Notarise app
+      run: |
+        ditto -c -k --sequesterRsrc --keepParent "$RUNNER_TEMP/MyApp.app" "$RUNNER_TEMP/MyApp.zip"
+        xcrun notarytool submit "$RUNNER_TEMP/MyApp.zip" --wait --keychain-profile "AC_PASSWORD"
+        xcrun stapler staple "$RUNNER_TEMP/MyApp.app"
+```
+
+When you run this workflow you will have an app bundle that is signed and notarised, ready for packaging in a disk image or installer.
+
+To verify that code signing worked you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
+
+Once you've downloaded the app bundle and want to start it you should see the popup from macOS saying that the app was scanned and no malware was found.
