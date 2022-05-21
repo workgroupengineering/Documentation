@@ -329,7 +329,7 @@ There are a few parts to the added code:
 Observable.Merge(vm.Ok, vm.Cancel.Select(_ => (TodoItem)null))
 ```
 
-This code takes advantage of the fact that `ReactiveCommand` is itself an observable which produces a value each time the command is executed. You'll notice than when we defined the commands they had slightly different declarations:
+This code takes advantage of the fact that `ReactiveCommand` is itself an observable which produces a value each time the command is executed. You'll notice that when we defined the commands they had slightly different declarations:
 
 ```csharp
 public ReactiveCommand<Unit, TodoItem> Ok { get; }
