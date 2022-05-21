@@ -102,7 +102,7 @@ public class TextCaseConverter : IValueConverter
                 case "upper":
                 case "SQL":
                     return sourceText.ToUpper();
-                case "lower"
+                case "lower":
                     return sourceText.ToLower();
                 case "title": // Every First Letter Uppercase
                     var txtinfo = new System.Globalization.CultureInfo("en-US",false).TextInfo;
