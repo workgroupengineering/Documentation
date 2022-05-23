@@ -93,11 +93,11 @@ private async void LoadCovers(CancellationToken cancellationToken)
 }
 ```
 
-Calling this asynchronous method will iterate through each item in a copy of the `SearchResults` and call our `AlbumViewModel`s `LoadCover` method. Creating a copy with `.ToList()` is necessary because this method is async and `SearchResults` might be updated by another thread.
+Calling this asynchronous method will iterate through each item in a copy of the `SearchResults` and call our `AlbumViewModel`'s `LoadCover` method. Creating a copy with `.ToList()` is necessary because this method is async and `SearchResults` might be updated by another thread.
 
 Notice a `CancellationToken` is used to check if we want to stop loading album covers.
 
-Now add the following code to the beggining of `DoSearch` method of `MusicStoreViewModel` after the `SearchResults.Clear();` line.
+Now add the following code to the beginning of `DoSearch` method of `MusicStoreViewModel` after the `SearchResults.Clear();` line.
 
 ```csharp
 _cancellationTokenSource?.Cancel();
