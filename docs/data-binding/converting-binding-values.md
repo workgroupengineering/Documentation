@@ -32,7 +32,7 @@ A "double-bang" can be used to convert a non-boolean value to a boolean value. F
 
 ### Binding Converters <a href="binding-converters" id="binding-converters"></a>
 
-For more advanced conversions, Avalonia supports [`IValueConverter `](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1)the same as other XAML frameworks.
+For more advanced conversions, Avalonia supports [`IValueConverter`](https://docs.microsoft.com/en-gb/dotnet/api/system.windows.data.ivalueconverter?view=netframework-4.7.1) the same as other XAML frameworks.
 
 > Note: The `IValueConverter` interface is not available in .NET standard 2.0 so we ship our own, in the `Avalonia.Data.Converters` namespace.
 
@@ -77,4 +77,102 @@ Hiding a `ContentControl` if the bound content is null or empty:
 ```markup
 <ContentControl Content="{Binding MyContent}"
                 IsVisible="{Binding MyContent, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+```
+
+> from now on assume converters are imported as shown in the previus "Binding Converters" section
+
+Convert text to specifc case from a parameter
+```markup
+<TextBlock Text="{Binding TheContent, 
+    Converter={StaticResource textCaseConverter},
+    ConverterParameter=lower}" />
+```
+```csharp
+public class TextCaseConverter : IValueConverter
+{
+    public static readonly TextCaseConverter Instance = new();
+
+    public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+        if (value is string sourceText && parameter is string targetCase
+            && targetType.IsAssignableTo(typeof(string)))
+        {
+            switch (targetCase)
+            {
+                case "upper":
+                case "SQL":
+                    return sourceText.ToUpper();
+                case "lower":
+                    return sourceText.ToLower();
+                case "title": // Every First Letter Uppercase
+                    var txtinfo = new System.Globalization.CultureInfo("en-US",false).TextInfo;
+                    return txtinfo.ToTitleCase(sourceText);
+                default:
+                    // invalid option, return the exception below
+                    break;
+            }
+        }
+        // converter used for the wrong type
+        return new BindingNotification(new InvalidCastException(), BindingErrorType.Error);
+    }
+
+    public object ConvertBack( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+      throw new NotSupportedException();
+    }
+}
+```
+
+
+Converting a binded object to different target types contextually
+
+```markup
+<Image Width="42" 
+       Source="{Binding Animal, Converter={StaticResource animalConverter}}"/>
+<TextBlock 
+       Text="{Binding Animal, Converter={StaticResource animalConverter}}" />
+```
+
+```csharp
+public class AnimalConverter : IValueConverter
+{
+    public static readonly AnimalConverter Instance = new();
+
+    public object? Convert( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+        if (value is Animal animal)
+        {
+            if (targetType.IsAssignableTo(typeof(IImage)))
+            {
+                img = @"icons/generic-animal-placeholder.png"
+                switch (animal)
+                {
+                    case Dog d:
+                      img = d.IsGoodBoy ? @"icons/dog-happy.png" : @"icons/dog.png";
+                      break;
+                    case Cat:
+                      img = @"icons/cat.png";
+                      break;
+                    // etc. etc.
+                }
+                // see https://docs.avaloniaui.net/docs/controls/image
+                return BitmapAssetValueConverter.Instance
+                    .Convert(img, typeof(Bitmap), parameter, culture);
+            }
+            else if (targetType.IsAssignableTo(typeof(string)))
+            {
+                return !string.IsNullOrEmpty(animal.NickName) ? 
+                    $"{animal.Name} \"{animal.NickName}\"" : animal.Name;
+            }
+        }
+        // converter used for the wrong type
+        return new BindingNotification(new InvalidCastException(), BindingErrorType.Error);
+        
+    }
+
+    public object ConvertBack( object? value, Type targetType, object? parameter, CultureInfo culture )
+    {
+      throw new NotSupportedException();
+    }
+}
 ```
