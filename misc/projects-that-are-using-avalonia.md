@@ -6,7 +6,7 @@ Note: this list consists only of _Open Source_ projects.
 
 Cross platform framework and emulator for Reverse Engineering DOS games.
 
-![image](https://raw.githubusercontent.com/OpenRakis/Spice86/master/doc/cryodune_orni.png]
+![image](https://raw.githubusercontent.com/OpenRakis/Spice86/master/doc/cryodune_orni.png)
 
 ## [FVim](https://github.com/yatli/fvim)
 
