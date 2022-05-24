@@ -2,6 +2,12 @@
 
 Note: this list consists only of _Open Source_ projects.
 
+## [Spice86](https://github.com/OpenRakis/Spice86)
+
+Cross platform framework and emulator for Reverse Engineering DOS games.
+
+![image](https://raw.githubusercontent.com/OpenRakis/Spice86/master/doc/cryodune_orni.png]
+
 ## [FVim](https://github.com/yatli/fvim)
 
 Cross platform Neovim front-end UI, built with F# + Avalonia.
