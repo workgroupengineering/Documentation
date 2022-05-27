@@ -182,15 +182,18 @@ Negates an inner selector.
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<Style Selector="TextBlock1,TextBlock2">
+<Style Selector="TextBlock, Button">
 ```
 {% endtab %}
 
 {% tab title="C\#" %}
 ```csharp
+new Style(x => Selectors.Or(x.OfType<TextBlock>(), x.OfType<Button>()))
 ```
 {% endtab %}
 {% endtabs %}
+
+Finds the elements that match any of these selectors. Each selector is separated by ",".
 
 ## Nth Child <a id="nth-child"></a>
 
