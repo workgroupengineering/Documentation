@@ -7,7 +7,7 @@ One example for populating a `TreeView` can be from a directory on the computer.
 ```markup
 <TreeView Items="{Binding Items}" 
 	  Width="400" Height="480" 
-	  HorizontalAlignment="Left" 
+	  HorizontalAlignment="Left">
 	<TreeView.ItemTemplate>
 		<TreeDataTemplate ItemsSource="{Binding Subfolders}">
 			<TextBlock Text="{Binding strNodeText}"/>
