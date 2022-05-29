@@ -21,7 +21,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
     <TextBlock Name="tb" Text="{Binding Caption.Length, RelativeSource={RelativeSource TemplatedParent}}"/>
     ```
 
- 2. A `TemplateBinding` only supports `OneWay` mode for performance reasons (this is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks)). This means a `TempalteBinding` is actually equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If `TwoWay` binding is required in a control template the full syntax is required as shown below. Note that `Binding` will also use the default binding mode unlike `TemplateBinding`.
+ 2. A `TemplateBinding` only supports `OneWay` mode for performance reasons (this is the [same as WPF](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/templatebinding-markup-extension#remarks)). This means a `TemplateBinding` is actually equivalent to `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`. If `TwoWay` binding is required in a control template, the full syntax is needed as shown below. Note that `Binding` will also use the default binding mode unlike `TemplateBinding`.
 
     ```markup
     {Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}
