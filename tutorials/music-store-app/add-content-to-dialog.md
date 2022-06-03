@@ -169,7 +169,7 @@ The `ListBox` will see that the `SearchResults` has an item inside it, it will c
 </Application.DataTemplates>
 ```
 
-This ViewLocator is a special `DataTemplate` that will take the typename, in this case `Avalonia.MusicStore.ViewModels.AlbumViewModel` and check to see if a `View` exits at `Avalonia.MusicStore.Views.AlbumView`.
+This ViewLocator is a special `DataTemplate` that will take the typename, in this case `Avalonia.MusicStore.ViewModels.AlbumViewModel` and check to see if a `View` exists at `Avalonia.MusicStore.Views.AlbumView`.
 
 If the ListBox finds one, it will display whatever `xaml` that `View` describes inside the `ListBox`, otherwise it will just show the typename inside the `ListBox` as a string.
 
