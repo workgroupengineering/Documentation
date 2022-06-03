@@ -200,6 +200,8 @@
   * [Android](tutorials/developing-for-mobile/android/README.md)
     * [Setting up your developer environment for Android](tutorials/developing-for-mobile/android/setting-up-your-developer-environment-for-android.md)
     * [Build and run your Application on a Simulator](tutorials/developing-for-mobile/android/build-and-run-your-application-on-a-simulator.md)
+    * [Build and run your Application on a physical device](tutorials/developing-for-mobile/android/build-and-run-your-application-on-a-device.md)
+    * [Configure debugging in Visual Studio Code (Linux)](tutorials/developing-for-mobile/android/configure-vscode-debug-linux.md)
   * [iOS](tutorials/developing-for-mobile/ios/README.md)
     * [Setting up your developer environment for iOS](tutorials/developing-for-mobile/ios/setting-up-your-developer-environment-for-ios.md)
     * [Build and run your application on a Simulator](tutorials/developing-for-mobile/ios/build-and-run-your-application-on-a-simulator.md)
