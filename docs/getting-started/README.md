@@ -14,4 +14,4 @@ cd MyApp
 dotnet run
 ```
 
-Now you can open MyApp folder and continue improve your application.
+Now you can open MyApp folder and continue improving your application.
