@@ -17,15 +17,15 @@ For debugging Avalonia-based Android projects on Linux (using Visual Studio Code
 			"type": "mono",
 			"preLaunchTask": "run-debug-android",
 			"request": "attach",
-      "address": "localhost",
-      "port": 10000
+      			"address": "localhost",
+      			"port": 10000
 		},
 		{
 			"name": "Attach - Android",
 			"type": "mono",
-      "request": "attach",
-      "address": "localhost",
-       "port": 10000
+			"request": "attach",
+			"address": "localhost",
+			"port": 10000
 		}
 	]
 }
