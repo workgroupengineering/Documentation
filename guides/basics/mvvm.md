@@ -11,7 +11,7 @@ MVVM might be overkill for a simple application, but as applications grow over t
 * The interactions between UI components becomes overly complicated and error-prone
 * It's very difficult to unit test code in code-behind
 
-MVVM solves this by abstracting the user interface into regular .NET classes that can be unit tested like any other classe.
+MVVM solves this by abstracting the user interface into regular .NET classes that can be unit tested like any other classes.
 
 This is intended as a brief introduction to MVVM, there are many resources online that go into this subject in more depth.
 
