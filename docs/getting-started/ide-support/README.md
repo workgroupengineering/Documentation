@@ -82,6 +82,23 @@ namespace My.Namespace
 }
 ```
 
+### Design.DataContext <a id="Design.DataContext"></a>
+
+Alternatively you can use `Design.DataContext` attached property. As well as Design.Width and Design.Height.
+```markup
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dd="clr-namespace:My.Namespace;assembly=MyAssembly"
+        x:Class="AvaloniaApplication1.MainWindow"
+        Design.Width="100">
+    <Design.DataContext>
+        <dd:MyViewModel />
+    </Design.DataContext>
+    Welcome to Avalonia!
+</Window>
+```
+
 ## Diagnosing Errors <a id="diagnosing-errors"></a>
 
 If you're having problems, try enabling verbose logging. To do this:
