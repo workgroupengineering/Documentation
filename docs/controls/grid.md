@@ -18,7 +18,9 @@ Below is an example that shows:
 
 * Configuring the grid using the ColumnDefinition and GridDefinition properties directly
 * How to assign the cell for a given component
-* Showing effects of spanning rows/columns An example of a Grid with 3 equal Rows and 3 Columns with \(1 fixed width\), \(2 grabbing the rest proportionally\) would be:
+* Showing effects of spanning rows/columns
+
+An example of a Grid with 3 equal Rows and 3 Columns with \(1 fixed width\), \(2 grabbing the rest proportionally\) would be:
 
 ```markup
 <Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
@@ -30,10 +32,10 @@ Below is an example that shows:
 </Grid>
 ```
 
-In the above example we have two keywords: **asterix** and **Auto**. Here is explanation for them:
+In the above example we have two keywords: __*__ and **Auto**. Here is explanation for them:
 
 * The **"Auto"** keyword is used to have the row or column geometry be determined by the containing control's definitions.
-* The **asterisk** is used for denoting proportional spacing. 
+* The __*__ is used for denoting proportional spacing. 
 
 The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Colum 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
 
