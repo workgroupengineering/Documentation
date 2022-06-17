@@ -6,24 +6,6 @@ Most events in Avalonia are implemented as Routed Events. Routed events are even
 
 A typical Avalonia application contains many elements. Whether created in code or declared in XAML, these elements exist in an element tree relationship to each other. The event route can travel in one of two directions depending on the event definition, but generally the route travels from the source element and then "bubbles" upward through the element tree until it reaches the element tree root \(typically a page or a window\). This bubbling concept might be familiar to you if you have worked with the HTML DOM previously.
 
-Consider the following simple element tree:
-
-```markup
-<Border>
-  <StackPanel Orientation="Horizontal" Button.Click="CommonClickHandler">
-    <Button Name="YesButton">Yes</Button>
-    <Button Name="NoButton">No</Button>
-    <Button Name="CancelButton">Cancel</Button>
-  </StackPanel>
-</Border>
-```
-
-In this simplified element tree, the source of a `Click` event is one of the `Button` elements, and whichever `Button` was clicked is the first element that has the opportunity to handle the event. But if no handler attached to the `Button` acts on the event, then the event will bubble upwards to the `Button` parent in the element tree, which is the `StackPanel`. Potentially, the event bubbles to `Border`, and then beyond to the page root of the element tree \(not shown\).
-
-In other words, the event route for this `Click` event is:
-
-`Button` → `StackPanel` → `Border` → ...
-
 ### Top-level Scenarios for Routed Events <a id="top-level-scenarios-for-routed-events"></a>
 
 The following is a brief summary of the scenarios that motivated the routed event concept, and why a typical CLR event was not adequate for these scenarios:
