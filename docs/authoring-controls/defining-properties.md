@@ -28,7 +28,10 @@ The `AvaloniaProperty.Register` method also accepts a number of other parameters
 * `defaultBindingMode`: The default binding mode for the property. Can be set to `OneWay`, `TwoWay`, `OneTime` or `OneWayToSource`.
 * `validate`: A validation/coercion function of type `Func<TOwner, TValue, TValue>`. The function accepts the instance of the class on which the property is being set and the value and returns the coerced value or throws an exception for an invalid value.
 
-> A styled property is analogous to a `DependencyProperty` in other XAML frameworks.
+> A styled property is analogous to a `DependencyProperty` in other XAML frameworks. 
+
+> The naming convention of the property and its backing AvaloniaProperty field is important. The name of the field is always the name of the property, with the suffix Property appended.
+
 
 ### Using a `StyledProperty` on Another Class <a id="using-a-styledproperty-on-another-class"></a>
 
