@@ -33,7 +33,7 @@
 
 3. Download and install [Rider: The Cross-Platform .NET IDE from JetBrains](https://www.jetbrains.com/rider/)
 
-   Rider will give you the very best development experience available for Avalonia. It is available for Windows, Linux and Mac.
+   Rider will give you the very best development experience available for Avalonia. It is available for Windows, Linux, and macOS.
 
    Rider supports XAML out of the box. However, if you want to use the XAML previewer, you need the Avalonia plugin.
 
