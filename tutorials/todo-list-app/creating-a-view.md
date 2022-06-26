@@ -76,7 +76,10 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="400"
              x:Class="Todo.Views.TodoListView">
   <DockPanel>
-    <Button DockPanel.Dock="Bottom">Add an item</Button>
+    <Button DockPanel.Dock="Bottom"
+            HorizontalAlignment="Center">
+        Add an item
+    </Button>
     <StackPanel>
       <CheckBox Margin="4">Walk the dog</CheckBox>
       <CheckBox Margin="4">Buy some milk</CheckBox>
@@ -131,10 +134,10 @@ First we add a `DockPanel` as the child of the `UserControl`. A `UserControl` ca
 `DockPanel` is a type of panel which lays out its controls at the top, bottom, left and right sides, with a single control filling the remaining space in the middle.
 
 ```markup
-<Button DockPanel.Dock="Bottom">Add an item</Button>
+<Button DockPanel.Dock="Bottom" HorizontalAlignment="Center">Add an item</Button>
 ```
 
-Now we declare the `Button` that appears at the bottom of the view. The `DockPanel.Dock` attribute tells the containing `DockPanel` that we want the button to appear at the bottom. As the element content we set the button text: `"Add an item"`.
+Now we declare the `Button` that appears at the bottom of the view. The `DockPanel.Dock` attribute tells the containing `DockPanel` that we want the button to appear at the bottom. `HorizontalAlignment` centers button in the middle of the parent. As the element content we set the button text: `"Add an item"`.
 
 ```markup
 <StackPanel>
