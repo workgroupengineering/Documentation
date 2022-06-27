@@ -106,7 +106,7 @@ namespace RoutingExample
 
 **MainWindow.xaml**
 
-Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embedd appropriate views for the view models. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML. To disabling the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`.
+Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embedd appropriate views for the view models. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML.
 
 For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
 
@@ -148,6 +148,17 @@ For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.
 </Window>
 ```
 
+To disable the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`, like so:
+```markup
+        <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
+            <rxui:RoutedViewHost.DefaultContent>
+                <TextBlock Text="Default content"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+            </rxui:RoutedViewHost.DefaultContent>
+        </rxui:RoutedViewHost>
+```
+
 **MainWindow.xaml.cs**
 
 Here is the code-behind for main view declared above.
@@ -166,7 +177,26 @@ namespace RoutingExample
 }
 ```
 
-Finally, add `.UseReactiveUI()` to your `AppBuilder` and initialize `DataContext`.
+**App.axaml.cs**
+Make sure you initialize `DataContext` in `App.axaml.cs`
+
+```csharp
+        public override void OnFrameworkInitializationCompleted()
+        {
+            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            {
+                desktop.MainWindow = new MainWindow
+                {
+                    DataContext = new MainWindowViewModel(),
+                };
+            }
+
+            base.OnFrameworkInitializationCompleted();
+        }
+
+```
+
+Finally, add `.UseReactiveUI()` to your `AppBuilder`:
 
 ```csharp
 namespace RoutingExample
@@ -175,9 +205,7 @@ namespace RoutingExample
     {
         public static void Main(string[] args)
         {
-            BuildAvaloniaApp().Start<MainWindow>(
-                () => new MainWindowViewModel()
-            );
+            BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
         }
 
         public static AppBuilder BuildAvaloniaApp()
