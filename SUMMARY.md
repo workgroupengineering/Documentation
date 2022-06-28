@@ -18,6 +18,7 @@
   * [Developer Tools](docs/getting-started/developer-tools.md)
   * [Logging Errors and Warnings](docs/getting-started/logging-errors-and-warnings.md)
   * [Unhandled Exceptions](docs/getting-started/UnhandledExceptions.md)
+  * [Application Lifetimes](docs/getting-started/application-lifetimes.md)
 * [🔄 Data Binding](docs/data-binding/README.md)
   * [The DataContext](docs/data-binding/the-datacontext.md)
   * [Change Notifications](docs/data-binding/change-notifications.md)
