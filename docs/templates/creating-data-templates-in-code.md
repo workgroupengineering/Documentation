@@ -5,7 +5,7 @@ Avalonia also supports creating data templates in code with the [`FuncDataTempla
 At its simplest you can create a data template by passing a lambda which accepts an instance to the `FuncDataTemplate<T>` constructor:
 
 ```csharp
-var template = new FuncDataTemplate<Student>(x =>
+var template = new FuncDataTemplate<Student>((value, namescope) =>
     new TextBlock
     {
         [!TextBlock.TextProperty] = new Binding("FirstName"),
