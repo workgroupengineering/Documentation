@@ -10,6 +10,20 @@ The `DataGrid` control is a control that displays data in a customizable grid.
 
 [DataGrid.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls.DataGrid/DataGrid.cs)
 
+## Reference required nuget package
+
+To start using [DataGrid](https://www.nuget.org/packages/Avalonia.Controls.DataGrid/), you need to reference it in your project first.
+You can run "dotnet add package" from the command line:
+```bash
+dotnet add package Avalonia.Controls.DataGrid
+```
+Or add package reference directly to the csproj file:
+```xml
+<PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.16" />
+```
+
+Note, that version should match Avalonia version you are using.
+
 ## Add required styles to App.axaml
 
 The Themes can be changed to light or dark to fit your application theme.
