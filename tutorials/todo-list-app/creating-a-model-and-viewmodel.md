@@ -1,6 +1,6 @@
 # Creating a Model & ViewModel
 
-Now that we've got a basic view on-screen let's think about how we could display real data from a database or similar in it. The most obvious, and traditional way to do this would be to load the data in the view's constructor and create a `ComboBox` for each TODO item in code. However doing it this way has a few disadvantages:
+Now that we've got a basic view on-screen let's think about how we could display real data from a database or similar in it. The most obvious, and traditional way to do this would be to load the data in the view's constructor and create a `CheckBox` for each TODO item in code. However doing it this way has a few disadvantages:
 
 * We can't use XAML
 * We have to write code to react to changes in the data and update the display
