@@ -26,7 +26,7 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
         <!-- Set DataType inside the Binding-markup -->
         <TextBox Text="{Binding MailAddress, DataType={x:Type vm:MyViewModel}}" />
 
-        <!-- We cannot use complied bindings to bind to methods, so we opt them out for the button -->
+        <!-- We cannot use compiled bindings to bind to methods, so we opt them out for the button -->
         <Button x:CompiledBindings="False"
                 Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
@@ -53,7 +53,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{CompiledBinding MailAddress}" />
 
-        <!-- We cannot use complied bindings to bind to methods, so we use the normal Binding -->
+        <!-- We cannot use compiled bindings to bind to methods, so we use the normal Binding -->
         <Button x:CompiledBindings="False"
                 Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
@@ -62,7 +62,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
 ```
 
 ## ReflectionBinding-Markup
-If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use complied binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
+If you have compiled bindings enabled in the root node (via `x:CompileBindings="True"`) and you either don't want to use compiled binding at a certain position or you hit one of the [known limitations](#known-limitations), you can use the `ReflectionBinding`-markup.
 
 ```xml
 <!-- Set DataType -->
@@ -79,7 +79,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBlock Text="E-Mail:" />
         <TextBox Text="{Binding MailAddress}" />
 
-        <!-- We cannot use complied bindings to bind to methods, so we use ReflectionBinding instead -->
+        <!-- We cannot use compiled bindings to bind to methods, so we use ReflectionBinding instead -->
         <Button x:CompiledBindings="False"
                 Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
