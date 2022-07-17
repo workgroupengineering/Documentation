@@ -58,7 +58,7 @@ Controls the type of selection that can be made on the `ListBox`:
 | :--- | :--- |
 | `Single` | Only a single item can be selected \(default\) |
 | `Multiple` | Multiple items can be selected |
-| `Toggle` | Item selection can be toggled by tapping/spacebar. When not enabled, shift or ctrl must be used to select mutiple items |
+| `Toggle` | Item selection can be toggled by tapping/spacebar. When not enabled, shift or ctrl must be used to select multiple items |
 | `AlwaysSelected` | An item will always be selected as long as there are items to select. |
 
 These values can be combined, e.g.:

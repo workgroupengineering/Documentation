@@ -99,7 +99,7 @@ Add other runtime identifiers as necessary. Each one should be separated by a se
 
 ### Notes on the `.app` executable file <a id="notes-on-the-app-executable-file"></a>
 
-The file that is actually executed by macOS when starting your `.app` bundle will **not** have the standard `.dll` extension. If your publish folder contents, which go inside the `.app` bundle, do not have both a `MyApp` \(exectuable\) and a `MyApp.dll`, things are probably not generating properly, and macOS will probably not be able to start your `.app` properly.
+The file that is actually executed by macOS when starting your `.app` bundle will **not** have the standard `.dll` extension. If your publish folder contents, which go inside the `.app` bundle, do not have both a `MyApp` \(executable\) and a `MyApp.dll`, things are probably not generating properly, and macOS will probably not be able to start your `.app` properly.
 
 [Some recent changes in the way .NET Core is distributed and notarized on macOS](https://docs.microsoft.com/en-us/dotnet/core/install/macos-notarization-issues) have caused the `MyApp` executable \(also called the "app host" in the linked documentation\) to not be generated. **You need this file to be generated in order for your `.app` to function properly.** To make sure this gets generated, do one of the following:
 
@@ -300,7 +300,7 @@ For more information on customizing your notarization workflow and more flags yo
 The following steps were modified from [this StackOverflow post](https://stackoverflow.com/a/53121755/3938401):
 
 1. Make sure your `.app` is code signed properly
-2. Stick your `.app` in a `.zip` file, e.g. `MyApp.zip`. Note that using `zip` will make notarisation fail, instead use `ditto` like so: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
+2. Stick your `.app` in a `.zip` file, e.g. `MyApp.zip`. Note that using `zip` will make notarization fail, instead use `ditto` like so: `ditto -c -k --sequesterRsrc --keepParent MyApp.app MyApp.zip`
 3. Run `xcrun altool --notarize-app -f MyApp.zip --primary-bundle-id com.unique-identifier-for-this-upload -u username -p password`. You can use a password in your keychain by passing `-p "@keychain:AC_PASSWORD"`, where AC\_PASSWORD is the key. The account has to be registered as an Apple Developer.
 4. If the upload is successful, you'll get a UUID back for your request token like this: `28fad4c5-68b3-4dbf-a0d4-fbde8e6a078f`
 5. You can check notarization status using that token like this: `xcrun altool --notarization-info 28fad4c5-68b3-4dbf-a0d4-fbde8e6a078f -u username -p password`. This could take some time -- eventually it will succeed or fail.
@@ -359,9 +359,9 @@ Your app should be ready for this and do not crash if any folder is read/write p
 Your app content should be bundled correctly. [Here's an article from Apple with a lot of useful info](https://developer.apple.com/documentation/bundleresources/placing_content_in_a_bundle).
 
 Most important rules from the article: 
-* `.dll` files are not concidered as a code by Apple. So it should be placed inside `/Resources` folder and can be not signed.
+* `.dll` files are not considered as a code by Apple. So it should be placed inside `/Resources` folder and can be not signed.
 * `/MacOS` files should contain only executable mach-o - you app executable and any other helper executables
-* All other mach-o `.dylib` files shoul be inside `Frameworks/` folder.
+* All other mach-o `.dylib` files should be inside `Frameworks/` folder.
 
 To satisfy this requirement without a lot of pain you can use relative symlinks from `MacOS/` folder to `Resources/` and `Frameworks/` folders. As an example:
 
@@ -497,7 +497,7 @@ Open a Transporter app, sign in, select your \*.pkg package and wait for validat
 
 If you will receive any errors - fix them, package app again, remove file in Transporter and select it again.
 
-When upload succedes - you will see your package in App Store Connect.
+When upload succeeds - you will see your package in App Store Connect.
 
 ## Troubleshooting
 
@@ -532,7 +532,7 @@ Note that `CFBundleName` is limited to 15 characters, if your application name i
 
 Building the app in a CI/CD pipeline is straightforward using the `dotnet` command. For code signing and notarization to work a little extra work is required.
 
-`codesign` and `notarytool` read the certificate and credentials to talk to the notarisation service from a Keychain on the build machine:
+`codesign` and `notarytool` read the certificate and credentials to talk to the notarization service from a Keychain on the build machine:
 
 ```bash
 # Create a new keychain
@@ -620,7 +620,7 @@ And then add these steps:
 
 > **Note:** `RUNNER_TEMP` is an environment variable provided by GitHub Actions
 
-After code signing the app bundle can now be notarised, by adding this step to the job:
+After code signing the app bundle can now be notarized, by adding this step to the job:
 
 ```yaml
     - name: Notarise app
@@ -630,7 +630,7 @@ After code signing the app bundle can now be notarised, by adding this step to t
         xcrun stapler staple "$RUNNER_TEMP/MyApp.app"
 ```
 
-When you run this workflow you will have an app bundle that is signed and notarised, ready for packaging in a disk image or installer.
+When you run this workflow you will have an app bundle that is signed and notarized, ready for packaging in a disk image or installer.
 
 To verify that code signing worked you will need to download it first to trigger the quarantine functionality of macOS. You can do this by e-mailing it to yourself or using a service like WeTransfer or similar.
 

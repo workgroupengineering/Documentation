@@ -40,7 +40,7 @@ You can also include array/list indexers in binding paths:
 
 ## Binding Modes <a id="binding-modes"></a>
 
-You can change the behavior of a `{Binding}` by specifing a binding `Mode`:
+You can change the behavior of a `{Binding}` by specifying a binding `Mode`:
 
 ```markup
 <TextBlock Text="{Binding Name, Mode=OneTime}">

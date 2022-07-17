@@ -11,7 +11,7 @@ You can debug the XAML compiler adding at your's csproj AvaloniaXamlIlDebuggerLa
   </PropertyGroup>
 ```
 
-If build the project in Visual Studio you shold see a window like this:
+If build the project in Visual Studio you should see a window like this:
 
 ![](https://user-images.githubusercontent.com/53405089/132686320-958f30a6-49f8-498f-853c-b9dd17262b54.png)
 

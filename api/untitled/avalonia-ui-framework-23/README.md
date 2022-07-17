@@ -26,7 +26,7 @@
 | [IndexerDescriptor](http://reference.avaloniaui.net/api/Avalonia.Data/IndexerDescriptor) |  Holds a description of a binding for [`AvaloniaObject`](http://reference.avaloniaui.net/api/Avalonia/AvaloniaObject)'s \[\] operator. |
 | [InstancedBinding](http://reference.avaloniaui.net/api/Avalonia.Data/InstancedBinding) |  Holds the result of calling [`Initiate(IAvaloniaObject, AvaloniaProperty, object, bool)`](http://reference.avaloniaui.net/api/Avalonia.Data/IBinding/BA1DE0B2). |
 | [MultiBinding](http://reference.avaloniaui.net/api/Avalonia.Data/MultiBinding) |  A XAML binding that calculates an aggregate value from multiple child [`Bindings`](http://reference.avaloniaui.net/api/Avalonia.Data/MultiBinding/A8E43478). |
-| [RelativeSource](http://reference.avaloniaui.net/api/Avalonia.Data/RelativeSource) |  Describes the the location of a binding source, relative to the binding target. |
+| [RelativeSource](http://reference.avaloniaui.net/api/Avalonia.Data/RelativeSource) |  Describes the location of a binding source, relative to the binding target. |
 | [TemplateBinding](http://reference.avaloniaui.net/api/Avalonia.Data/TemplateBinding) |  A XAML binding to a property on a control's templated parent. |
 
 ## Interface Types <a id="InterfaceTypes"></a>

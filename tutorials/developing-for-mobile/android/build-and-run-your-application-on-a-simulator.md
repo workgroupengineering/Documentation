@@ -4,7 +4,7 @@ Please ensure you have followed the guide [create-a-cross-platform-solution.md](
 
 Assuming you have created a project called `HelloWord`. Enter the directory `HelloWorld.Android` from the command line.
 
-To build the project for Andoird run the following command.
+To build the project for Android run the following command.
 
 ```bash
 dotnet build

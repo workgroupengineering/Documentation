@@ -37,7 +37,7 @@ In the above example we have two keywords: __*__ and **Auto**. Here is explanati
 * The **"Auto"** keyword is used to have the row or column geometry be determined by the containing control's definitions.
 * The __*__ is used for denoting proportional spacing. 
 
-The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Colum 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
+The multiplier used in front of the proportional spacing value is used to figure out the relative size for the proportional columns. All proportional columns fit in the space left behind after all explicit values and "Auto" values are calculated. So for the above example the Column 1 will get 1.5 parts plus Column 2 will get 4 parts of the remainder of the space that Column 0 left. Lastly, the Button itself will fill in from the initial Cell 1,1 over one column and down one row because `Grid.RowSpan` and `Grid.ColumnSpan` are set to occupy two units instead of one.
 
 ![Grid Using Properties and Spanning Columns](../../.gitbook/assets/grid_example.png)
 
@@ -60,11 +60,11 @@ First let's create sample 2x2 grid in our View, we can achieve this simply by wr
 
 As you can see we created equal grid, I left `ShowGridLines` parameter set to `True` for better visibility.
 
-![Grid Using Asterix Symbols](../../.gitbook/assets/grid_asterix_example.png)
+![Grid Using Asterisk Symbols](../../.gitbook/assets/grid_asterisk_example.png)
 
-Now let's fill our grid with some elements, i will fill exery field with button, you can use anything you want.
+Now let's fill our grid with some elements, I will fill every field with button, you can use anything you want.
 
-![Grid Using Sterix Symbols Filled With Buttons](../../.gitbook/assets/grid_asterix_example_buttons.png)
+![Grid Using Asterisk Symbols Filled With Buttons](../../.gitbook/assets/grid_asterisk_example_buttons.png)
 
 Now our View code look's like this:
 
@@ -86,11 +86,11 @@ Now our View code look's like this:
     </Grid>
 ```
 
-In this moment our **asterix** symbols are forcing our grid to become equal, now let's see what will happen when we replace **asterix** with the **Auto** keyword
+In this moment our **asterisk** symbols are forcing our grid to become equal, now let's see what will happen when we replace **asterisk** with the **Auto** keyword
 
 ![Grid Using Auto Keyword](../../.gitbook/assets/grid_auto_example_buttons.png)
 
-As you can see our grid become sticky to it's content, it is very usefull when we have components with variable `Height` propety.
+As you can see our grid become sticky to its content, it is very useful when we have components with variable `Height` property.
 
 This new View code look's like this:
 

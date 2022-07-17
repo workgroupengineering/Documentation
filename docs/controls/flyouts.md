@@ -41,7 +41,7 @@ Flyouts are light dismissable containers that show arbitrary UI content. Flyouts
 
 ## Flyout Types
 
-There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `Flyout` has no special logic and is just a simple container for any abitrary UI content. 
+There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `Flyout` has no special logic and is just a simple container for any arbitrary UI content. 
 
 ![Basic Flyout](<../../.gitbook/assets/flyoutpreview.png>)
 
@@ -140,7 +140,7 @@ Although `Flyout`s are not controls themselves, their general appearance can sti
 
 To create a custom flyout type, derive from FlyoutBase. You'll have to override the abstract method `CreatePresenter()` to specify the presenter the `Flyout` should use to display its content. This can be any type of control, but note that this is the root content for the inner popup and should be styled with background, border, corner radius, etc. to match other popups. You can still use a normal `FlyoutPresenter` if you wish
 
-The following examle creates a simple `Flyout` that hosts an image
+The following example creates a simple `Flyout` that hosts an image
 
 ```C#
 public class MyImageFlyout : FlyoutBase
