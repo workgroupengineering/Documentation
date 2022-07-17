@@ -17,7 +17,7 @@ Avalonia is supported on the following platforms:
 * MacOS High Sierra 10.13 and higher
 * for Linux:
   * Debian 9 (Stretch) and higher
-  * Ubuntu 16.5 and higher
+  * Ubuntu 16.04 and higher
   * Fedora 30 and higher
 
 ## Supported Development Environments
