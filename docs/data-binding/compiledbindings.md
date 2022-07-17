@@ -27,7 +27,7 @@ You can now enable or disable compiled bindings by setting `x:CompileBindings="[
         <TextBox Text="{Binding MailAddress, DataType={x:Type vm:MyViewModel}}" />
 
         <!-- We cannot use compiled bindings to bind to methods, so we opt them out for the button -->
-        <Button x:CompiledBindings="False"
+        <Button x:CompileBindings="False"
                 Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
@@ -54,7 +54,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
         <TextBox Text="{CompiledBinding MailAddress}" />
 
         <!-- We cannot use compiled bindings to bind to methods, so we use the normal Binding -->
-        <Button x:CompiledBindings="False"
+        <Button x:CompileBindings="False"
                 Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
@@ -80,7 +80,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBox Text="{Binding MailAddress}" />
 
         <!-- We cannot use compiled bindings to bind to methods, so we use ReflectionBinding instead -->
-        <Button x:CompiledBindings="False"
+        <Button x:CompileBindings="False"
                 Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
     </StackPanel>
