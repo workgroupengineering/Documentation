@@ -54,8 +54,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
         <TextBox Text="{CompiledBinding MailAddress}" />
 
         <!-- We cannot use compiled bindings to bind to methods, so we use the normal Binding -->
-        <Button x:CompileBindings="False"
-                Content="Send an E-Mail"
+        <Button Content="Send an E-Mail"
                 Command="{Binding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
@@ -69,10 +68,10 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MyApp.ViewModels"
-             x:DataType="vm:MyViewModel">
+             x:DataType="vm:MyViewModel"
+             x:CompileBindings="True">
     <StackPanel>
         <TextBlock Text="Last name:" />
-        <!-- use CompiledBinding markup for your binding -->
         <TextBox Text="{Binding LastName}" />
         <TextBlock Text="Given name:" />
         <TextBox Text="{Binding GivenName}" />
@@ -80,8 +79,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
         <TextBox Text="{Binding MailAddress}" />
 
         <!-- We cannot use compiled bindings to bind to methods, so we use ReflectionBinding instead -->
-        <Button x:CompileBindings="False"
-                Content="Send an E-Mail"
+        <Button Content="Send an E-Mail"
                 Command="{ReflectionBinding SendEmailCommand}" />
     </StackPanel>
 </UserControl>
