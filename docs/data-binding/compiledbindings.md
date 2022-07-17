@@ -46,7 +46,7 @@ If you don't want to enable compiled bindings for all child nodes, you can also 
              x:DataType="vm:MyViewModel">
     <StackPanel>
         <TextBlock Text="Last name:" />
-        <!-- use CompiledBinging markup for your binding -->
+        <!-- use CompiledBinding markup for your binding -->
         <TextBox Text="{CompiledBinding LastName}" />
         <TextBlock Text="Given name:" />
         <TextBox Text="{CompiledBinding GivenName}" />
@@ -72,7 +72,7 @@ If you have compiled bindings enabled in the root node (via `x:CompileBindings="
              x:DataType="vm:MyViewModel">
     <StackPanel>
         <TextBlock Text="Last name:" />
-        <!-- use CompiledBinging markup for your binding -->
+        <!-- use CompiledBinding markup for your binding -->
         <TextBox Text="{Binding LastName}" />
         <TextBlock Text="Given name:" />
         <TextBox Text="{Binding GivenName}" />
