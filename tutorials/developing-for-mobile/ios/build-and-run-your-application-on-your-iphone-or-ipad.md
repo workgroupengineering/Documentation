@@ -22,7 +22,7 @@ This has to be done by creating an XCode app project that has the same `bundle i
 
 4\. Type in a name for your project and Organisation. Keep all the rest of the information the same.
 
-5\. Choose a directory to save the project. You will not need to keep the project so dont worry too much about where.
+5\. Choose a directory to save the project. You will not need to keep the project so don't worry too much about where.
 
 6\. In the status bar at the top click on the "Any device (arm64)"
 

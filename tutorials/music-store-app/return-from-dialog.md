@@ -18,7 +18,7 @@ public ReactiveCommand<Unit, AlbumViewModel?> BuyMusicCommand { get; }
 
 Note we are using `ReactiveCommand` this is where we are using ReactiveUI to provide some of the plumbing for us. Avalonia expects commands to be of type `ICommand` and `ReactiveCommand` implements this interface.
 
-Note that `ReactiveCommand<TParam, TResult>` has some type arguments. Commands can take a parameter, however we do not need a paramter in this case, so we use `Unit` which is kind of a dummy type, it contains no data. Reactive Commands can also return a result. This will be useful for returning the Album the user wants to buy.
+Note that `ReactiveCommand<TParam, TResult>` has some type arguments. Commands can take a parameter, however we do not need a parameter in this case, so we use `Unit` which is kind of a dummy type, it contains no data. Reactive Commands can also return a result. This will be useful for returning the Album the user wants to buy.
 
 Now add the following lines to the constructor of `MusicStoreViewModel` in order to instantiate the command and implement the code needed to return a result from the dialog:
 

@@ -2,7 +2,7 @@
 
 Originally based on [UWPvsWPF.md](https://github.com/robloo/PublicDocs/blob/master/UWPvsWPF.md) with Avalonia-specific changes. Licensed CC BY-SA 4.0
 
-This section lists the main differences \(primarily from a XAML viewpoint\) between Avaloni, UWP and WPF.
+This section lists the main differences \(primarily from a XAML viewpoint\) between Avalonia, UWP and WPF.
 
 Legend:
 

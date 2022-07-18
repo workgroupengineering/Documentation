@@ -6,7 +6,7 @@ Inside the dialog we would like the user to search for albums, and then select a
 
 To do this we will need to query a web api to return a list of items. This will take some time so the user may need to wait.
 
-The UI in order to acheive this can consist of the following elements.
+The UI in order to achieve this can consist of the following elements.
 
 * A `TextBox` for the user to type the album or artist name.
 * A `ProgressBar` to tell the user their search request is happening.
@@ -17,7 +17,7 @@ Controls can be laid out inside `Panels`. The most common ones are `StackPanel` 
 
 A `StackPanel` will stack multiple controls on top of each other or next to each other depending on the `Orientation` that is set. The default being `Vertical`.
 
-A `DockPanel` allows controls to be docked to any side the user wished via the `DockPanel.Dock` attached property. The last control inside a `DockPanel` if it doesnt have a `Dock` specified will fill the remaining space.
+A `DockPanel` allows controls to be docked to any side the user wished via the `DockPanel.Dock` attached property. The last control inside a `DockPanel` if it doesn't have a `Dock` specified will fill the remaining space.
 
 Right click on your `Views` folder and select `Add` → `Avalonia User Control` to add a new `View` to the project.
 
@@ -161,7 +161,7 @@ Notice this property is instantiated with `= new ();`. Forget this and it will b
 
 Since we are using `ObservableCollection` when we `bind` the `ListBox`s `Items` property to it, then the `ListBox` control will start listening to events and keep the `Items` inside the `ListBox` in sync with the `ObservableCollection` on the `ViewModel`.
 
-The `ListBox` will see that the `SearchResults` has an item inside it, it will check the type of the item, which will be `AlbumViewModel`. The `ListBox` will then see if it has a `DataTemplate` for that type, which we dont. However it will find at the root of the application in `App.axaml`
+The `ListBox` will see that the `SearchResults` has an item inside it, it will check the type of the item, which will be `AlbumViewModel`. The `ListBox` will then see if it has a `DataTemplate` for that type, which we don't. However it will find at the root of the application in `App.axaml`
 
 ```markup
 <Application.DataTemplates>

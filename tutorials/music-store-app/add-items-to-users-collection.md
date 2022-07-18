@@ -6,7 +6,7 @@ Ok so now the user can find albums to purchase, it would be nice if the user cou
 
 Modify the `MainWindow.axaml` so that it places the existing `Button` inside a panel. We can then add a `TextBlock` that we can show when the user has no music, to prompt them to buy some.
 
-We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `ItemsControl` is the exact same as a `ListBox` except it doesnt allow the user to select anything.
+We can then use an `ItemsControl` instead of a `ListBox` as we did before. An `ItemsControl` is the exact same as a `ListBox` except it doesn't allow the user to select anything.
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
@@ -111,5 +111,5 @@ Lets run the program and see if it works.
 
 ![image-20210310175949319](https://avaloniaui.net/docs/advanced-tutorial/images/image-20210310175949319.png)
 
-For the finishing touch we simply need to add persistance to the application.
+For the finishing touch we simply need to add persistence to the application.
 

@@ -1,6 +1,6 @@
 # ContextMenu
 
-The `ContextMenu` control is a menu that can be applied to any control to provide right-click control-specfic menus.
+The `ContextMenu` control is a menu that can be applied to any control to provide right-click control-specific menus.
 
 ## Reference <a id="reference"></a>
 

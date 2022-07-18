@@ -10,7 +10,7 @@ The traditional extension for XAML files is `.xaml` but due to problems with Vis
 
 For more information see [https://github.com/AvaloniaUI/Avalonia/issues/4102](https://github.com/AvaloniaUI/Avalonia/issues/4102).
 
-Both `.xaml` and `.axaml` will be supported going foward, so feel free to use the extension you prefer.
+Both `.xaml` and `.axaml` will be supported going forward, so feel free to use the extension you prefer.
 
 ## Format of an Avalonia XAML File <a id="format-of-an-avalonia-xaml-file"></a>
 
@@ -25,7 +25,7 @@ A basic Avalonia XAML file looks like this:
 
 There are three parts to this file:
 
-* The root element `Window` - this descibes the type of the root control in the XAML file; in this case [`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/)
+* The root element `Window` - this describes the type of the root control in the XAML file; in this case [`Window`](http://reference.avaloniaui.net/api/Avalonia.Controls/Window/)
 * `xmlns="https://github.com/avaloniaui"` - this is the XAML namespace for Avalonia. Without this, the file will not be recognised as an Avalonia XAML document.
 * `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the XAML-language XAML namespace. This isn't strictly necessary, but you will probably need it for accessing certain features of the XAML language.
 * `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find the associated class for this file, defined in [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind)

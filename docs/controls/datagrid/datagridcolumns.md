@@ -20,7 +20,7 @@ Every [.](./ "mention") can hold multiple `DataGridColumns`. Avalonia has severa
 
 ## DataGridTextColumn
 
-This column is used to display text data, normally represented by a `string`. In the normal state the text is displayed in a `TextBlock`. If the user edits the current cell, a `TextBox` will be shown. This column has some properties which can be used to control the appereance like `FontSize` and `FontFamily`.
+This column is used to display text data, normally represented by a `string`. In the normal state the text is displayed in a `TextBlock`. If the user edits the current cell, a `TextBox` will be shown. This column has some properties which can be used to control the appearance like `FontSize` and `FontFamily`.
 
 ### Example
 
@@ -43,7 +43,7 @@ This column is used to display text data, normally represented by a `string`. In
 
 ## DataGridCheckBoxColumn
 
-This column is used to represent a `bool` value. The  value is represented by a `CheckBox`, which is disabled in the normal state and endabled in the editing state of the `DataGridCell`. If needed you can ebable the intermediate state by setting the property `IsThreeState` to true.
+This column is used to represent a `bool` value. The  value is represented by a `CheckBox`, which is disabled in the normal state and enabled in the editing state of the `DataGridCell`. If needed you can enable the intermediate state by setting the property `IsThreeState` to true.
 
 ### Example
 
@@ -69,7 +69,7 @@ This column is used to represent a `bool` value. The  value is represented by a 
 This column is used to display any content you like. There  are two [datatemplates.md](../../../misc/wpf/datatemplates.md "mention") which you can define, the `CellTemplate` for the normal state and the `CellEditingTemplate` for the editing state of the current `DataGridCell`.&#x20;
 
 {% hint style="info" %}
-The DataGridTemplateColumn is editable from Avalonia version 0.10.12 onwoard. If you do not set a `CellEditingTemplate`, the column will stay read-only.
+The DataGridTemplateColumn is editable from Avalonia version 0.10.12 onward. If you do not set a `CellEditingTemplate`, the column will stay read-only.
 {% endhint %}
 
 ### Example

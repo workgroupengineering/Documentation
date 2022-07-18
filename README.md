@@ -38,5 +38,5 @@ If you've found a bug or issue in the framework, you should create an issue on [
 
 If you're looking for help with your app, try engaging our active developer community on [Telegram](https://t.me/Avalonia). 
 
-### Commerical Support 
+### Commercial Support
 We have a range of commercial support plans that provide priority assistance from the core contributors. You can learn more from [our website](https://avaloniaui.net/support.html). 

@@ -40,13 +40,13 @@ Examples:
 
 ![rider-welcome](https://avaloniaui.net/docs/advanced-tutorial/images/rider-welcome.png)
 
-A new Preferenes Screen will open up. Click the `Settings` icon as shown and select `Manage Plugin Repositories...`
+A new Preferences Screen will open up. Click the `Settings` icon as shown and select `Manage Plugin Repositories...`
 
 ![configure-plugin-repos](https://avaloniaui.net/docs/advanced-tutorial/images/configure-plugin-repos.png)
 
-Click the `+` icon and enter the url `https://plugins.jetbrains.com/plugins/dev/14839`then click `OK`![enter-plugin-repo](https://avaloniaui.net/docs/advanced-tutorial/images/enter-plugin-repo.png)
+Click the `+` icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839`then click `OK`![enter-plugin-repo](https://avaloniaui.net/docs/advanced-tutorial/images/enter-plugin-repo.png)
 
-Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once thats done, click the `Restart IDE` button that will appear.![plugin-install](https://avaloniaui.net/docs/advanced-tutorial/images/plugin-install.png)
+Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install` then once that's done, click the `Restart IDE` button that will appear.![plugin-install](https://avaloniaui.net/docs/advanced-tutorial/images/plugin-install.png)
 
 Now Rider should be ready to develop Avalonia applications.
 

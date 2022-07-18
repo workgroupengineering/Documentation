@@ -79,9 +79,9 @@ Hiding a `ContentControl` if the bound content is null or empty:
                 IsVisible="{Binding MyContent, Converter={x:Static ObjectConverters.IsNotNull}}"/>
 ```
 
-> from now on assume converters are imported as shown in the previus "Binding Converters" section
+> from now on assume converters are imported as shown in the previous "Binding Converters" section
 
-Convert text to specifc case from a parameter
+Convert text to specific case from a parameter
 ```markup
 <TextBlock Text="{Binding TheContent, 
     Converter={StaticResource textCaseConverter},
@@ -124,7 +124,7 @@ public class TextCaseConverter : IValueConverter
 ```
 
 
-Converting a binded object to different target types contextually
+Converting a bound object to different target types contextually
 
 ```markup
 <Image Width="42" 

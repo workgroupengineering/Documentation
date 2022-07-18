@@ -13,7 +13,7 @@ First we have to create our attached property. The method `AvaloniaProperty.Regi
 
 This call ensures that the property has a type, an owner type and one where it may be used.
 
-The verify method can be used to clean up a value that is being set. Either by returning the corrected value or discard the process by returning `AvaloniaProperty.UnsetValue`. Or one can perform special tasks with the element that the property is hosted by. The getter and seter methods should always just set the value an never to anything beyond. In fact they will usually never be called as the Binding system will recognize the convention and set the proerties directly where they are stored.
+The verify method can be used to clean up a value that is being set. Either by returning the corrected value or discard the process by returning `AvaloniaProperty.UnsetValue`. Or one can perform special tasks with the element that the property is hosted by. The getter and setter methods should always just set the value and never do anything beyond. In fact they will usually never be called as the Binding system will recognize the convention and set the properties directly where they are stored.
 
 In this example file we create two attached properties that interact with each other: A _Command_ property and a _CommandParameter_ that is used by when invoking the command.
 
@@ -113,7 +113,7 @@ public class DoubleTappedBehav : AvaloniaObject
 
 In the verify method we utilize the routed event system to attach a new handler. Note that the handler should be detached, again. The value of the property is requested by the normal program mechanisms using `GetValue()` method.
 
-This example UI shows how to use the attached property. After making the namespace known to the xaml compiler it can be used by qualifying it with a dot. Then bindings can be used.
+This example UI shows how to use the attached property. After making the namespace known to the XAML compiler it can be used by qualifying it with a dot. Then bindings can be used.
 
 ```markup
 <UserControl xmlns="https://github.com/avaloniaui"
