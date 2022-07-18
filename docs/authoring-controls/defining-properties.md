@@ -38,7 +38,7 @@ The `AvaloniaProperty.Register` method also accepts a number of other parameters
 Sometimes the property you want to add to your control already exists on another control, `Background` being a good example. To register a property defined on another control, you call `StyledProperty.AddOwner`:
 
 ```csharp
-public static readonly StyledProperty<Brush> BackgroundProperty =
+public static readonly StyledProperty<IBrush> BackgroundProperty =
     Border.BackgroundProperty.AddOwner<Panel>();
 
 public Brush Background
