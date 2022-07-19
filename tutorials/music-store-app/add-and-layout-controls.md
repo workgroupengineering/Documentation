@@ -28,9 +28,19 @@ If you remember earlier in the section about MVVM we discussed how `Views` use `
 
 This `Binding Expression` is saying, when the button is `clicked`, then `execute` the `command` called `BuyMusicCommand` on the ViewModel.
 
-Open `MainWindowViewModel.cs` and add the following code:
+Open `MainWindowViewModel.cs` and add the following code (the `ICommand` Interface requires `System.Windows.Input` but you'll need the additional namespaces, specified at the top, later on in the tutorial):
 
 ```csharp
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
+using System.Windows.Input;
+using ReactiveUI;
+
+namespace Avalonia.MusicStore.ViewModels
+
 public class MainWindowViewModel : ViewModelBase
     {
         public MainWindowViewModel()
