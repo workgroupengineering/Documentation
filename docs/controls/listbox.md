@@ -138,7 +138,7 @@ public class MyViewModel
 
         // SelectionModel.Source can be set to Items here, or if it is left null it will be set by
         // the `ListBox` when bound.
-        Selection = new SelectionModel());
+        Selection = new SelectionModel();
         Selection.SelectionChanged += SelectionChanged;
 
         // Select item 10 in Items.
