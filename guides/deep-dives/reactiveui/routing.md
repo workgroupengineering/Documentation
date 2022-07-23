@@ -106,13 +106,12 @@ namespace RoutingExample
 
 **MainWindow.xaml**
 
-Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embed appropriate views for the view models. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML.
-
-For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
+Now we need to place the `RoutedViewHost` XAML control to our main view. It will resolve and embed appropriate views for the view models based on the supplied `IViewLocator` implementation and the passed `Router` instance of type `RoutingState`. Note, that you need to import `rxui` namespace for `RoutedViewHost` to work. Additionally, you can override animations that are played when `RoutedViewHost` changes a view — simply override `RoutedViewHost.PageTransition` property in XAML. For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.0 release on NuGet use `xmlns:rxui="clr-namespace:Avalonia;assembly=Avalonia.ReactiveUI"` as in the example below.
 
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:app="clr-namespace:RoutingExample"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -130,6 +129,10 @@ For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center" />
             </rxui:RoutedViewHost.DefaultContent>
+            <rxui:RoutedViewHost.ViewLocator>
+                <!-- See AppViewLocator.cs section below -->
+                <app:AppViewLocator />
+            </rxui:RoutedViewHost.ViewLocator>
         </rxui:RoutedViewHost>
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15">
             <StackPanel.Styles>
@@ -149,19 +152,38 @@ For latest builds from MyGet use `xmlns:rxui="https://reactiveui.net"`, for 0.8.
 ```
 
 To disable the animations, simply set the `RoutedViewHost.PageTransition` property to `{x:Null}`, like so:
+
 ```markup
-        <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
-            <rxui:RoutedViewHost.DefaultContent>
-                <TextBlock Text="Default content"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center" />
-            </rxui:RoutedViewHost.DefaultContent>
-        </rxui:RoutedViewHost>
+<rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}" PageTransition="{x:Null}">
+    <rxui:RoutedViewHost.DefaultContent>
+        <TextBlock Text="Default content"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+    </rxui:RoutedViewHost.DefaultContent>
+</rxui:RoutedViewHost>
+```
+
+**AppViewLocator.cs**
+
+The `AppViewLocator` that we are passing to the `RoutedViewHost` control declared in the `MainWindow.xaml` markup shown above is responsible for resolving a View based on the type of the ViewModel that should be shown by an `IScreen`. See [View Location](https://reactiveui.net/docs/handbook/view-location/) for details. The simplest possible `IViewLocator` implementation based on pattern matching might look like this:
+
+```csharp
+namespace RoutingExample
+{
+    public class AppViewLocator : ReactiveUI.IViewLocator
+    {
+        public IViewFor ResolveView<T>(T viewModel, string contract = null) where T : class => viewModel switch
+        {
+            FirstViewModel context => new FirstView { DataContext = context },
+            _ => throw new ArgumentOutOfRangeException(nameof(viewModel))
+        };
+    }
+}
 ```
 
 **MainWindow.xaml.cs**
 
-Here is the code-behind for main view declared above.
+Here is the code-behind for main view declared above in XAML.
 
 ```csharp
 namespace RoutingExample
@@ -178,22 +200,22 @@ namespace RoutingExample
 ```
 
 **App.axaml.cs**
-Make sure you initialize `DataContext` in `App.axaml.cs`
+
+Make sure you initialize the `DataContext` of your root view in `App.axaml.cs`
 
 ```csharp
-        public override void OnFrameworkInitializationCompleted()
+public override void OnFrameworkInitializationCompleted()
+{
+    if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+    {
+        desktop.MainWindow = new MainWindow
         {
-            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-            {
-                desktop.MainWindow = new MainWindow
-                {
-                    DataContext = new MainWindowViewModel(),
-                };
-            }
+            DataContext = new MainWindowViewModel(),
+        };
+    }
 
-            base.OnFrameworkInitializationCompleted();
-        }
-
+    base.OnFrameworkInitializationCompleted();
+}
 ```
 
 Finally, add `.UseReactiveUI()` to your `AppBuilder`:
@@ -208,24 +230,14 @@ namespace RoutingExample
             BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
         }
 
-        public static AppBuilder BuildAvaloniaApp()
-        {
-            // Router uses Splat.Locator to resolve views for
-            // view models, so we need to register our views.
-            //
-            Locator.CurrentMutable.Register(() => new FirstView(), typeof(IViewFor<FirstViewModel>));
-
-            return AppBuilder
-                .Configure<App>()
+        public static AppBuilder BuildAvaloniaApp() =>
+            AppBuilder.Configure<App>()
                 .UseReactiveUI()
                 .UsePlatformDetect()
                 .LogToDebug();
-        }
     }
 }
 ```
-
-Instead of registering views manually, you can use custom `IViewLocator` implementation, or `Locator.RegisterViewsForViewModels` method which registers all `IViewFor` implementations from an assembly. See [View Location](https://reactiveui.net/docs/handbook/view-location/) for details.
 
 Now, you can run the app and see routing in action!
 
