@@ -165,7 +165,7 @@ To disable the animations, simply set the `RoutedViewHost.PageTransition` proper
 
 **AppViewLocator.cs**
 
-The `AppViewLocator` that we are passing to the `RoutedViewHost` control declared in the `MainWindow.xaml` markup shown above is responsible for resolving a View based on the type of the ViewModel that should be shown by an `IScreen`. See [View Location](https://reactiveui.net/docs/handbook/view-location/) for details. The simplest possible `IViewLocator` implementation based on pattern matching might look like this:
+The `AppViewLocator` that we are passing to the `RoutedViewHost` control declared in the `MainWindow.xaml` markup shown above is responsible for resolving a View based on the type of the ViewModel. The `IScreen.Router` instance of type `RoutingState` determines which ViewModel should be currently shown. See [View Location](https://reactiveui.net/docs/handbook/view-location/) for details. The simplest possible `IViewLocator` implementation based on pattern matching might look like this:
 
 ```csharp
 namespace RoutingExample
@@ -183,7 +183,7 @@ namespace RoutingExample
 
 **MainWindow.xaml.cs**
 
-Here is the code-behind for main view declared above in XAML.
+Here is the code-behind for `MainWindow.xaml` declared above.
 
 ```csharp
 namespace RoutingExample
