@@ -78,7 +78,7 @@ namespace Avalonia.MusicStore.Models
             }
         }
 
-        public Stream SaveCoverBitmapSteam()
+        public Stream SaveCoverBitmapStream()
         {
             return File.OpenWrite(CachePath + ".bmp");
         }
