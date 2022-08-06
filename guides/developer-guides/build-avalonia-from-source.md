@@ -18,6 +18,10 @@ git submodule update --init --recursive
 
 * [.NET Core - All Supported OS's](https://www.microsoft.com/net/core)
 
+At least the following versions must be installed: 
+* .NET Core 3.1 SDK
+* .NET 6 SDK
+
 ### Build
 
 ```bash
