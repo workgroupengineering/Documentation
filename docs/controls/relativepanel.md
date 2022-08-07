@@ -1,6 +1,6 @@
 # RelativePanel
 
-The `RelativePanel` control is a `Panel` which lets you layout elements by specifying where the go in relation to other elements and in relation to the panel.
+The `RelativePanel` control is a `Panel` which lets you layout elements by specifying where they go in relation to other elements and in relation to the panel.
 
 By default, an element is positioned in the upper left corner of the panel.
 

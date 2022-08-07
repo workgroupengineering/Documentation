@@ -38,7 +38,7 @@ A custom increment/decrement value can be set for the button spinner. The defaul
 ### NumericUpDown without a button spinner <a href="numericupdown-without-a-button-spinner" id="numericupdown-without-a-button-spinner"></a>
 
 ```markup
-<NumericUpDown Value="42" AllowSpin="false" ShowButtonSpinner="false"/>
+<NumericUpDown Value="42" AllowSpin="False" ShowButtonSpinner="False"/>
 ```
 
 ## Common Properties <a href="common-properties" id="common-properties"></a>
