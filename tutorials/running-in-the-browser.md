@@ -16,20 +16,20 @@ dotnet new -i avalonia.templates
 
 3. Create a new directory for the project.
 
-```
+```bash
 mkdir WebTest
 cd WebTest
 ```
 
 4. Generate a new project that supports running in the browser.
 
-```
+```bash
 dotnet new avalonia.xplat
 ```
 
 5. In order to run simply do:
 
-```
+```bash
 cd WebTest.Web
 dotnet run
 ```

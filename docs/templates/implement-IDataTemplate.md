@@ -32,7 +32,7 @@ public class MyDataTemplate : IDataTemplate
 
 You can now use the class `MyDataTemplate` in your view like this:
 
-```xml
+```markup
 <!-- remember to add the needed prefix in your view -->
 <!-- xmlns:dataTemplates="using:MyApp.DataTemplates" -->
 
@@ -113,7 +113,7 @@ public class ShapesTemplateSelector : IDataTemplate
 
 Now we will setup the `ShapesTemplateSelector` in the `DataTemplates`-section of our `App.axaml`: 
 
-```xml
+```markup
 <!-- remember to add the needed prefix in your view -->
 <!-- xmlns:dataTemplates="using:MyApp.DataTemplates" -->
 <!-- xmlns:model="using:MyApp.Model" -->
@@ -138,7 +138,7 @@ Now we will setup the `ShapesTemplateSelector` in the `DataTemplates`-section of
 
 Now we can will create a `ComboBox` which the user can use to select a `ShapeType`:
 
-```xml
+```markup
 <!-- remember to add the needed prefix in your view -->
 <!-- xmlns:model="using:MyApp.Model" -->
 

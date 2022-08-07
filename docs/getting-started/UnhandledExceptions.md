@@ -10,7 +10,7 @@ We recommend to log exceptions to the console, a file or anywhere else. There ar
 
 You can catch any exception from the main thread, which is also the UI thread in Avalonia, in your `Program.cs`-file. To do so we just wrap the entire `void Main` in a `try` and `catch` block. In the `catch` block you can log the error, inform the user, send the log file or restart the application. 
 
-```cs
+```csharp
 // File: Program.cs
 
 public static void Main(string[] args)

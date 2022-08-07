@@ -49,7 +49,7 @@ If you need a protocol registration or file associations - open plist files from
 
 Example protocol:
 
-```text
+```xml
   <key>CFBundleURLTypes</key>
   <array>
     <dict>
@@ -67,7 +67,7 @@ Example protocol:
 
 Example file association
 
-```text
+```xml
   <key>CFBundleDocumentTypes</key>
   <array>
     <dict>
@@ -125,20 +125,20 @@ You'll first have to add the project as a `PackageReference` in your project. Ad
 
 After that, you can create your `.app` by executing the following on the command line:
 
-```text
+```bash
 dotnet restore -r osx-x64
 dotnet msbuild -t:BundleApp -p:RuntimeIdentifier=osx-x64 -p:UseAppHost=true
 ```
 
 You can specify other parameters for the `dotnet msbuild` command. For instance, if you want to publish in release mode:
 
-```text
+```bash
 dotnet msbuild -t:BundleApp -p:RuntimeIdentifier=osx-x64 -property:Configuration=Release -p:UseAppHost=true
 ```
 
 or if you want to specify a different app name:
 
-```text
+```bash
 dotnet msbuild -t:BundleApp -p:RuntimeIdentifier=osx-x64 -p:CFBundleDisplayName=MyBestThingEver -p:UseAppHost=true
 ```
 
@@ -175,7 +175,7 @@ dotnet publish -r osx-x64 --configuration Release -p:UseAppHost=true
 
 Create your `Info.plist` file, adding or modifying keys as necessary:
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -248,7 +248,7 @@ You'll also need to have the Xcode command line tools installed. You can get tho
 
 First, enable Hardened Runtime with [exceptions](https://developer.apple.com/documentation/security/hardened_runtime?language=objc) by creating an `MyAppEntitlements.entitlements` file:
 
-```markup
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -376,7 +376,7 @@ You should read all [entitlements documentation](https://developer.apple.com/doc
 
 First for the entitlements file is to sign all helper executables inside `.app/Content/MacOS/` folder. It should look like this.
 
-```text
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -391,7 +391,7 @@ First for the entitlements file is to sign all helper executables inside `.app/C
 
 Second is to sign app executable and a whole app bundle. It should contain all app's permissions. Here is an example:
 
-```text
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -416,7 +416,7 @@ Second is to sign app executable and a whole app bundle. It should contain all a
 
 Also here is some optional parameters your app can need:
 
-```text
+```xml
     <key>com.apple.security.network.client</key>
     <true/>
     <key>com.apple.security.network.server</key>
@@ -505,7 +505,7 @@ When upload succeeds - you will see your package in App Store Connect.
 
 This means that your application most likely does not specify a menu. On startup, Avalonia creates the default menu items for an application and automatically adds the _About Avalonia_ item when no menu has been configured. This can be resolved by adding one to your `App.xaml`:
 
-```xml
+```markup
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:RoadCaptain.App.RouteBuilder"

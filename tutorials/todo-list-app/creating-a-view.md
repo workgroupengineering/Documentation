@@ -147,7 +147,7 @@ Next we add another panel: a `StackPanel`. `StackPanel` lays out its child contr
 
 Because this is the last child in the `DockPanel` it will fill the remaining space in the center of the control.
 
-```
+```markup
 <CheckBox Margin="4">Walk the dog</CheckBox>
 <CheckBox Margin="4">Buy some milk</CheckBox>
 ```

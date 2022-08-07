@@ -94,7 +94,7 @@ By default bindings to this property are two-way.
 
 Exposes the selected item in the `Items` collection, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
-```text
+```markup
 <ListBox SelectedItem="{Binding SelectedItem}">
 ```
 

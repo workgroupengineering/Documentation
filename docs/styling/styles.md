@@ -112,9 +112,9 @@ Other pseudoclasses include `:focus`, `:disabled`, `:pressed` for buttons, `:che
 
 You can create own pseudoclasses for your `CustomControl` or `TemplatedControl`.
 The function below adds or remove a pseudoclass depending on a boolean value on a `StyledElement`.
- ````csharp
- PseudoClasses.Set(":className", bool);
- ````
+```csharp
+PseudoClasses.Set(":className", bool);
+```
 ***Remember:** PseudoClasses always starts with a `:`!*
 
 ### Selectors <a id="selectors"></a>
