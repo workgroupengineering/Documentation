@@ -43,7 +43,7 @@ This column is used to display text data, normally represented by a `string`. In
 
 ## DataGridCheckBoxColumn
 
-This column is used to represent a `bool` value. The  value is represented by a `CheckBox`, which is disabled in the normal state and enabled in the editing state of the `DataGridCell`. If needed you can enable the intermediate state by setting the property `IsThreeState` to true.
+This column is used to represent a `bool` value. The  value is represented by a `CheckBox`, which is disabled in the normal state and enabled in the editing state of the `DataGridCell`. If needed you can enable the indeterminate state by setting the property `IsThreeState` to true.
 
 ### Example
 

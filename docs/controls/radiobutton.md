@@ -17,7 +17,7 @@ The `RadioButton` control allows users to select one or more things from a colle
 <!-- Second Group -->
 <RadioButton IsChecked="{Binding Option4Enabled }"
              GroupName="Second Group"
-             Content="Forth Option"/>
+             Content="Fourth Option"/>
 <RadioButton IsChecked="{Binding Option5Enabled }"
              GroupName="Second Group"
              Content="Fifth Option"/>

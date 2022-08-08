@@ -14,16 +14,16 @@ This button will show a muted speaker icon or an unmuted speaker icon based on w
 
 ```markup
 <Style Selector="ToggleButton DrawingPresenter.tbchecked">
-    <Setter Property="IsVisible" Value="false"/>
+    <Setter Property="IsVisible" Value="False"/>
 </Style>
 <Style Selector="ToggleButton:checked DrawingPresenter.tbchecked">
-    <Setter Property="IsVisible" Value="true"/>
+    <Setter Property="IsVisible" Value="True"/>
 </Style>
 <Style Selector="ToggleButton DrawingPresenter.tbunchecked">
-    <Setter Property="IsVisible" Value="true"/>
+    <Setter Property="IsVisible" Value="True"/>
 </Style>
 <Style Selector="ToggleButton:checked DrawingPresenter.tbunchecked">
-    <Setter Property="IsVisible" Value="false"/>
+    <Setter Property="IsVisible" Value="False"/>
 </Style>
 ```
 

@@ -65,7 +65,7 @@ There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `F
 
 ## Creating Flyouts
 
-In order to be shown Flyouts have to be attached to a specific control, though this is not a static assignment and can be changed at runtime. `Button` has a `Flyout` property that can be used open a Flyout upon click.
+In order to be shown Flyouts have to be attached to a specific control, though this is not a static assignment and can be changed at runtime. `Button` has a `Flyout` property that can be used to open a Flyout upon click.
 
 ```Xml
 <Button Content="Click me">
