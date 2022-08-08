@@ -18,7 +18,7 @@ You can run "dotnet add package" from the command line:
 dotnet add package Avalonia.Controls.DataGrid
 ```
 Or add package reference directly to the csproj file:
-```markup
+```xml
 <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.16" />
 ```
 

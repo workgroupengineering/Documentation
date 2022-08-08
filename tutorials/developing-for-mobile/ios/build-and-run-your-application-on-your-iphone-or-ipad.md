@@ -50,7 +50,7 @@ If successful you may return to your IDE of choice and open the `info.plist` fil
 
 12\. Now edit the `.iOS.csproj` file.
 
-```markup
+```xml
 <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
 <CodesignKey>Apple Development: dan@walms.co.uk (3L323F7VSS)</CodesignKey>
 ```

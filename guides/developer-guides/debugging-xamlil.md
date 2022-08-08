@@ -2,7 +2,7 @@
 
 You can debug the XAML compiler adding at your's csproj AvaloniaXamlIlDebuggerLaunch property like this:
 
-```markup
+```xml
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>

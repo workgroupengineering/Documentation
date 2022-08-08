@@ -27,7 +27,7 @@ In certain situations you need to run an Avalonia sample application as an app b
 
 A solution to this is to change the sample's output path to [resemble an app bundle](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html). You can do this by modifying the output path in the csproj, e.g.:
 
-```markup
+```xml
 <OutputPath>bin\$(Configuration)\$(Platform)\ControlCatalog.NetCore.app/Contents/MacOS</OutputPath>
 <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 <UseAppHost>true</UseAppHost>
