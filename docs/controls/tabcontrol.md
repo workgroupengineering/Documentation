@@ -93,7 +93,7 @@ Dynamically generated `TabItem`s through binding are also supported. In this cas
 
 The following example uses a `TabItemModel` array to represent two tabs. Let's first create the model.
 
-```markup
+```csharp
 public class TabItemModel
 {
     public string Header { get; }
@@ -108,7 +108,7 @@ public class TabItemModel
 
 Create an array of two `TabItemModel` instances and bind it to the DataContext.
 
-```markup
+```csharp
 DataContext = new TabItemModel[] { 
     new TabItemModel("One", "Some content on first tab"),
     new TabItemModel("Two", "Some content on second tab"),

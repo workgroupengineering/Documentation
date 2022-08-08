@@ -67,7 +67,7 @@ There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `F
 
 In order to be shown Flyouts have to be attached to a specific control, though this is not a static assignment and can be changed at runtime. `Button` has a `Flyout` property that can be used to open a Flyout upon click.
 
-```Xml
+```markup
 <Button Content="Click me">
     <Button.Flyout>
         <Flyout>
@@ -80,7 +80,7 @@ In order to be shown Flyouts have to be attached to a specific control, though t
 ### Attached Flyouts
 For other controls that don't have built-in support for flyouts, one can be assigned using attached flyouts
 
-```Xml
+```markup
 <Border Background="Red" PointerPressed="Border_PointerPressed">
     <FlyoutBase.AttachedFlyout>
         <Flyout>
@@ -92,7 +92,7 @@ For other controls that don't have built-in support for flyouts, one can be assi
 
 Attached Flyouts can be shown by calling the `ShowAttachedFlyout` method
 
-```C#
+```csharp
 public void Border_PointerPressed(object sender, RoutedEventArgs args)
 {
     FlyoutBase.ShowAttachedFlyout(sender as Control);
@@ -109,7 +109,7 @@ ContextFlyouts are invoked automatically like normal `ContextMenu`s. Although cu
 
 As previously mentioned, Flyouts can be shared between various elements within your app.
 
-```Xml
+```markup
 <Window.Resources>
     <Flyout x:Key="MySharedFlyout">
         <!-- Flyout content here -->
@@ -126,7 +126,7 @@ As previously mentioned, Flyouts can be shared between various elements within y
 
 Although `Flyout`s are not controls themselves, their general appearance can still be customized by targeting the presenter the `Flyout` uses to display its content. For a normal `Flyout` this is `FlyoutPresenter` and for `MenuFlyout` this is `MenuFlyoutPresenter`. Because flyout presenters are not exposed, special style classes that should pertain to specific flyouts can be passed using the `FlyoutPresenterClasses` property on `FlyoutBase`
 
-```Xml
+```markup
 <Style Selector="FlyoutPresenter.mySpecialClass">
     <Setter Property="Background" Value="Red" />
 </Style>
@@ -142,7 +142,7 @@ To create a custom flyout type, derive from FlyoutBase. You'll have to override 
 
 The following example creates a simple `Flyout` that hosts an image
 
-```C#
+```csharp
 public class MyImageFlyout : FlyoutBase
 {
     public static readonly StyledProperty<IImage> ImageProperty = AvaloniaProperty.Register<MyImageFlyout, IImage>(nameof(Image));

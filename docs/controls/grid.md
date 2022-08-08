@@ -45,7 +45,7 @@ Here is another example showing the difference between those two.
 
 First let's create sample 2x2 grid in our View, we can achieve this simply by writing code looking like this:
 
-```text
+```markup
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -68,7 +68,7 @@ Now let's fill our grid with some elements, I will fill every field with button,
 
 Now our View code look's like this:
 
-```text
+```markup
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -94,7 +94,7 @@ As you can see our grid become sticky to its content, it is very useful when we 
 
 This new View code look's like this:
 
-```text
+```markup
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>

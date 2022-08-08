@@ -16,7 +16,7 @@ In the below example we have a `TextBlock` which shows the result and a `Button`
 
 Our view looks like this: 
 
-```xml
+```markup
 <StackPanel>
   <TextBlock x:Name="TextBlock_Result" />
   <Button Content="Run long running process" Click="Button_OnClick" />
@@ -25,7 +25,7 @@ Our view looks like this:
 
 The long running task looks like this:
 
-```cs
+```csharp
 async Task LongRunningTask()
 {
     // Do some work
@@ -37,7 +37,7 @@ async Task LongRunningTask()
 
 Finally we can run the long running task as shown below: 
 
-```cs
+```csharp
 private void Button_OnClick(object sender, RoutedEventArgs e)
 {
     // Start the job and return immediately
@@ -47,7 +47,7 @@ private void Button_OnClick(object sender, RoutedEventArgs e)
 
 if we want to get the result to work with it further, we need to change the long running task to return the result:
 
-```cs
+```csharp
 async Task<string> LongRunningTask()
 {
     // Do some work
@@ -62,7 +62,7 @@ async Task<string> LongRunningTask()
 
 We can use the result now: 
 
-```cs
+```csharp
 private async void Button_OnClick(object sender, RoutedEventArgs e)
 {
     // Run the job

@@ -34,7 +34,7 @@ To open the DevTools, press F12, or pass a different `Gesture` to the `this.Atta
 {% hint style="info" %}
 From release 0.10 to use DevTools, you must add `Avalonia.Diagnostics` nuget package.
 
-```
+```bash
 dotnet add package Avalonia.Diagnostics --version 0.10.0
 ```
 {% endhint %}

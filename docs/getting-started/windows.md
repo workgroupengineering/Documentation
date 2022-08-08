@@ -21,7 +21,7 @@ The default application templates create a single `Window` called `MainWindow`. 
 
 Run this command replacing `[namespace]` with the namespace you'd like to create the window in and `[name]` with the name of the window.
 
-```text
+```bash
 dotnet new avalonia.window -na [namespace] -n [name]
 ```
 

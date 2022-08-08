@@ -12,7 +12,7 @@
 
    The output will look similar to this.
 
-   ```text
+   ```bash
    $ dotnet new -i Avalonia.Templates
      Determining projects to restore...
      Restored /Users/danwalmsley/.templateengine/dotnetcli/v5.0.200/scratch/restore.csproj (in 706 ms).

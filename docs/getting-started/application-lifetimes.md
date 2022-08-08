@@ -6,7 +6,7 @@ Platforms are not created equal. The lifetime management that we are used to in 
 
 The preferred way of initializing your application on desktop is:
 
-```cs
+```csharp
 class Program
 {
   // This method is needed for IDE previewer infrastructure
@@ -23,7 +23,7 @@ class Program
 
 So, where is the main window setup? It's now moved to Application class:
 
-```cs
+```csharp
 public override void OnFrameworkInitializationCompleted()
 {
   if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
@@ -78,7 +78,7 @@ We don't force you to use our lifetime model on platforms that allow us to do so
 
 More docs will come later, for now see: [Issue #2564](https://github.com/AvaloniaUI/Avalonia/issues/2564) and  [PR 2676](https://github.com/AvaloniaUI/Avalonia/pull/2676)
 
-```cs
+```csharp
 class Program
 {
   // This method is needed for IDE previewer infrastructure
