@@ -43,5 +43,3 @@ In the `Application.xaml` file :
     </TrayIcons>
   </TrayIcon.Icons>
 ```
-
-Here is the result of this code on GNU/Linux (Distro : Ubuntu, Desktop Environment : GNOME) :
