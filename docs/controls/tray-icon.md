@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `TrayIcon` allows to display an icon and a native menu in the system tray. Supported on Windows, MacOS and some Linux distribution (confirmed to work on Ubuntu). 
+The `TrayIcon` control allows an Avalonia application to display an icon and a native menu in the system tray. It is supported on Windows, macOS and some Linux distributions (confirmed to work on Ubuntu). 
 
 ## Properties
 
