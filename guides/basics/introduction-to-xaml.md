@@ -30,6 +30,56 @@ There are three parts to this file:
 * `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` - this is the XAML-language XAML namespace. This isn't strictly necessary, but you will probably need it for accessing certain features of the XAML language.
 * `x:Class="AvaloniaApplication1.MainWindow"` - this tells the XAML compiler where to find the associated class for this file, defined in [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind)
 
+## Declaring XAML Namespaces
+
+In every `XML`-file you can declare namespaces, where the processor of the document can look up the nodes defined. If you are completely new to `X(A)ML`, please read more about `XML-Namespaces` [here](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).
+
+A new namespace can be added via the `xmlns`-attribute. Most of the times the namespaces used are defined at the root node, but they can be added at each level of your file. Only one namespace can be defined without an alias, all other namespaces must have an unique alias defined: 
+
+```xml
+xmlns:myAlias="MyNamespaceDefinition"
+```
+
+### Valid XAML Namespaces
+
+**Option 1**: Using the `clr-namespace`-syntax: 
+
+```xml
+xmlns:myAlias1="xmlns:my1="clr-namespace:My.NameSpace"
+xmlns:myAlias2="xmlns:my1="clr-namespace:My.NameSpace.InOtherAssembly;assembly=TheOtherAssembly"
+```
+
+{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
+
+{% hint style="info" %} You can omit the `assembly` part if your namespace is in the same assembly. {% endhint %}
+
+**Option 2**: Using the `using`-syntax: 
+
+```xml
+xmlns:myAlias3="using:My.NameSpace"
+```
+
+{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
+
+**Option 3**: Using a common namespace which can combine multiple namespaces: 
+
+Some libraries have their own common namespace defined, like Avalonia does. Often they use an URL like `https://github.com/avaloniaui`, but it can be any string. Usage: 
+
+```xml
+xmlns:myAlias4="https://github.com/avaloniaui"
+```
+
+### Create a common Namespace
+
+If you want to create your own common namespace, add these lines to any `*.cs`-file, for example in `Properties ► AssemblyInfo.cs`:
+
+```cs
+using Avalonia.Metadata;
+
+[assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace")]
+[assembly: XmlnsDefinition("https://my.controls.url", "My.NameSpace.Other")]
+```
+
 ## Declaring Controls <a id="declaring-controls"></a>
 
 Controls are added to the XAML by adding an XML element with the control's class name. For example to add a button as the child of the window you would write:
