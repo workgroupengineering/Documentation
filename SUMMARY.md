@@ -80,6 +80,7 @@
   * [TabControl](docs/controls/tabcontrol.md)
   * [TabStrip](docs/controls/tabstrip.md)
   * [TextBlock](docs/controls/textblock.md)
+  * [TrayIcon](docs/controls/tray-icon.md)
   * [TreeDataGrid](docs/controls/treedatagrid/README.md)
     * [Creating a Hierarchical TreeDataGrid](docs/controls/treedatagrid/creating-a-hierarchical-treedatagrid.md)
     * [Creating a Flat TreeDataGrid](docs/controls/treedatagrid/creating-a-flat-treedatagrid.md)
