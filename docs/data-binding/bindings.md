@@ -81,3 +81,8 @@ The format string is specified slightly different than in WPF, note the addition
 ```markup
 <TextBlock Text="{Binding FloatValue, StringFormat=\{0.0\}}" />
 ```
+
+
+## Samples
+
+[Basic MVVM Samople](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/BasicMvvmSample)
