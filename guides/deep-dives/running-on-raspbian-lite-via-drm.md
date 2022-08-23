@@ -114,7 +114,7 @@ Now create a new UserControl with name `MainSingleView` and host the `MainView`:
              d:DesignHeight="450"
              x:Class="AvaloniaRaspbianLiteDrm.MainSingleView">
     <avaloniaRaspbianLiteDrm:MainView />
-</UserControl
+</UserControl>
 ```
 
 Also change the `MainWindow.axaml` to host the `MainView` inside:
