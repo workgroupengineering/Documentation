@@ -140,11 +140,11 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 Matches any control which has the specified property set to the specified value.
 
-**Note:** When using a `AttachedProperty` in Selectors inside XAML, it has to be wrapped in braces.
-
-```markup
-<Style Selector="TextBlock[(Grid.Row)=0]">
-```
+> **Note:** When using a `AttachedProperty` in Selectors inside XAML, it has to be wrapped in braces.
+>
+> ```markup
+> <Style Selector="TextBlock[(Grid.Row)=0]">
+> ```
 
 ## Template <a id="template"></a>
 
