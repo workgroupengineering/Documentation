@@ -60,7 +60,8 @@ A top-level window.
 
 ### [WrapPanel](wrappanel.md)
 
-Positions child elements in sequential position from left to right,&#x20;breaking content to the next line at the edge of the containing box.&#x20;
+Positions child elements in sequential position from left to right,&#x20;
+breaking content to the next line at the edge of the containing box.&#x20;
 
 ## Buttons
 
@@ -111,6 +112,10 @@ A control that displays a block of text.
 ### [TextBox](textbox.md)
 
 Represents a control that can be used to display or edit unformatted text.
+
+### [MaskedTextBox](maskedtextbox.md)
+
+Represents a control that can be used to display or edit text format it uses a mask to distinguish between proper and improper user input format.
 
 ## Value selectors
 
