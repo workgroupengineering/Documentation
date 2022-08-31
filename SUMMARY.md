@@ -63,6 +63,7 @@
   * [ItemsRepeater](docs/controls/itemsrepeater.md)
   * [LayoutTransformControl](docs/controls/layouttransformcontrol.md)
   * [ListBox](docs/controls/listbox.md)
+  * [MaskedTextBox](docs/controls/maskedtextbox.md)
   * [Menu](docs/controls/menu.md)
   * [NativeMenu](docs/controls/nativemenu.md)
   * [NumericUpDown](docs/controls/numericupdown.md)
