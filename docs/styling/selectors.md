@@ -237,3 +237,7 @@ new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 {% endtabs %}
 
 Matches elements based on their position among a group of siblings, counting from the end.
+
+## Online nth-child & nth-last-child Tester <a id="nth-last Online Tester"></a>
+Using the link below, both `nth-child` and `nth-last-child` can be easily evaluated:
+[nth-child-tester](https://css-tricks.com/examples/nth-child-tester/)
