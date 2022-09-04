@@ -45,8 +45,8 @@ xmlns:myAlias="MyNamespaceDefinition"
 **Option 1**: Using the `clr-namespace`-syntax: 
 
 ```xml
-xmlns:myAlias1="xmlns:my1="clr-namespace:My.NameSpace"
-xmlns:myAlias2="xmlns:my1="clr-namespace:My.NameSpace.InOtherAssembly;assembly=TheOtherAssembly"
+xmlns:myAlias1="clr-namespace:My.NameSpace"
+xmlns:myAlias2="clr-namespace:My.NameSpace.InOtherAssembly;assembly=TheOtherAssembly"
 ```
 
 {% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
