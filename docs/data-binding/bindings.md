@@ -85,4 +85,4 @@ The format string is specified slightly different than in WPF, note the addition
 
 ## Samples
 
-[Basic MVVM Samople](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/BasicMvvmSample)
+[Basic MVVM Sample](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/BasicMvvmSample)
