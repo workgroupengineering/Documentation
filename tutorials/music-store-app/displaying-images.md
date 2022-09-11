@@ -97,6 +97,12 @@ Calling this asynchronous method will iterate through each item in a copy of the
 
 Notice a `CancellationToken` is used to check if we want to stop loading album covers.
 
+Add this field to `MusicStoreViewModel`
+
+```csharp
+private CancellationTokenSource? _cancellationTokenSource;
+```
+
 Now add the following code to the beginning of `DoSearch` method of `MusicStoreViewModel` after the `SearchResults.Clear();` line.
 
 ```csharp
