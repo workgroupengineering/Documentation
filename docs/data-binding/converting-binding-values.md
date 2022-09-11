@@ -176,3 +176,7 @@ public class AnimalConverter : IValueConverter
     }
 }
 ```
+
+### Samples
+
+[ValueConverter Sample](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM/ValueConversionSample)
