@@ -63,13 +63,20 @@ The `Default` mode is assumed if one is not specified. This mode is generally `O
 You can apply a format string to the binding to influence how the value is represented in the UI:
 
 ```markup
+<!-- Option 1: Use curly braces {} to escape string format -->
 <TextBlock Text="{Binding FloatValue, StringFormat={}{0:0.0}}" />
+
+<!-- Option 2: Use backslash \{ to escape string format -->
+<TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}" />
+
+<!-- Option 3: If the string format does not start with {0}, you don't need to escape the string format. -->
+<!-- Note: If you have a whitespace in your string format, surround it with single quotes '' -->
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
 ```
 
 When a `StringFormat` parameter is present, the value of the binding will be converted using the `StringFormatValueConverter` which will be passed the format string.
 
-The format string is specified slightly different than in WPF, note the additional escaped curly braces `{}` at the beginning and the usage of `0:` in front of the string format:
+Other than in WPF, you need to surround the string format with curly braces and start with 0: (`{0:TheStringFormat}`). If the curly braces are at the beginning of the format string, you need to escape them by either adding `{}` in front of it or by using backslashes `\{ ... \}`:
 
 **WPF:**
 
@@ -81,6 +88,7 @@ The format string is specified slightly different than in WPF, note the addition
 
 ```markup
 <TextBlock Text="{Binding FloatValue, StringFormat={}{0:0.0}}" />
+<TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 ```
 
 {% hint style="info" %} 
