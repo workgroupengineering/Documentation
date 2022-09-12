@@ -156,10 +156,10 @@ The available transitions are:
 |`scale`|`scale(10)`, `scale(0, 10)` ||
 |`scaleX`|`scaleX(10)`||
 |`scaleY`|`scaleY(10)`||
-|`skew`|`skew(90deg)`, `skew(0, 90deg)`|`deg`, `turn`, `grad`, `rad`|
-|`skewX`|`skewX(90deg)`|`deg`, `turn`, `grad`, `rad`|
-|`skewY`|`skewY(90deg)`|`deg`, `turn`, `grad`, `rad`|
-|`rotate`|`rotate(90deg)`|`deg`, `turn`, `grad`, `rad`|
+|`skew`|`skew(90deg)`, `skew(0, 90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`skewX`|`skewX(90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`skewY`|`skewY(90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`rotate`|`rotate(90deg)`|`deg`, `grad`, `rad`, `turn`|
 |`matrix`|`matrix(1,2,3,4,5,6)`||
 
 {% hint style="info" %}
