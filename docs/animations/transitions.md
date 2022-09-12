@@ -146,6 +146,22 @@ new Border
 {% endtab %}
 {% endtabs %}
 
+The available transitions are:
+
+|Transition|Sample|Acceptable units|
+|:---|:---|:---|
+|`translate`|`translate(10px)`, `translate(0px, 10px)`| `px`|
+|`translateX`|`translateX(10px)`|`px`|
+|`translateY`|`translateY(10px)`|`px`|
+|`scale`|`scale(10)`, `scale(0, 10)` ||
+|`scaleX`|`scaleX(10)`||
+|`scaleY`|`scaleY(10)`||
+|`skew`|`skew(90deg)`, `skew(0, 90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`skewX`|`skewX(90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`skewY`|`skewY(90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`rotate`|`rotate(90deg)`|`deg`, `grad`, `rad`, `turn`|
+|`matrix`|`matrix(1,2,3,4,5,6)`||
+
 {% hint style="info" %}
 Avalonia also supports WPF-style render transforms such as`RotateTransform` ,`ScaleTransform` etc. These transforms cannot be transitioned: always use the CSS-like format if you want to apply a transition to a render transform.
 {% endhint %}
