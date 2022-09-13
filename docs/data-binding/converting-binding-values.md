@@ -62,6 +62,9 @@ Avalonia supplies a number of built-in value converters for common scenarios:
 | `ObjectConverters.IsNull`           |  Returns `true` if the input is null                                 |
 | `ObjectConverters.IsNotNull`        |  Returns `false` if the input is null                                |
 | `BoolConverters.And`                |  A multi-value converter that returns `true` if all inputs are true. |
+| `BoolConverters.Or`                 |  A multi-value converter that returns `true` if any input is true. |
+
+You can see find list of default converters here: [Avalonia.Data.Converters Namespace](https://docs.avaloniaui.net/api/untitled/avalonia-ui-framework-23/avalonia-ui-framework-24#classtypes).
 
 ### Examples
 
