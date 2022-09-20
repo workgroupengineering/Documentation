@@ -45,14 +45,17 @@ A routed event is a CLR event that is backed by an instance of the `RoutedEvent`
 The following example shows the declaration for a custom `Tap` routed event, including the registration and exposure of the `RoutedEvent` identifier field and the `add` and `remove` implementations for the `Tap` CLR event.
 
 ```csharp
-public static readonly RoutedEvent<RoutedEventArgs> TapEvent =
-    RoutedEvent.Register(nameof(Tap), RoutingStrategies.Bubble);
-
-// Provide CLR accessors for the event
-public event EventHandler<RoutedEventArgs> Tap
+public class SampleControl: Control
 {
+  public static readonly RoutedEvent<RoutedEventArgs> TapEvent =
+    RoutedEvent.Register<SampleControl, RoutedEventArgs>(nameof(Tap), RoutingStrategies.Bubble);
+
+  // Provide CLR accessors for the event
+  public event EventHandler<RoutedEventArgs> Tap
+  { 
     add => AddHandler(TapEvent, value);
     remove => RemoveHandler(TapEvent, value);
+  }
 }
 ```
 
