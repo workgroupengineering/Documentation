@@ -17,7 +17,7 @@ public async Task SaveToDiskAsync()
 
         await Task.Run(() =>
         {
-            using (var fs = _album.SaveCoverBitmapSteam())
+            using (var fs = _album.SaveCoverBitmapStream())
             {
                 bitmap.Save(fs);
             }
