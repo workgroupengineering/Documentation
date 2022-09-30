@@ -28,7 +28,7 @@ Some apps require or desire a native look and feel. Others require a "pixel perf
 
 Avalonia is suited to these "Pixel Perfect" style apps, providing the advantage of native code and speed.
 
-If you are already familiar with MVVM you may wish to skip this next section, if your new to Avalonia read on.
+If you are already familiar with MVVM you may wish to skip this next section, if you're new to Avalonia read on.
 
 ### Model View ViewModel
 
@@ -36,7 +36,7 @@ The best architecture to use Avalonia with \(not compulsory, just works best\) i
 
 It sounds complicated, and there are many over complicated guides and tutorials on the internet.
 
-MVVM is simply a way to enforce [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). For your quick demo tutorial app, this may seem overkill. Keeping UI and business logic separated in such a way. However the apps that your will soon be building, often start small but quickly grow. Your customers will spring new requirements on you, and you will need to shoe horn them into your software.
+MVVM is simply a way to enforce [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). For your quick demo tutorial app, this may seem overkill. Keeping UI and business logic separated in such a way. However the apps that you will soon be building, often start small but quickly grow. Your customers will spring new requirements on you, and you will need to shoe horn them into your software.
 
 Following the MVVM approach will alleviate these difficulties and help keep your UI code scalable.
 
@@ -72,7 +72,7 @@ Your user interface is essentially the way your `users` interact with your busin
 
 A `ViewModel` is essentially special type of `Model` that represents all the `data` that will be displayed in the UI. It also represents all the `actions` that can be done with the UI. For example what happens when a button is clicked.
 
-This keeps things like disabling buttons when the user hasnt input the correct information away from your business logic.
+This keeps things like disabling buttons when the user hasn't input the correct information away from your business logic.
 
 A `ViewModel` will `subscribe` to or `observe` events on a model so that it knows when something in your system has changed, with the intention that it can then update the UI so the `user` will know about it.
 
