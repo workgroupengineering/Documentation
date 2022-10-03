@@ -20,3 +20,6 @@ Is equivalent to:
 </DataTemplate>
 ```
 
+## Samples
+
+[FuncDataTemplate Sample](https://github.com/AvaloniaUI/Avalonia.Samples/blob/main/src/Avalonia.Samples/DataTemplates/FuncDataTemplateSample)
