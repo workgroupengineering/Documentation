@@ -33,4 +33,5 @@ To get started with ReactiveUI, see the [Getting Started](https://reactiveui.net
 * [View Activation](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/view-activation)
 * [Routing](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/routing)
 * [Data Persistence](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/data-persistence)
+* [Binding to Sorted/Filtered Data](https://docs.avaloniaui.net/guides/deep-dives/reactiveui/binding-to-sorted-filtered-list)
 
