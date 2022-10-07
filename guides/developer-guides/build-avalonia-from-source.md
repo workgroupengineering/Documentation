@@ -54,7 +54,7 @@ dotnet run
 Open Avalonia.sln in Visual Studios 2019 or above.
 ```
 
-### OSX
+### macOS
 
 The native interop layer requires code generation, this can be triggered by:
 `./build.sh --target CompileNative`

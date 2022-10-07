@@ -174,7 +174,7 @@
   * [Comparison of Avalonia with WPF and UWP](guides/developer-guides/comparison-of-avalonia-with-wpf-and-uwp.md)
   * [Debugging Previewer](guides/developer-guides/debugging-previewer.md)
   * [Debugging the XAML compiler](guides/developer-guides/debugging-xamlil.md)
-  * [MacOS Development](guides/developer-guides/macos-development.md)
+  * [macOS Development](guides/developer-guides/macos-development.md)
   * [Release Process](guides/developer-guides/release-process.md)
   * [Maintaining Stable Branch](guides/developer-guides/maintaining-stable-branch-pr-merge-process.md)
 

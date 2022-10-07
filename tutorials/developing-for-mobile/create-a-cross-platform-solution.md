@@ -37,7 +37,7 @@ This will create a project with the following structure:
 
 * HelloWorld (Avalonia UI project with Views and ViewModels)
 * HelloWorld.Android (Avalonia bootstrap code for Android)
-* HelloWorld.Desktop (Avalonia bootstrap code for Desktop - Window, MacOS and Linux)
+* HelloWorld.Desktop (Avalonia bootstrap code for Desktop - Windows, macOS and Linux)
 * HelloWorld.iOS (Avalonia bootstrap code for iOS)
 * HelloWorld.Web (Avalonia bootstrap code for Web)
 * nuget.config (gives access to nightly builds of Avalonia)
