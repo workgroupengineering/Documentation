@@ -20,7 +20,7 @@ You may also need to uninstall old versions. `dotnet workload remove android`
 
 There are a few ways to install the Android SDK.
 
-If you have Visual Studio or Visual for Mac you should follow the guide found here:
+If you have Visual Studio or Visual Studio for Mac you should follow the guide found here:
 
 {% embed url="https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk" %}
 

@@ -1,12 +1,12 @@
 ---
-description: Getting started developing for the MacOS backend
+description: Getting started developing for the macOS backend
 ---
 
-# MacOS Development
+# macOS Development
 
 ## Native code
 
-The native OSX code is located at `native/Avalonia.Native/src/OSX`. Open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
+The native macOS code is located at `native/Avalonia.Native/src/OSX`. Open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
 
 You can make changes in Xcode and compile using Cmd+B. You will then need to point your Avalonia application to the modified dynlib. The path can be found by clicking on the dylib in Xcode’s project navigator under Products.
 
@@ -19,11 +19,11 @@ You then specify this path in your AppBuilder using:
 })
 ```
 
-If you're running on an M1 Mac and targeting .NET 5 and lower then you'll need to switch to rosetta by selecting "My Mac \(Rosetta\)" in the toolbar.
+If you're running on an Apple Silicon Mac and targeting .NET 5 and lower then you'll need to switch to rosetta by selecting "My Mac \(Rosetta\)" in the toolbar.
 
 ### Bundling Dev Code
 
-In certain situations you need to run an Avalonia sample application as an app bundle. One of these situations is testing MacOS Accessibility - Xcode's Accessibility Inspector fails to recognise the application otherwise.
+In certain situations you need to run an Avalonia sample application as an app bundle. One of these situations is testing macOS Accessibility - Xcode's Accessibility Inspector fails to recognise the application otherwise.
 
 A solution to this is to change the sample's output path to [resemble an app bundle](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html). You can do this by modifying the output path in the csproj, e.g.:
 

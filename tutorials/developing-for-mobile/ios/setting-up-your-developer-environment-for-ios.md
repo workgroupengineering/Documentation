@@ -2,7 +2,7 @@
 
 ### Prerequisites&#x20;
 
-On a mac you will need to have the latest version of MacOS and XCode installed.
+On a Mac you will need to have the latest version of acOS and Xcode installed.
 
 ### Install the SDK
 
@@ -20,4 +20,4 @@ You may need to run the command with `sudo`\
 You may also need to uninstall old versions. `dotnet workload remove ios`
 {% endhint %}
 
-This will allow you to build applications for iOS on any platform. However you will only be able to test and run them if you have access to actual MacOS hardware with XCode installed.
+This will allow you to build applications for iOS on any platform. However you will only be able to test and run them if you have access to actual macOS hardware with Xcode installed.

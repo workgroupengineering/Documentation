@@ -1,18 +1,18 @@
 # Build and Run your Application on your iPhone or iPad
 
-In order to allow dotnet to sideload your application to your iphone or ipad you must first use XCode to provision your device.
+In order to allow dotnet to sideload your application to your iphone or ipad you must first use Xcode to provision your device.
 
 Before continuing follow this guide to create a free Apple developer signing certificate.
 
 {% embed url="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/free-provisioning" %}
 
-This has to be done by creating an XCode app project that has the same `bundle identifier` that you will use in your application.
+This has to be done by creating an Xcode app project that has the same `bundle identifier` that you will use in your application.
 
-1. Open XCode
+1. Open Xcode
 
 ![](<../../../.gitbook/assets/Screenshot 2022-03-17 at 12.09.54.png>)
 
-2\. Select Create a new XCode project
+2\. Select Create a new Xcode project
 
 ![](<../../../.gitbook/assets/image (36).png>)
 
@@ -32,7 +32,7 @@ This has to be done by creating an XCode app project that has the same `bundle i
 
 ![](<../../../.gitbook/assets/image (32).png>)
 
-8\. Click on devices and connect your iPhone or iPad with the USB cable. XCode will start to provision your phone for development.
+8\. Click on devices and connect your iPhone or iPad with the USB cable. Xcode will start to provision your phone for development.
 
 ![](<../../../.gitbook/assets/Screenshot 2022-03-17 at 12.19.06.png>)
 
@@ -44,7 +44,7 @@ This has to be done by creating an XCode app project that has the same `bundle i
 
 If successful you may return to your IDE of choice and open the `info.plist` file from the iOS project.
 
-11\. Change the bundle identifier to the same as the one you choose in XCode in step 3.
+11\. Change the bundle identifier to the same as the one you choose in Xcode in step 3.
 
 ![](<../../../.gitbook/assets/image (18).png>)
 

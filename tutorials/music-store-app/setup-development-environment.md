@@ -32,7 +32,7 @@ Examples:
 
 1. Download and install [Rider: The Cross-Platform .NET IDE from JetBrains](https://www.jetbrains.com/rider/)
 
-   Rider will give you the very best development experience available for Avalonia. It is available for Windows, Linux and Mac
+   Rider will give you the very best development experience available for Avalonia. It is available for Windows, Linux and macOS
 
 2. Install the Avalonia Plugin
 

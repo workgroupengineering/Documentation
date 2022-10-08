@@ -344,7 +344,7 @@ You need a lot of things:
 * In KeyChain you should see this certificates `3rd Party Mac Developer Installer` and `Apple Distribution`. If cert names are started with another strings - you've created a wrong certificate. Try again.
 * Expand imported keys in KeyChain and double click on a private key inside.
 * Go to Access Control Tab.
-* Select `Allow all applications to access this item` in case you don't want to enter a mac profile password for every file sign.
+* Select `Allow all applications to access this item` in case you don't want to enter a Mac profile password for every file sign.
 
 ### Sandbox and bundle <a id="sandbox-and-bundle"></a>
 
@@ -569,7 +569,7 @@ As Apple requires multi-factor authentication (MFA) on developer accounts, `nota
 xcrun notarytool store-credentials "AC_PASSWORD" --apple-id "${{ secrets.APPLE_ID }}" --team-id ${{ env.TEAM_ID }} --password "${{ secrets.NOTARY_TOOL_PASSWORD }}"
 ```
 
-`TEAM_ID` is the team id in AppStore Connect, `APPLE_ID` is your Apple account e-mail address, `NOTARY_TOOL_PASSWORD` is the app-password you generated.
+`TEAM_ID` is the team id in App Store Connect, `APPLE_ID` is your Apple account e-mail address, `NOTARY_TOOL_PASSWORD` is the app-password you generated.
 
 To use these steps in your GitHub Actions workflow add them as a step to the job that builds your app:
 

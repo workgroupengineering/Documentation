@@ -14,7 +14,7 @@ Avalonia is supported on the following platforms:
 
 * Windows 8 and higher
   * **Note**: Avalonia works correctly on Windows 7 also, but not supported _officially_
-* MacOS High Sierra 10.13 and higher
+* macOS High Sierra 10.13 and higher
 * for Linux:
   * Debian 9 (Stretch) and higher
   * Ubuntu 16.04 and higher

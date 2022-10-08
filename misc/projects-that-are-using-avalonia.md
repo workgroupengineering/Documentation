@@ -40,7 +40,7 @@ The Avalonia port of ILSpy
 
 ## [Jaya File Manager (JayaFM)](https://github.com/nullvoid-creations/Jaya)
 
-**JayaFM** is a small .NET Core based cross platform file explorer application which runs on Windows, Mac and Linux. Its goal is very simple, _"To allow browsing and managing of several file systems and cloud storage accounts simultaneously using a one application which should work and look similar on all platforms it supports."_.
+**JayaFM** is a small .NET Core based cross platform file explorer application which runs on Windows, macOS and Linux. Its goal is very simple, _"To allow browsing and managing of several file systems and cloud storage accounts simultaneously using a one application which should work and look similar on all platforms it supports."_.
 
 Application is designed to be plug-able from the ground up i.e. anyone with experience of working with .NET Framework will be able to add support for new storage services by implementing a simple plugin.
 

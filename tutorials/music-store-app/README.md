@@ -12,7 +12,7 @@ It was created by [Dan Walmsley ](https://twitter.com/dwuk86)for a [webinar ](ht
 
 In this tutorial, you will see just how easy it is to build great looking visual desktop applications using Avalonia.
 
-This guide has instructions for Rider on OSX, however the steps will be almost the same on other operating systems, and reasonably similar on other IDEs such as Visual Studio.
+This guide has instructions for Rider on macOS, however the steps will be almost the same on other operating systems, and reasonably similar on other IDEs such as Visual Studio.
 
 Our livestream assumes some knowledge of [XAML](../../guides/basics/introduction-to-xaml.md), [MVVM ](../../guides/basics/mvvm.md)development, however this guide should fill in the gaps for beginners.
 
