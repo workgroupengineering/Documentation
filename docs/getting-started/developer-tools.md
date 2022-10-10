@@ -78,7 +78,7 @@ While [properties](developer-tools.md#properties) panel shows currently active v
 
 Additionally one can see all styles that could potentially match this control (by toggling `Show inactive` option).
 
-Current styles can be snapshotted by either pressing the `Snapshot` button or pressing `Alt+S` while hovering over the target window. Snapshotting means that styles panel won't update to reflect new state of the control. This is especially useful when troubleshooting problems with `:pointerover` or `:pressed` selectors.
+Current styles can be snap-shotted by either pressing the `Snapshot` button or pressing `Alt+S` while hovering over the target window. Snap-shotting means that styles panel won't update to reflect new state of the control. This is especially useful when troubleshooting problems with `:pointerover` or `:pressed` selectors.
 
 {% hint style="info" %}
 If setter value is bound to a resource it will be indicated by a circle followed by the resource key.
