@@ -10,7 +10,7 @@ The `ToggleButton` control is a subclass of the `Button` control that has a buil
 
 ### Speaker Mute Button <a id="speaker-mute-button"></a>
 
-This button will show a muted speaker icon or an unmuted speaker icon based on whether the button is checked or unchecked, which the `ToggleButton` control toggles between when users click on the button.
+This button will show a muted speaker icon or an un-muted speaker icon based on whether the button is checked or unchecked, which the `ToggleButton` control toggles between when users click on the button.
 
 ```markup
 <Style Selector="ToggleButton DrawingPresenter.tbchecked">
@@ -37,4 +37,3 @@ The style code above reacts to `ToggleButton`'s `:checked` pseudoclass, so that 
     </Panel>
 </ToggleButton>
 ```
-
