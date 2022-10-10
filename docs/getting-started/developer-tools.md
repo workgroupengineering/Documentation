@@ -37,6 +37,7 @@ From release 0.10 to use DevTools, you must add `Avalonia.Diagnostics` nuget pac
 ```bash
 dotnet add package Avalonia.Diagnostics --version 0.10.0
 ```
+
 {% endhint %}
 
 ![](<../../.gitbook/assets/image (23).png>)
@@ -122,8 +123,8 @@ The console can be shown using the "View" → "Console" menu. The console implem
 | ---------------- | ---------------------------- |
 | Alt+S            | Enable Snapshot Styles       |
 | Alt+D            | Disable Snapshot Styles      |
-| CRTL+Shift       | Inspect Control over Pointer |
-| CRTL+Alt+F       | Toggle Popup freeze          |
+| CTRL+Shift       | Inspect Control over Pointer |
+| CTRL+Alt+F       | Toggle Popup freeze          |
 
 ## Examples
 
