@@ -22,7 +22,9 @@ Selects a control by type. The first example above selects the `Avalonia.Control
 
 This selector does not match derived types. For that, use the [`Is`](selectors.md#is) selector.
 
-> Note the type of an object is actually determined by looking at its IStyleable.StyleKey property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
+{% hint style="info" %}
+Note the type of an object is actually determined by looking at its IStyleable.StyleKey property. By default this simply returns the type of the current instance, but if, for example, you do want your control which inherits from `Button` to be styled as a `Button`, then you can implement the `IStyleable.StyleKey` property on your class to return `typeof(Button)`.
+{% endhint %}
 
 ## Name <a id="name"></a>
 
@@ -42,7 +44,7 @@ new Style(x => x.OfType<Button>().Name("myButton"));
 {% endtab %}
 {% endtabs %}
 
-Selects a control by its [`Name`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/2362746E) property.
+Selects a control by its [`Name`](http://reference.avaloniaui.net/api/Avalonia/StyledElement/2362746E) property with a `#` charactor.
 
 ## Class <a id="class"></a>
 
@@ -84,7 +86,9 @@ new Style(x => x.Is(typeof(Button)));
 
 This is very similar to the [`OfType`](selectors.md#ofType) selector except it also matches derived types.
 
-> Again, the type of an object is actually determined by looking at its IStyleable.StyleKey property.
+{% hint style="info" %}
+Again, the type of an object is actually determined by looking at its IStyleable.StyleKey property.
+{% endhint %}
 
 ## Child <a id="child"></a>
 
@@ -140,11 +144,16 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 
 Matches any control which has the specified property set to the specified value.
 
-> **Note:** When using a `AttachedProperty` in Selectors inside XAML, it has to be wrapped in braces.
->
-> ```markup
-> <Style Selector="TextBlock[(Grid.Row)=0]">
-> ```
+{% hint style="info" %}
+**Note:** When using a `AttachedProperty` in selectors inside XAML, it has to be wrapped in parenthesis.
+```markup
+<Style Selector="TextBlock[(Grid.Row)=0]">
+```
+{% endhint %}
+
+{% hint style="info" %}
+**Note:** When using in selectors in XAML, properties must support [`TypeConverter`](https://learn.microsoft.com/zh-cn/dotnet/api/system.componentmodel.typeconverter)
+{% endhint %}
 
 ## Template <a id="template"></a>
 
@@ -238,6 +247,43 @@ new Style(x => x.OfType<TextBlock>().NthLastChild(2, 3));
 
 Matches elements based on their position among a group of siblings, counting from the end.
 
-## Online nth-child & nth-last-child Tester <a id="nth-last Online Tester"></a>
+## Nth Child and Nth Last Child Syntax
+
+`:nth-child()` and `:nth-last-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are **1-based**. Below samples use `:nth-child()`, but also applicable for `:nth-last-child()`.
+
+### Keyword notation
+
+`odd` Represents elements whose index in a series of siblings is odd: 1, 3, 5, etc.
+
+`even` Represents elements whose index in a series of siblings is even: 2, 4, 6, etc.
+
+### Functional notation
+
+`An+B` Represents elements in a list whose indices match those found in a custom pattern of numbers, defined by An+B, where:
+
+* `A` is an integer step size,
+* `B` is an integer offset,
+* `n` is all non-negative integers, starting from 0.
+
+It can be understood as _every `A`th element starting from `B`th_
+
+### Functional notation examples
+
+|Example|Representation|
+|:---|:---|
+|`:nth-child(odd)`|The odd elements: **1**, **3**, **5**, etc.|
+|`:nth-child(even)`|The even elements: **2**, **4**, **6**, etc.|
+|`:nth-child(2n+1)`|The odd elements: **1**_(2×0+1)_, **3**_(2×1+1)_, **5**_(2×2+1)_, etc. equivalent to `:nth-child(odd)`|
+|`:nth-child(2n)`|The even elements: **2**_(2×1)_, **4**_(2×2)_, **6**_(2×3)_, etc. equivalent to `:nth-child(even)`. Notice that **0**_(2×0)_ a valid notation, however it's not maching any element since index starts from 1. |
+|`:nth-child(7)`|The 7th element|
+|`:nth-child(n+7)`|Every element start from 7th: **7**_(0+7)_, **8**_(1+7)_, **9**_(2+7)_, etc|
+|`:nth-child(3n+4)`|Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc|
+|`:nth-child(-n+3)`|First 3 elements: **3**_(-1×0+3)_, **2**_(-1×1+3)_, **1**_(-1×2+3)_. All subsequent indices are less than 1 so they are not matching any elements.  |
+
+
+### Online nth-child & nth-last-child Tester <a id="nth-last Online Tester"></a>
+
 Using the link below, both `nth-child` and `nth-last-child` can be easily evaluated:
 [nth-child-tester](https://css-tricks.com/examples/nth-child-tester/)
+
+
