@@ -145,7 +145,7 @@ new Style(x => x.OfType<Button>().PropertyEquals(Button.IsDefaultProperty, true)
 Matches any control which has the specified property set to the specified value.
 
 {% hint style="info" %}
-**Note:** When using a `AttachedProperty` in selectors inside XAML, it has to be wrapped in braces.
+**Note:** When using a `AttachedProperty` in selectors inside XAML, it has to be wrapped in parenthesis.
 ```markup
 <Style Selector="TextBlock[(Grid.Row)=0]">
 ```
