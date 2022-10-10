@@ -3,7 +3,6 @@
   "language": "en",
   "words": [
     "Avalonia",
-    "axaml",
     "Flyouts",
     "keyframes",
     "lookless",
@@ -12,7 +11,6 @@
     "Pseudoclasses",
     "quickstart",
     "Serilog",
-    "Skia",
     "strikethrough",
     "Swappable",
     "treeview",
@@ -20,7 +18,10 @@
     "UWP",
     "Viewbox"
   ],
-  "ignoreWords": [],
+  "ignoreWords": [
+    "axaml",
+    "Skia"
+  ],
   "patterns": [
     {
       "name": "Markdown links",
