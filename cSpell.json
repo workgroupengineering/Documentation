@@ -45,6 +45,10 @@
       "name": "HTML Tags",
       "pattern": "<[^>]*>",
       "description": "Reference: https://stackoverflow.com/questions/11229831/regular-expression-to-remove-html-tags-from-a-string"
+    },
+    {
+      "name": "Liquid Syntax",
+      "pattern": "\\{[%] (.*) [%]\\}"
     }
   ],
   "ignoreRegExpList": [
