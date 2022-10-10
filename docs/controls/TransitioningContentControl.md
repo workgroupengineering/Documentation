@@ -1,5 +1,5 @@
 ---
-description: The TransitioningContentControl is a ContentControl which can render PageTransions when the Content changes.
+description: The TransitioningContentControl is a ContentControl which can render PageTransitions when the Content changes.
 ---
 
 # TransitioningContentControl
