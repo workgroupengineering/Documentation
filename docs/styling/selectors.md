@@ -322,7 +322,7 @@ It can be understood as _every `A`th element starting from `B`th_
 |`:nth-child(odd)`|The odd elements: **1**, **3**, **5**, etc.|
 |`:nth-child(even)`|The even elements: **2**, **4**, **6**, etc.|
 |`:nth-child(2n+1)`|The odd elements: **1**_(2×0+1)_, **3**_(2×1+1)_, **5**_(2×2+1)_, etc. equivalent to `:nth-child(odd)`|
-|`:nth-child(2n)`|The even elements: **2**_(2×1)_, **4**_(2×2)_, **6**_(2×3)_, etc. equivalent to `:nth-child(even)`. Notice that **0**_(2×0)_ a valid notation, however it's not maching any element since index starts from 1. |
+|`:nth-child(2n)`|The even elements: **2**_(2×1)_, **4**_(2×2)_, **6**_(2×3)_, etc. equivalent to `:nth-child(even)`. Notice that **0**_(2×0)_ a valid notation, however it's not matching any element since index starts from 1. |
 |`:nth-child(7)`|The 7th element|
 |`:nth-child(n+7)`|Every element start from 7th: **7**_(0+7)_, **8**_(1+7)_, **9**_(2+7)_, etc|
 |`:nth-child(3n+4)`|Every 3rd element start from 4th: **4**_(3×0+4)_, **7**_(3×1+4)_, **10**_(3×2+4)_, **13**_(3×3+4)_, etc|
