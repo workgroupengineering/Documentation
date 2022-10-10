@@ -13,30 +13,36 @@ Avalonia selectors, like CSS selectors, do not raise any errors or warnings, whe
 Styles are applied in order of declaration. If there are **multiple** style files that target the same control property, one style can override the other:
 
 {% code title="Styles2.axaml" %}
+
 ```markup
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Green" />
 </Style>
 ```
+
 {% endcode %}
 
 {% code title="Styles1.axaml" %}
+
 ```markup
 <Style Selector="TextBlock.header">
     <Style Property="Foreground" Value="Blue" />
     <Style Property="FontSize" Value="16" />
 </Style>c
 ```
+
 {% endcode %}
 
 {% code title="App.axaml" %}
+
 ```markup
 <StyleInclude Source="Style1.axaml" />
 <StyleInclude Source="Style2.axaml" />
 ```
+
 {% endcode %}
 
-Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Green". The same order prioritisation happens within style files also.
+Here styles from file **Styles1.axaml** were applied first, so setters in styles of file **Styles2.axaml** take priority. The resulting TextBlock will have FontSize="16" and Foreground="Green". The same order prioritization happens within style files also.
 
 ### Locally set Properties override Styles
 
@@ -78,10 +84,7 @@ With this code example the `Border` has a Red background normally and Blue when 
 {% hint style="info" %}
 Visit the Avalonia source code to find the [original templates](https://github.com/AvaloniaUI/Avalonia/tree/master/src/Avalonia.Themes.Fluent/Controls) when this happens and copy and paste the styles with pseudoclasses into your code.
 
-
 {% endhint %}
-
-
 
 ### Selector with a pseudoclass doesn't override the default
 
@@ -134,7 +137,6 @@ Why default styles change the ContentPresenter `Background` property directly in
 
 This is because if the user were to set a local value on the button, it would override all styles, and make button always the same color. For more details see this [reverted PR](https://github.com/AvaloniaUI/Avalonia/pull/2662#issuecomment-515764732).
 {% endhint %}
-
 
 ### Previous value of specific properties is not restored when style is not applied anymore
 

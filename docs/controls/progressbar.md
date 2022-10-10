@@ -2,7 +2,7 @@
 
 The `ProgressBar` control allow for showing dynamic progress status.
 
-### Customising the progress text
+### Customizing the progress text
 
 When [`ShowProgressText`](http://reference.avaloniaui.net/api/Avalonia.Controls/ProgressBar/590A8B3E) is `true`, text on the progress bar will be displayed.
 
@@ -20,7 +20,6 @@ By default this text shows the percentage completion, according to the [`Value`]
 |Min |Max |Value |Format String                    |Output                       |
 |----|----|------|---------------------------------|-----------------------------|
 |0   |20  |17    |`{0}/{3} Tasks Complete ({1:0}%)`|`17/20 Tasks Complete (85%)` |
-
 
 ### Reference <a id="reference"></a>
 
