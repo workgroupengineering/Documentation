@@ -15,7 +15,8 @@
     "Swappable",
     "treeview",
     "UI",
-    "UWP"
+    "UWP",
+    "Viewbox"
   ],
   "ignoreWords": [],
   "patterns": [
