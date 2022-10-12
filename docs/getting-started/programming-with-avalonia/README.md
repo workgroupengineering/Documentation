@@ -31,14 +31,15 @@ The following images show the user interface that is defined by the XAML in the 
 
 ## Code-behind
 
-The main behavior of an application is to implement the functionality that responds to user interactions, including handling events \(for example, clicking a menu, tool bar, or button\) and calling business logic and data access logic in response. 
+The main behavior of an application is to implement the functionality that responds to user interactions, including handling events \(for example, clicking a menu, tool bar, or button\) and calling business logic and data access logic in response.
 
-In Avalonia, this behavior can be implemented in code that is associated with markup. This type of code is known as [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind). 
+In Avalonia, this behavior can be implemented in code that is associated with markup. This type of code is known as [code-behind](https://docs.avaloniaui.net/guides/basics/code-behind).
 
 The following example shows the updated markup from the previous example and the code-behind \(note that there are 2 tabs\):
 
 {% tabs %}
 {% tab title="XAML" %}
+
 ```markup
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -51,9 +52,11 @@ The following example shows the updated markup from the previous example and the
 
 </Window>
 ```
+
 {% endtab %}
 
 {% tab title="C\#" %}
+
 ```csharp
 using Avalonia;
 using Avalonia.Controls;
@@ -79,11 +82,11 @@ namespace AvaloniaApplication1
     }
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
 In this example, the code-behind implements a class that derives from the [`Window`](https://docs.avaloniaui.net/docs/getting-started/windows) class. The `x:Class` attribute is used to associate the markup with the code-behind class. `InitializeComponent` is called from the code-behind class's constructor to merge the UI that is defined in markup with the code-behind class.  
 You could notice `MainWindow` class is declared as `partial` and there is no `InitializeComponent` implementation visible. That's because `InitializeComponent` body was auto-generated at the partial class counterpart by the [Avalonia.NameGenerator](https://github.com/AvaloniaUI/Avalonia.NameGenerator) package which is included with Avalonia templates by default.
 
-The combination of `x:Class` and `InitializeComponent` ensure that your implementation is correctly initialised whenever it is created. The code-behind class also implements an event handler for the button's `Click` event. When the button is clicked, the event handler changes the text of the button by setting a property on the `Button` control.
-
+The combination of `x:Class` and `InitializeComponent` ensure that your implementation is correctly initialized whenever it is created. The code-behind class also implements an event handler for the button's `Click` event. When the button is clicked, the event handler changes the text of the button by setting a property on the `Button` control.

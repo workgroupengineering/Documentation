@@ -2,12 +2,11 @@
 
 ## Overview
 
-Flyouts are light dismissable containers that show arbitrary UI content. Flyouts are not controls and can be declared as a resource and shared between multiple elements within your app.
-
+Flyouts are light dismissible containers that show arbitrary UI content. Flyouts are not controls and can be declared as a resource and shared between multiple elements within your app.
 
 ## FlyoutBase
 
-`FlyoutBase` is the base class for all flyout implementations. 
+`FlyoutBase` is the base class for all flyout implementations.
 
 ## Common Properties for all Flyouts
 
@@ -38,17 +37,15 @@ Flyouts are light dismissable containers that show arbitrary UI content. Flyouts
 
 [FlyoutPlacementMode.cs (enum)](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/FlyoutPlacementMode.cs)
 
-
 ## Flyout Types
 
-There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `Flyout` has no special logic and is just a simple container for any arbitrary UI content. 
+There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `Flyout` has no special logic and is just a simple container for any arbitrary UI content.
 
 ![Basic Flyout](<../../.gitbook/assets/flyoutpreview.png>)
 
 `MenuFlyout`, as the name implies, creates a Menu.
 
 ![Basic MenuFlyout](<../../.gitbook/assets/menuflyoutpreview.png>)
-
 
 ## Reference
 
@@ -61,7 +58,6 @@ There are two built-in types of Flyouts: `Flyout` and `MenuFlyout`. A regular `F
 [Flyout.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/Flyout.cs)
 
 [MenuFlyout.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/Flyouts/MenuFlyout.cs)
-
 
 ## Creating Flyouts
 
@@ -78,6 +74,7 @@ In order to be shown Flyouts have to be attached to a specific control, though t
 ```
 
 ### Attached Flyouts
+
 For other controls that don't have built-in support for flyouts, one can be assigned using attached flyouts
 
 ```markup
@@ -100,10 +97,10 @@ public void Border_PointerPressed(object sender, RoutedEventArgs args)
 ```
 
 ### Context Flyouts
+
 Controls can also utilize Context Flyouts, which is an alternative/replacement to `ContextMenu`s that provides a sharable, richer UI experience than simple context menus. NOTE: A control cannot have both a `ContextFlyout` and `ContextMenu` at the same time.
 
 ContextFlyouts are invoked automatically like normal `ContextMenu`s. Although custom behaviors and logic an be implemented by invoking it manually (like any other flyout: `ContextFlyout.ShowAt(Control)`) or responding to the `ContextRequested` event
-
 
 ## Sharing Flyouts
 
@@ -120,7 +117,6 @@ As previously mentioned, Flyouts can be shared between various elements within y
 
 <Button Content="Now click me!" Flyout="{StaticResource MySharedFlyout}" />
 ```
-
 
 ## Styling Flyouts
 
@@ -164,4 +160,3 @@ public class MyImageFlyout : FlyoutBase
     }
 }
 ```
-
