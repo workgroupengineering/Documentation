@@ -72,7 +72,7 @@ You can apply a format string to the binding to influence how the value is repre
 <!-- Option 3: If the string format does not start with {0}, you don't need to escape the string format. -->
 <!-- Note: If you have a whitespace in your string format, surround it with single quotes '' -->
 <TextBlock Text="{Binding Animals.Count, StringFormat='I have {0} animals.'}" />
-<!-- Note: If you need to escape the curly brace in case your format string starts with the value like so: -->
+<!-- Note: You need to escape the curly braces in case your format string starts with the value you are binding, like so: -->
 <TextBlock Text="{Binding Animals.Count, StringFormat='{}{0} animals live in the farm.'}" />
 ```
 
