@@ -182,7 +182,7 @@ Matches any control which has the specified property set to the specified value.
 {% endhint %}
 
 {% hint style="info" %}
-**Note:** When using in selectors in XAML, properties must support [`TypeConverter`](https://learn.microsoft.com/zh-cn/dotnet/api/system.componentmodel.typeconverter)
+**Note:** When using in selectors in XAML, properties must support [`TypeConverter`](https://learn.microsoft.com/dotnet/api/system.componentmodel.typeconverter)
 {% endhint %}
 
 ## Template <a id="template"></a>
