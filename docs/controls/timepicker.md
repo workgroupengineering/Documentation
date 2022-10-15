@@ -9,14 +9,13 @@ This example shows how to create a simple time picker with a header in XAML or i
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<TimePicker Header="Arrival time"/>
+<TimePicker/>
 ```
 {% endtab %}
 
 {% tab title="CS" %}
 ```csharp
 TimePicker arrivalTimePicker = new TimePicker();
-arrivalTimePicker.Header = "Arrival time";
 ```
 {% endtab %}
 {% endtabs %}

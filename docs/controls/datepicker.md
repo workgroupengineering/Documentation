@@ -7,16 +7,13 @@ The `DatePicker` control allows the user to pick a date value.
 {% tabs %}
 {% tab title="XAML" %}
 ```markup
-<DatePicker Header="Date of birth"/>
+<DatePicker/>
 ```
 {% endtab %}
 
 {% tab title="CS" %}
 ```csharp
-DatePicker birthDatePicker = new DatePicker()
-{
-    Header = "Date of birth"
-};
+DatePicker birthDatePicker = new DatePicker();
 ```
 {% endtab %}
 {% endtabs %}
