@@ -33,6 +33,6 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
    <!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
    <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 
-   <!-- Instead this syntax must be used in this case-->
+   <!-- Instead this syntax must be used in this case. -->
    <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"/>
    ```
