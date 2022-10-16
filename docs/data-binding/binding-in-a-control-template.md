@@ -30,7 +30,7 @@ Although the two syntaxes shown here are equivalent in most cases, there are som
  3. `TemplateBinding` can only be used on `IStyledElement`.
 
    ```markup
-   <!-- This WON'T work as GeometryDrawing is not IStyledElement -->
+   <!-- This WON'T work as GeometryDrawing is not a IStyledElement. -->
    <GeometryDrawing Brush="{TemplateBinding Foreground}"/>
 
    <!-- Instead this syntax must be used in this case-->
