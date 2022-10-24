@@ -67,7 +67,7 @@ You can apply a format string to the binding to influence how the value is repre
 <TextBlock Text="{Binding FloatValue, StringFormat={}{0:0.0}}" />
 
 <!-- Option 2: Use backslash \{ to escape string format -->
-<TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}" />
+<TextBlock Text="{Binding FloatValue, StringFormat=\{0:0.0\}}" />
 
 <!-- Option 3: If the string format does not start with {0}, you don't need to escape the string format. -->
 <!-- Note: If you have a whitespace in your string format, surround it with single quotes '' -->
