@@ -42,7 +42,7 @@ The template should create a XAML file with the following contents in the `Views
 </UserControl>
 ```
 
-Alongside the XAML, you will also find a `TodoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the XAML file so click the expander next to the XAML file in Solution Explorer to see it):\
+Alongside the XAML, you will also find a `TodoListView.axaml.cs` file containing the code-behind for the view (in Visual Studio this is nested under the XAML file so click the expander next to the XAML file in Solution Explorer to see it):
 
 
 ```csharp
