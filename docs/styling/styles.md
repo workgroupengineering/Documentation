@@ -65,6 +65,11 @@ As in CSS, controls can be given _style classes_ which can be used in selectors.
 <Button Classes="h1 blue"/>
 ```
 
+If you need to add or remove class by condition, you can use following special syntax:
+```markup
+<Button Classes.accent="{Binding IsSpecial}" />
+```
+
 Style classes can also be manipulated in code using the `Classes` collection:
 
 ```csharp
