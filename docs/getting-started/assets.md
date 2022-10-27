@@ -38,6 +38,8 @@ If the asset is located in a different assembly to the XAML file then use the `a
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
+Avalonia can provide converters which can load assets for bitmaps, icons and fonts out of the box. So assets Uri can be automatically converted to any of following types: [IImage](http://reference.avaloniaui.net/api/Avalonia.Media/IImage), [IBitmap](http://reference.avaloniaui.net/api/Avalonia.Media.Imaging/IBitmap), [WindowIcon](http://reference.avaloniaui.net/api/Avalonia.Controls/WindowIcon) and [FontFamily](http://reference.avaloniaui.net/api/Avalonia.Media/FontFamily)
+
 ### Referencing manifest resources <a id="referencing-manifest-resources"></a>
 
 Assets can also be included in .NET applications by using the `<EmbeddedResource>` MSBuild item which causes the file to be included in the assembly as a [manifest resource](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.assembly.getmanifestresourcenames).
@@ -65,3 +67,4 @@ var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
 var bitmap = new Bitmap(assets.Open(new Uri(uri)));
 ```
 
+The `uri` variable in the snippet can hold either any valid URI which was described above, so `avres:`, `resm:` and URI less values are supported. By default Avalonia does not support nor `file://` nor `http://` and `https://` schemes, so if you want load files from disk or over HTTP, you have to do that yourself, or use community alternatives like https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia.
