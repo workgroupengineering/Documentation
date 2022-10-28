@@ -1,6 +1,19 @@
 # 🧰 Controls
 
+Avalonia provides following groups of controls:
+
+- [Layout controls](#layout)
+- [Buttons](#buttons)
+- [Data display controls](#data-display)
+- [Text display and editing](#text)
+- [Value selection](#value-selectors)
+- [Displaying images](#images)
+- [Date and time controls](#date-and-time)
+- [Menus](#menus)
+
 ## Layout
+
+Layout controls provide ability for developer to arrange child controls according to specific rules.
 
 ### [Border](border.md)
 
@@ -95,6 +108,8 @@ Functions as a toggle button with primary and secondary parts that can each be p
 
 ## Data Display
 
+These controls helps display data, either in tabular or list form.
+
 ### [DataGrid](datagrid/)
 
 Displays data in a customizable grid.
@@ -112,6 +127,8 @@ Represents a data-driven collection control that incorporates a flexible layout 
 An items control in which individual items can be selected.
 
 ## Text
+
+Controls for displaying and editing text
 
 ### [AutoCompleteBox](autocompletebox.md)
 
@@ -145,6 +162,8 @@ A control that lets the user select from a range of values by moving a thumb con
 
 ## Images
 
+These controls display bitmap or vector images.
+
 ### DrawingImage
 
 Displays a vector image.
@@ -154,6 +173,8 @@ Displays a vector image.
 Displays a bitmap image.
 
 ## Date and Time
+
+Set of controls which gives you ability display display and select dates, point of time, or display calendar..
 
 ### [Calendar](calendar.md)
 
