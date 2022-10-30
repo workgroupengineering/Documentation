@@ -57,7 +57,7 @@ public class MainWindowViewModel : ViewModelBase
 
 Pressing the `Debug Button` again to run the program we can see we have a button and when clicked setting a breakpoint inside the `BuyMusicCommand` code we can see that the code is executed when it's hit.
 
-![buy-button](https://avaloniaui.net/docs/advanced-tutorial/images/buy-button.png)
+![buy-button](images/buy-button.png)
 
 Let's position the button to the top right of the screen and make it look a bit nicer.
 
@@ -89,7 +89,7 @@ Let's create a file just for Icons.
 
 In Rider right click on the project and select `Add` → `Avalonia Styles`
 
-![add-styles](https://avaloniaui.net/docs/advanced-tutorial/images/add-styles.png)
+![add-styles](images/add-styles.png)
 
 Enter the name `Icons` when prompted and press `Enter`.
 
@@ -149,5 +149,5 @@ Return to `MainWindow.axaml`, we can add the Icon to the Button like so...
 
 Running the application we now have a nice button.
 
-![pretty-button](https://avaloniaui.net/docs/advanced-tutorial/images/pretty-button.png)
+![pretty-button](images/pretty-button.png)
 
