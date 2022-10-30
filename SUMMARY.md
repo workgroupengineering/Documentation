@@ -109,6 +109,7 @@
 * [🖱 Input](docs/input/README.md)
   * [Routed Events](docs/input/routed-events.md)
   * [Clipboard](docs/input/clipboard.md)
+  * [Mouse&Pointer devices](docs/input/pointer.md)
   * [Hotkeys](docs/input/hotkeys.md)
 * [🔑 Animations](docs/animations/README.md)
   * [Keyframe Animations](docs/animations/keyframe-animations.md)
