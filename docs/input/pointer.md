@@ -1,6 +1,6 @@
 # Mouse & Pointer devices
 
-Avalonia operates on the abstraction called pointer devices. These devices including, but not limited to mouse, joystic, touchpad etc. Each control in Avalonia provides following events which allow developer subscribe to the pointer device movements, clicks and wheel movements: 
+Avalonia operates on the abstraction called pointer devices. These devices including, but not limited to mouse, joystick, touchpad etc. Each control in Avalonia provides following events which allow developer subscribe to the pointer device movements, clicks and wheel movements: 
 - PointerEnter
 - PointerLeave
 - PointerMoved
