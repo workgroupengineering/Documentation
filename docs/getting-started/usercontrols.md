@@ -22,7 +22,7 @@ You can create `UserControl`s from templates:
 Run this command replacing `[namespace]` with the namespace you'd like to create the `UserControl` in and `[name]` with the name of the control.
 
 ```bash
-dotnet new avalonia.usercontrol -na [namespace] -n [name]
+dotnet new avalonia.usercontrol -p:n [namespace] -n [name]
 ```
 
 For more information see [the .NET core templates repository](https://github.com/AvaloniaUI/avalonia-dotnet-templates/).
