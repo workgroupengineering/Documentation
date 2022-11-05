@@ -1,6 +1,6 @@
 # Assets
 
-Many applications need to include assets such as bitmaps and [resource dictionaries](../styling/resources.md) in their executable and refer to these assets from XAML.
+Many applications need to include assets such as bitmaps and [resource dictionaries](../styling/resources.md) within their executable and refer to these assets from XAML.
 
 ### Including assets <a id="including-assets"></a>
 
@@ -32,13 +32,13 @@ Or their rooted path:
 <Image Source="/Assets/icon.png"/>
 ```
 
-If the asset is located in a different assembly to the XAML file then use the `avares:` URL scheme. For example if the asset is contained in an assembly called `MyAssembly.dll` then you would use:
+If the asset is located in a different assembly from the XAML file, then use the `avares:` URI scheme. For example, if the asset is contained in an assembly called `MyAssembly.dll`, then you would use:
 
 ```markup
 <Image Source="avares://MyAssembly/Assets/icon.png"/>
 ```
 
-Avalonia can provide converters which can load assets for bitmaps, icons and fonts out of the box. So assets Uri can be automatically converted to any of following types: [IImage](http://reference.avaloniaui.net/api/Avalonia.Media/IImage), [IBitmap](http://reference.avaloniaui.net/api/Avalonia.Media.Imaging/IBitmap), [WindowIcon](http://reference.avaloniaui.net/api/Avalonia.Controls/WindowIcon) and [FontFamily](http://reference.avaloniaui.net/api/Avalonia.Media/FontFamily)
+Avalonia provides converters which can load assets for bitmaps, icons and fonts out of the box. So an assets Uri can be automatically converted to any of following types: [IImage](http://reference.avaloniaui.net/api/Avalonia.Media/IImage), [IBitmap](http://reference.avaloniaui.net/api/Avalonia.Media.Imaging/IBitmap), [WindowIcon](http://reference.avaloniaui.net/api/Avalonia.Controls/WindowIcon) and [FontFamily](http://reference.avaloniaui.net/api/Avalonia.Media/FontFamily)
 
 ### Referencing manifest resources <a id="referencing-manifest-resources"></a>
 
@@ -67,4 +67,4 @@ var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
 var bitmap = new Bitmap(assets.Open(new Uri(uri)));
 ```
 
-The `uri` variable in the snippet can hold either any valid URI which was described above, so `avres:`, `resm:` and URI less values are supported. By default Avalonia does not support nor `file://` nor `http://` and `https://` schemes, so if you want load files from disk or over HTTP, you have to do that yourself, or use community alternatives like https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia.
+The `uri` variable in the snippet can contain any valid URI, including `avares:` and `resm:` as described above. By default, Avalonia does not provide support for `file://`, `http://`, or `https://` schemes. If you want to load files from disk or web, you can implement that functionality yourself or use community implementations like https://github.com/AvaloniaUtils/AsyncImageLoader.Avalonia.
