@@ -20,15 +20,15 @@ private static void HandleMyEvent(object sender, RoutedEventArgs e)
 ```csharp
 static MyControl()
 {
-    MyEvent.AddClassHandler<MyControl>(x => x.HandleMyEvent);
+    MyEvent.AddClassHandler<MyControl>((x, e) => x.HandleMyEvent(e));
 }
 
-private void HandleMyEvent(object sender, RoutedEventArgs e)
+private void HandleMyEvent(RoutedEventArgs e)
 {
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-Notice that in WPF you have to add the class handler as a static method, whereas in Avalonia the class handler is not static: the notification is automatically directed to the correct instance.
+Notice that in WPF you have to add the class handler as a static method, whereas in Avalonia the class handler is not static: the notification is automatically directed to the correct instance. The `sender` parameter typical of event handlers is not necessary in this case and everything remains strongly typed.
 
