@@ -64,7 +64,7 @@ public string? EMail
 Exceptions inside the getter of your property are not allowed and will result in a crash of your application.
 {% endhint %}
 
-## Customize the appereance of the validation message
+## Customize the appearance of the validation message
 
 To display the validation messages, Avalonia has a control called [`DataValidationErrors`](http://reference.avaloniaui.net/api/Avalonia.Controls/DataValidationErrors/). This control is typically placed inside the `ControlTemplate` of all `Controls` that supports data validation, like `TextBox`, `Slider` and other. You can create your own `Style` of the `DataValidationErrors`-control in order to customize the representation of the error messages. 
 
