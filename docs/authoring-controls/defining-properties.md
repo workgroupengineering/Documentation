@@ -132,7 +132,7 @@ They don't support the following:
 * Overriding default values.
 * Inherited values
 
-## Using a DirectProperty on Another Class <a id="using-a-directproperty-on-another-class"></a>
+### Using a DirectProperty on Another Class <a id="using-a-directproperty-on-another-class"></a>
 
 In the same way that you can call `AddOwner` on a styled property, you can also add an owner to a direct property. Because direct properties reference fields on the control, you must also add a field for the property:
 
@@ -160,6 +160,7 @@ Pros:
 * No additional object is allocated per-instance for the property
 * Property getter is a standard C\# property getter
 * Property setter is a standard C\# property setter that raises an event.
+* You can add [data validation](../data-binding/data-validation.md) support
 
 Cons:
 
@@ -172,3 +173,29 @@ So use direct properties when you have the following requirements:
 * Property will not need to be styled
 * Property will usually or always have a value
 
+### DataValidation support
+
+If you want to allow a property to validate the data and show validation error messages, the property must be implemented as a `DirectProperty` and validation support must be enabled (`enableDataValidation: true`).  
+
+**Example of a property with DataValidation enabled**
+```cs
+public static readonly DirectProperty<MyControl, int> ValueProperty =
+    AvaloniaProperty.RegisterDirect<MyControl, int>(
+        nameof(Value),
+        o => o.Value,
+        (o, v) => o.Value = v, 
+        enableDataValidation: true);
+```
+
+If you want to [re-use a direct property of another class](#using-a-directproperty-on-another-class) you can also enable data validation. In this case use `AddOwnerWithDataValidation`. 
+
+**Example: TextBox.TextProperty property re-uses TextBlock.TextProperty but adds validation support**
+
+```cs
+public static readonly DirectProperty<TextBox, string?> TextProperty =
+    TextBlock.TextProperty.AddOwnerWithDataValidation<TextBox>(
+        o => o.Text,
+        (o, v) => o.Text = v,
+        defaultBindingMode: BindingMode.TwoWay,
+        enableDataValidation: true);
+```
