@@ -202,7 +202,7 @@
   * [Add Data Persistence](tutorials/music-store-app/add-data-persistence.md)
   * [Load data at Startup](tutorials/music-store-app/load-data-at-startup.md)
   * [Summary](tutorials/music-store-app/summary.md)
-* [Running in the Browser](tutorials/running-in-the-browser.md)
+* [🕸️ Running in the Browser](tutorials/running-in-the-browser.md)
 * [📱 Developing for Mobile](tutorials/developing-for-mobile/README.md)
   * [Create a cross platform solution](tutorials/developing-for-mobile/create-a-cross-platform-solution.md)
   * [Android](tutorials/developing-for-mobile/android/README.md)
