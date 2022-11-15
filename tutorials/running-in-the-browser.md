@@ -14,7 +14,7 @@ dotnet workload install wasm-experimental wasm-tools
 2. Install or update the dotnet templates to the latest version.
 
 ```bash
-dotnet new -i avalonia.templates
+dotnet new install avalonia.templates
 ```
 
 3. Create a new directory for the project.
