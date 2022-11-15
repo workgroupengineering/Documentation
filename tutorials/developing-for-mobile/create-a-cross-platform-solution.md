@@ -9,7 +9,7 @@ Make sure you use latest .NET 6 SDK. iOS especially requires developers to use 6
 Install the Avalonia dotnet templates. Version `0.10.13` and above adds support for mobile.
 
 ```bash
-dotnet new -i avalonia.templates
+dotnet new install avalonia.templates
 ```
 
 
