@@ -2,7 +2,7 @@
 
 
 
-1. Download and install .NET 5 SDK [Download .NET \(Linux, macOS, and Windows\) \(microsoft.com\)](https://dotnet.microsoft.com/download)
+1. Download and install the .NET SDK of your choice [Download .NET \(Linux, macOS, and Windows\) \(microsoft.com\)](https://dotnet.microsoft.com/download)
 
    This is the runtime, development kit \(compiler, etc\) that is used to build Avalonia applications.
 
