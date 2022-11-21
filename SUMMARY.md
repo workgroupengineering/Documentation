@@ -32,6 +32,7 @@
   * [Binding in a Control Template](docs/data-binding/binding-in-a-control-template.md)
   * [Binding Classes](docs/data-binding/binding-classes.md)
   * [Creating and binding Attached Properties](docs/data-binding/creating-and-binding-attached-properties.md)
+  * [Data Validation](docs/data-binding/data-validation.md)
 * [🎨 Styling](docs/styling/README.md)
   * [Styles](docs/styling/styles.md)
   * [Selectors](docs/styling/selectors.md)
