@@ -2,7 +2,7 @@
 
 ### Prerequisites&#x20;
 
-On a Mac you will need to have the latest version of acOS and Xcode installed.
+On a Mac you will need to have the latest version of macOS and Xcode installed.
 
 ### Install the SDK
 
