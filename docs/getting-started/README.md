@@ -3,7 +3,7 @@
 To start hacking with Avalonia, install templates for it
 
 ```bash
-dotnet new install Avalonia.Templates
+dotnet new --install Avalonia.Templates
 ```
 
 Then create new application
