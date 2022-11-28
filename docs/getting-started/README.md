@@ -3,8 +3,10 @@
 To start hacking with Avalonia, install templates for it
 
 ```bash
-dotnet new --install Avalonia.Templates
+dotnet new install Avalonia.Templates
 ```
+
+> For .NET 6.0 and earlier `--install` option should be used instead.
 
 Then create new application
 
