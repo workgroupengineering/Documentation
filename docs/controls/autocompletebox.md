@@ -8,5 +8,5 @@ Represents a control that provides a text box for user input and a drop-down tha
 
 ### Source Code
 
-[AutoCompleteBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox.cs)
+[AutoCompleteBox.cs](https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Controls/AutoCompleteBox/AutoCompleteBox.cs)
 
