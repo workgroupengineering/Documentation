@@ -9,7 +9,7 @@
 2. Install Avalonia Templates
 
    Run the command `dotnet new install Avalonia.Templates` from the command prompt on your machine.
-   Or `dotnet new -i Avalonia.Templates` for older SDK versions.
+   Or `dotnet new -i Avalonia.Templates` for SDK versions before .NET 7.
 
    The output will look similar to this.
 
