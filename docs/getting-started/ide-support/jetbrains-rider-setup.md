@@ -8,12 +8,13 @@
 
 2. Install Avalonia Templates
 
-   Run the command `dotnet new -i Avalonia.Templates` from the command prompt on your machine.
+   Run the command `dotnet new install Avalonia.Templates` from the command prompt on your machine.
+   Or `dotnet new -i Avalonia.Templates` for older SDK versions.
 
    The output will look similar to this.
 
    ```bash
-   $ dotnet new -i Avalonia.Templates
+   $ dotnet new install Avalonia.Templates
      Determining projects to restore...
      Restored /Users/danwalmsley/.templateengine/dotnetcli/v5.0.200/scratch/restore.csproj (in 706 ms).
 
