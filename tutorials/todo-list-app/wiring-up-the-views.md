@@ -15,7 +15,7 @@ Views/MainWindow.axaml
         Icon="/Assets/avalonia-logo.ico"
         Width="200" Height="300"
         Title="Avalonia Todo"
-        Content="{Binding List}"
+        Content="{Binding List}">
 </Window>
 ```
 
