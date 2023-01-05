@@ -1,42 +1,35 @@
-# 👋 Welcome
+# 🎉 Introduction to Avalonia
 
-Welcome to **Avalonia Docs**! 
+Welcome to the documentation for Avalonia, a cross-platform .NET framework for building beautiful, modern graphical user interfaces (GUIs). With Avalonia, you can create native applications for Windows, macOS, Linux, iOS, Android, and WebAssembly, all from a single codebase.
 
-Learn how to create .NET GUI applications for Windows, macOS, Linux, iOS, Android and Web Assembly from a single codebase. 
+## 💻 Supported .NET Versions
 
-## Supported .NET Version
+Avalonia is compatible with all platforms that support .NET Standard 2.0. You can find more information on .NET Standard versions [here](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#select-net-standard-version).
 
-Avalonia is supported on [all platforms that support .NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#select-net-standard-version)
+## 📱 Supported Platforms
 
-## Supported Platforms
+Avalonia has official support for the following platforms:
 
-Avalonia is supported on the following platforms:
+- Windows 8 and higher (although it does work on Windows 7 as well)
+- macOS High Sierra 10.13 and higher
 
-* Windows 8 and higher
-  * **Note**: Avalonia works correctly on Windows 7 also, but not supported _officially_
-* macOS High Sierra 10.13 and higher
-* for Linux:
-  * Debian 9 (Stretch) and higher
-  * Ubuntu 16.04 and higher
-  * Fedora 30 and higher
+On Linux, Avalonia is supported on the following distributions:
 
-## Supported Development Environments
+- Debian 9 (Stretch) and higher
+- Ubuntu 16.04 and higher
+- Fedora 30 and higher
 
-The following environments support Avalonia XAML with IntelliSense:
+## 🛠 Supported Development Environments
 
-* Visual Studio 2017 and higher (with or without Resharper 2020.3). Avalonia Visual Designer is also supported.
-* JetBrains Rider 2020.3 and higher.
+Avalonia has excellent support for XAML development with IntelliSense in the following environments:
 
-[Installing Avalonia Extension for Visual Studio](docs/getting-started/ide-support/)
+- Visual Studio 2017 and higher, including the Avalonia Visual Designer
+- JetBrains Rider 2020.3 and higher
 
-[JetBrains Rider Setup](docs/getting-started/ide-support/jetbrains-rider-setup.md)
+You can find instructions on how to install the Avalonia extension for Visual Studio [here](docs/getting-started/ide-support/). For JetBrains Rider setup, see [these instructions](docs/getting-started/ide-support/jetbrains-rider-setup.md).
 
-## How to get help
+## 🙋‍♂️ Getting Help
 
-### Community Support 
-If you've found a bug or issue in the framework, you should create an issue on [GitHub](https://github.com/AvaloniaUI/Avalonia). 
+If you encounter any issues or bugs with Avalonia, please open a new issue on [GitHub](https://github.com/AvaloniaUI/Avalonia). Our active developer community on [Telegram](https://t.me/Avalonia) is also a great resource for help with your projects.
 
-If you're looking for help with your app, try engaging our active developer community on [Telegram](https://t.me/Avalonia). 
-
-### Commercial Support
-We have a range of commercial support plans that provide priority assistance from the core contributors. You can learn more from [our website](https://avaloniaui.net/Support). 
+In addition to community support, we offer a range of commercial support plans that provide priority assistance from the core contributors. You can learn more about these plans on [our website](https://avaloniaui.net/Support).
