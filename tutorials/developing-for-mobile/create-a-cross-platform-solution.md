@@ -41,7 +41,6 @@ This will create a project with the following structure:
 * HelloWorld.iOS (Avalonia bootstrap code for iOS)
 * HelloWorld.Web (Avalonia bootstrap code for Web)
 * nuget.config (gives access to nightly builds of Avalonia)
-* global.json (forces use of latest sdk)
 * Directory.Build.props (sets the Avalonia version your application will target)
 * HelloWorld.sln (the solution file if you use an IDE)
 
