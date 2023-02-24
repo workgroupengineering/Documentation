@@ -30,6 +30,10 @@ Will bind the `Button`'s `Content` to `Window.DataContext.ButtonCaption`.
 
 ## Binding DataContext <a id="binding-datacontext"></a>
 
+{% hint style="info" %} 
+**Info:** In the samples below we consider that we have a `ViewModel` that has a property named `Content`. `Content` itself is a class that has a property called `Header`. 
+{% endhint %}
+
 When binding `DataContext`, the `DataContext` of the parent control is used as the source of the binding:
 
 ```markup
@@ -43,7 +47,7 @@ Controls that display content based on a [data template](https://docs.avaloniaui
 
 ```markup
 <Window>
-    <ContentControl DataContext="{Binding Content}">
+    <ContentControl Content="{Binding Content}">
         <ContentControl.ContentTemplate>
             <DataTemplate>
                 <!-- Will bind `Text` to `Window.DataContext.Content.Header -->
