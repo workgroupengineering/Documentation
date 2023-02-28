@@ -64,13 +64,17 @@ public class DoubleTappedBehav : AvaloniaObject
         }
 
         // local handler fcn
-        void Handler(object s, RoutedEventArgs e)
+        static void Handler(object s, RoutedEventArgs e)
         {
-            // This is how we get the parameter off of the gui element.
-            object commandParameter = interactElem.GetValue(CommandParameterProperty);
-            if (commandValue?.CanExecute(commandParameter) == true)
+            if (s is Interactive interactElem)
             {
-                commandValue.Execute(commandParameter);
+                // This is how we get the parameter off of the gui element.
+                object commandParameter = interactElem.GetValue(CommandParameterProperty);
+                ICommand commandValue = interactElem.GetValue(CommandProperty);
+                if (commandValue?.CanExecute(commandParameter) == true)
+                {
+                    commandValue.Execute(commandParameter);
+                }
             }
         }
     }
