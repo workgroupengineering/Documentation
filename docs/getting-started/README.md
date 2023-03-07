@@ -10,7 +10,7 @@ To install the Avalonia templates, run the following command:
 dotnet new install Avalonia.Templates
 ```
 
-> Note: For .NET 6.0 and earlier, use the `--install` option instead.
+> Note: For .NET 6.0 and earlier, replace `install` with `--install` instead.
 
 ## Creating a New Application
 
