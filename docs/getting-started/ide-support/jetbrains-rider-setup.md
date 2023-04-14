@@ -48,11 +48,7 @@ A new Preferences Screen will open up. Click the `Settings` icon as shown and se
 
 ![configure-plugin-repos](<../../../.gitbook/assets/jetbrains-rider-setup-2-configure-plugin-repos.png>)
 
-Click the `+` icon and enter the URL `https://plugins.jetbrains.com/plugins/dev/14839` then click `OK`:
-
-![enter-plugin-repo](<../../../.gitbook/assets/jetbrains-rider-setup-3-enter-plugin-repo.png>)
-
-Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; once that's done, click the `Restart IDE` button that appears.
+Now click on the `Marketplace` tab and search for `Avalonia`. Select `AvaloniaRider` and click `Install`; accept the warning about Third-Party Plugins; once that's done, click the `Restart IDE` button that appears.
 
 ![plugin-install](<../../../.gitbook/assets/jetbrains-rider-setup-4-plugin-install.png>)
 
