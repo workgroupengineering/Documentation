@@ -6,7 +6,7 @@ On a Mac you will need to have the latest version of macOS and Xcode installed.
 
 ### Install the SDK
 
-First it is very important to install the correct [dotnet SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0). At the time of writing, the lowest sdk version that works is 6.0.200.
+First it is very important to install the correct [dotnet SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0). At the time of writing, the lowest sdk version that works is 7.0.102.
 
 ### Install the Workload
 
