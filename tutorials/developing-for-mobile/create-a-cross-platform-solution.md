@@ -4,12 +4,12 @@ description: Create a solution compatible with Desktop, Mobile and Web
 
 # Create a cross platform solution
 
-Make sure you use latest .NET 6 SDK. iOS especially requires developers to use 6.0.202 SDK or newer.
+Make sure you use latest .NET 7 SDK. iOS especially requires developers to use 7.0.102 SDK or newer.
 
-Install the Avalonia dotnet templates. Version `0.10.13` and above adds support for mobile.
+Install the Avalonia dotnet templates.
 
 ```bash
-dotnet new --install avalonia.templates
+dotnet new install avalonia.templates
 ```
 
 
@@ -39,7 +39,7 @@ This will create a project with the following structure:
 * HelloWorld.Android (Avalonia bootstrap code for Android)
 * HelloWorld.Desktop (Avalonia bootstrap code for Desktop - Windows, macOS and Linux)
 * HelloWorld.iOS (Avalonia bootstrap code for iOS)
-* HelloWorld.Web (Avalonia bootstrap code for Web)
+* HelloWorld.Browser (Avalonia bootstrap code for running in Browsers using WASM)
 * Directory.Build.props (sets the Avalonia version your application will target)
 * HelloWorld.sln (the solution file if you use an IDE)
 
