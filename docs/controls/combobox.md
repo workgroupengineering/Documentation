@@ -1,5 +1,5 @@
 ---
-description: A drop-down list control.
+description: A drop-down single-select list control.
 ---
 
 # ComboBox
@@ -10,9 +10,7 @@ description: A drop-down list control.
 | :--- | :--- |
 | `SelectedIndex` | Gets or sets the index of the selected item. |
 | `SelectedItem` | Gets or sets the selected item. |
-| `SelectedItems` | Gets the selected items. |
 | `AutoScrollToSelectedItem` | Gets or sets a value indicating whether to automatically scroll to newly selected items. |
-| `SelectionMode` | Gets or sets the selection mode. |
 | `IsDropDownOpen` | Gets or sets a value indicating whether the dropdown is currently open. |
 | `MaxDropDownHeight` | Gets or sets the maximum height for the dropdown list. |
 
