@@ -30,7 +30,7 @@ A multi-platform data driven 2D diagram editor. ([video](https://www.youtube.com
 
 Cross platform, privacy focused Bitcoin wallet.
 
-![image](https://i.imgur.com/qur36pu.png)
+![image](https://i.imgur.com/MAvhzHJ.png)
 
 ## [AvaloniaILSpy](https://github.com/icsharpcode/AvaloniaILSpy)
 
