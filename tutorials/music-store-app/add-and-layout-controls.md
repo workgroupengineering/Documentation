@@ -66,12 +66,12 @@ Place the `<Button>` element inside a simple `<Panel>` element.
 The simplest way to control the layout of a control is with the `HorizontalAlignment`and `VerticalAlignment` properties.
 
 ```markup
-<Panel Margin="40">
-  <Button Content="Buy Music" Command="{Binding BuyMusicCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" />
+<Panel>
+  <Button Content="Buy Music" Margin="40" Command="{Binding BuyMusicCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" />
 </Panel>
 ```
 
-We also add a `Margin` of 40 to the `Panel` so that the button is not right at the edge of the Window.
+We also add a `Margin` of 40 to the `Button` so that the button is not right at the edge of the Window.
 
 You may prefer to have an icon or image instead of text inside your button. The are a few ways to do this, let's grab a store icon from [Avalonia - Fluent Icons](https://avaloniaui.github.io/icons.html)
 
