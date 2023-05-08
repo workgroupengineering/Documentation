@@ -111,7 +111,7 @@ namespace Avalonia.MusicStore.ViewModels
 
 This still wont do much because some plumbing code is required in the so called "code behind".
 
-Open `MainWindow.xaml.cs` you may need to expand the `MainWindow.axaml` file in to see this file.
+Open `MainWindow.axaml.cs` you may need to expand the `MainWindow.axaml` file in to see this file.
 
 * Make the `MainWindow` class inherit `ReactiveWindow<MainWindowViewModel>` instead of just `Window`.
 
