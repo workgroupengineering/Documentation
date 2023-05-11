@@ -42,7 +42,7 @@ If the selector isn't conditional then the animation will be triggered when a ma
 
 The `KeyFrame` objects defines when the target `Setter` objects should be applied on the target `Control`, with value interpolation in-between.
 
-The `Cue` property of an `KeyFrame` object is based on the `Duration` of the parent animation and can be an absolute time index \(i.e., `"0:0:1"`\) or a percent of the animation's `Duration` \(i.e., `"0%"`, `"100%"`\). However, `Cue`'s value should not exceed the `Duration` specified.
+The `Cue` property of an `KeyFrame` object is based on the `Duration` of the parent animation and is a percent of the animation's `Duration` \(i.e., `"0%"`, `"100%"`\).
 
 All `Animation` objects should contain at least one `KeyFrame`, with a `Setter` that has target property and value.
 
