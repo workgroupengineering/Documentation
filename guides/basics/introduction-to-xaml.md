@@ -61,6 +61,8 @@ xmlns:myAlias3="using:My.NameSpace"
 
 {% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
 
+{% hint style="warning" %} `using`-syntax cannot be used in case of reflection based type resolution like in `ReflectionBinding`. {% endhint %}
+
 **Option 3**: Using a common namespace which can combine multiple namespaces: 
 
 Some libraries have their own common namespace defined, like Avalonia does. Often they use an URL like `https://github.com/avaloniaui`, but it can be any string. Usage: 
