@@ -49,7 +49,7 @@ xmlns:myAlias1="clr-namespace:My.NameSpace"
 xmlns:myAlias2="clr-namespace:My.NameSpace.InOtherAssembly;assembly=TheOtherAssembly"
 ```
 
-{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
+{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use. {% endhint %}
 
 {% hint style="info" %} You can omit the `assembly` part if your namespace is in the same assembly. {% endhint %}
 
@@ -59,7 +59,9 @@ xmlns:myAlias2="clr-namespace:My.NameSpace.InOtherAssembly;assembly=TheOtherAsse
 xmlns:myAlias3="using:My.NameSpace"
 ```
 
-{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use {% endhint %}
+{% hint style="info" %} `My.NameSpace` is the namespace in `C#` you want to use. {% endhint %}
+
+{% hint style="warning" %} The `using`-syntax cannot be used in case of reflection based type resolution like in `ReflectionBinding`. {% endhint %}
 
 **Option 3**: Using a common namespace which can combine multiple namespaces: 
 
