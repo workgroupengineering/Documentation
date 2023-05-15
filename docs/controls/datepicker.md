@@ -56,7 +56,7 @@ myDatePicker.SelectedDate = new DateTimeOffset(new DateTime(1950, 1, 1));
 
 ## Reference <a id="reference"></a>
 
-[DatePicker](http://reference.avaloniaui.net/api/Avalonia.Controls/TextBox/)
+[DatePicker](http://reference.avaloniaui.net/api/Avalonia.Controls/DatePicker/)
 
 ## Source code <a id="source-code"></a>
 
