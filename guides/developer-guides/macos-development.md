@@ -4,6 +4,22 @@ description: Getting started developing for the macOS backend
 
 # macOS Development
 
+## How to build and run your AvaloniaUI app for macOS
+
+It's actually really simple. If you're developing in Windows (which is easier for a Windows developer), once your AvaloniaUI application is looking about right and you're ready to try it on macOS, copy your entire project folder to your Mac (don't worry - all the files will be treated as basic flat files). If you have a github for it, commit it and then check it out on your dev Mac machine.
+
+You'll need Visual Studio for MacOS. 
+
+Open your project's SLN file in Visual Studio for MacOS.
+
+Then run.
+
+That's it. 
+
+VS for Mac will recompile the code and since it's target independent, it will build the native (ie: Mac) version and link all the Mac target DLLs for .Net Core 6.0 and AvaloniaUI.
+
+The following instructions are for more advanced builds such as having a proper Mac app bundle or of you need better intergration with native MacOS.
+
 ## Native code
 
 The native macOS code is located at `native/Avalonia.Native/src/OSX`. Open the `Avalonia.Native.OSX.xcodeproj` project in Xcode.
