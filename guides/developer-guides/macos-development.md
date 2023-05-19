@@ -8,15 +8,24 @@ description: Getting started developing for the macOS backend
 
 It's actually really simple. If you're developing in Windows (which is easier for a Windows developer), once your AvaloniaUI application is looking about right and you're ready to try it on macOS, copy your entire project folder to your Mac (don't worry - all the files will be treated as basic flat files). If you have a github for it, commit it and then check it out on your dev Mac machine.
 
-You'll need Visual Studio for MacOS. 
+You'll need a development platform for macOS such as Visual Studio for MacOS, JetBrains Rider or you can build from the command line if you have the dotnet SDK installed on you Mac.
+See the Getting Started>>IDE Support for more details.
 
-Open your project's SLN file in Visual Studio for MacOS.
+### Visual Studio for Mac or JetBrains Rider
+Open your project's SLN file in your platform of choice
 
-Then run.
+Then build or run.
 
-That's it. 
+### Command Line Build
+Open Terminal and change directories (cd) to your project's folder (where the project's sln file is).
 
-VS for Mac will recompile the code and since it's target independent, it will build the native (ie: Mac) version and link all the Mac target DLLs for .Net Core 6.0 and AvaloniaUI.
+Type "dotnet build" to build your project.
+
+If you have multiple SLNs in the same folder, you will have to specify which one to use by typing "dotnet build myproject.sln" where "myproject" is the name of your SLN.
+
+To run either type "dotnet run --project pathToProject/myproject.csproj" where "pathToProject" is the path to where the csproj file you want to run is, or change directories (cd) to that location and type "dotnet run".
+
+Your build platform will recompile the code and since it's target independent, it will build the native (ie: Mac) version and link all the Mac target DLLs for .Net Core 6.0 and AvaloniaUI.
 
 The following instructions are for more advanced builds such as having a proper Mac app bundle or of you need better intergration with native MacOS.
 
