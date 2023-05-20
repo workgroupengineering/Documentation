@@ -161,9 +161,48 @@ Notice this property is instantiated with `= new ();`. Forget this and it will b
 
 Since we are using `ObservableCollection` when we `bind` the `ListBox`s `Items` property to it, then the `ListBox` control will start listening to events and keep the `Items` inside the `ListBox` in sync with the `ObservableCollection` on the `ViewModel`.
 
-The `ListBox` will see that the `SearchResults` has an item inside it, it will check the type of the item, which will be `AlbumViewModel`. The `ListBox` will then see if it has a `DataTemplate` for that type, which we don't. However it will find at the root of the application in `App.axaml`
+The `ListBox` will see that the `SearchResults` has an item inside it, it will check the type of the item, which will be `AlbumViewModel`. The `ListBox` will then see if it has a `DataTemplate` for that type, which we don't. However it will find at the root of the application in `App.axaml`.
 
-```markup
+In order to do that we will create a special class named `ViewLocator`. Right click on project and `Add`→ `Class/Interface`:
+
+```csharp
+using System;
+using Avalonia.Controls;
+using Avalonia.Controls.Templates;
+using Avalonia.MusicStore.ViewModels;
+
+namespace Avalonia.MusicStore
+{
+    public class ViewLocator : IDataTemplate
+    {
+        public bool SupportsRecycling => false;
+
+        public IControl Build(object data)
+        {
+            var name = data.GetType().FullName!.Replace("ViewModel", "View");
+            var type = Type.GetType(name);
+
+            if (type != null)
+            {
+                return (Control) Activator.CreateInstance(type)!;
+            }
+            else
+            {
+                return new TextBlock {Text = "Not Found: " + name};
+            }
+        }
+
+        public bool Match(object data)
+        {
+            return data is ViewModelBase;
+        }
+    }
+}
+```
+
+And then add that to `App.axaml`:
+
+ ```markup
 <Application.DataTemplates>
     <local:ViewLocator />
 </Application.DataTemplates>
