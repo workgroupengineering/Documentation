@@ -130,7 +130,7 @@ private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel, Alb
 }
 ```
 
-This method creates the MusicStoreWindow, it sets its `DataContext` to interaction.Input, which is the instance of the `ViewModel`.
+This method creates the MusicStoreWindow, it sets its `DataContext` to interaction.Input, which is the instance of the `MusicStoreViewModel`.
 
 It then calls `await dialog.ShowDialog<AlbumViewModel?>(this)` on the dialog, passing `this` as an argument, showing that the `MainWindow` currently represented by `this` pointer will be the `owner` or `parent` window.
 
