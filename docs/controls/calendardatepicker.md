@@ -29,7 +29,8 @@ This code will display the selected date in ISO 8601 format (year, month and day
 
 ## Reference 
 
-[AutoCompleteBox](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/)
+[CalendarDatePicker](https://reference.avaloniaui.net/api/Avalonia.Controls/CalendarDatePicker/)
+
 
 ## Source code
 
