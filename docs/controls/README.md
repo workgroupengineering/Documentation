@@ -180,7 +180,7 @@ Set of controls which gives you ability display display and select dates, point 
 
 Represents a control that enables a user to select a date by using a visual calendar display.
 
-### CalendarDatePicker
+### [CalendarDatePicker](calendardatepicker.md)
 
 A control for selecting dates with a calendar drop-down.
 

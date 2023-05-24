@@ -50,6 +50,7 @@
     * [SplitButton](docs/controls/SplitButton.md)
     * [ToggleSplitButton](docs/controls/ToggleSplitButton.md)
   * [Calendar](docs/controls/calendar.md)
+  * [CalendarDatePicker](docs/controls/calendardatepicker.md)
   * [Canvas](docs/controls/canvas.md)
   * [Carousel](docs/controls/carousel.md)
   * [CheckBox](docs/controls/checkbox.md)
