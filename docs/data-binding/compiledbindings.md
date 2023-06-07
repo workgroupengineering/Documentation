@@ -41,8 +41,6 @@ Starting from Avalonia `11.0-preview5` you can also enable or disable it in whol
 </PropertyGroup>
 ```
 
-Also
-
 ## CompiledBinding-Markup
 
 If you don't want to enable compiled bindings for all child nodes, you can also use the `CompiledBinding`-markup. You still need to define the `DataType`, but you can omit `x:CompileBindings="True"`.
