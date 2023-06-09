@@ -39,7 +39,7 @@ Sometimes you will want to customize the container itself. You can do this by in
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
     </ListBox.Styles>
-<ListBox>
+</ListBox>
 ```
 
 In WPF and UWP this is done via the `ItemContainerStyle` - this property does not exist in Avalonia; you should use the method outlined above.
