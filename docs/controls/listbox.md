@@ -39,7 +39,7 @@ Sometimes you will want to customize the container itself. You can do this by in
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
     </ListBox.Styles>
-<ListBox>
+</ListBox>
 ```
 
 In WPF and UWP this is done via the `ItemContainerStyle` - this property does not exist in Avalonia; you should use the method outlined above.
@@ -64,7 +64,7 @@ Controls the type of selection that can be made on the `ListBox`:
 These values can be combined, e.g.:
 
 ```markup
-<ListBox SelectionMode="Multiple,Toggle">
+<ListBox SelectionMode="Multiple,Toggle"/>
 ```
 
 ### SelectedIndex <a id="selectedindex"></a>
@@ -72,7 +72,7 @@ These values can be combined, e.g.:
 Exposes the index of the selected item, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
 ```markup
-<ListBox SelectedIndex="{Binding SelectedIndex}">
+<ListBox SelectedIndex="{Binding SelectedIndex}"/>
 ```
 
 ```csharp
@@ -95,7 +95,7 @@ By default bindings to this property are two-way.
 Exposes the selected item in the `Items` collection, or in the case of multiple selection the first selected item. You will often want to bind this to a view model if your list `SelectionMode` is set to `Single`.
 
 ```markup
-<ListBox SelectedItem="{Binding SelectedItem}">
+<ListBox SelectedItem="{Binding SelectedItem}"/>
 ```
 
 ```csharp
@@ -126,7 +126,7 @@ Once `Selection` is bound to a `SelectionModel`, `SelectedItems` will no longer 
 `SelectionModel` also exposes batching functionality through its `Update()` method and a `SelectionChanged` event which details exactly which items have been selected and deselected.
 
 ```markup
-<ListBox Items="{Binding Items}" Selection="{Binding Selection}">
+<ListBox Items="{Binding Items}" Selection="{Binding Selection}"/>
 ```
 
 ```csharp
@@ -170,7 +170,7 @@ This property holds the selected items in an `IList`. It can be bound to any lis
 For various reasons the performance of `SelectedItems` can be very poor, particularly on large collections. It is recommended that you use the `Selection` property instead.
 
 ```markup
-<ListBox SelectedItems="{Binding SelectedItems}">
+<ListBox SelectedItems="{Binding SelectedItems}"/>
 ```
 
 ```csharp
