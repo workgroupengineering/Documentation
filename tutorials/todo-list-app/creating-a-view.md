@@ -73,7 +73,7 @@ Edit the contents of `Views/TodoListView.axaml` to contain the following:
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="400"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="Todo.Views.TodoListView">
   <DockPanel>
     <Button DockPanel.Dock="Bottom"
@@ -110,12 +110,12 @@ The next XML namespace is `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml
 The following two namespaces are used to communicate designer-specific information, which is specified next:
 
 ```markup
-mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="400"
+mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
 ```
 
 `mc:Ignorable="d"` tells the XAML engine that entries beginning with `d:` can be ignored and you can pretty much ignore it too!
 
-The `d:DesignWidth="200"` and `d:DesignHeight="400"` attributes tell the XAML designer to display the content with a size of 200x400 pixels. They're ignored at runtime.
+The `d:DesignWidth="200"` and `d:DesignHeight="300"` attributes tell the XAML designer to display the content with a size of 200x300 pixels. They're ignored at runtime.
 
 ```markup
 x:Class="Todo.Views.TodoListView"
